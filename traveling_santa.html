@@ -233,14 +233,10 @@
 <span style="color: #53a311">//induced by applying H = - \Sum_i X_i for time t.</span>
 <span style="color: #0066BB; font-weight: bold">operation</span> DriverHamiltonian(x: <span style="color: #0066BB; font-weight: bold">Qubit</span>[], t: <span style="color: #0066BB; font-weight: bold">Double</span>) : ()
 {
-    <span style="color: #0066BB; font-weight: bold">body</span>
+    <span style="color: #0066BB; font-weight: bold">for</span>(i <span style="color: #0066BB; font-weight: bold">in</span> 0..Length(x)-1)
     {
-        <span style="color: #0066BB; font-weight: bold">for</span>(i <span style="color: #0066BB; font-weight: bold">in</span> 0..Length(x)-1)
-        {
-            <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliX</span>, -2.0*t, x[i]);
-        }
+        <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliX</span>, -2.0*t, x[i]);
     }
-    <span style="color: #0066BB; font-weight: bold">adjoint auto</span>;
 }
 </pre>
 </div>
@@ -256,28 +252,24 @@
 <span style="color: #53a311">//by the Ising Hamiltonian \Sum_ij J_ij Z_i Z_j + \sum_i h_i Z_i.</span>
 <span style="color: #0066BB; font-weight: bold">operation</span> InstanceHamiltonian(z: <span style="color: #0066BB; font-weight: bold">Qubit</span>[], t: <span style="color: #0066BB; font-weight: bold">Double</span>, h: <span style="color: #0066BB; font-weight: bold">Double</span>[], J: <span style="color: #0066BB; font-weight: bold">Double</span>[]) : <span style="color: #0066BB; font-weight: bold">Unit</span>
 {
-    <span style="color: #0066BB; font-weight: bold">body</span> (...)
+    <span style="color: #0066BB; font-weight: bold">using</span> (ancilla = <span style="color: #0066BB; font-weight: bold">Qubit</span>[1])
     {
-        <span style="color: #0066BB; font-weight: bold">using</span> (ancilla = <span style="color: #0066BB; font-weight: bold">Qubit</span>[1])
-	    {
-	        <span style="color: #0066BB; font-weight: bold"></span>for</span>(i <span style="color: #0066BB; font-weight: bold">in</span>in 0<span style="color: #0066BB; font-weight: bold">..</span>5)
-	        {
-	            <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliZ</span>, 2.0*t*h[i],z[i]);
-            }
-            <span style="color: #0066BB; font-weight: bold">for</span>(i <span style="color: #0066BB; font-weight: bold">in</span>0<span style="color: #0066BB; font-weight: bold">..</span>5)
+        <span style="color: #0066BB; font-weight: bold"></span>for</span>(i <span style="color: #0066BB; font-weight: bold">in</span> 0<span style="color: #0066BB; font-weight: bold">..</span>5)
+        {
+            <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliZ</span>, 2.0*t*h[i],z[i]);
+        }
+        <span style="color: #0066BB; font-weight: bold">for</span>(i <span style="color: #0066BB; font-weight: bold">in</span> 0<span style="color: #0066BB; font-weight: bold">..</span>5)
+        {
+            <span style="color: #0066BB; font-weight: bold">for</span> (j <span style="color: #0066BB; font-weight: bold">in</span> i+1<span style="color: #0066BB; font-weight: bold">..</span>5)
             {
-                <span style="color: #0066BB; font-weight: bold">for</span> (j <span style="color: #0066BB; font-weight: bold">in</span> i+1<span style="color: #0066BB; font-weight: bold">..</span>5)
-                {
-                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[i], ancilla[0]);
-                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[j], ancilla[0]);
-                    <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliZ</span>, 2.0*t*J[6*i+j], ancilla[0]);
-                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[i], ancilla[0]);
-                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[j], ancilla[0]);
-                }
-           }
+                <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[i], ancilla[0]);
+                <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[j], ancilla[0]);
+                <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliZ</span>, 2.0*t*J[6*i+j], ancilla[0]);
+                <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[i], ancilla[0]);
+                <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[j], ancilla[0]);
+            }
         }
     }
-    <span style="color: #0066BB; font-weight: bold">adjoint auto</span>;
 }
 </pre></div>
 <br /><br />
