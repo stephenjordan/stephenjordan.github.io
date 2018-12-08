@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Traveling Santa Problem</title>
+	<meta name="description" content="How to help Santa Claus using quantum computing and Q#." />
+        <meta name="keywords" content="quantum computing Microsoft Q#" />
+	<meta name="author" content="Stephen Jordan" />
+        <link rel="stylesheet" type="text/css" href="spj.css" />
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+    </script>
+  </head>
+
+<body>
+<div id="wrap">
+	<div id="header">        
+  </div>
+	<div id="main">
+
+  <h2>Traveling Santa Problem</h2>
+  
+  <i>This post is part of the <a href="https://blogs.msdn.microsoft.com/visualstudio/2018/11/15/q-advent-calendar-2018/">Q# advent calendar</a>.
+  Check out the calendar for other posts!</i>
+
+  <h3> 1. Formulating the Problem </h3>
+  Santa Claus has unfortunately fallen on some hard times and will only be able to visit a small number of homes this year.
+  After carefully considering his priorities, he has decided to bring presents to three locations:
+
+  <ul>
+    <li>Stephen Jordan's house (Seattle, Washington)</li>
+    <li>The pope (Vatican City)</li>
+    <li>NORAD (Cheyenne Mountain, Colorado)</li>
+  </ul>
+
+  (Santa wants to put coal in the stockings at NORAD because he doesn't like it that every year they
+  <a href="http://www.noradsanta.org">track him</a>.)<br />
+  <br />
+  Santa must carefully choose his route to minimize cost. The cost of the trip is one dollar per thousand kilometers
+  traveled. (The reindeer expend on calorie per kilometer flown. Reindeer fuel costs $0.03 per carrot and each carrot
+  contains 30 calories.)
+
+  Santa's itinerary must begin and end at the North Pole. There are thus six segments that could potentially appear
+  in Santa's route:<br /><br />
+  <center>
+  <img src="diagram0.png" height="278" width="278">
+  </center>
+  <br /><br />
+  The lengths of the segments are:
+  <br /><br />
+
+  <center>
+  <table>
+    <tr>
+      <th>Segment</th>
+      <th>Distance (km)</th> 
+      <th>Cost ($)</th>
+    </tr>
+    <tr>
+      <td>S0: North Pole to Stephen's House</td>
+      <td>4,703km</td>
+      <td>$4.70</td>
+    </tr>
+    <tr>
+      <td>S1: Stephen's House to Vatican</td>
+      <td>9,074km</td>
+      <td>$9.09</td>
+    </tr>
+    <tr>
+      <td>S2: Vatican to Cheyenne Mtn</td>
+      <td>9,031km</td>
+      <td>$9.03</td>
+    </tr>
+    <tr>
+      <td>S3: Cheyenne Mtn to North Pole</td>
+      <td>5,696km</td>
+      <td>$5.70</td>
+    </tr>
+    <tr>
+      <td>S4: North Pole to Vatican</td>
+      <td>8,020km</td>
+      <td>$8.02</td>
+    </tr>
+    <tr>
+      <td>S5: Stephen's House to Cheyenne Mtn</td>
+      <td>1,709km</td>
+      <td>$1.71</td>
+    </tr>
+  </table>
+  </center>
+  <br />
+  We can now formulate a cost function to optimize. Let \(x_j=1\) if segment \(S_j\) appears in Santa's journey and \(x_j =0\) otherwise.
+  Then the total cost of the journey is:
+  \begin{equation}
+  C = \sum_{j=0}^5 C_j x_j
+  \end{equation}
+  where \(C_0 = 4.70\), \(C_1 = 9.09\), and so on. However, the problem also has constraints. Santa's journey must begin and end at
+  the North Pole and he must visit each location exactly once. One can verify that out of all \(2^6\) possible assignments to
+  \(x_0,\ldots,x_5\) only three are valid itineraries, namely:<br /><br />
+  <center>
+    <img src="valid2.png" height="88" width="396">
+  </center>
+  <br /><br />
+  (It doesn't matter whether Santa goes clockwise or counterclockwise since the cost is the same.)
+  One can further verify that the validity of the assignment to \(x_0,\ldots,x_5 \in \{0,1\}\) is 
+  exactly captured by the following four constraints.
+  \begin{equation}
+  \sum_{j=0}^5 x_j = 4
+  \end{equation}
+  \begin{equation}
+  x_0 = x_2
+  \end{equation}
+  \begin{equation}
+  x_1 = x_3
+  \end{equation}
+  \begin{equation}
+  x_4 = x_5
+  \end{equation}
+  Minimizing (1) subject to (2)-(5) is now a well formulated optimization problem. We can recast this as a problem of finding the ground
+  state of a classical Ising model as follows. We work with variables
+  \begin{equation*}
+  z_0,\ldots,z_5 \in \{-1,1\}
+  \end{equation*}
+  and we map from \(x_0,\ldots,x_5\) to \(z_0,\ldots,z_5\) by:
+  \begin{equation}
+  z_j = 1 - 2 x_j
+  \end{equation}
+  <i>i.e.</i> if \(x_j = 0\) then \(z_j = 1\) and if \(x_j = 1\) then \(z_j = -1\). We thus wish to solve the following problem.<br /><br />
+  <div id="demobox">
+    <b>Problem 1: </b>Find \(z_0,\ldots,z_5 \in \{-1,1\}\) minimizing
+    \begin{equation}
+    C(z_0,\ldots,z_5) = \frac{1}{2} \sum_{j=0}^5 C_j (1-z_j)
+    \end{equation}
+    subject to:
+    \begin{equation}
+    \sum_{j=0}^5 z_j = -2
+    \end{equation}
+    \begin{equation}
+    z_0 = z_2
+    \end{equation}
+    \begin{equation}
+    z_1 = z_3
+    \end{equation}
+    \begin{equation}
+    z_4 = z_5
+    \end{equation}
+  </div> 
+  <br />
+  To convert this into an unconstrained optimization problem we may add penalties to the cost function for violated constraints.
+  One can see that
+  \begin{equation}
+  1-z_i z_j = \left\{ \begin{array}{rl} 0 & \textrm{if $z_i = z_j$} \\ 2 & \textrm{if $z_i \neq z_j$} \end{array} \right.
+  \end{equation}
+  and
+  \begin{equation}
+  \left(2 + \sum_{j=0}^5 z_j \right)^2 = \left\{ \begin{array}{ll} 0 & \textrm{if $\sum_{j=0}^5 z_j = 2$} \\ \textrm{at least 2} & \textrm{otherwise} \end{array} \right.
+  \end{equation}
+  If we throw away all constraints then the minimum trip cost is zero (from \( x_0 = x_1 = x_2 = x_3 = x_4 = x_5 = 0\) ) and the maximum trip cost
+  is $38.25 (from \(x_0 = x_1 = x_2 = x_3 = x_4 = x_5 = 1 \) ). So, we see that if we choose a total cost function of:
+  \begin{equation}
+  H = \frac{1}{2} \sum_{j=0}^5 C_j (1 - z_j) + p (1-z_0 z_2) + p(1-z_1 z_3) + p (1-z_4 z_5) + p \left(2 + \sum_{j=0}^5 z_j \right)^2
+  \end{equation}
+  then by choosing \( p > \frac{1}{2} 38.25 \) we ensure that all constraint-violating assignments are costlier than any valid assignment.
+  For concreteness, we may choose \(p = 20 \). Expanding (14) and using the fact that \(z_j^2\) is always equal to 1 we arrive at classical Ising Hamiltonian whose
+  ground state is the solution to the optimization problem.<br /><br />
+  <div id="demobox">
+      <b>Problem 2: </b>Find \(z_0,\ldots,z_5 \in \{-1,1\}\) minimizing
+      \begin{equation}
+      H_C = \sum_{i \lt j=0}^5 J_{ij} z_i z_j + \sum_{i=0}^5 h_i z_i
+      \end{equation}
+      where \(h_j = 4p - C_j\), \(J_{02} = J_{13} = J_{45} = p\), and all other \( J_{i \lt j} = 2p \). Thus, with \(p = 20\):
+      \begin{eqnarray}
+      h_0 & = & 77.65 \\
+      h_1 & = & 75.455 \\
+      h_2 & = & 75.485 \\
+      h_3 & = & 77.15 \\
+      h_4 & = & 75.99 \\
+      h_5 & = & 79.145 \\
+      \end{eqnarray}
+      \begin{equation}
+      J_{02} = J_{13} = J_{45} = 20
+      \end{equation}
+      \begin{equation}
+      J_{01} = J_{03} = J_{04} = J_{05} = J_{12} = J_{14} = J_{15} = J_{23} = J_{24} = J_{25} = J_{34} = J_{35} = 40
+      \end{equation}
+  </div>
+  <br />
+  Note that the minimum value achieved by \( H \) (<i>i.e.</i> the ground energy) is not the same as the minimum value
+  achieved by C, because we have dropped the constant term from \( H \), keeping only terms that involve the variables
+  \(z_0,\ldots,z_5\). However, by construction, the assignment to the variables achieving this minimum will be the optimal
+  solution to the original problem (problem 1).
+  <br />
+  <h3>2. Solving the Problem</h3>
+  Having formulated the problem, the next step is to solve it. One approach is to use the Quantum Approximate Optimization Algorithm
+  (QAOA), introduced <a href="https://arxiv.org/abs/1411.4028">here</a>. The idea behind QAOA (and quantum adiabatic optimization, which is closely related)
+  is to first note that the classical Hamiltonian \(H_C\) described in (15) can be promoted to a quantum Hamiltonian by replacing each variable
+  \(z_j\) with the Pauli-Z operator acting on the \(j^{\mathrm{th}}\) qubit. (In keeping with the notation common in quantum
+  information I'll denote this Pauli operator by \(Z_j\). In other areas of physics it would be more common to denote this
+  as \(\sigma_z^{(j)}\).) We can thus solve our optimization problem by obtaining the ground state of the quantum Hamiltonian
+  \(H_C\) and then measuring the value of each qubit. In QAOA one attempts to do this by interspersing time evolutions according
+  to the Hamiltonian \(H_C\) with time evolutions induced by some "driver" Hamiltonian, which we will take to be
+  \begin{equation}
+  H_0 = -\sum_{i=0}^{n-1} X_i,
+  \end{equation}
+  where \( n\) is the number of qubits, in our case six.
+  We initialize our system to the uniform superposition
+  \begin{equation}
+  \left( \frac{ | 0 \rangle + | 1 \rangle}{\sqrt{2}} \right)^{\otimes n} = \frac{1}{\sqrt{2^n}} \sum_{x \in \{0,1\}^n} | x \rangle,
+  \end{equation}
+  which, being a tensor product state, is easy to prepare.
+  <br /><br />
+  To implement the unitary time evolutions \( e^{-i H_0 t}\) and \( e^{-i H_C t}\) as quantum circuits by breaking them
+  down into elementary gates. Implementing \( e^{-i H_0 t} \) as a quantum circuit is not difficult because all the Pauli
+  Pauli X operators commute, so
+  \begin{equation}
+  e^{-i H_0 t} = \prod_{j=0}^{n-1} e^{-i X_j t}.
+  \end{equation}
+  The Microsoft Quantum Development Kit (QDK) has gates of the form \( e^{-i X_j t/2} \) built in as <code>R(PauliX, t, qubit[j])</code>. Thus we can implement time evolution
+  according to \( H_0 \) with the following Q# operation.<br /><br />
+  <!-- adapted from HTML generated by hilite.me -->
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 125%">
+<span style="color: #53a311">//This applies the X-rotation to each qubit. We can think of it as time evolution</span>
+<span style="color: #53a311">//induced by applying H = - \Sum_i X_i for time t.</span>
+<span style="color: #0066BB; font-weight: bold">operation</span> DriverHamiltonian(x: <span style="color: #0066BB; font-weight: bold">Qubit</span>[], t: <span style="color: #0066BB; font-weight: bold">Double</span>) : ()
+{
+    <span style="color: #0066BB; font-weight: bold">body</span>
+    {
+        <span style="color: #0066BB; font-weight: bold">for</span>(i <span style="color: #0066BB; font-weight: bold">in</span> 0..Length(x)-1)
+        {
+            <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliX</span>, -2.0*t, x[i]);
+        }
+    }
+    <span style="color: #0066BB; font-weight: bold">adjoint auto</span>;
+}
+</pre>
+</div>
+  <br />
+  Similarly, all the individual terms in \( H_C \) commute. These come in two types: single-qubit Pauli Z and two-qubit ZZ couplings. The single-qubit Z rotations
+  can be implemented using <code>R(PauliZ, t, qubit[j])</code>, which is built in to the QDK. To implement the unitaries of the form \( e^{-i Z_i Z_j t}\) we note that this
+  applies a phase determined by the exclusive-or of qubits i and j. Thus, we can compute this exclusive-or into an ancilla qubit, apply a Z-rotation on the ancilla,
+  and then uncompute. Putting this all together (and cancelling some redundant CNOT gates) yields the following Q# function to implement \( e^{-i H_C t}\).
+  <br /><br />
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+<span style="color: #53a311">//This applies the Z-rotation according to the instance Hamiltonian. </span>
+<span style="color: #53a311">//We can think of it as Hamiltonian time evolution for time t induced</span>
+<span style="color: #53a311">//by the Ising Hamiltonian \Sum_ij J_ij Z_i Z_j + \sum_i h_i Z_i.</span>
+<span style="color: #0066BB; font-weight: bold">operation</span> InstanceHamiltonian(z: <span style="color: #0066BB; font-weight: bold">Qubit</span>[], t: <span style="color: #0066BB; font-weight: bold">Double</span>, h: <span style="color: #0066BB; font-weight: bold">Double</span>[], J: <span style="color: #0066BB; font-weight: bold">Double</span>[]) : <span style="color: #0066BB; font-weight: bold">Unit</span>
+{
+    <span style="color: #0066BB; font-weight: bold">body</span> (...)
+    {
+        <span style="color: #0066BB; font-weight: bold">using</span> (ancilla = <span style="color: #0066BB; font-weight: bold">Qubit</span>[1])
+	    {
+	        <span style="color: #0066BB; font-weight: bold"></span>for</span>(i <span style="color: #0066BB; font-weight: bold">in</span>in 0<span style="color: #0066BB; font-weight: bold">..</span>5)
+	        {
+	            <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliZ</span>, 2.0*t*h[i],z[i]);
+            }
+            <span style="color: #0066BB; font-weight: bold">for</span>(i <span style="color: #0066BB; font-weight: bold">in</span>0<span style="color: #0066BB; font-weight: bold">..</span>5)
+            {
+                <span style="color: #0066BB; font-weight: bold">for</span> (j <span style="color: #0066BB; font-weight: bold">in</span> i+1<span style="color: #0066BB; font-weight: bold">..</span>5)
+                {
+                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[i], ancilla[0]);
+                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[j], ancilla[0]);
+                    <span style="color: #0066BB; font-weight: bold">R</span>(<span style="color: #0066BB; font-weight: bold">PauliZ</span>, 2.0*t*J[6*i+j], ancilla[0]);
+                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[i], ancilla[0]);
+                    <span style="color: #0066BB; font-weight: bold">CNOT</span>(z[j], ancilla[0]);
+                }
+           }
+        }
+    }
+    <span style="color: #0066BB; font-weight: bold">adjoint auto</span>;
+}
+</pre></div>
+<br /><br />
+Then, we call these operations from an overall QAOA method as follows.
+<br /><br />
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 125%">
+<span style="color: #53a311">//Here is a QAOA algorithm for this Ising Hamiltonian</span>
+operation QAOA_santa(tx: Double[], tz: Double[], p: Int) : Bool[]
+{
+    body (...)
+    {
+        <span style="color: #0066BB; font-weight: bold">mutable</span> r = <span style="color: #0066BB; font-weight: bold">new Bool</span>[6];
+        <span style="color: #0066BB; font-weight: bold">mutable</span> J = <span style="color: #0066BB; font-weight: bold">new Double</span>[36];
+        <span style="color: #0066BB; font-weight: bold">let</span> h = [77.65, 75.455, 75.485, 77.15, 75.99, 79.145];
+        <span style="color: #53a311">//J_ij is mostly 40, so set all to 40 then overwrite the exceptions</span>
+        <span style="color: #0066BB; font-weight: bold">for</span>(i in 0<span style="color: #0066BB; font-weight: bold">..</span>35)
+        {
+            <span style="color: #0066BB; font-weight: bold">set</span> J[i] = 40.0;
+        }
+        <span style="color: #0066BB; font-weight: bold">set</span> J[2]  = 20.0;
+        <span style="color: #0066BB; font-weight: bold">set</span> J[9]  = 20.0;
+        <span style="color: #0066BB; font-weight: bold">set</span> J[29] = 20.0;
+        <span style="color: #53a311">//Now run the QAOA circuit</span>
+        <span style="color: #0066BB; font-weight: bold">using</span>(x = <span style="color: #0066BB; font-weight: bold">Qubit</span>[6])
+        {
+            <span style="color: #0066BB; font-weight: bold">ApplyToEachCA</span>(<span style="color: #0066BB; font-weight: bold">H</span>, x);                        <span style="color: #53a311">//prepare the uniform distribution</span>
+            <span style="color: #0066BB; font-weight: bold">for</span>(i in 0<span style="color: #0066BB; font-weight: bold">..</span>p-1)
+            {
+                InstanceHamiltonian(x, tz[i], h, J);    <span style="color: #53a311">//do Exp(-i H_C tz[i])</span>
+                DriverHamiltonian(x, tx[i]);            <span style="color: #53a311">//do Exp(-i H_0 tx[i])</span>
+            }
+            <span style="color: #0066BB; font-weight: bold">set</span> r = MeasureAllReset(x);                 <span style="color: #53a311">//measure in the computational basis</span>
+        }
+        <span style="color: #0066BB; font-weight: bold">return</span> r;
+    }
+}
+</pre>
+</div>
+<br /><br />
+One of the key elements of a QAOA algorithm is a good choice of durations to apply the Hamiltonians. One good scheme, found through
+experimentation is to use five-round QAOA with the following parameters.
+\begin{equation}
+e^{-i H_0 t^{(x)}_4} e^{-i H_C t^{(z)}_4} \ldots e^{-i H_0 t^{(x)}_0} e^{-i H_C t^{(z)}_0} \left( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \right)^{\otimes 6}
+\end{equation}
+where
+\begin{equation}
+t^{(x)}_0 = 0.619193 \quad t^{(x)}_1 = 0.742566 \quad t^{(x)}_2 = 0.060035 \quad t^{(x)}_3 = -1.568955 \quad t^{(x)}_4 = 0.045490
+\end{equation}
+\begin{equation}
+t^{(z)}_0 = 0.181647 \quad t^{(z)}_1 = -1.139045 \quad t^{(z)}_2 = 0.221082 \quad t^{(z)}_3 = 0.537753 \quad t^{(z)}_4 = -0.417222
+\end{equation}
+This succeeds in finding the optimal solution roughly 71% of the time. The full Q# code and C# driver implementing this is available
+<a href="TBD">on github</a>. You are invited to download this code and try your own modifications. Perhaps you can find better
+parameters. Perhaps with enough help from your clever choices of parameters, and the power of quantum computing, Santa can conserve
+his budget enough to visit more than three destinations next year.
+</div>
+<div id="footer">
+<br />
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+body, html {
+    margin:0;
+    padding:0;
+    color:#000;
+    background: #ECF7FD;
+    font-family: "arial", sans-serif;
+}
+
+img {
+    border:0;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+#wrap {
+    width:960px;
+    margin:0 auto;
+    background: white;
+}
+
+#header {
+    background: #ECF7FD;
+    margin-top: 15px;
+}
+
+h1 {
+    margin:0;
+}
+
+#main {
+    float:left;
+    width:940px;
+    padding:10px;
+    background: white;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+h2 {
+    margin:0 0 1em;
+}
+
+#footer {
+    clear:both;
+    padding:5px 10px 10px 10px;
+    background:#EEEEEE;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    margin-bottom: 15px;
+}
+
+#footer p {
+    margin:0;
+}
+
+#demobox {
+    background-color: rgb(216, 216, 216) ;
+    padding: 10px ;
+    border: 1px solid black ;
+  } 
