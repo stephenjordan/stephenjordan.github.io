@@ -285,35 +285,36 @@ Then, we call these operations from an overall QAOA method as follows.
 <br /><br />
 <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;">
 <pre style="margin: 0; line-height: 125%">
-<span style="color: #53a311">//Here is a QAOA algorithm for this Ising Hamiltonian</span>
-operation QAOA_santa(tx: Double[], tz: Double[], p: Int) : Bool[]
+<span style="color: #53a311">// Here is a QAOA algorithm for this Ising Hamiltonian</span>
+<span style="color: #0066BB; font-weight: bold">operation</span> QAOA_santa(segmentCosts:<span style="color: #0066BB; font-weight: bold">Double</span>[], penalty:<span style="color: #0066BB; font-weight: bold">Double</span>, tx: <span style="color: #0066BB; font-weight: bold">Double</span>[], tz: <span style="color: #0066BB; font-weight: bold">Double</span>[], p: <span style="color: #0066BB; font-weight: bold">Int</span>) : <span style="color: #0066BB; font-weight: bold">Bool</span>[]
 {
-    body (...)
-    {
-        <span style="color: #0066BB; font-weight: bold">mutable</span> r = <span style="color: #0066BB; font-weight: bold">new Bool</span>[6];
-        <span style="color: #0066BB; font-weight: bold">mutable</span> J = <span style="color: #0066BB; font-weight: bold">new Double</span>[36];
-        <span style="color: #0066BB; font-weight: bold">let</span> h = [77.65, 75.455, 75.485, 77.15, 75.99, 79.145];
-        <span style="color: #53a311">//J_ij is mostly 40, so set all to 40 then overwrite the exceptions</span>
-        <span style="color: #0066BB; font-weight: bold">for</span>(i in 0<span style="color: #0066BB; font-weight: bold">..</span>35)
-        {
-            <span style="color: #0066BB; font-weight: bold">set</span> J[i] = 40.0;
-        }
-        <span style="color: #0066BB; font-weight: bold">set</span> J[2]  = 20.0;
-        <span style="color: #0066BB; font-weight: bold">set</span> J[9]  = 20.0;
-        <span style="color: #0066BB; font-weight: bold">set</span> J[29] = 20.0;
-        <span style="color: #53a311">//Now run the QAOA circuit</span>
-        <span style="color: #0066BB; font-weight: bold">using</span>(x = <span style="color: #0066BB; font-weight: bold">Qubit</span>[6])
-        {
-            <span style="color: #0066BB; font-weight: bold">ApplyToEachCA</span>(<span style="color: #0066BB; font-weight: bold">H</span>, x);                        <span style="color: #53a311">//prepare the uniform distribution</span>
-            <span style="color: #0066BB; font-weight: bold">for</span>(i in 0<span style="color: #0066BB; font-weight: bold">..</span>p-1)
-            {
-                InstanceHamiltonian(x, tz[i], h, J);    <span style="color: #53a311">//do Exp(-i H_C tz[i])</span>
-                DriverHamiltonian(x, tx[i]);            <span style="color: #53a311">//do Exp(-i H_0 tx[i])</span>
-            }
-            <span style="color: #0066BB; font-weight: bold">set</span> r = MeasureAllReset(x);                 <span style="color: #53a311">//measure in the computational basis</span>
-        }
-        <span style="color: #0066BB; font-weight: bold">return</span> r;
+    <span style="color: #53a311">// Calculate Hamiltonian parameters based on the given costs and penalty</span>
+    <span style="color: #0066BB; font-weight: bold">mutable</span> J = <span style="color: #0066BB; font-weight: bold">new Double</span>[36];
+    <span style="color: #0066BB; font-weight: bold">mutable</span> h = <span style="color: #0066BB; font-weight: bold">new Double</span>[6];
+    <span style="color: #0066BB; font-weight: bold">for</span> (i <span style="color: #0066BB; font-weight: bold">in</span> 0<span style="color: #0066BB; font-weight: bold">..</span>5) {
+        <span style="color: #0066BB; font-weight: bold">set</span> h[i] = 4.0 * penalty - 0.5 * segmentCosts[i];
     }
+    <span style="color: #53a311">// Most elements of J_ij equal 2*penalty, so set all elements to this value, then overwrite the exceptions</span>
+    <span style="color: #0066BB; font-weight: bold">for</span> (i <span style="color: #0066BB; font-weight: bold">in</span> 0<span style="color: #0066BB; font-weight: bold">..</span>35)
+    {
+        <span style="color: #0066BB; font-weight: bold">set</span> J[i] = 2.0 * penalty;
+    }
+    <span style="color: #0066BB; font-weight: bold">set</span> J[2]  = penalty;
+    <span style="color: #0066BB; font-weight: bold">set</span> J[9]  = penalty;
+    <span style="color: #0066BB; font-weight: bold">set</span> J[29] = penalty;
+    <span style="color: #53a311">// Now run the QAOA circuit</span>
+    <span style="color: #0066BB; font-weight: bold">mutable</span> r = <span style="color: #0066BB; font-weight: bold">new Bool</span>[6];
+    <span style="color: #0066BB; font-weight: bold">using</span> (x = <span style="color: #0066BB; font-weight: bold">Qubit</span>[6])
+    {
+        <span style="color: #0066BB; font-weight: bold">ApplyToEach</span>(<span style="color: #0066BB; font-weight: bold">H</span>, x);                          <span style="color: #53a311">// prepare the uniform distribution</span>
+        <span style="color: #0066BB; font-weight: bold">for</span> (i <span style="color: #0066BB; font-weight: bold">in</span> 0<span style="color: #0066BB; font-weight: bold">..</span>p-1)
+        {
+            InstanceHamiltonian(x, tz[i], h, J);    <span style="color: #53a311">// do Exp(-i H_C tz[i])</span>
+            DriverHamiltonian(x, tx[i]);            <span style="color: #53a311">// do Exp(-i H_0 tx[i])</span>
+        }
+        <span style="color: #0066BB; font-weight: bold">set</span> r = MeasureAllReset(x);                 <span style="color: #53a311">// measure in the computational basis</span>
+    }
+    <span style="color: #0066BB; font-weight: bold">return</span> r;
 }
 </pre>
 </div>
