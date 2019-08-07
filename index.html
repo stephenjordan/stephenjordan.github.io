@@ -182,6 +182,21 @@ solving this equation. Let \( (x_1,y_1) \) be the pair that minimizes
  related to Gauss sum estimation [<a href="#Geraci_exact">47</a>].
 <br /><br />
 
+<b>Algorithm:</b>Primality Proving<br />
+<b>Speedup:</b>Polynomial<br />
+<b>Description:</b> Given an <i>n</i>-bit number, return a proof of its primality. The fastest classical
+algorithms are AKS, the best versions of which [<a href="#AKS1">393</a>, <a href="#AKS2">394</a>] have
+essentially-quartic complexity, and ECPP, where the heuristic complexity of the fastest version
+[<a href="#ECPP">395</a>] is also essentially quartic. The fastest known quantum algorithm for this
+problem is the method of Donis-Vela and Garcia-Escartin [<a href="#DVGE">396</a>], with complexity
+\( O(n^2 (\log \ n)^3 \log \ \log \ n) \). This improves upon a prior factoring-based quantum algorithm
+for primality proving [<a href="#ChauLo">397</a>] that has complexity \( O(n^3 \log \ n \ \log \ \log \ n) \).
+A recent result of Harvey and Van Der Hoeven [<a href="#HVDH">398</a>] can be used to improve the
+complexity of the factoring-based quantum algorithm for primality proving to \( O(n^3 \log n) \)
+and it may be possible to similarly reduce the complexity of the Donis-Vela-Garcia-Escartin algorithm
+to \( O(n^2 (\log \ n)^3) \) [<a href="#Greathouse">399</a>].
+<br /><br />
+
 <b>Algorithm:</b>Solving Exponential Congruences<br />
 <b>Speedup:</b>Polynomial<br />
 <b>Description:</b>
@@ -4485,6 +4500,48 @@ Lisa Hales and Sean Hallgren
 <br /><em>Algorithmica</em>, 80:560-575, 2017.
 <br /><br /></dd>
 
+<dt><a name="AKS1">393</a></dt>
+<dd>Qi Cheng
+<br />Primality Proving via One Round in ECPP and One Iteration in AKS
+<br /><em>Journal of Cryptology</em>, Volume 20, Issue 3, pg. 375-387, July 2007.
+<br /><br /></dd>
+
+<dt><a name="AKS2">394</a></dt>
+<dd>Daniel J. Bernstein
+<br />Proving primality in essentially quartic random time
+<br /><em>Mathematics of Computation</em>, Vol. 76, pg. 389-403, 2007.
+<br /><br /></dd>
+
+<dt><a name="ECPP">395</a></dt>
+<dd>F. Morain
+<br />Implementing the asymptotically fast version of the elliptic curve primality proving algorithm
+<br /><em>Mathematics of Computation</em>, Vol. 76, pg. 493-505, 2007.
+<br /><br /></dd>
+
+<dt><a name="DVGE">396</a></dt>
+<dd>Alvaro Donis-Vela and Juan Carlos Garcia-Escartin
+<br />A quantum primality test with order finding
+<br /><em><a href="https://arxiv.org/abs/1711.02616">arXiv:1711.02616</a></em>, 2017.
+<br /><br /></dd>
+
+<dt><a name="ChauLo">397</a></dt>
+<dd>H. F. Chau and H.-K. Lo
+<br />Primality test via quantum factorization
+<br /><em>International Journal of Modern Physics C</em>, Vol. 8, No. 2, pg. 131-138, 1997.
+<br />[<a href="https://arxiv.org/abs/quant-ph/9508005">arXiv:quant-ph/9508005</a>]
+<br /><br /></dd>
+
+<dt><a name="HVDH">398</a></dt>
+<dd>David Harvey and Joris Van Der Hoeven
+<br />Integer multiplication in time \( O(n \log \ n) \)
+<br /><em><a href="https://hal.archives-ouvertes.fr/hal-02070778">hal-02070778</a></em>, 2019.
+<br /><br /></dd>
+
+<dt><a name="Greathouse">399</a></dt>
+<dd>Charles Greathouse
+<br /><em>personal communication</em>, 2019.
+<br /><br /></dd>
+
 </dl>
 </div>
 
@@ -4497,6 +4554,13 @@ Lisa Hales and Sean Hallgren
 <a href="#BQP">Approximation and Simulation</a><br />
 <a href="#acknowledgments">Acknowledgments</a><br />
 <a href="#references">References</a><br /><br />
+</div>
+
+<h2>Translations</h2>
+The quantum algorithm zoo has been translated into:
+<div class="navlist">
+<a href="https://www.qmedia.jp/algorithm-zoo/">Japanese</a><br />
+<a href="https://www.qtumist.com/quantum-algorithm-zoo">Chinese</a><br /><br />
 </div>
 
 <h2>Other Surveys</h2>
@@ -4532,7 +4596,7 @@ Author:<br /><br />
 <div style="clear: both;"></div>
 <br />
 
-Last updated: June 13, 2018<br />
+Last updated: August 7, 2018<br />
 Date created: April 22, 2011<br /><br />
 
 </div>
