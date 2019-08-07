@@ -610,8 +610,13 @@ hidden shift.
  electrical resistance of networks [<a href="#Wang14">210</a>], least-squares
  curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems 
  [<a href="#WYPGW16">297</a>], and machine learning 
- [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>]. Some
- limitations of the quantum machine learning algorithms based on
+ [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>].
+ However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>]
+ and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang
+ [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>].
+ That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving
+ that the proposed quantum algorithms for these tasks do not achieve exponential speedup.
+ Some limitations of the quantum machine learning algorithms based on
  linear systems are nicely summarized in [<a href="#Aa15">246</a>].
  In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum
  computers can invert well-conditioned  \( n \times n \) matrices
@@ -1083,12 +1088,10 @@ other headings. In
 [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>,<a href="#SSP16">338</a>,<a href="#ZFF15">339</a>,<a href="#KP17">359</a>],
 quantum algorithms for solving linear systems [<a href="#HHL08">104</a>] are
 applied to speed up cluster-finding, principal component analysis,
-binary classification, and various forms of regression, provided the data satisfies certain conditions. In
-[<a href="#LGZ14">222</a>], these quantum algorithms 
-for linear systems are applied to speed up the characterization of
-persistent homology from data sets. A cluster-finding method not based
-on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>].
-The papers 
+binary classification, and various forms of regression, provided the data satisfies certain conditions. However, a number of quantum machine learning algorithms based on
+linear systems have subsequently been "dequantizied". Specifically, Tang showed in [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>] that the 
+problems of recommendation systems and principal component analysis solved by the quantum algorithms of [<a href="#RML13">251</a>,<a href="#KP16">309</a>] can in fact also be solved in polynomial time randomized classical algorithms.
+A cluster-finding method not based on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>]. The papers 
 [<a href="#PL12">192</a>,<a href="#NDRM08">195</a>,<a href="#CLGOR16">344</a>,<a href="#AH15">345</a>,<a href="#BRRP16">346</a>,<a href="#KXBCMRA16">347</a>,<a href="#AARBM16">348</a>]
 explore the use of adiabatic optimization techniques to speed up the training of
 classifiers. In [<a href="#WKS14">221</a>], a method is proposed for
@@ -4471,8 +4474,7 @@ pg. 431-442, Springer, 2006.
 <br /><br /></dd>
 
 <dt><a name="Hales_Hallgren">388</a></dt>
-<dd>
-Lisa Hales and Sean Hallgren
+<dd>Lisa Hales and Sean Hallgren
 <br /> An improved quantum Fourier transform algorithm and applications.
 <br />In <i>Proceedings of FOCS 2000</i>, pg. 515-525.
 <br /><br /></dd>
@@ -4541,6 +4543,19 @@ Lisa Hales and Sean Hallgren
 <dt><a name="Greathouse">399</a></dt>
 <dd>Charles Greathouse
 <br /><em>personal communication</em>, 2019.
+<br /><br /></dd>
+
+<dt><a name="Tang18a">400</a></dt>
+<dd>Ewin Tang
+<br />A quantum-inspired classical algorithm for recommendation systems
+<br />In <i>Proceedings of STOC 2019</i>, pg. 217-228.
+<br />[<a href="https://arxiv.org/abs/1807.04271">arXiv:1807.04271</a>]
+<br /><br /></dd>
+
+<dt><a name="Tang18b">401</a></dt>
+<dd>Ewin Tang
+<br />Quantum-inspired classical algorithms for principal component analysis and supervised clustering
+<br /><em><a href="https://arxiv.org/abs/1811.00414.pdf">arXiv:1811.00414</a></em>, 2018.
 <br /><br /></dd>
 
 </dl>
