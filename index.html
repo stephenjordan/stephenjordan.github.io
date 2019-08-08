@@ -250,14 +250,15 @@ whether the sum of any subset of the given integers adds up
 to <i>s</i>. This problem is NP-complete, and therefore is unlikely to
 be solvable by classical or quantum algorithms with polynomial
 worst-case complexity. In the hard instances the given integers
-are of order \( 2^n \). In [<a href="#BJLM13">178</a>], a quantum
-algorithm is given that solves this problem in time \( 2^{0.241n} \),
+are of order \( 2^n \), and much research on subset sum focuses on
+average case instances in this regime. In [<a href="#BJLM13">178</a>], a quantum
+algorithm is given that solves such instances in time \( 2^{0.241n} \),
 up to polynomial factors. This quantum algorithm works by applying a
-variant of Ambainis's quantum walk algorithm for element-distinctness
-[<a href="#Ambainis_distinctness">7</a>]to speed up a sophisticated
+variant of Ambainis's quantum walk algorithm for 
+element-distinctness [<a href="#Ambainis_distinctness">7</a>] to speed up a sophisticated
 classical algorithm for this problem due to Howgrave-Graham and
-Joux. The fastest known classical algorithm for subset-sum runs in time
-\( 2^{0.291n} \), up to polynomial factors.<br /><br />
+Joux. The fastest known classical algorithm for such instances of subset-sum runs in time
+\( 2^{0.291n} \), up to polynomial factors [<a href="#BCJ11">404</a>].<br /><br />
 
 <b>Algorithm:</b> Decoding <br />
 <b>Speedup:</b> Varies <br />
@@ -1467,7 +1468,8 @@ chronological order).
 <li>Martin Eker&aring;</li>
 <li><a href="http://web.maths.unsw.edu.au/~igorshparlinski/">Igor Shparlinski</a></li>
 <li>Timothy Chase</li>
-<li>Alejandro Pozas-Kerstjens</li>
+<li><a href="https://www.icfo.eu/lang/about-icfo/people/people_details?people_id=892">Alejandro Pozas-Kerstjens</a></li>
+<li><a href="https://www.csail.mit.edu/person/nikhil-vyas">Nikhil Vyas</a></li>
 </ul>
 <br />
 
@@ -4568,11 +4570,18 @@ pg. 431-442, Springer, 2006.
 <br /><em><a href="https://arxiv.org/abs/1704.06174">arXiv:1704.06174</a></em>, 2017.
 <br /><br /></dd>
 
-<dt><a name="DPK19">403</a></dt>
+<dt><a name="ZPK19">403</a></dt>
 <dd>Zhikuan Zhao, Alejandro Pozas-Kerstjens, Patrick Rebentrost, and Peter Wittek
 <br />Bayesian Deep Learning on a Quantum Computer
 <br /><em>Quantum Machine Intelligence</em> vol. 1, pg. 41-51, 2019.
 <br />[<a href="https://arxiv.org/abs/1806.11463">arXiv:1806.11463</a>]
+<br /><br /></dd>
+
+<dt><a name="BCJ11">404</a></dt>
+<dd>Anja Becker, Jean-Sebastien Coron, and Antoine Joux
+<br />Improved generic algorithms for hard knapsacks
+<br /><em>Proceedings of Eurocrypt 2011</em> pg. 364-385
+<br />[<a href="http://eprint.iacr.org/2011/474">IACR eprint 2011/474</a>]
 <br /><br /></dd>
 
 </dl>
