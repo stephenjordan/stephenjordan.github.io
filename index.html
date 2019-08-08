@@ -146,9 +146,9 @@ solving this equation. Let \( (x_1,y_1) \) be the pair that minimizes
  \( \theta \) is a root has degree <i>d</i>. The set \( \mathcal{O} \)
  of elements of \( \mathbb{Q}(\theta) \) which are roots of monic polynomials in
  \( \mathbb{Z}[x] \) forms a ring, called the ring of integers of 
- \( \mathbb{Q}(\theta) \).
- For a ring, the ideals modulo the prime ideals form a group called the class group. 
- As shown by Hallgren [<a href="#Hallgren_unit">50</a>], a quantum computer can find in
+ \( \mathbb{Q}(\theta) \), which is a Dedekind domain. For a Dedekind domain, the nonzero
+ fractional ideals modulo the nonzero principal ideals form a group called the class group.
+ As shown by Hallgren [<a href="#Hallgren_unit">50</a>], a quantum computer can find in poly(<i>d</i>) time
  a set of generators for the class group of the ring of
  integers of any constant degree number field, given a description of \( \theta \) in time
  poly(log(\( | \mathcal{O} | \))). An improved quantum algorithm, whose runtime is also
@@ -250,7 +250,7 @@ whether the sum of any subset of the given integers adds up
 to <i>s</i>. This problem is NP-complete, and therefore is unlikely to
 be solvable by classical or quantum algorithms with polynomial
 worst-case complexity. In the hard instances the given integers
-are of order \( 2^n \), and much research on subset sum focuses on
+are of order \( 2^n \) and much research on subset sum focuses on
 average case instances in this regime. In [<a href="#BJLM13">178</a>], a quantum
 algorithm is given that solves such instances in time \( 2^{0.241n} \),
 up to polynomial factors. This quantum algorithm works by applying a
@@ -1470,6 +1470,7 @@ chronological order).
 <li>Timothy Chase</li>
 <li><a href="https://www.icfo.eu/lang/about-icfo/people/people_details?people_id=892">Alejandro Pozas-Kerstjens</a></li>
 <li><a href="https://www.csail.mit.edu/person/nikhil-vyas">Nikhil Vyas</a></li>
+<li><a href="https://kevinlui.org/">Kevin Lui</a></li>
 </ul>
 <br />
 
