@@ -11,14 +11,23 @@ img {
 }
 
 #wrap {
-    width:960px;
+    width:1050px;
     margin:0 auto;
     background: white;
 }
 
 #header {
-    background: #ECF7FD;
+    background: rgb(32, 115, 192);
     margin-top: 15px;
+    padding: 10px;
+    color: white;
+}
+
+h1 {
+    position: relative;
+    left: 10px;
+    top: 3px;
+    font-weight: normal;
 }
 
 h1 {
@@ -43,7 +52,7 @@ h2 {
 
 #sidebar {
     float:right;
-    width:240px;
+    width:320px;
     padding:10px;
     background: white;
     font-size: 14px;

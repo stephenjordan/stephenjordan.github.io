@@ -20,12 +20,13 @@
 <body>
 <div id="wrap">
 	<div id="header">
-        <img width="960" height="32" src="zoobanner.png" alt="Quantum Algorithm Zoo" />
-        </div>
+        <h1>Quantum Algorithm Zoo</h1>
+  </div>
 	<div id="main">
 <div id="notice">
 <p>This is a comprehensive catalog of quantum algorithms. If you notice any errors or 
-omissions, please email me at stephen.jordan@microsoft.com. 
+omissions, please email me at stephen.jordan@microsoft.com. (Alternatively, you may
+submit a pull request to the <a href="https://github.com/stephenjordan/stephenjordan.github.io">repository</a> on github.)
 Your help is appreciated and will be <a href="#acknowledgments">acknowledged</a>.</p>
 </div>
 
@@ -271,26 +272,6 @@ been formulated to speed up the decoding of convolutional codes
 [<a href="#GM14">238</a>] and simplex codes
 [<a href="#BZ98">239</a>].<br /><br />
 
-<b>Algorithm:</b> Constraint Satisfaction <br />
-<b>Speedup:</b> Polynomial <br />
-<b>Description:</b> Constraint satisfaction problems, many of which
-are NP-hard, are ubiquitous in computer science, a canonical example
-being 3-SAT. If one wishes to satisfy as many constraints as possible
-rather than all of them, these become combinatorial optimization
-problems. (See also <a href="#adiabiatic">adiabatic algorithms</a>.) The brute force
-solution to constraint satisfaction problems can be quadratically sped
-up using Grover's algorithm. However, most constaint satisfaction
-problems are solvable by classical algorithms that (although still
-exponential-time) run more than quadratically faster than brute force
-checking of all possible solutions. Nevertheless, a polynomial quantum
-speedup over the fastest known classical algorithm for 3-SAT is given
-in [<a href="#Ambainis_SIGACT">133</a>], and polynomial quantum
-speedups for some other constraint satisfaction problems are given in
-[<a href="#CGF">134</a>, <a href="#MGAG15">298</a>]. A commonly used classical algorithm for
-constraint satisfaction is backtracking, and for some problems this
-algorithm is the fastest known. A general quantum speedup for
-backtracking algorithms is given in [<a href="#M15a">264</a>].<br /><br />
-
 <b>Algorithm:</b> Quantum Cryptanalysis <br />
 <b>Speedup:</b> Various <br />
 <b>Description:</b> It is well-known that Shor's algorithms for
@@ -347,7 +328,8 @@ unlikely to be feasible.
  between inputs [<a href="#Ambainis_linear">138</a>], approximate 
  definite integrals [<a href="#integration">77</a>], and converge to a
  fixed-point
- [<a href="#G05">208</a>, <a href="#TGP05">209</a>]. The
+ [<a href="#G05">208</a>, <a href="#TGP05">209</a>]. Considerations on optimizing
+ the depth of quantum search circuits are given in [<a href="#ZK19">405</a>]. The
  generalization of Grover's algorithm known as amplitude estimation
  [<a href="#Amplitude">17</a>]
  is now an important primitive in quantum algorithms. Amplitude estimation forms the
@@ -495,29 +477,6 @@ Fourier transform of another.
  complexity.
 <br /><br />
 
-<b>Algorithm:</b> Gradients, Structured Search, and Learning Polynomials<br />
-<b>Speedup:</b> Polynomial <br />
-<b>Description:</b> Suppose we are given a oracle for computing some smooth function
- \( f:\mathbb{R}^d \to \mathbb{R} \). The inputs and outputs to <i>f</i> are given to 
- the oracle with finitely many bits of precision. The task is to estimate \( \nabla f \)
- at some specified point \( \mathbf{x}_0 \in \mathbb{R}^d \). As shown in 
- [<a href="#Jordan_gradient">61</a>], a quantum computer can achieve this using one query,
- whereas a classical computer needs at least <i>d+1</i> queries. In [<a href="#Bulger">20</a>],
- Bulger suggested potential applications for optimization problems. As shown in appendix D
- of [<a href="#mythesis">62</a>], a quantum computer can use the gradient algorithm to find
- the minimum of a quadratic form in <i>d</i> dimensions using <i>O(d)</i> queries, whereas,
- as shown in [<a href="#Yao">94</a>], a classical computer needs at least \( \Omega(d^2) \)
- queries. Single query quantum algorithms for finding the minima of basins based on Hamming 
- distance were given in
- [<a href="#Hogg">147</a>,<a href="#Hunziker_Meyer">148</a>,<a href="#MP09">223</a>].
- The quantum algorithm of [<a href="#mythesis">62</a>] can also extract all \( d^2 \)
- matrix elements of the quadratic form using <i>O(d)</i> queries, and  more generally, all
- \( d^n \) <i>n</i>th derivatives of a smooth function of <i>d</i> variables in \( O(d^{n-1}) \)
- queries. As shown in [<a href="#Roetteler_quad">130</a>,<a href="#Montanaro_polynomials">146</a>],
- quadratic forms and multilinear polynomials in <i>d</i> variables over a finite field may 
- be extracted with a factor of <i>d</i> fewer quantum queries than are required classically.
-<br /><br />
-
 <b>Algorithm:</b> Hidden Shift <br />
 <b>Speedup:</b> Superpolynomial <br />
 <b>Description:</b> We are given oracle access to some function <i>f</i> on 
@@ -550,7 +509,10 @@ Fourier transform of another.
  on \( \mathbb{Z}_N \) is <i>O</i>(log <i>n</i>), whereas the classical query complexity is 
  \( \Theta(\sqrt{N}) \). However, the best known quantum <i>circuit</i> complexity for injective
  hidden shift on \( \mathbb{Z}_N \) is \( O(2^{C \sqrt{\log N}}) \), achieved by Kuperberg's
- sieve algorithm [<a href="#Kuperberg">66</a>].
+ sieve algorithm [<a href="#Kuperberg">66</a>]. A recent result, building upon [<a href="#Ivanyos08">408</a>, <a href="#FIMSS_NAHS">43</a>],
+ achieves exponential quantum speedups for some generalizations of the Hidden shift problem including
+ the <i>hidden multiple shift problem</i>, in which one has query access to \(f_s(x) = f(x-hs) \)
+ over some allowed range of <i>s</i> and one wishes to infer <i>h</i> [<a href="#IPS18">407</a>].
 <br /><br />
 
 <b>Algorithm:</b> Polynomial interpolation <br />
@@ -588,43 +550,6 @@ hidden shift problems so that it can operate in <i>d</i> dimensions
 and accomodate small amounts of noise, and then classically reducing the
 pattern matching problem to this noisy <i>d</i>-dimensional version of
 hidden shift.
-<br /><br />
-
-<b>Algorithm:</b> Linear Systems<br />
-<b>Speedup:</b> Superpolynomial<br />
-<b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and 
- some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> 
- for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix
- with  <i>O</i>(polylog <i>n</i>) nonzero entries in each row and condition number <i>k</i>.
- As shown in [<a href="#HHL08">104</a>], a quantum computer can in \( O(k^2 \log n) \)
- time compute to polynomial precision various expectation values of operators with respect
- to the vector <i>f(A)b</i> (provided that a quantum state proportional to <i>b</i> is 
- efficiently constructable). For certain functions, such as <i>f(x)=1/x</i>, this
- procedure can be extended to non-Hermitian and even non-square <i>A</i>. The 
- runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \)
- in [<a href="#Ambainis_linear">138</a>]. Exponentially improved
- scaling of runtime with precision was obtained in
- [<a href="#CKS15">263</a>]. Some methods to extend this algorithm to apply to non-sparse matrices
- have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to
- be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic
- scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear
- differential equations [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], estimating
- electrical resistance of networks [<a href="#Wang14">210</a>], least-squares
- curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems 
- [<a href="#WYPGW16">297</a>], and machine learning 
- [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>].
- However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>]
- and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang
- [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>].
- That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving
- that the proposed quantum algorithms for these tasks do not achieve exponential speedup.
- Some limitations of the quantum machine learning algorithms based on
- linear systems are nicely summarized in [<a href="#Aa15">246</a>].
- In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum
- computers can invert well-conditioned  \( n \times n \) matrices
- using only \( O( \log n ) \) qubits, whereas the best classical
- algorithm uses order \( \log^2 n \) bits. Subsequent improvements to
- this quantum algorithm are given in [<a href="#FL16">279</a>].
 <br /><br />
 
 <b>Algorithm:</b> Ordered Search <br />
@@ -1079,49 +1004,6 @@ query complexity upper bounds for the electrical resistance problem in the adjac
 query model are given in [<a href="#IJ15">280</a>] using approximate span programs.
 <br /><br />
 
-<b>Algorithm: </b> Machine Learning <br />
-<b>Speedup:</b> Varies<br />
-<b>Description:</b> 
-Maching learning encompasses a wide variety of computational problems
-and can be attacked by a wide variety of algorithmic techniques. This
-entry summarizes quantum algorithmic techniques for improved machine
-learning. Many of the quantum algorithms here are cross-listed under
-other headings. In
-[<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>,<a href="#SSP16">338</a>,<a href="#ZFF15">339</a>,<a href="#KP17">359</a>,<a href="#ZPK19">403</a>],
-quantum algorithms for solving linear systems [<a href="#HHL08">104</a>] are
-applied to speed up cluster-finding, principal component analysis,
-binary classification, training of neural networks, and various forms of regression, provided the data satisfies certain conditions. However, a number of quantum machine learning algorithms based on
-linear systems have subsequently been "dequantized". Specifically, Tang showed in [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>] that the 
-problems of recommendation systems and principal component analysis solved by the quantum algorithms of [<a href="#RML13">251</a>,<a href="#KP16">309</a>] can in fact also be solved in polynomial time randomized classical algorithms.
-A cluster-finding method not based on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>]. The papers 
-[<a href="#PL12">192</a>,<a href="#NDRM08">195</a>,<a href="#CLGOR16">344</a>,<a href="#AH15">345</a>,<a href="#BRRP16">346</a>,<a href="#KXBCMRA16">347</a>,<a href="#AARBM16">348</a>]
-explore the use of adiabatic optimization techniques to speed up the training of
-classifiers. In [<a href="#WKS14">221</a>], a method is proposed for
-training Boltzmann machines by manipulating coherent quantum states
-with amplitudes proportional to the Boltzmann weights. Polynomial speedups
-can be obtained by applying Grover search and related techniques such as amplitude amplification to amenable
-subroutines of state of the art classical machine learning algorithms. See,
-for example 
-[<a href="#ABG07">358</a>,<a href="#ABG13">340</a>,<a href="#WKS16">341</a>,<a href="#PDMMB14">342</a>,<a href="#DCLT08">343</a>].
-Other quantum machine learning algorithms not falling into one of the above categories include 
-[<a href="#YBLL14">337</a>,<a href="#WG17">349</a>].
-Some limitations of quantum machine learning algorithms are nicely
-summarized in [<a href="#Aa15">246</a>]. Many other
-quantum query algorithms that extract hidden structure of the
-black-box function could be cast as machine learning algorithms. See
-for example
-[<a href="#Montanaro_polynomials">146</a>,<a href="#Childs_nonlinear">23</a>,<a href="#Bernstein_Vazirani">11</a>,<a href="#Wocjan_nonlinear">31</a>,<a href="#DHIS13">212</a>]. 
-Query algorithms for learning the majority and "battleship" functions are
-given in [<a href="#HMPPR03">224</a>]. Large quantum advantages for
-learning from noisy oracles are given in [<a href="#CSS14">236</a>,<a href="#HR11">237</a>].
-Several recent review articles 
-[<a href="#Ad15">299</a>,<a href="#SSP14">332</a>,<a href="#BWPRWL16">333</a>]
-and a book [<a href="#QMLbook">331</a>] are available which summarize the state of the field.
-There is a related body of work, not strictly within the standard setting of quantum algorithms,
-regarding quantum learning in the case that the data itself is quantum coherent. 
-See <i>e.g.</i> [<a href="#BJ99">350</a>,<a href="#ABG06">334</a>,<a href="#DTB16">335</a>,<a href="#AW17">351</a>,<a href="#SG04">352</a>,<a href="#AW16">353</a>,<a href="#MSW16">354</a>,<a href="#BCDFP10">355</a>,<a href="#SCJ01">356</a>,<a href="#SC02">357</a>].
-<br /><br />
-
 <b>Algorithm: </b> Junta Testing and Group Testing <br />
 <b>Speedup:</b> Polynomial<br />
 <b>Description:</b> 
@@ -1236,54 +1118,6 @@ Freedman [<a href="#Freedman">42</a>,
  [<a href="#WCAN">122</a>]. A method based on quantum walks, achieving
  polynomial speedup for evaluating partition functions is given in
  [<a href="#M15b">265</a>].
-<br /><br />
-
-<a name="adiabatic">
-<b>Algorithm:</b> Adiabatic Algorithms <br />
-<b>Speedup: </b> Unknown <br />
-<b>Description:</b> In adiabatic quantum computation one starts with
- an initial Hamiltonian whose ground state is easy to prepare, and
- slowly varies the Hamiltonian to one whose ground state encodes the
- solution to some computational problem. By the adiabatic theorem, the
- system will track the instantaneous ground state provided the
- variation of the Hamiltonian is sufficiently slow. The runtime of an
- adiabatic algorithm scales at worst as \(1/ \gamma^3 \) where \( \gamma \)
- is the minimum eigenvalue gap between the ground state
- and the first excited state [<a href="#JRS06">185</a>]. If the
- Hamiltonian is varied sufficiently smoothly, one can improve this to
- \( \widetilde{O}(1/\gamma^2) \) [<a href="#EH12">247</a>]. Adiabatic
- quantum computation was first proposed by Farhi <i>et al.</i> as a
- method for solving NP-complete combinatorial optimization problems
- [<a href="#Farhi_adiabatic">96</a>, <a href="#FGGLLP01">186</a>]. Adiabatic quantum algorithms for
- optimization problems typically use "stoquastic" Hamiltonians, which
- do not suffer from the sign problem. Such algorithms are sometimes
- referred to as quantum annealing. Adiabatic quantum computation with
- non-stoquastic Hamiltonians is as powerful as the quantum circuit 
- model [<a href="#Aharonov_adiabatic">97</a>]. Adiabatic algorithms
- using stoquastic Hamiltonians are probably less powerful
- [<a href="#BDOT06">183</a>], but may be nevertheless more powerful
- than classical computation. The asymptotic runtime of adiabatic
- optimization algorithms is notoriously difficult to analyze, but some
- progress has been achieved
- [<a href="#AKR09">179</a>,<a href="#R04">180</a>,<a href="#FGG02">181</a>,<a href="#FGGGMS09">182</a>,<a href="#FGGN05">187</a>,<a href="#FGGS10">188</a>,<a href="#FGG02B">189</a>,<a href="#vDMV01">190</a>,<a href="#FGHSSYZ12">191</a>,<a href="#IM08">226</a>]. (Also
- relevant is an earlier literature on quantum annealing, which
- originally referred to a classical optimization algorithm that works by 
- simulating a quantum process, much as simulated annealing is a
- classical optimization algorithm that works by simulating a thermal
- process. See <em>e.g.</em>
- [<a href="#FGSSD94">199</a>, <a href="#MN08">198</a>].) Adiabatic quantum
- computers can perform a process somewhat analogous
- to Grover search in \( O(\sqrt{N}) \) time
- [<a href="#Roland_Cerf">98</a>]. Adiabatic quantum algorithms
- achieving quadratic speedup for a more general class of problems are
- constructed in [<a href="#SB12">184</a>] by adapting techniques from
- [<a href="#Szegedy">85</a>]. Adiabatic quantum algorithms have been
- proposed for several specific problems, including PageRank
- [<a href="#GZL12">176</a>], machine learning
- [<a href="#PL12">192</a>, <a href="#NDRM08">195</a>],
- and graph problems [<a href="#GC11">193</a>, <a href="#GC13">194</a>].
- Some quantum simulation algorithms also use adiabatic state
- preparation.
 <br /><br />
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
@@ -1431,6 +1265,230 @@ equations over finite fields [<a href="#vanDam_zeros">87</a>].
  [<a href="#Wocjan_matrix">60</a>]. Thus, quantum computers can solve it in polynomial
  time, but classical computers probably cannot.
 <br /><br />
+<hr/>
+
+<a name="ONML"></a>
+<h2>Optimization, Numerics, and Machine Learning</h2>
+
+<b>Algorithm:</b> Constraint Satisfaction <br />
+<b>Speedup:</b> Polynomial <br />
+<b>Description:</b> Constraint satisfaction problems, many of which
+are NP-hard, are ubiquitous in computer science, a canonical example
+being 3-SAT. If one wishes to satisfy as many constraints as possible
+rather than all of them, these become combinatorial optimization
+problems. (See also <a href="#adiabiatic">adiabatic algorithms</a>.) The brute force
+solution to constraint satisfaction problems can be quadratically sped
+up using Grover's algorithm. However, most constaint satisfaction
+problems are solvable by classical algorithms that (although still
+exponential-time) run more than quadratically faster than brute force
+checking of all possible solutions. Nevertheless, a polynomial quantum
+speedup over the fastest known classical algorithm for 3-SAT is given
+in [<a href="#Ambainis_SIGACT">133</a>], and polynomial quantum
+speedups for some other constraint satisfaction problems are given in
+[<a href="#CGF">134</a>, <a href="#MGAG15">298</a>]. A commonly used classical algorithm for
+constraint satisfaction is backtracking, and for some problems this
+algorithm is the fastest known. A general quantum speedup for
+backtracking algorithms is given in [<a href="#M15a">264</a>].<br /><br />
+
+<a name="adiabatic">
+<b>Algorithm:</b> Adiabatic Algorithms <br />
+b>Speedup: </b> Unknown <br />
+b>Description:</b> In adiabatic quantum computation one starts with
+an initial Hamiltonian whose ground state is easy to prepare, and
+slowly varies the Hamiltonian to one whose ground state encodes the
+solution to some computational problem. By the adiabatic theorem, the
+system will track the instantaneous ground state provided the
+variation of the Hamiltonian is sufficiently slow. The runtime of an
+adiabatic algorithm scales at worst as \(1/ \gamma^3 \) where \( \gamma \)
+is the minimum eigenvalue gap between the ground state
+and the first excited state [<a href="#JRS06">185</a>]. If the
+Hamiltonian is varied sufficiently smoothly, one can improve this to
+\( \widetilde{O}(1/\gamma^2) \) [<a href="#EH12">247</a>]. Adiabatic
+quantum computation was first proposed by Farhi <i>et al.</i> as a
+method for solving NP-complete combinatorial optimization problems
+[<a href="#Farhi_adiabatic">96</a>, <a href="#FGGLLP01">186</a>]. Adiabatic quantum algorithms for
+optimization problems typically use "stoquastic" Hamiltonians, which
+do not suffer from the sign problem. Such algorithms are sometimes
+referred to as quantum annealing. Adiabatic quantum computation with
+non-stoquastic Hamiltonians is as powerful as the quantum circuit 
+model [<a href="#Aharonov_adiabatic">97</a>]. Adiabatic algorithms
+using stoquastic Hamiltonians are probably less powerful
+[<a href="#BDOT06">183</a>], but may be nevertheless more powerful
+than classical computation. The asymptotic runtime of adiabatic
+optimization algorithms is notoriously difficult to analyze, but some
+progress has been achieved
+[<a href="#AKR09">179</a>,<a href="#R04">180</a>,<a href="#FGG02">181</a>,<a href="#FGGGMS09">182</a>,<a href="#FGGN05">187</a>,<a href="#FGGS10">188</a>,<a href="#FGG02B">189</a>,<a href="#vDMV01">190</a>,<a href="#FGHSSYZ12">191</a>,<a href="#IM08">226</a>]. (Also
+relevant is an earlier literature on quantum annealing, which
+originally referred to a classical optimization algorithm that works by 
+simulating a quantum process, much as simulated annealing is a
+classical optimization algorithm that works by simulating a thermal
+process. See <em>e.g.</em>
+[<a href="#FGSSD94">199</a>, <a href="#MN08">198</a>].) Adiabatic quantum
+computers can perform a process somewhat analogous
+to Grover search in \( O(\sqrt{N}) \) time
+[<a href="#Roland_Cerf">98</a>]. Adiabatic quantum algorithms
+achieving quadratic speedup for a more general class of problems are
+constructed in [<a href="#SB12">184</a>] by adapting techniques from
+[<a href="#Szegedy">85</a>]. Adiabatic quantum algorithms have been
+proposed for several specific problems, including PageRank
+[<a href="#GZL12">176</a>], machine learning
+[<a href="#PL12">192</a>, <a href="#NDRM08">195</a>], finding Hadamard
+matrices [<a href="#SM19">406</a>], and graph problems [<a href="#GC11">193</a>, <a href="#GC13">194</a>].
+Some quantum simulation algorithms also use adiabatic state
+preparation.
+<br /><br />
+
+<b>Algorithm:</b> Gradients, Structured Search, and Learning Polynomials<br />
+<b>Speedup:</b> Polynomial <br />
+<b>Description:</b> Suppose we are given a oracle for computing some smooth function
+\( f:\mathbb{R}^d \to \mathbb{R} \). The inputs and outputs to <i>f</i> are given to 
+the oracle with finitely many bits of precision. The task is to estimate \( \nabla f \)
+at some specified point \( \mathbf{x}_0 \in \mathbb{R}^d \). As shown in 
+[<a href="#Jordan_gradient">61</a>], a quantum computer can achieve this using one query,
+whereas a classical computer needs at least <i>d+1</i> queries. In [<a href="#Bulger">20</a>],
+Bulger suggested potential applications for optimization problems. As shown in appendix D
+of [<a href="#mythesis">62</a>], a quantum computer can use the gradient algorithm to find
+the minimum of a quadratic form in <i>d</i> dimensions using <i>O(d)</i> queries, whereas,
+as shown in [<a href="#Yao">94</a>], a classical computer needs at least \( \Omega(d^2) \)
+queries. Single query quantum algorithms for finding the minima of basins based on Hamming 
+distance were given in
+[<a href="#Hogg">147</a>,<a href="#Hunziker_Meyer">148</a>,<a href="#MP09">223</a>].
+The quantum algorithm of [<a href="#mythesis">62</a>] can also extract all \( d^2 \)
+matrix elements of the quadratic form using <i>O(d)</i> queries, and  more generally, all
+\( d^n \) <i>n</i>th derivatives of a smooth function of <i>d</i> variables in \( O(d^{n-1}) \)
+queries. Remarkably general results in [<a href="#CML18">419</a>,<a href="#CMH19">419</a> ,<a href="#AGG18">420</a>]
+give quantum speedups for convex optimization and volume estimation of convex bodies, as well
+as query complexity lower bounds. Roughly speaking these results show that for convex
+optimization and volume estimation in <i>d</i> dimensions one gets a quadratic speedup in <i>d</i>
+just as was found earlier for the special case of minimizing quadratic forms.
+As shown in [<a href="#Roetteler_quad">130</a>,<a href="#Montanaro_polynomials">146</a>],
+quadratic forms and multilinear polynomials in <i>d</i> variables over a finite field may 
+be extracted with a factor of <i>d</i> fewer quantum queries than are required classically.
+<br /><br />
+
+<b>Algorithm:</b> Linear Systems<br />
+<b>Speedup:</b> Superpolynomial<br />
+<b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and 
+some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> 
+for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix
+with  <i>O</i>(polylog <i>n</i>) nonzero entries in each row and condition number <i>k</i>.
+As shown in [<a href="#HHL08">104</a>], a quantum computer can in \( O(k^2 \log n) \)
+time compute to polynomial precision various expectation values of operators with respect
+to the vector <i>f(A)b</i> (provided that a quantum state proportional to <i>b</i> is 
+efficiently constructable). For certain functions, such as <i>f(x)=1/x</i>, this
+procedure can be extended to non-Hermitian and even non-square <i>A</i>. The 
+runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \)
+in [<a href="#Ambainis_linear">138</a>]. Exponentially improved
+scaling of runtime with precision was obtained in
+[<a href="#CKS15">263</a>]. Some methods to extend this algorithm to apply to non-sparse matrices
+have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to
+be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic
+scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear
+differential equations [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], estimating
+electrical resistance of networks [<a href="#Wang14">210</a>], least-squares
+curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems 
+[<a href="#WYPGW16">297</a>], and machine learning 
+[<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>].
+However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>]
+and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang
+[<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>].
+That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving
+that the proposed quantum algorithms for these tasks do not achieve exponential speedup.
+Some limitations of the quantum machine learning algorithms based on
+linear systems are nicely summarized in [<a href="#Aa15">246</a>].
+In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum
+computers can invert well-conditioned  \( n \times n \) matrices
+using only \( O( \log n ) \) qubits, whereas the best classical
+algorithm uses order \( \log^2 n \) bits. Subsequent improvements to
+this quantum algorithm are given in [<a href="#FL16">279</a>].
+<br /><br />
+
+<b>Algorithm: </b> Machine Learning <br />
+<b>Speedup:</b> Varies<br />
+<b>Description:</b> 
+Maching learning encompasses a wide variety of computational problems
+and can be attacked by a wide variety of algorithmic techniques. This
+entry summarizes quantum algorithmic techniques for improved machine
+learning. Many of the quantum algorithms here are cross-listed under
+other headings. In
+[<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>,<a href="#SSP16">338</a>,<a href="#ZFF15">339</a>,<a href="#KP17">359</a>,<a href="#ZPK19">403</a>],
+quantum algorithms for solving linear systems [<a href="#HHL08">104</a>] are
+applied to speed up cluster-finding, principal component analysis,
+binary classification, training of neural networks, and various forms of regression, provided the data satisfies certain conditions. However, a number of quantum machine learning algorithms based on
+linear systems have subsequently been "dequantized". Specifically, Tang showed in [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>] that the 
+problems of recommendation systems and principal component analysis solved by the quantum algorithms of [<a href="#RML13">251</a>,<a href="#KP16">309</a>] can in fact also be solved in polynomial time randomized classical algorithms.
+A cluster-finding method not based on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>]. The papers 
+[<a href="#PL12">192</a>,<a href="#NDRM08">195</a>,<a href="#CLGOR16">344</a>,<a href="#AH15">345</a>,<a href="#BRRP16">346</a>,<a href="#KXBCMRA16">347</a>,<a href="#AARBM16">348</a>]
+explore the use of adiabatic optimization techniques to speed up the training of
+classifiers. In [<a href="#WKS14">221</a>], a method is proposed for
+training Boltzmann machines by manipulating coherent quantum states
+with amplitudes proportional to the Boltzmann weights. Polynomial speedups
+can be obtained by applying Grover search and related techniques such as amplitude amplification to amenable
+subroutines of state of the art classical machine learning algorithms. See,
+for example 
+[<a href="#ABG07">358</a>,<a href="#ABG13">340</a>,<a href="#WKS16">341</a>,<a href="#PDMMB14">342</a>,<a href="#DCLT08">343</a>].
+Other quantum machine learning algorithms not falling into one of the above categories include 
+[<a href="#YBLL14">337</a>,<a href="#WG17">349</a>].
+Some limitations of quantum machine learning algorithms are nicely
+summarized in [<a href="#Aa15">246</a>]. Many other
+quantum query algorithms that extract hidden structure of the
+black-box function could be cast as machine learning algorithms. See
+for example
+[<a href="#Montanaro_polynomials">146</a>,<a href="#Childs_nonlinear">23</a>,<a href="#Bernstein_Vazirani">11</a>,<a href="#Wocjan_nonlinear">31</a>,<a href="#DHIS13">212</a>]. 
+Query algorithms for learning the majority and "battleship" functions are
+given in [<a href="#HMPPR03">224</a>]. Large quantum advantages for
+learning from noisy oracles are given in [<a href="#CSS14">236</a>,<a href="#HR11">237</a>].
+Several recent review articles 
+[<a href="#Ad15">299</a>,<a href="#SSP14">332</a>,<a href="#BWPRWL16">333</a>]
+and a book [<a href="#QMLbook">331</a>] are available which summarize the state of the field.
+There is a related body of work, not strictly within the standard setting of quantum algorithms,
+regarding quantum learning in the case that the data itself is quantum coherent. 
+See <i>e.g.</i> [<a href="#BJ99">350</a>,<a href="#ABG06">334</a>,<a href="#DTB16">335</a>,<a href="#AW17">351</a>,<a href="#SG04">352</a>,<a href="#AW16">353</a>,<a href="#MSW16">354</a>,<a href="#BCDFP10">355</a>,<a href="#SCJ01">356</a>,<a href="#SC02">357</a>].
+<br /><br />
+
+<b>Algorithm:</b> Solving Differential Equations<br />
+<b>Speedup:</b> Superpolynomial<br />
+<b>Description:</b> Consider linear first order differential equation \( \frac{d}{dt} \mathbf{x} = A(t) \mathbf{x} + \mathbf{b}(t) \), where
+\( \mathbf{x} \) and \( \mathbf{b} \) are <i>N</i>-dimensional vectors and <i>A</i> is an \(N \times N\) matrix. Given an initial condition
+\( \mathbf{x}(0) \) one wishes to compute the solution \( \mathbf{x}(t) \) at some later time <i>t</i> to some precision \( \epsilon \) in
+the sense that the normalized vector \( x(t)/\|x(t)\| \) produced has distance at most \( \epsilon \) from the exact solution. In [<a href="#Berry10">156</a>],
+Berry gives a quantum algorithm for this problem that runs in time \( O(t^2 \mathrm{poly}(1/\epsilon) \mathrm{poly log} N) \), whereas the fastest classical algorithms
+run in time \( O ( t \mathrm{poly} N ) \). The final result is produced in the form of a quantum superposition state on \( O(log N) \) qubits whose amplitudes contain
+the components of \( \mathbf{x}(t) \). The algorithm works by reducing the problem to linear algebra via a high-order finite difference method and applying
+the quantum linear algebra primitive of [<a href="#HHL08">104</a>]. In [<a href="#BCOW17">410</a>] an improved quantum algorithm for this problem was given
+which brings the epsilon dependence down to \( \mathrm{poly log}(1/\epsilon) \). A quantum algorithm for solving nonlinear differential equations (again in the
+sense of obtaining a solution encoded in the amplitudes) is described in [<a href="#LO08">411</a>]. Partial differential equations can be reduced to
+ordinary differential equations through discretization, and higher order differential equations can be reduced to first order through additiona of auxiliary
+variables. Consequently, these more general problems can be solved through the methods of [<a href="#Berry10">156</a>, <a href="#HHL08">104</a>]. However,
+quantum algorithms designed to solve these problems directly may be more efficient (and for specific problems one may analyze the complexity of tasks that
+are unspecified in a more general formulation such as preparation of relevant initial states). In [<a href="#CJS13">249</a>] a quantum algorithm is given
+which solves the wave equation by applying finite-element methods to reduce it to linear algebra and then applying the quantum linear algebra algorithm of
+[<a href="#HHL08">104</a>] with preconditioning. In [<a href="#CJO17">369</a>] a quantum algorithm is given for solving the wave equation by discretizing it
+with finite differences and massaging it into the form of a Schrodinger equation which is then simulated using the method of [<a href="#BCK15">245</a>]. The
+problem solved by [<a href="#CJO17">369</a>] is not equivalent to that solved by [<a href="#CJS13">249</a>] because in [<a href="#CJS13">249</a>] the problem
+is reduced to a time-indepent one through assuming sinusoidal time dependence and applying separation of variables, whereas [<a href="#CJO17">369</a>] solves
+the time-dependent problem. The quantum speedup achieved over classical methods for solving the wave equation in <i>d</i>-dimensiona is polynomial for fixed
+<i>d</i> but expontial in <i>d</i>. Concrete resource estimates for quantum algorithms to solve differential equations are given in 
+[<a href="#CPP13">412</a>, <a href="#WWL19">413</a>, <a href="#SVM17">414</a>]. A quantum algorithm for solving linear partial differential equations using
+continuous-variable quantum computing is given in [<a href="#AKW19">415</a>]. In [<a href="#MP16">296</a>] quantum finite element methods are analyzed in
+a general setting. A quantum spectral method for solving differential equations is given in [<a href="#CL19">416</a>]. A quantum algorithm for solving the Vlasov equation is
+given in [<a href="#ESP19">417</a>].
+<br /><br />
+
+<b>Algorithm:</b> Quantum Dynamic Programming<br />
+<b>Speedup:</b> Polynomial<br />
+<b>Description:</b> In [<a href="#ABI18">409</a>] the authors introduce a problem called path-in-the-hypercube. In this problem, one given
+a subgraph of the hypercube and asked whether there is a path along this subgraph that starts from the all zeros vertex,
+ends at the all ones vertex, and makes only Hamming weight increasing moves. (The vertices of the hypercube graph correspond
+to bit strings of length <i>n</i> and the hypercube graph joins vertices of Hamming distance one.) Many NP-complete problems
+for which the best classical algorithm is dynamic programming can be modeled as instances of path-in-the-hypercube. By
+combining Grover search with dynamic programming methods, a quantum algorithm can solve path-in-the-hypercube in time
+\( O^*(1.817^n) \), where the notation \( O^* \) indicates that polynomial factors are being omitted. The fastest known
+classical algorithm for this problem runs in time \( O^*(2^n) \). Using this primitive quantum algorithms can be constructed
+that solve vertex ordering problems in \( O^*(1.817^n) \) vs. \( O^* (2^n) \) classically, graph bandwidth in \( O^*(2.946^n) \)
+vs. \( O^*(4.383^n) \) classically, travelling salesman and feedback arc set in \( O^*(1.729^n) \) vs. \( O^*(2^n) \) classically,
+and minimum set cover in \( O( \mathrm{poly}(m,n) 1.728^n ) \) vs. \( O(nm2^n) \) classically.
+<br /><br />
 
 <hr />
 
@@ -1452,7 +1510,7 @@ chronological order).
 <li><a href="http://arxiv.org/find/quant-ph/1/au:+Grover_L/0/1/0/all/0/1">Lov Grover</a></li>
 <li><a href="http://adaptun.com/ehs.html">Eduin H. Serna</a></li>
 <li>Charles Greathouse</li>
-<li><a href="https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-eisert/people/bermejo-vega/index.html">Juan Bermejo-Vega</a></li>
+<li>Juani Bermejo-Vega</li>
 <li><a href="http://www.professores.uff.br/kowada/">Luis Kowada</a></li>
 <li>Keith Britt</li>
 <li><a href="http://www.mit.edu/~aram">Aram Harrow</a></li>
@@ -1471,6 +1529,9 @@ chronological order).
 <li><a href="https://www.icfo.eu/lang/about-icfo/people/people_details?people_id=892">Alejandro Pozas-Kerstjens</a></li>
 <li><a href="https://www.csail.mit.edu/person/nikhil-vyas">Nikhil Vyas</a></li>
 <li><a href="https://kevinlui.org/">Kevin Lui</a></li>
+<li><a href="http://insti.physics.sunysb.edu/~korepin/">Vladimir Korepin</a></li>
+<li><a href="https://www.stei.itb.ac.id/file/stei-script/andriyan.html">Andriyan Suksmono</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jack_Hidary">Jack Hidari</a></li>
 </ul>
 <br />
 
@@ -1710,7 +1771,7 @@ Andrew M. Childs, Richard Cleve, Enrico Deotto, Edward Farhi, Sam Gutmann, and
 
 <dt><a name="Childs_Jordan">27</a></dt>
 <dd>
-Andrew M. Childs, Richard Cleve, Stephen P. Jordan, and David Yeung
+Andrew M. Childs, Richard Cleve, Stephen P. Jordan, and David Yonge-Mallo
 <br />Discrete-query quantum algorithm for NAND trees.
 <br /><em>Theory of Computing</em>, 5:119-123, 2009.
 <br /><a href="http://arxiv.org/abs/quant-ph/0702160">arXiv:quant-ph/0702160</a>
@@ -1728,7 +1789,7 @@ arXiv:quant-ph/0507190</a>.
 
 <dt><a name="Cleve_tree">29</a></dt>
 <dd>
-Richard Cleve, Dmitry Gavinsky, and David L. Yeung
+Richard Cleve, Dmitry Gavinsky, and David L. Yonge-Mallo
 <br />Quantum algorithms for evaluating MIN-MAX trees.
 <br />In <em>Theory of Quantum Computation, Communication, and
 Cryptography</em>, pages 11-15,
@@ -2828,7 +2889,8 @@ Algorithms (SODA '12)</em>, 2012.
 <dd>
 Dominic Berry
 <br />Quantum algorithms for solving linear differential equations.
-<br /><i><a href="http://arxiv.org/abs/1010.2745">arXiv:1010.2745</a></i>, 2010.
+<br /><i>J. Phys. A: Math. Theor.</i>47, 105301, 2014.
+<br />[<a href="http://arxiv.org/abs/1010.2745">arXiv:1010.2745</a>].
 <br /><br /></dd>
 
 <dt><a name="Williams_Williams">157</a></dt>
@@ -4585,9 +4647,124 @@ pg. 431-442, Springer, 2006.
 <br />[<a href="http://eprint.iacr.org/2011/474">IACR eprint 2011/474</a>]
 <br /><br /></dd>
 
-</dl>
-</div>
+<dt><a name="ZK19">405</a></dt>
+<dd>Kun Zhang and Vladimir E. Korepin
+<br />Low depth quantum search algorithm
+<br /><em><a href="https://arxiv.org/abs/1908.04171">arXiv:1908.04171</a></em>, 2019.
+<br /><br /></dd>
 
+<dt><a name="SM19">406</a></dt>
+<dd>Andriyan Bayo Suksmono and Yuichiro Minato
+<br />Finding Hadamard matrices by a quantum annealing machine
+<br /><em>Scientific Reports</em> 9:14380, 2019.
+<br />[<a href="https://arxiv.org/abs/1902.07890">arXiv:1902.07890</a>]
+<br /><br /></dd>
+
+<dt><a name="IPS18">407</a></dt>
+<dd>G&aacute;bor Ivanyos, Anupam Prakash, and Miklos Santha
+<br />On learning linear functions from subset and its applications in quantum computing
+<br /><em>26th Annual European Symposium on Algorithms (ESA 2018)</em>, <a href="https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16083"></a>LIPIcs volume 112</a>, 2018.
+<br />[<a href="https://arxiv.org/abs/1806.09660">arXiv:1806.09660</a>]
+<br /><br /></dd>
+
+<dt><a name="Ivanyos08">408</a></dt>
+<dd>G&aacute;bor Ivanyos
+<br />On solving systems of random linear disequations
+<br /><em>Quantum Information and Computation</em>, 8(6):579-594, 2008.
+<br />[<a href="https://arxiv.org/abs/0704.2988">arXiv:0704.2988</a>]
+<br /><br /></dd>
+</dl>
+
+<dt><a name="ABI18">409</a></dt>
+<dd>A. Ambainis, K. Balodis, J. Iraids, M. Kokainis, K. Prusis, and J. Vihrovs
+<br />Quantum speedups for exponential-time dynamic programming algorithms
+<br /><em>Proceedings of the 30th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 19)</em>, pg. 1783-1793, 2019.
+<br />[<a href="https://arxiv.org/abs/1807.05209">arXiv:1807.05209</a>]
+<br /><br /></dd>
+</dl>
+
+<dt><a name="BCOW17">410</a></dt>
+<dd> Dominic W. Berry, Andrew M. Childs, Aaron Ostrander, and Guoming Wang
+<br />Quantum algorithm for linear differential equations with exponentially improved dependence on precision
+<br /><em>Communications in Mathematical Physics</em>, 356(3):1057-1081, 2017.
+<br />[<a href="https://arxiv.org/abs/1701.03684">arXiv:1701.03684</a>]
+<br /><br /></dd>
+</dl>
+
+<dt><a name="LO08">411</a></dt>
+<dd> Sarah K. Leyton and Tobias J. Osborne
+<br />Quantum algorithm to solve nonlinear differential equations
+<br /><i><a href="https://arxiv.org/abs/0812.4423">arXiv:0812.4423</a></i>
+<br /><br /></dd>
+</dl>
+
+<dt><a name="CPP13">412</a></dt>
+<dd> Y. Cao, A. Papageorgiou, I. Petras, J. Traub, and S. Kais
+<br />Quantum algorithm and circuit design solving the Poisson equation
+<br /><i>New Journal of Physics</i> 15(1):013021, 2013.
+<br />[<a href="https://arxiv.org/abs/1207.2485">arXiv:1207.2485</a>]
+<br /><br /></dd>
+</dl>
+
+<dt><a name="WWL19">413</a></dt>
+<dd> S. Wang, Z. Wang, W. Li, L. Fan, Z. Wei, and Y. Gu
+<br />Quantum fast Poisson solver: the algorithm and modular circuit design
+<br /><i><a href="https://arxiv.org/abs/1910.09756">arXiv:1910.09756</a></i>, 2019.
+<br /><br /></dd>
+</dl>
+
+<dt><a name="SVM17">414</a></dt>
+<dd> A. Scherer, B. Valiron, S.-C. Mau, S. Alexander, E. van den Berg, and T. Chapuran
+<br />Concrete resource analysis of the quantum linear system algorithm used to compute the electromagnetic scattering crossection of a 2D target
+<br /><i>Quantum Information Processing</i> 16:60, 2017.
+<br />[<a href="https://arxiv.org/abs/1505.06552">arXiv:1505.06552</a>]
+<br /><br /></dd>
+</dl>
+
+<dt><a name="AKW19">415</a></dt>
+<dd> Juan Miguel Arrazola, Timjan Kalajdziavski, Christian Weedbrook, and Seth Lloyd
+<br />Quantum algorithm for nonhomogeneous linear partial differential equations
+<br /><i>Physical Review A</i> 100:032306, 2019.
+<br />[<a href="https://arxiv.org/abs/1809.02622">arXiv:1809.02622</a>]
+<br /><br /></dd>
+</dl>
+
+<dt><a name="CL19">416</a></dt>
+<dd> Andrew Childs and Jin-Peng Liu
+<br />Quantum spectral methods for differential equations
+<br /><i><a href="https://arxiv.org/abs/1901.00961">arXiv:1901.00961</a></i>
+<br /><br /></dd>
+</dl>
+
+<dt><a name="ESP19">417</a></dt>
+<dd> Alexander Engle, Graeme Smith, and Scott E. Parker
+<br />A quantum algorithm for the Vlasov equation
+<br /><i><a href="https://arxiv.org/abs/1907.09418">arXiv:1907.09418</a></i>
+<br /><br /></dd>
+</dl>
+
+<dt><a name="CML18">418</a></dt>
+<dd> Shouvanik Chakrabarti, Andrew M. Childs, Tongyang Li, and Xiaodi Wu
+<br />Quantum algorithms and lower bounds for convex optimization
+<br /><i><a href="https://arxiv.org/abs/1809.01731">arXiv:1809.01731</a></i>
+<br /><br /></dd>
+</dl>
+
+<dt><a name="CMH19">419</a></dt>
+<dd> S. Chakrabarti, A. M. Childs, S.-H. Hung, T. Li, C. Wang, and X. Wu
+<br />Quantum algorithm for estimating volumes of convex bodies
+<br /><i><a href="https://arxiv.org/abs/1908.03903">arXiv:1908.03903</a></i>
+<br /><br /></dd>
+</dl>
+
+<dt><a name="AGG18">420</a></dt>
+<dd> Joran van Apeldoorn, Andr&aacute;s Gily&eacute;n, Sander Gribling, and Ronald de Wolf
+<br />Convex optimization using quantum oracles
+<br /><i><a href="https://arxiv.org/abs/1809.00643">arXiv:1809.00643</a></i>
+<br /><br /></dd>
+</dl>
+
+</div>
 <div id="sidebar">
 
 <h2>Navigation</h2>
@@ -4595,12 +4772,13 @@ pg. 431-442, Springer, 2006.
 <a href="#algebraic">Algebraic &amp; Number Theoretic</a><br />
 <a href="#oracular">Oracular</a><br />
 <a href="#BQP">Approximation and Simulation</a><br />
+<a href="#ONML">Optimization, Numerics, &amp; Machine Learning</a><br />
 <a href="#acknowledgments">Acknowledgments</a><br />
 <a href="#references">References</a><br /><br />
 </div>
 
 <h2>Translations</h2>
-The quantum algorithm zoo has been translated into:
+This page has been translated into:
 <div class="navlist">
 <a href="https://www.qmedia.jp/algorithm-zoo/">Japanese</a><br />
 <a href="https://www.qtumist.com/quantum-algorithm-zoo">Chinese</a><br /><br />
@@ -4618,7 +4796,8 @@ For overviews of quantum algorithms I recommend:<br /><br />
 <a href="http://arxiv.org/abs/1206.6126">van Dam and Sasaki</a><br />
 <a href="http://cacm.acm.org/magazines/2010/2/69352-recent-progress-in-quantum-algorithms/fulltext">Bacon and van Dam</a><br />
 <a href="https://www.fgamedia.org/faculty/loceff/cs_courses/cs_83a/Intro_to_QC_Vol_1_Loceff.pdf">Loceff</a><br />
-<a href="http://arxiv.org/abs/1511.04206">Montanaro</a><br /><br />
+<a href="http://arxiv.org/abs/1511.04206">Montanaro</a><br />
+<a href="https://www.amazon.com/Quantum-Computing-Approach-Jack-Hidary/dp/3030239217/">Hidary</a><br /><br />
 </div>
 
 <h2>Terminology</h2>
@@ -4639,7 +4818,7 @@ Author:<br /><br />
 <div style="clear: both;"></div>
 <br />
 
-Last updated: August 7, 2018<br />
+Last updated: December 5, 2019<br />
 Date created: April 22, 2011<br /><br />
 
 </div>
