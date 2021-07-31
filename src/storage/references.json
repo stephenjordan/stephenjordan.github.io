@@ -1,0 +1,3741 @@
+{
+  "1": {
+    "ref_id": 1,
+    "authors": "Daniel S. Abrams and Seth Lloyd",
+    "title": "Simulation of many-body Fermi systems on a universal quantum computer.",
+    "links": {
+      "arXiv:quant-ph/9703054": "http://arxiv.org/abs/quant-ph/9703054"
+    },
+    "extra": "<em>Physical Review Letters</em>, 79(13):2586-2589, 1997."
+  },
+  "2": {
+    "ref_id": 2,
+    "authors": "Dorit Aharonov and Itai Arad",
+    "title": "The BQP-hardness of approximating the Jones polynomial.",
+    "links": {
+      "arXiv:quant-ph/0605181": "http://arxiv.org/abs/quant-ph/0605181"
+    },
+    "extra": "<em>New Journal of Physics</em> 13:035019, 2011."
+  },
+  "3": {
+    "ref_id": 3,
+    "authors": "Dorit Aharonov, Itai Arad, Elad Eban, and Zeph Landau",
+    "title": "Polynomial quantum algorithms for additive approximations of the Potts model and other points of the Tutte plane.",
+    "links": {
+      "arXiv:quant-ph/0702008": "http://arxiv.org/abs/quant-ph/0702008"
+    },
+    "extra": ""
+  },
+  "4": {
+    "ref_id": 4,
+    "authors": "Dorit Aharonov, Vaughan Jones, and Zeph Landau",
+    "title": "A polynomial quantum algorithm for approximating the Jones polynomial.",
+    "links": {
+      "arXiv:quant-ph/0511096": "http://arxiv.org/abs/quant-ph/0511096"
+    },
+    "extra": "In <em>Proceedings of the 38th ACM Symposium on Theory of Computing</em>, 2006."
+  },
+  "5": {
+    "ref_id": 5,
+    "authors": "Dorit Aharonov and Amnon Ta-Shma",
+    "title": "Adiabatic quantum state generation and statistical zero knowledge.",
+    "links": {
+      "arXiv:quant-ph/0301023": "http://arxiv.org/abs/quant-ph/0301023"
+    },
+    "extra": "In <em>Proceedings of the 35th ACM Symposium on Theory of Computing</em>, 2003."
+  },
+  "6": {
+    "ref_id": 6,
+    "authors": "A. Ambainis, H. Buhrman, P. H\u00f8yer, M. Karpinizki, and P. Kurur",
+    "title": "Quantum matrix verification.",
+    "links": {},
+    "extra": "Unpublished Manuscript, 2002."
+  },
+  "7": {
+    "ref_id": 7,
+    "authors": "Andris Ambainis",
+    "title": "Quantum walk algorithm for element distinctness.",
+    "links": {
+      "arXiv:quant-ph/0311001": "http://arxiv.org/abs/quant-ph/0311001"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 37:210-239, 2007."
+  },
+  "8": {
+    "ref_id": 8,
+    "authors": "Andris Ambainis, Andrew M. Childs, Ben W.Reichardt, Robert \u0160palek, and Shengyu Zheng",
+    "title": "Every AND-OR formula of size N can be evaluated in time \\( n^{1/2+o(1)} \\) on a quantum computer.",
+    "links": {
+      "arXiv:quant-ph/0703015": "http://arxiv.org/abs/quant-ph/0703015",
+      "arXiv:0704.3628": "http://arxiv.org/abs/0704.3628"
+    },
+    "extra": "In <em>Proceedings of the 48th IEEE Symposium on the Foundations of Computer Science</em>, pages 363-372, 2007. <a href=\"http://arxiv.org/abs/quant-ph/0703015\">arXiv:quant-ph/0703015</a> and"
+  },
+  "9": {
+    "ref_id": 9,
+    "authors": "Dave Bacon, Andrew M. Childs, and Wim van Dam",
+    "title": "From optimal measurement to efficient quantum algorithms for the hidden subgroup problem over semidirect product groups.",
+    "links": {
+      "arXiv:quant-ph/0504083": "http://arxiv.org/abs/quant-ph/0504083"
+    },
+    "extra": "In <em>Proceedings of the 46th IEEE Symposium on Foundations of Computer Science</em>, pages 469-478, 2005."
+  },
+  "10": {
+    "ref_id": 10,
+    "authors": "Michael Ben-Or and Avinatan Hassidim",
+    "title": "Quantum search in an ordered list via adaptive learning.",
+    "links": {
+      "arXiv:quant-ph/0703231": "http://arxiv.org/abs/quant-ph/0703231"
+    },
+    "extra": ""
+  },
+  "11": {
+    "ref_id": 11,
+    "authors": "Ethan Bernstein and Umesh Vazirani",
+    "title": "Quantum complexity theory.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 25th ACM Symposium on the Theory of Computing</em>, pages 11-20, 1993."
+  },
+  "12": {
+    "ref_id": 12,
+    "authors": "D.W. Berry, G. Ahokas, R. Cleve, and B. C. Sanders",
+    "title": "Efficient quantum algorithms for simulating sparse Hamiltonians.",
+    "links": {
+      "arXiv:quant-ph/0508139": "http://arxiv.org/abs/quant-ph/0508139"
+    },
+    "extra": "<em>Communications in Mathematical Physics</em>, 270(2):359-371, 2007."
+  },
+  "13": {
+    "ref_id": 13,
+    "authors": "A. Berzina, A. Dubrovsky, R. Frivalds, L. Lace, and O. Scegulnaja",
+    "title": "Quantum query complexity for some graph problems.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 30th Conference on Current Trends in Theory and Practive of Computer Science</em>, pages 140-150, 2004."
+  },
+  "14": {
+    "ref_id": 14,
+    "authors": "D. Boneh and R. J. Lipton",
+    "title": "Quantum cryptanalysis of hidden linear functions.",
+    "links": {},
+    "extra": "In Don Coppersmith, editor, <em>CRYPTO '95</em>, Lecture Notes in Computer Science, pages 424-437. Springer-Verlag, 1995."
+  },
+  "15": {
+    "ref_id": 15,
+    "authors": "M. Boyer, G. Brassard, P. H\u00f8yer, and A. Tapp",
+    "title": "Tight bounds on quantum searching.",
+    "links": {},
+    "extra": "<em>Fortschritte der Physik</em>, 46:493-505, 1998."
+  },
+  "16": {
+    "ref_id": 16,
+    "authors": "G. Brassard, P. H\u00f8yer, and A. Tapp",
+    "title": "Quantum counting.",
+    "links": {
+      "arXiv:quant-ph/9805082": "http://arxiv.org/abs/quant-ph/9805082"
+    },
+    "extra": ""
+  },
+  "17": {
+    "ref_id": 17,
+    "authors": "Gilles Brassard, Peter H\u00f8yer, Michele Mosca, and Alain Tapp",
+    "title": "Quantum amplitude amplification and estimation.",
+    "links": {
+      "arXiv:quant-ph/0005055": "http://arxiv.org/abs/quant-ph/0005055"
+    },
+    "extra": "In Samuel J. Lomonaco Jr. and Howard E. Brandt, editors, <em>Quantum Computation and Quantum Information: A Millennium Volume</em>, volume 305 of <em> AMS Contemporary Mathematics Series</em> . American Mathematical Society, 2002."
+  },
+  "18": {
+    "ref_id": 18,
+    "authors": "Gilles Brassard, Peter H\u00f8yer, and Alain Tapp",
+    "title": "Quantum algorithm for the collision problem.",
+    "links": {
+      "arXiv:quant-ph/9705002": "http://arxiv.org/abs/quant-ph/9705002"
+    },
+    "extra": "<em>ACM SIGACT News</em>, 28:14-19, 1997."
+  },
+  "19": {
+    "ref_id": 19,
+    "authors": "Harry Buhrman and Robert \u0160palek",
+    "title": "Quantum verification of matrix products.",
+    "links": {
+      "arXiv:quant-ph/0409035": "http://arxiv.org/abs/quant-ph/0409035"
+    },
+    "extra": "In <em>Proceedings of the 17th ACM-SIAM Symposium on Discrete Algorithms</em>, pages 880-889, 2006."
+  },
+  "20": {
+    "ref_id": 20,
+    "authors": "David Bulger",
+    "title": "Quantum basin hopping with gradient-based local optimisation.",
+    "links": {
+      "arXiv:quant-ph/0507193": "http://arxiv.org/abs/quant-ph/0507193"
+    },
+    "extra": ""
+  },
+  "21": {
+    "ref_id": 21,
+    "authors": "Harry Burhrman, Christoph D\u00fcrr, Mark Heiligman, Peter H\u00f8yer, Fr\u00e9d\u00e9ric Magniez, Miklos Santha, and Ronald de Wolf",
+    "title": "Quantum algorithms for element distinctness.",
+    "links": {
+      "arXiv:quant-ph/0007016": "http://arxiv.org/abs/quant-ph/0007016"
+    },
+    "extra": "In <em>Proceedings of the 16th IEEE Annual Conference on Computational Complexity</em>, pages 131-137, 2001."
+  },
+  "22": {
+    "ref_id": 22,
+    "authors": "Dong Pyo Chi, Jeong San Kim, and Soojoon Lee",
+    "title": "Notes on the hidden subgroup problem on some semi-direct product groups.",
+    "links": {
+      "arXiv:quant-ph/0604172": "http://arxiv.org/abs/quant-ph/0604172"
+    },
+    "extra": "<i> Phys. Lett. A</i> 359(2):114-116, 2006."
+  },
+  "23": {
+    "ref_id": 23,
+    "authors": "A. M. Childs, L. J. Schulman, and U. V. Vazirani",
+    "title": "Quantum algorithms for hidden nonlinear structures.",
+    "links": {
+      "arXiv:0705.2784": "http://arxiv.org/abs/0705.2784"
+    },
+    "extra": "In <em>Proceedings of the 48th IEEE Symposium on Foundations of Computer Science</em>, pages 395-404, 2007."
+  },
+  "24": {
+    "ref_id": 24,
+    "authors": "Andrew Childs and Troy Lee",
+    "title": "Optimal quantum adversary lower bounds for ordered search.",
+    "links": {
+      "arXiv:0708.3396": "http://arxiv.org/abs/0708.3396"
+    },
+    "extra": "<i>Proceedings of ICALP 2008</i>"
+  },
+  "25": {
+    "ref_id": 25,
+    "authors": "Andrew M. Childs",
+    "title": "<em><a href=\"http://www.math.uwaterloo.ca/~amchilds/papers/thesis.pdf\">Quantum information processing in continuous time</a></em>",
+    "links": {
+      "Quantum information processing in continuous time": "http://www.math.uwaterloo.ca/~amchilds/papers/thesis.pdf"
+    },
+    "extra": ""
+  },
+  "26": {
+    "ref_id": 26,
+    "authors": "Andrew M. Childs, Richard Cleve, Enrico Deotto, Edward Farhi, Sam Gutmann, and Daniel A. Spielman",
+    "title": "Exponential algorithmic speedup by quantum walk.",
+    "links": {
+      "arXiv:quant-ph/0209131": "http://arxiv.org/abs/quant-ph/0209131"
+    },
+    "extra": "In <em>Proceedings of the 35th ACM Symposium on Theory of Computing</em>, pages 59-68, 2003."
+  },
+  "27": {
+    "ref_id": 27,
+    "authors": "Andrew M. Childs, Richard Cleve, Stephen P. Jordan, and David Yonge-Mallo",
+    "title": "Discrete-query quantum algorithm for NAND trees.",
+    "links": {
+      "arXiv:quant-ph/0702160": "http://arxiv.org/abs/quant-ph/0702160"
+    },
+    "extra": "<em>Theory of Computing</em>, 5:119-123, 2009."
+  },
+  "28": {
+    "ref_id": 28,
+    "authors": "Andrew M. Childs and Wim van Dam",
+    "title": "Quantum algorithm for a generalized hidden shift problem.",
+    "links": {
+      "arXiv:quant-ph/0507190": "http://arxiv.org/abs/quant-ph/0507190"
+    },
+    "extra": "In <em>Proceedings of the 18th ACM-SIAM Symposium on Discrete Algorithms</em>, pages 1225-1232, 2007."
+  },
+  "29": {
+    "ref_id": 29,
+    "authors": "Richard Cleve, Dmitry Gavinsky, and David L. Yonge-Mallo",
+    "title": "Quantum algorithms for evaluating MIN-MAX trees.",
+    "links": {
+      "arXiv:0710.5794": "http://arxiv.org/abs/0710.5794"
+    },
+    "extra": "In <em>Theory of Quantum Computation, Communication, andCryptography</em>, pages 11-15, Springer, 2008. (LNCS Vol. 5106)"
+  },
+  "30": {
+    "ref_id": 30,
+    "authors": "J. Niel de Beaudrap, Richard Cleve, and John Watrous",
+    "title": "Sharp quantum versus classical query complexity separations.",
+    "links": {
+      "arXiv:quant-ph/0011065v2": "http://arxiv.org/abs/quant-ph/0011065"
+    },
+    "extra": "<em>Algorithmica</em>, 34(4):449-461, 2002."
+  },
+  "31": {
+    "ref_id": 31,
+    "authors": "Thomas Decker, Jan Draisma, and Pawel Wocjan",
+    "title": "Quantum algorithm for identifying hidden polynomials.",
+    "links": {
+      "arXiv:0706.1219": "http://arxiv.org/abs/0706.1219"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 9(3):215-230, 2009."
+  },
+  "32": {
+    "ref_id": 32,
+    "authors": "David Deutsch",
+    "title": "Quantum theory, the Church-Turing principle, and the universal quantum computer.",
+    "links": {},
+    "extra": "<em>Proceedings of the Royal Society of London Series A</em>, 400:97-117, 1985."
+  },
+  "33": {
+    "ref_id": 33,
+    "authors": "David Deutsch and Richard Jozsa",
+    "title": "Rapid solution of problems by quantum computation.",
+    "links": {},
+    "extra": "<em>Proceedings of the Royal Society of London Series A</em>, 493:553-558, 1992."
+  },
+  "34": {
+    "ref_id": 34,
+    "authors": "Christoph D\u00fcrr, Mark Heiligman, Peter H\u00f8yer, and Mehdi Mhalla",
+    "title": "Quantum query complexity of some graph problems.",
+    "links": {
+      "arXiv:quant-ph/0401091": "http://arxiv.org/abs/quant-ph/0401091"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 35(6):1310-1328, 2006."
+  },
+  "35": {
+    "ref_id": 35,
+    "authors": "Christoph D\u00fcrr and Peter H\u00f8yer",
+    "title": "A quantum algorithm for finding the minimum.",
+    "links": {
+      "arXiv:quant-ph/9607014": "http://arxiv.org/abs/quant-ph/9607014"
+    },
+    "extra": ""
+  },
+  "36": {
+    "ref_id": 36,
+    "authors": "Christoph D\u00fcrr, Mehdi Mhalla, and Yaohui Lei",
+    "title": "Quantum query complexity of graph connectivity.",
+    "links": {
+      "arXiv:quant-ph/0303169": "http://arxiv.org/abs/quant-ph/0303169"
+    },
+    "extra": ""
+  },
+  "37": {
+    "ref_id": 37,
+    "authors": "Mark Ettinger, Peter H\u00f8yer, and Emanuel Knill",
+    "title": "The quantum query complexity of the hidden subgroup problem is polynomial.",
+    "links": {
+      "arXiv:quant-ph/0401083": "http://arxiv.org/abs/quant-ph/0401083"
+    },
+    "extra": "<em>Information Processing Letters</em>, 91(1):43-48, 2004."
+  },
+  "38": {
+    "ref_id": 38,
+    "authors": "Edward Farhi, Jeffrey Goldstone, and Sam Gutmann",
+    "title": "A quantum algorithm for the Hamiltonian NAND tree.",
+    "links": {
+      "arXiv:quant-ph/0702144": "http://arxiv.org/abs/quant-ph/0702144"
+    },
+    "extra": "<em>Theory of Computing</em> 4:169-190, 2008."
+  },
+  "39": {
+    "ref_id": 39,
+    "authors": "Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Michael Sipser",
+    "title": "Invariant quantum algorithms for insertion into an ordered list.",
+    "links": {
+      "arXiv:quant-ph/9901059": "http://arxiv.org/abs/quant-ph/9901059"
+    },
+    "extra": ""
+  },
+  "40": {
+    "ref_id": 40,
+    "authors": "Richard P. Feynman",
+    "title": "Simulating physics with computers.",
+    "links": {},
+    "extra": "<em>International Journal of Theoretical Physics</em>, 21(6/7):467-488, 1982."
+  },
+  "41": {
+    "ref_id": 41,
+    "authors": "Michael Freedman, Alexei Kitaev, and Zhenghan Wang",
+    "title": "Simulation of topological field theories by quantum computers.",
+    "links": {},
+    "extra": "<em>Communications in Mathematical Physics</em>, 227:587-603, 2002."
+  },
+  "42": {
+    "ref_id": 42,
+    "authors": "Michael Freedman, Michael Larsen, and Zhenghan Wang",
+    "title": "A modular functor which is universal for quantum computation.",
+    "links": {
+      "arXiv:quant-ph/0001108": "http://arxiv.org/abs/quant-ph/0001108"
+    },
+    "extra": "<i>Comm. Math. Phys.</i> 227(3):605-622, 2002."
+  },
+  "43": {
+    "ref_id": 43,
+    "authors": "K. Friedl, G. Ivanyos, F. Magniez, M. Santha, and P. Sen",
+    "title": "Hidden translation and translating coset in quantum computing.",
+    "links": {
+      "arXiv:quant-ph/0211091": "http://arxiv.org/abs/quant-ph/0211091"
+    },
+    "extra": "<em>SIAM Journal on Computing</em> Vol. 43, pp. 1-24, 2014. Appeared earlier in <em>Proceedings of the 35th ACM Symposium on Theory of Computing</em>, pages 1-9, 2003."
+  },
+  "44": {
+    "ref_id": 44,
+    "authors": "D. Gavinsky",
+    "title": "Quantum solution to the hidden subgroup problem for poly-near-Hamiltonian-groups.",
+    "links": {},
+    "extra": "<em>Quantum Information and Computation</em>, 4:229-235, 2004."
+  },
+  "45": {
+    "ref_id": 45,
+    "authors": "Joseph Geraci",
+    "title": "A new connection between quantum circuits, graphs and the Isingpartition function",
+    "links": {
+      "arXiv:0801.4833": "http://arxiv.org/abs/0801.4833"
+    },
+    "extra": "<em>Quantum Information Processing</em>, 7(5):227-242, 2008."
+  },
+  "46": {
+    "ref_id": 46,
+    "authors": "Joseph Geraci and Frank Van Bussel",
+    "title": "A theorem on the quantum evaluation of weight enumerators for acertain class of cyclic Codes with a note on cyclotomic cosets.",
+    "links": {
+      "arXiv:cs/0703129": "http://arxiv.org/abs/cs/0703129"
+    },
+    "extra": ""
+  },
+  "47": {
+    "ref_id": 47,
+    "authors": "Joseph Geraci and Daniel A. Lidar",
+    "title": "On the exact evaluation of certain instances of the Potts partition function by quantum computers.",
+    "links": {
+      "arXiv:quant-ph/0703023": "http://arxiv.org/abs/quant-ph/0703023"
+    },
+    "extra": "<i>Comm. Math. Phys.</i> Vol. 279, pg. 735, 2008."
+  },
+  "48": {
+    "ref_id": 48,
+    "authors": "Lov K. Grover",
+    "title": "Quantum mechanics helps in searching for a needle in a haystack.",
+    "links": {
+      "arXiv:quant-ph/9605043": "http://arxiv.org/abs/quant-ph/9605043"
+    },
+    "extra": "<em>Physical Review Letters</em>, 79(2):325-328, 1997."
+  },
+  "49": {
+    "ref_id": 49,
+    "authors": "Sean Hallgren",
+    "title": "Polynomial-time quantum algorithms for Pell's equation and the principal ideal problem.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 34th ACM Symposium on Theory of Computing</em>, 2002."
+  },
+  "50": {
+    "ref_id": 50,
+    "authors": "Sean Hallgren",
+    "title": "Fast quantum algorithms for computing the unit group and class group of a number field.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 37th ACM Symposium on Theory of Computing</em>, 2005."
+  },
+  "51": {
+    "ref_id": 51,
+    "authors": "Sean Hallgren, Alexander Russell, and Amnon Ta-Shma",
+    "title": "Normal subgroup reconstruction and quantum computation using group representations.",
+    "links": {},
+    "extra": "<em>SIAM Journal on Computing</em>, 32(4):916-934, 2003."
+  },
+  "52": {
+    "ref_id": 52,
+    "authors": "Mark Heiligman",
+    "title": "Quantum algorithms for lowest weight paths and spanning trees in complete graphs.",
+    "links": {
+      "arXiv:quant-ph/0303131": "http://arxiv.org/abs/quant-ph/0303131"
+    },
+    "extra": ""
+  },
+  "53": {
+    "ref_id": 53,
+    "authors": "Yoshifumi Inui and Fran\u00e7ois Le Gall",
+    "title": "Efficient quantum algorithms for the hidden subgroup problem over a class of semi-direct product groups.",
+    "links": {
+      "arXiv:quant-ph/0412033": "http://arxiv.org/abs/quant-ph/0412033"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 7(5/6):559-570, 2007."
+  },
+  "54": {
+    "ref_id": 54,
+    "authors": "Yuki Kelly Itakura",
+    "title": "Quantum algorithm for commutativity testing of a matrix set.",
+    "links": {
+      "arXiv:quant-ph/0509206": "http://arxiv.org/abs/quant-ph/0509206"
+    },
+    "extra": "Master's thesis, University of Waterloo, 2005."
+  },
+  "55": {
+    "ref_id": 55,
+    "authors": "G\u00e1bor Ivanyos, Fr\u00e9d\u00e9ric Magniez, and Miklos Santha",
+    "title": "Efficient quantum algorithms for some instances of the non-abelian hidden subgroup problem.",
+    "links": {
+      "arXiv:quant-ph/0102014": "http://arxiv.org/abs/quant-ph/0102014"
+    },
+    "extra": "In <em>Proceedings of the 13th ACM Symposium on Parallel Algorithms and Architectures</em>, pages 263-270, 2001."
+  },
+  "56": {
+    "ref_id": 56,
+    "authors": "G\u00e1bor Ivanyos, Luc Sanselme, and Miklos Santha",
+    "title": "An efficient quantum algorithm for the hidden subgroup problem in extraspecial groups.",
+    "links": {
+      "arXiv:quant-ph/0701235": "http://arxiv.org/abs/quant-ph/0701235"
+    },
+    "extra": "In <em>Proceedings of the 24th Symposium on Theoretical Aspects of Computer Science</em>, 2007."
+  },
+  "57": {
+    "ref_id": 57,
+    "authors": "G\u00e1bor Ivanyos, Luc Sanselme, and Miklos Santha",
+    "title": "An efficient quantum algorithm for the hidden subgroup problem in nil-2 groups.",
+    "links": {
+      "arXiv:0707.1260": "http://arxiv.org/abs/0707.1260"
+    },
+    "extra": "In <em>LATIN 2008: Theoretical Informatics</em>, pg. 759-771,Springer (LNCS 4957)."
+  },
+  "58": {
+    "ref_id": 58,
+    "authors": "Dominik Janzing and Pawel Wocjan",
+    "title": "BQP-complete problems concerning mixing properties of classical random walks on sparse graphs.",
+    "links": {
+      "arXiv:quant-ph/0610235": "http://arxiv.org/abs/quant-ph/0610235"
+    },
+    "extra": ""
+  },
+  "59": {
+    "ref_id": 59,
+    "authors": "Dominik Janzing and Pawel Wocjan",
+    "title": "A promiseBQP-complete string rewriting problem.",
+    "links": {
+      "arXiv:0705.1180": "http://arxiv.org/abs/0705.1180"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 10(3/4):234-257, 2010."
+  },
+  "60": {
+    "ref_id": 60,
+    "authors": "Dominik Janzing and Pawel Wocjan",
+    "title": "A simple promiseBQP-complete matrix problem.",
+    "links": {
+      "arXiv:quant-ph/0606229": "http://arxiv.org/abs/quant-ph/0606229"
+    },
+    "extra": "<em>Theory of Computing</em>, 3:61-79, 2007."
+  },
+  "61": {
+    "ref_id": 61,
+    "authors": "Stephen P. Jordan",
+    "title": "Fast quantum algorithm for numerical gradient estimation.",
+    "links": {
+      "arXiv:quant-ph/0405146": "http://arxiv.org/abs/quant-ph/0405146"
+    },
+    "extra": "<em>Physical Review Letters</em>, 95:050501, 2005."
+  },
+  "62": {
+    "ref_id": 62,
+    "authors": "Stephen P. Jordan",
+    "title": "<em>Quantum Computation Beyond the Circuit Model</em>",
+    "links": {
+      "arXiv:0809.2307": "http://arxiv.org/abs/0809.2307"
+    },
+    "extra": ". PhD thesis, Massachusetts Institute of Technology, 2008."
+  },
+  "63": {
+    "ref_id": 63,
+    "authors": "Ivan Kassal, Stephen P. Jordan, Peter J. Love, Masoud Mohseni, and Al\u00e1n Aspuru-Guzik",
+    "title": "Quantum algorithms for the simulation of chemical dynamics.",
+    "links": {
+      "arXiv:0801.2986": "http://arxiv.org/abs/0801.2986"
+    },
+    "extra": "<i>Proc. Natl. Acad. Sci.</i> Vol. 105, pg. 18681, 2008."
+  },
+  "64": {
+    "ref_id": 64,
+    "authors": "Kiran S. Kedlaya",
+    "title": "Quantum computation of zeta functions of curves.",
+    "links": {
+      "arXiv:math/0411623": "http://arxiv.org/abs/math/0411623"
+    },
+    "extra": "<em>Computational Complexity</em>, 15:1-19, 2006."
+  },
+  "65": {
+    "ref_id": 65,
+    "authors": "E. Knill and R. Laflamme",
+    "title": "Quantum computation and quadratically signed weight enumerators.",
+    "links": {
+      "arXiv:quant-ph/9909094": "http://arxiv.org/abs/quant-ph/9909094"
+    },
+    "extra": "<em>Information Processing Letters</em>, 79(4):173-179, 2001."
+  },
+  "66": {
+    "ref_id": 66,
+    "authors": "Greg Kuperberg",
+    "title": "A subexponential-time quantum algorithm for the dihedral hidden subgroup problem.",
+    "links": {
+      "arXiv:quant-ph/0302112": "http://arxiv.org/abs/quant-ph/0302112"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 35(1):170-188, 2005."
+  },
+  "67": {
+    "ref_id": 67,
+    "authors": "Daniel A. Lidar",
+    "title": "On the quantum computational complexity of the Ising spin glass partition function and of knot invariants.",
+    "links": {
+      "arXiv:quant-ph/0309064": "http://arxiv.org/abs/quant-ph/0309064"
+    },
+    "extra": "<em>New Journal of Physics</em> Vol. 6, pg. 167, 2004."
+  },
+  "68": {
+    "ref_id": 68,
+    "authors": "Daniel A. Lidar and Haobin Wang",
+    "title": "Calculating the thermal rate constant with exponential speedup on a quantum computer.",
+    "links": {
+      "arXiv:quant-ph/9807009": "http://arxiv.org/abs/quant-ph/9807009"
+    },
+    "extra": "<em>Physical Review E</em>, 59(2):2429-2438, 1999."
+  },
+  "69": {
+    "ref_id": 69,
+    "authors": "Chris Lomont",
+    "title": "The hidden subgroup problem - review and open problems.",
+    "links": {
+      "arXiv:quant-ph/0411037": "http://arxiv.org/abs/quant-ph/0411037"
+    },
+    "extra": ""
+  },
+  "70": {
+    "ref_id": 70,
+    "authors": "Fr\u00e9d\u00e9ric Magniez, Miklos Santha, and Mario Szegedy",
+    "title": "Quantum algorithms for the triangle problem.",
+    "links": {
+      "arXiv:quant-ph/0310134": "http://arxiv.org/abs/quant-ph/0310134"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 37(2):413-424, 2007."
+  },
+  "71": {
+    "ref_id": 71,
+    "authors": "Carlos Magno, M. Cosme, and Renato Portugal",
+    "title": "Quantum algorithm for the hidden subgroup problem on a class of semidirect product groups.",
+    "links": {
+      "arXiv:quant-ph/0703223": "http://arxiv.org/abs/quant-ph/0703223"
+    },
+    "extra": ""
+  },
+  "72": {
+    "ref_id": 72,
+    "authors": "Cristopher Moore, Daniel Rockmore, Alexander Russell, and Leonard Schulman",
+    "title": "The power of basis selection in Fourier sampling: the hidden subgroup problem in affine groups.",
+    "links": {
+      "arXiv:quant-ph/0211124": "http://arxiv.org/abs/quant-ph/0211124"
+    },
+    "extra": "In <em>Proceedings of the 15th ACM-SIAM Symposium on Discrete Algorithms</em>, pages 1113-1122, 2004."
+  },
+  "73": {
+    "ref_id": 73,
+    "authors": "M. Mosca",
+    "title": "Quantum searching, counting, and amplitude amplification by eigenvector analysis.",
+    "links": {},
+    "extra": "In R. Freivalds, editor, <em>Proceedings of International Workshop on Randomized Algorithms</em>, pages 90-100, 1998."
+  },
+  "74": {
+    "ref_id": 74,
+    "authors": "Michele Mosca",
+    "title": "<em><a href=\"http://www.iqc.ca/~mmosca/web/papers/moscathesis.pdf\">Quantum Computer Algorithms</a></em>",
+    "links": {
+      "Quantum Computer Algorithms": "http://www.iqc.ca/~mmosca/web/papers/moscathesis.pdf"
+    },
+    "extra": ""
+  },
+  "75": {
+    "ref_id": 75,
+    "authors": "Ashwin Nayak and Felix Wu",
+    "title": "The quantum query complexity of approximating the median and related statistics.",
+    "links": {
+      "arXiv:quant-ph/9804066": "http://arxiv.org/abs/quant-ph/9804066"
+    },
+    "extra": "In <em>Proceedings of 31st ACM Symposium on the Theory of Computing</em>, 1999."
+  },
+  "76": {
+    "ref_id": 76,
+    "authors": "Michael A. Nielsen and Isaac L. Chuang.",
+    "title": "<em>Quantum Computation and Quantum Information</em>",
+    "links": {},
+    "extra": ". Cambridge University Press, Cambridge, UK, 2000."
+  },
+  "77": {
+    "ref_id": 77,
+    "authors": "Erich Novak",
+    "title": "Quantum complexity of integration.",
+    "links": {
+      "arXiv:quant-ph/0008124": "http://arxiv.org/abs/quant-ph/0008124"
+    },
+    "extra": "<em>Journal of Complexity</em>, 17:2-16, 2001."
+  },
+  "78": {
+    "ref_id": 78,
+    "authors": "Oded Regev",
+    "title": "Quantum computation and lattice problems.",
+    "links": {
+      "arXiv:cs/0304005": "http://arxiv.org/abs/cs/0304005"
+    },
+    "extra": "In <em>Proceedings of the 43rd Symposium on Foundations of Computer Science</em>, 2002."
+  },
+  "79": {
+    "ref_id": 79,
+    "authors": "Oded Regev",
+    "title": "A subexponential time algorithm for the dihedral hidden subgroup problem with polynomial space.",
+    "links": {
+      "arXiv:quant-ph/0406151": "http://arxiv.org/abs/quant-ph/0406151"
+    },
+    "extra": ""
+  },
+  "80": {
+    "ref_id": 80,
+    "authors": "Ben Reichardt and Robert \u0160palek",
+    "title": "Span-program-based quantum algorithm for evaluating formulas.",
+    "links": {
+      "arXiv:0710.2630": "http://arxiv.org/abs/0710.2630"
+    },
+    "extra": "<em>Proceedings of STOC 2008</em>"
+  },
+  "81": {
+    "ref_id": 81,
+    "authors": "Martin Roetteler and Thomas Beth",
+    "title": "Polynomial-time solution to the hidden subgroup problem for a class of non-abelian groups.",
+    "links": {
+      "arXiv:quant-ph/9812070": "http://arxiv.org/abs/quant-ph/9812070"
+    },
+    "extra": ""
+  },
+  "82": {
+    "ref_id": 82,
+    "authors": "Peter W. Shor",
+    "title": "Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer.",
+    "links": {
+      "arXiv:quant-ph/9508027": "http://arxiv.org/abs/quant-ph/9508027"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 26(5):1484-1509, 1997."
+  },
+  "83": {
+    "ref_id": 83,
+    "authors": "Peter W. Shor and Stephen P. Jordan",
+    "title": "Estimating Jones polynomials is a complete problem for one clean qubit.",
+    "links": {
+      "arXiv:0707.2831": "http://arxiv.org/abs/0707.2831"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 8(8/9):681-714, 2008."
+  },
+  "84": {
+    "ref_id": 84,
+    "authors": "R. D. Somma, S. Boixo, and H. Barnum",
+    "title": "Quantum simulated annealing.",
+    "links": {
+      "arXiv:0712.1008": "http://arxiv.org/abs/0712.1008"
+    },
+    "extra": ""
+  },
+  "85": {
+    "ref_id": 85,
+    "authors": "M. Szegedy",
+    "title": "Quantum speed-up of Markov chain based algorithms.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 45th IEEE Symposium on Foundations of Computer Science</em>, pg. 32, 2004."
+  },
+  "86": {
+    "ref_id": 86,
+    "authors": "Wim van Dam",
+    "title": "Quantum algorithms for weighing matrices and quadratic residues.",
+    "links": {
+      "arXiv:quant-ph/0008059": "http://arxiv.org/abs/quant-ph/0008059"
+    },
+    "extra": "<em>Algorithmica</em>, 34(4):413-428, 2002."
+  },
+  "87": {
+    "ref_id": 87,
+    "authors": "Wim van Dam",
+    "title": "Quantum computing and zeros of zeta functions.",
+    "links": {
+      "arXiv:quant-ph/0405081": "http://arxiv.org/abs/quant-ph/0405081"
+    },
+    "extra": ""
+  },
+  "88": {
+    "ref_id": 88,
+    "authors": "Wim van Dam and Sean Hallgren",
+    "title": "Efficient quantum algorithms for shifted quadratic character problems.",
+    "links": {
+      "arXiv:quant-ph/0011067": "http://arxiv.org/abs/quant-ph/0011067"
+    },
+    "extra": ""
+  },
+  "89": {
+    "ref_id": 89,
+    "authors": "Wim van Dam, Sean Hallgren, and Lawrence Ip",
+    "title": "Quantum algorithms for some hidden shift problems.",
+    "links": {
+      "arXiv:quant-h/0211140": "http://arxiv.org/abs/quant-ph/0211140"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 36(3):763-778, 2006."
+  },
+  "90": {
+    "ref_id": 90,
+    "authors": "Wim van Dam and Gadiel Seroussi",
+    "title": "Efficient quantum algorithms for estimating Gauss sums.",
+    "links": {
+      "arXiv:quant-ph/0207131": "http://arxiv.org/abs/quant-ph/0207131"
+    },
+    "extra": ""
+  },
+  "91": {
+    "ref_id": 91,
+    "authors": "John Watrous",
+    "title": "Quantum algorithms for solvable groups.",
+    "links": {
+      "arXiv:quant-ph/0011023": "http://arxiv.org/abs/quant-ph/0011023"
+    },
+    "extra": "In <em>Proceedings of the 33rd ACM Symposium on Theory of Computing</em>, pages 60-67, 2001."
+  },
+  "92": {
+    "ref_id": 92,
+    "authors": "Stephen Wiesner",
+    "title": "Simulations of many-body quantum systems by a quantum computer.",
+    "links": {
+      "arXiv:quant-ph/9603028": "http://arxiv.org/abs/quant-ph/9603028"
+    },
+    "extra": ""
+  },
+  "93": {
+    "ref_id": 93,
+    "authors": "Pawel Wocjan and Jon Yard",
+    "title": "The Jones polynomial: quantum algorithms and applications in quantum complexity theory.",
+    "links": {
+      "arXiv:quant-ph/0603069": "http://arxiv.org/abs/quant-ph/0603069"
+    },
+    "extra": "<i>Quantum Information and Computation 8(1/2):147-180, 2008.</i>"
+  },
+  "94": {
+    "ref_id": 94,
+    "authors": "Andrew Yao",
+    "title": "On computing the minima of quadratic forms.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 7th ACM Symposium on Theory of Computing</em>, pages 23-26, 1975."
+  },
+  "95": {
+    "ref_id": 95,
+    "authors": "Christof Zalka",
+    "title": "Efficient simulation of quantum systems by quantum computers.",
+    "links": {
+      "arXiv:quant-ph/9603026": "http://arxiv.org/abs/quant-ph/9603026"
+    },
+    "extra": "<em>Proceedings of the Royal Society of London Series A</em>, 454:313, 1996."
+  },
+  "96": {
+    "ref_id": 96,
+    "authors": "Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Michael Sipser",
+    "title": "Quantum computation by adiabatic evolution.",
+    "links": {
+      "arXiv:quant-ph/0001106": "http://arxiv.org/abs/quant-ph/0001106"
+    },
+    "extra": ""
+  },
+  "97": {
+    "ref_id": 97,
+    "authors": "Dorit Aharonov, Wim van Dam, Julia Kempe, Zeph Landau, Seth Lloyd, andOded Regev",
+    "title": "Adiabatic Quantum Computation is Equivalent to Standard QuantumComputation.",
+    "links": {
+      "arXiv:quant-ph/0405098": "http://arxiv.org/abs/quant-ph/0405098"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 37(1):166-194, 2007."
+  },
+  "98": {
+    "ref_id": 98,
+    "authors": "J\u00e9r\u00e9mie Roland and Nicolas J. Cerf",
+    "title": "Quantum search by local adiabatic evolution.",
+    "links": {
+      "arXiv:quant-ph/0107015": "http://arxiv.org/abs/quant-ph/0107015"
+    },
+    "extra": "<em>Physical Review A</em>, 65(4):042308, 2002."
+  },
+  "99": {
+    "ref_id": 99,
+    "authors": "L.-A. Wu, M.S. Byrd, and D. A. Lidar",
+    "title": "Polynomial-Time Simulation of Pairing Models on a Quantum Computer.",
+    "links": {
+      "arXiv:quant-ph/0108110": "http://arxiv.org/abs/quant-ph/0108110"
+    },
+    "extra": "<em>Physical Review Letters</em>, 89(6):057904, 2002."
+  },
+  "100": {
+    "ref_id": 100,
+    "authors": "Eli Biham, Ofer Biham, David Biron, Markus Grassl, and Daniel Lidar",
+    "title": "Grover's quantum search algorithm for an arbitrary initialamplitude distribution.",
+    "links": {
+      "arXiv:quant-ph/9807027": "http://arxiv.org/abs/quant-ph/9807027",
+      "arXiv:quant-ph/0010077": "http://arxiv.org/abs/quant-ph/0010077"
+    },
+    "extra": "<em>Physical Review A</em>, 60(4):2742, 1999. <a href=\"http://arxiv.org/abs/quant-ph/9807027\">arXiv:quant-ph/9807027</a> and"
+  },
+  "101": {
+    "ref_id": 101,
+    "authors": "Andrew Childs, Shelby Kimmel, and Robin Kothari",
+    "title": "The quantum query complexity of read-many formulas",
+    "links": {
+      "arXiv:1112.0548": "http://arxiv.org/abs/1112.0548"
+    },
+    "extra": "In <em>Proceedings of ESA 2012</em>, pg. 337-348, Springer. (LNCS 7501)"
+  },
+  "102": {
+    "ref_id": 102,
+    "authors": "Al\u00e1n Aspuru-Guzik, Anthony D. Dutoi, Peter J. Love, and Martin Head-Gordon",
+    "title": "Simulated quantum computation of molecular energies.",
+    "links": {
+      "arXiv:quant-ph/0604193": "http://arxiv.org/abs/quant-ph/0604193"
+    },
+    "extra": "<em>Science</em>, 309(5741):1704-1707, 2005."
+  },
+  "103": {
+    "ref_id": 103,
+    "authors": "A. M. Childs, A. J. Landahl, and P. A. Parrilo",
+    "title": "Quantum algorithms for the ordered search problem via semidefiniteprogramming.",
+    "links": {
+      "arXiv:quant-ph/0608161": "http://arxiv.org/abs/quant-ph/0608161"
+    },
+    "extra": "<em>Physical Review A</em>, 75 032335, 2007."
+  },
+  "104": {
+    "ref_id": 104,
+    "authors": "Aram W. Harrow, Avinatan Hassidim, and Seth Lloyd",
+    "title": "Quantum algorithm for solving linear systems of equations.",
+    "links": {
+      "arXiv:0811.3171": "http://arxiv.org/abs/0811.3171"
+    },
+    "extra": "<em>Physical Review Letters</em> 15(103):150502, 2009."
+  },
+  "105": {
+    "ref_id": 105,
+    "authors": "Martin Roetteler",
+    "title": "Quantum algorithms for highly non-linear Boolean functions.",
+    "links": {
+      "arXiv:0811.3208": "http://arxiv.org/abs/0811.3208"
+    },
+    "extra": "<i>Proceedings of SODA 2010</i>"
+  },
+  "106": {
+    "ref_id": 106,
+    "authors": "Stephen P. Jordan",
+    "title": "Fast quantum algorithms for approximating the irreducible representations of groups.",
+    "links": {
+      "arXiv:0811.0562": "http://arxiv.org/abs/0811.0562"
+    },
+    "extra": ""
+  },
+  "107": {
+    "ref_id": 107,
+    "authors": "Tim Byrnes and Yoshihisa Yamamoto",
+    "title": "Simulating lattice gauge theories on a quantum computer.",
+    "links": {
+      "arXiv:quant-ph/0510027": "http://arxiv.org/abs/quant-ph/0510027"
+    },
+    "extra": "<em>Physical Review A</em>, 73, 022328, 2006."
+  },
+  "108": {
+    "ref_id": 108,
+    "authors": "D. Simon",
+    "title": "On the Power of Quantum Computation.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 35th Symposium on Foundations of Computer Science</em>, pg. 116-123, 1994."
+  },
+  "109": {
+    "ref_id": 109,
+    "authors": "John Proos and Christof Zalka",
+    "title": "Shor's discrete logarithm quantum algorithm for elliptic curves.",
+    "links": {
+      "arXiv:quant-ph/0301141": "http://arxiv.org/abs/quant-ph/0301141"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, Vol. 3, No. 4,pg.317-344, 2003."
+  },
+  "110": {
+    "ref_id": 110,
+    "authors": "Yi-Kai Liu",
+    "title": "Quantum algorithms using the curvelet transform.",
+    "links": {
+      "arXiv:0810.4968": "http://arxiv.org/abs/0810.4968"
+    },
+    "extra": "<i>Proceedings of STOC 2009</i>, pg. 391-400."
+  },
+  "111": {
+    "ref_id": 111,
+    "authors": "Wim van Dam and Igor Shparlinski",
+    "title": "Classical and quantum algorithms for exponential congruences.",
+    "links": {
+      "arXiv:0804.1109": "http://arxiv.org/abs/0804.1109"
+    },
+    "extra": "<i>Proceedings of TQC 2008</i>, pg. 1-10."
+  },
+  "112": {
+    "ref_id": 112,
+    "authors": "Itai Arad and Zeph Landau",
+    "title": "Quantum computation and the evaluation of tensor networks.",
+    "links": {
+      "arXiv:0805.0040": "http://arxiv.org/abs/0805.0040"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 39(7):3089-3121, 2010."
+  },
+  "113": {
+    "ref_id": 113,
+    "authors": "M. Van den Nest, W. D\u00fcr, R. Raussendorf, and H. J. Briegel",
+    "title": "Quantum algorithms for spin models and simulable gate sets for quantum computation.",
+    "links": {
+      "arXiv:0805.1214": "http://arxiv.org/abs/0805.1214"
+    },
+    "extra": "<em>Physical Review A</em>, 80:052334, 2009."
+  },
+  "114": {
+    "ref_id": 114,
+    "authors": "Silvano Garnerone, Annalisa Marzuoli, and Mario Rasetti",
+    "title": "Efficient quantum processing of 3-manifold topologicalinvariants.",
+    "links": {
+      "arXiv:quant-ph/0703037": "http://arxiv.org/abs/quant-ph/0703037"
+    },
+    "extra": "<em>Advances in Theoretical and Mathematical Physics</em>,13(6):1601-1652, 2009."
+  },
+  "115": {
+    "ref_id": 115,
+    "authors": "Louis H. Kauffman and Samuel J. Lomonaco Jr.",
+    "title": "q-deformed spin networks, knot polynomials and anyonic topological quantum computation.",
+    "links": {
+      "arXiv:quant-ph/0606114": "http://arxiv.org/abs/quant-ph/0606114"
+    },
+    "extra": "<i>Journal of Knot Theory</i>, Vol. 16, No. 3, pg. 267-332, 2007."
+  },
+  "116": {
+    "ref_id": 116,
+    "authors": "Arthur Schmidt and Ulrich Vollmer",
+    "title": "Polynomial time quantum algorithm for the computation of the unit group of a number field.",
+    "links": {},
+    "extra": "In <i>Proceedings of the 37th Symposium on the Theory of Computing</i>, pg. 475-480, 2005."
+  },
+  "117": {
+    "ref_id": 117,
+    "authors": "Sergey Bravyi, Aram Harrow, and Avinatan Hassidim",
+    "title": "Quantum algorithms for testing properties of distributions.",
+    "links": {
+      "arXiv:0907.3920": "http://arxiv.org/abs/0907.3920"
+    },
+    "extra": "<em>IEEE Transactions on Information Theory</em> 57(6):3971-3981, 2011."
+  },
+  "118": {
+    "ref_id": 118,
+    "authors": "Pawel M. Wocjan, Stephen P. Jordan, Hamed Ahmadi, and Joseph P. Brennan",
+    "title": "Efficient quantum processing of ideals in finite rings.",
+    "links": {
+      "arXiv:0908.0022": "http://arxiv.org/abs/0908.0022"
+    },
+    "extra": ""
+  },
+  "119": {
+    "ref_id": 119,
+    "authors": "V. Arvind, Bireswar Das, and Partha Mukhopadhyay",
+    "title": "The complexity of black-box ring problems.",
+    "links": {},
+    "extra": "In <i>Proceedings of COCCOON 2006</i>, pg 126-145."
+  },
+  "120": {
+    "ref_id": 120,
+    "authors": "V. Arvind and Partha Mukhopadhyay",
+    "title": "Quantum query complexity of multilinear identity testing.",
+    "links": {},
+    "extra": "In <i>Proceedings of STACS 2009</i>, pg. 87-98."
+  },
+  "121": {
+    "ref_id": 121,
+    "authors": "David Poulin and Pawel Wocjan",
+    "title": "Sampling from the thermal quantum Gibbs state and evaluating partition functions with a quantum computer.",
+    "links": {
+      "arXiv:0905.2199": "http://arxiv.org/abs/0905.2199"
+    },
+    "extra": "<i>Physical Review Letters</i> 103:220502, 2009."
+  },
+  "122": {
+    "ref_id": 122,
+    "authors": "Pawel Wocjan, Chen-Fu Chiang, Anura Abeyesinghe, and Daniel Nagaj",
+    "title": "Quantum speed-up for approximating partition functions.",
+    "links": {
+      "arXiv:0811.0596": "http://arxiv.org/abs/0811.0596"
+    },
+    "extra": "<i>Physical Review A</i> 80:022340, 2009."
+  },
+  "123": {
+    "ref_id": 123,
+    "authors": "Ashley Montanaro",
+    "title": "Quantum search with advice.",
+    "links": {
+      "arXiv:0908.3066": "http://arxiv.org/abs/0908.3066"
+    },
+    "extra": "In <em>Proceedings of the 5th conference on Theory of quantumcomputation, communication, and cryptography (TQC 2010)</em>"
+  },
+  "124": {
+    "ref_id": 124,
+    "authors": "Laszlo Babai, Robert Beals, and Akos Seress",
+    "title": "Polynomial-time theory of matrix groups.",
+    "links": {},
+    "extra": "In <i>Proceedings of STOC 2009</i>, pg. 55-64."
+  },
+  "125": {
+    "ref_id": 125,
+    "authors": "Peter Shor",
+    "title": "Algorithms for Quantum Computation: Discrete Logarithms and Factoring.",
+    "links": {},
+    "extra": "In <i>Proceedings of FOCS 1994</i>, pg. 124-134."
+  },
+  "126": {
+    "ref_id": 126,
+    "authors": "Aaron Denney, Cristopher Moore, and Alex Russell",
+    "title": "Finding conjugate stabilizer subgroups in PSL(2;q) and relatedgroups.",
+    "links": {
+      "arXiv:0809.2445": "http://arxiv.org/abs/0809.2445"
+    },
+    "extra": "<em>Quantum Information and Computation</em> 10(3):282-291, 2010."
+  },
+  "127": {
+    "ref_id": 127,
+    "authors": "Kevin K. H. Cheung and Michele Mosca",
+    "title": "Decomposing finite Abelian groups.",
+    "links": {
+      "arXiv:cs/0101004": "http://arxiv.org/abs/cs/0101004"
+    },
+    "extra": "<em>Quantum Information and Computation</em> 1(2):26-32, 2001."
+  },
+  "128": {
+    "ref_id": 128,
+    "authors": "Fran\u00e7ois Le Gall",
+    "title": "An efficient quantum algorithm for some instances of the groupisomorphism problem.",
+    "links": {
+      "arXiv:1001.0608": "http://arxiv.org/abs/1001.0608"
+    },
+    "extra": "In <em>Proceedings of STACS 2010</em> ."
+  },
+  "129": {
+    "ref_id": 129,
+    "authors": "Gorjan Alagic, Stephen Jordan, Robert Koenig, and Ben Reichardt",
+    "title": "Approximating Turaev-Viro 3-manifold invariants is universal for quantum computation.",
+    "links": {
+      "arXiv:1003.0923": "http://arxiv.org/abs/1003.0923"
+    },
+    "extra": "<em>Physical Review A</em> 82, 040302(R), 2010."
+  },
+  "130": {
+    "ref_id": 130,
+    "authors": "Martin R\u00f6tteler",
+    "title": "Quantum algorithms to solve the hidden shift problem for quadratics and for functions of large Gowers norm.",
+    "links": {
+      "arXiv:0911.4724": "http://arxiv.org/abs/0911.4724"
+    },
+    "extra": "In <em>Proceedings of MFCS 2009</em>, pg 663-674."
+  },
+  "131": {
+    "ref_id": 131,
+    "authors": "Arthur Schmidt",
+    "title": "Quantum Algorithms for many-to-one Functions to Solve the Regulator and the Principal Ideal Problem.",
+    "links": {
+      "arXiv:0912.4807": "http://arxiv.org/abs/0912.4807"
+    },
+    "extra": ""
+  },
+  "132": {
+    "ref_id": 132,
+    "authors": "K. Temme, T.J. Osborne, K.G. Vollbrecht, D. Poulin, and F. Verstraete",
+    "title": "Quantum Metropolis Sampling.",
+    "links": {
+      "arXiv:0911.3635": "http://arxiv.org/abs/0911.3635"
+    },
+    "extra": "<em>Nature</em>, Vol. 471, pg. 87-90, 2011."
+  },
+  "133": {
+    "ref_id": 133,
+    "authors": "Andris Ambainis",
+    "title": "Quantum Search Algorithms.",
+    "links": {
+      "arXiv:quant-ph/0504012": "http://arxiv.org/abs/quant-ph/0504012"
+    },
+    "extra": "<em>SIGACT News</em>, 35 (2):22-35, 2004."
+  },
+  "134": {
+    "ref_id": 134,
+    "authors": "Nicolas J. Cerf, Lov K. Grover, and Colin P. Williams",
+    "title": "Nested quantum search and NP-hard problems.",
+    "links": {},
+    "extra": "<em>Applicable Algebra in Engineering, Communication and Computing</em>, 10 (4-5):311-338, 2000."
+  },
+  "135": {
+    "ref_id": 135,
+    "authors": "Mario Szegedy",
+    "title": "Spectra of Quantized Walks and a \\( \\sqrt{\\delta \\epsilon} \\) rule.",
+    "links": {
+      "arXiv:quant-ph/0401053": "http://arxiv.org/abs/quant-ph/0401053"
+    },
+    "extra": ""
+  },
+  "136": {
+    "ref_id": 136,
+    "authors": "Kazuo Iwama, Harumichi Nishimura, Rudy Raymond, and Junichi Teruyama",
+    "title": "Quantum Counterfeit Coin Problems.",
+    "links": {
+      "arXiv:1009.0416": "http://arxiv.org/abs/1009.0416"
+    },
+    "extra": "In <em>Proceedings of 21st International Symposium on Algorithms and Computation (ISAAC2010)</em>, LNCS 6506, pp.73-84, 2010."
+  },
+  "137": {
+    "ref_id": 137,
+    "authors": "Barbara Terhal and John Smolin",
+    "title": "Single quantum querying of a database.",
+    "links": {
+      "arXiv:quant-ph/9705041": "http://arxiv.org/abs/quant-ph/9705041"
+    },
+    "extra": "<em>Physical Review A</em> 58:1822, 1998."
+  },
+  "138": {
+    "ref_id": 138,
+    "authors": "Andris Ambainis",
+    "title": "Variable time amplitude amplification and a faster quantum algorithm for solving systems of linear equations.",
+    "links": {
+      "arXiv:1010.4458": "http://arxiv.org/abs/1010.4458"
+    },
+    "extra": ""
+  },
+  "139": {
+    "ref_id": 139,
+    "authors": "Fr\u00e9d\u00e9ric Magniez and Ashwin Nayak",
+    "title": "Quantum complexity of testing group commutativity.",
+    "links": {
+      "arXiv:quant-ph/0506265": "http://arxiv.org/abs/quant-ph/0506265"
+    },
+    "extra": "In <em>Proceedings of 32nd International Colloquium on Automata,Languages and Programming.</em> LNCS 3580, pg. 1312-1324, 2005."
+  },
+  "140": {
+    "ref_id": 140,
+    "authors": "Andrew Childs and Robin Kothari",
+    "title": "Quantum query complexity of minor-closed graph properties.",
+    "links": {
+      "arXiv:1011.1443": "http://arxiv.org/abs/1011.1443"
+    },
+    "extra": "In <em>Proceedings of the 28th Symposium on Theoretical Aspects of Computer Science (STACS 2011)</em>, pg. 661-672"
+  },
+  "141": {
+    "ref_id": 141,
+    "authors": "Fr\u00e9d\u00e9ric Magniez, Ashwin Nayak, J\u00e9r\u00e9mie Roland, and Miklos Santha",
+    "title": "Search via quantum walk.",
+    "links": {
+      "arXiv:quant-ph/0608026": "http://arxiv.org/abs/quant-ph/0608026"
+    },
+    "extra": "In <em>Proceedings STOC 2007</em>, pg. 575-584."
+  },
+  "142": {
+    "ref_id": 142,
+    "authors": "Dmitry Gavinsky, Martin Roetteler, and J\u00e9r\u00e9my Roland",
+    "title": "Quantum algorithm for the Boolean hidden shift problem.",
+    "links": {
+      "arXiv:1103.3017": "http://arxiv.org/abs/1103.3017"
+    },
+    "extra": "In <em>Proceedings of the 17th annual international conferenceon Computing and combinatorics (COCOON '11)</em>, 2011."
+  },
+  "143": {
+    "ref_id": 143,
+    "authors": "Mark Ettinger and Peter H\u00f8yer",
+    "title": "On quantum algorithms for noncommutative hidden subgroups.",
+    "links": {
+      "arXiv:quant-ph/9807029": "http://arxiv.org/abs/quant-ph/9807029"
+    },
+    "extra": "<em>Advances in Applied Mathematics</em>, Vol. 25, No. 3, pg. 239-251, 2000."
+  },
+  "144": {
+    "ref_id": 144,
+    "authors": "Andris Ambainis, Andrew Childs, and Yi-Kai Liu",
+    "title": "Quantum property testing for bounded-degree graphs.",
+    "links": {
+      "arXiv:1012.3174": "http://arxiv.org/abs/1012.3174"
+    },
+    "extra": "In <em>Proceedings of RANDOM '11</em> : Lecture Notes in Computer Science 6845, pp. 365-376, 2011."
+  },
+  "145": {
+    "ref_id": 145,
+    "authors": "G. Ortiz, J.E. Gubernatis, E. Knill, and R. Laflamme",
+    "title": "Quantum algorithms for Fermionic simulations.",
+    "links": {
+      "arXiv:cond-mat/0012334": "http://arxiv.org/abs/cond-mat/0012334"
+    },
+    "extra": "<em>Physical Review A</em> 64: 022319, 2001."
+  },
+  "146": {
+    "ref_id": 146,
+    "authors": "Ashley Montanaro",
+    "title": "The quantum query complexity of learning multilinearpolynomials.",
+    "links": {
+      "arXiv:1105.3310": "http://arxiv.org/abs/1105.3310"
+    },
+    "extra": "<em>Information Processing Letters</em>, 112(11):438-442, 2012."
+  },
+  "147": {
+    "ref_id": 147,
+    "authors": "Tad Hogg",
+    "title": "Highly structured searches with quantum computers.",
+    "links": {},
+    "extra": "<em>Physical Review Letters</em> 80: 2473, 1998."
+  },
+  "148": {
+    "ref_id": 148,
+    "authors": "Markus Hunziker and David A. Meyer",
+    "title": "Quantum algorithms for highly structured search problems.",
+    "links": {},
+    "extra": "<em>Quantum Information Processing</em>, Vol. 1, No. 3, pg. 321-341, 2002."
+  },
+  "149": {
+    "ref_id": 149,
+    "authors": "Ben Reichardt",
+    "title": "Span programs and quantum query complexity: The general adversarybound is nearly tight for every Boolean function.",
+    "links": {
+      "arXiv:0904.2759": "http://arxiv.org/abs/0904.2759"
+    },
+    "extra": "In <em>Proceedings of the 50th IEEE Symposium on Foundations ofComputer Science (FOCS '09)</em>, pg. 544-551, 2009."
+  },
+  "150": {
+    "ref_id": 150,
+    "authors": "Aleksandrs Belovs",
+    "title": "Span-program-based quantum algorithm for the rank problem.",
+    "links": {
+      "arXiv:1103.0842": "http://arxiv.org/abs/1103.0842"
+    },
+    "extra": ""
+  },
+  "151": {
+    "ref_id": 151,
+    "authors": "Sebastian D\u00f6rn and Thomas Thierauf",
+    "title": "The quantum query complexity of the determinant.",
+    "links": {},
+    "extra": "<em>Information Processing Letters</em> Vol. 109, No. 6, pg. 305-328, 2009."
+  },
+  "152": {
+    "ref_id": 152,
+    "authors": "Aleksandrs Belovs",
+    "title": "Span programs for functions with constant-sized 1-certificates.",
+    "links": {
+      "arXiv:1105.4024": "http://arxiv.org/abs/1105.4024"
+    },
+    "extra": "In <em>Proceedings of STOC 2012</em>, pg. 77-84."
+  },
+  "153": {
+    "ref_id": 153,
+    "authors": "Troy Lee, Fr\u00e9d\u00e9ric Magniez, and Mikos Santha",
+    "title": "A learning graph based quantum query algorithm for findingconstant-size subgraphs.",
+    "links": {
+      "arXiv:1109.5135": "http://arxiv.org/abs/1109.5135"
+    },
+    "extra": "<em>Chicago Journal of Theoretical Computer Science</em>,Vol. 2012, Article 10, 2012."
+  },
+  "154": {
+    "ref_id": 154,
+    "authors": "Aleksandrs Belovs and Troy Lee",
+    "title": "Quantum algorithm for k-distinctness with prior knowledge on the input.",
+    "links": {
+      "arXiv:1108.3022": "http://arxiv.org/abs/1108.3022"
+    },
+    "extra": ""
+  },
+  "155": {
+    "ref_id": 155,
+    "authors": "Fran\u00e7ois Le Gall",
+    "title": "Improved output-sensitive quantum algorithms for Boolean matrix multiplication.",
+    "links": {},
+    "extra": "In <em>Proceedings of the 23rd Annual ACM-SIAM Symposium on DiscreteAlgorithms (SODA '12)</em>, 2012."
+  },
+  "156": {
+    "ref_id": 156,
+    "authors": "Dominic Berry",
+    "title": "Quantum algorithms for solving linear differential equations.",
+    "links": {
+      "arXiv:1010.2745": "http://arxiv.org/abs/1010.2745"
+    },
+    "extra": "<i>J. Phys. A: Math. Theor.</i> 47, 105301, 2014. ["
+  },
+  "157": {
+    "ref_id": 157,
+    "authors": "Virginia Vassilevska Williams and Ryan Williams",
+    "title": "Subcubic equivalences between path, matrix, and triangle problems.",
+    "links": {},
+    "extra": "In <em>51st IEEE Symposium on Foundations of Computer Science (FOCS '10)</em> pg. 645 - 654, 2010."
+  },
+  "158": {
+    "ref_id": 158,
+    "authors": "Ben W. Reichardt",
+    "title": "Reflections for quantum query algorithms.",
+    "links": {
+      "arXiv:1005.1601": "http://arxiv.org/abs/1005.1601"
+    },
+    "extra": "In <em>Proceedings of the 22nd ACM-SIAM Symposium on Discrete Algorithms (SODA)</em>, pg. 560-569, 2011."
+  },
+  "159": {
+    "ref_id": 159,
+    "authors": "Ben W. Reichardt",
+    "title": "Span-program-based quantum algorithm for evaluating unbalanced formulas.",
+    "links": {
+      "arXiv:0907.1622": "http://arxiv.org/abs/0907.1622"
+    },
+    "extra": ""
+  },
+  "160": {
+    "ref_id": 160,
+    "authors": "Ben W. Reichardt",
+    "title": "Faster quantum algorithm for evaluating game trees.",
+    "links": {
+      "arXiv:0907.1623": "http://arxiv.org/abs/0907.1623"
+    },
+    "extra": "In <em>Proceedings of the 22nd ACM-SIAM Symposium on Discrete Algorithms (SODA)</em>, pg. 546-559, 2011."
+  },
+  "161": {
+    "ref_id": 161,
+    "authors": "Stacey Jeffery, Robin Kothari, and Fr\u00e9d\u00e9ric Magniez",
+    "title": "Improving quantum query complexity of Boolean matrixmultiplication using graph collision.",
+    "links": {
+      "arXiv:1112.5855": "http://arxiv.org/abs/1112.5855"
+    },
+    "extra": "In <em>Proceedings of ICALP 2012</em>, pg. 522-532."
+  },
+  "162": {
+    "ref_id": 162,
+    "authors": "Andrew M. Childs and Jason M. Eisenberg",
+    "title": "Quantum algorithms for subset finding.",
+    "links": {
+      "arXiv:quant-ph/0311038": "http://arxiv.org/abs/quant-ph/0311038"
+    },
+    "extra": "<em>Quantum Information and Computation</em> 5(7):593-604, 2005."
+  },
+  "163": {
+    "ref_id": 163,
+    "authors": "Aleksandrs Belovs and Robert \u0160palek",
+    "title": "Adversary lower bound for the k-sum problem.",
+    "links": {
+      "arXiv:1206.6528": "http://arxiv.org/abs/1206.6528"
+    },
+    "extra": "In <em>Proceedings of ITCS 2013</em>, pg. 323-328."
+  },
+  "164": {
+    "ref_id": 164,
+    "authors": "Bohua Zhan, Shelby Kimmel, and Avinatan Hassidim",
+    "title": "Super-polynomial quantum speed-ups for Boolean evaluation treeswith hidden structure.",
+    "links": {
+      "arXiv:1101.0796": "http://arxiv.org/abs/1101.0796"
+    },
+    "extra": "<em>ITCS 2012: Proceedings of the 3rd Innovations in Theoretical Computer Science</em>, ACM, pg. 249-265."
+  },
+  "165": {
+    "ref_id": 165,
+    "authors": "Shelby Kimmel",
+    "title": "Quantum adversary (upper) bound.",
+    "links": {
+      "arXiv:1101.0797": "http://arxiv.org/abs/1101.0797"
+    },
+    "extra": "<em>39th International Colloquium on Automata, Languages and Programming - ICALP 2012</em> Volume 7391, p. 557-568."
+  },
+  "166": {
+    "ref_id": 166,
+    "authors": "Stephen Jordan, Keith Lee, and John Preskill",
+    "title": "Quantum algorithms for quantum field theories.",
+    "links": {
+      "arXiv:1111.3633": "http://arxiv.org/abs/1111.3633"
+    },
+    "extra": "<em>Science</em>, Vol. 336, pg. 1130-1133, 2012."
+  },
+  "167": {
+    "ref_id": 167,
+    "authors": "Andris Ambainis and Ashley Montanaro",
+    "title": "Quantum algorithms for search with wildcards and combinatorialgroup testing.",
+    "links": {
+      "arXiv:1210.1148": "http://arxiv.org/abs/1210.1148"
+    },
+    "extra": ""
+  },
+  "168": {
+    "ref_id": 168,
+    "authors": "Andris Ambainis and Robert \u0160palek",
+    "title": "Quantum algorithms for matching and network flows.",
+    "links": {
+      "arXiv:quant-ph/0508205": "http://arxiv.org/abs/quant-ph/0508205"
+    },
+    "extra": "<em>Proceedings of STACS 2007</em>, pg. 172-183."
+  },
+  "169": {
+    "ref_id": 169,
+    "authors": "Nathan Wiebe, Daniel Braun, and Seth Lloyd",
+    "title": "Quantum data-fitting.",
+    "links": {
+      "arXiv:1204.5242": "http://arxiv.org/abs/1204.5242"
+    },
+    "extra": "<em>Physical Review Letters</em> 109, 050505, 2012."
+  },
+  "170": {
+    "ref_id": 170,
+    "authors": "Andrew Childs and Nathan Wiebe",
+    "title": "Hamiltonian simulation using linear combinations of unitaryoperations.",
+    "links": {
+      "arXiv:1202.5822": "http://arxiv.org/abs/1202.5822"
+    },
+    "extra": "<em>Quantum Information and Computation</em> 12, 901-924, 2012."
+  },
+  "171": {
+    "ref_id": 171,
+    "authors": "Stacey Jeffery, Robin Kothari, and Fr\u00e9d\u00e9ric Magniez",
+    "title": "Nested quantum walks with quantum data structures.",
+    "links": {
+      "arXiv:1210.1199": "http://arxiv.org/abs/1210.1199"
+    },
+    "extra": "In <em>Proceedings of the 24th ACM-SIAM Symposium on Discrete Algorithms (SODA'13)</em>, pg. 1474-1485, 2013."
+  },
+  "172": {
+    "ref_id": 172,
+    "authors": "Aleksandrs Belovs",
+    "title": "Learning-graph-based quantum algorithm for k-distinctness.",
+    "links": {
+      "arXiv:1205.1534": "http://arxiv.org/abs/1205.1534"
+    },
+    "extra": "<em>Proceedings of STOC 2012</em>, pg. 77-84."
+  },
+  "173": {
+    "ref_id": 173,
+    "authors": "Andrew Childs, Stacey Jeffery, Robin Kothari, and Fr\u00e9d\u00e9ric Magniez",
+    "title": "A time-efficient quantum walk for 3-distinctness using nested updates.",
+    "links": {
+      "arXiv:1302.7316": "http://arxiv.org/abs/1302.7316"
+    },
+    "extra": ""
+  },
+  "174": {
+    "ref_id": 174,
+    "authors": "Hari Krovi and Alexander Russell",
+    "title": "Quantum Fourier transforms and the complexity of link invariantsfor quantum doubles of finite groups.",
+    "links": {
+      "arXiv:1210.1550": "http://arxiv.org/abs/1210.1550"
+    },
+    "extra": "<em>Commun. Math. Phys.</em> 334, 743-777, 2015"
+  },
+  "175": {
+    "ref_id": 175,
+    "authors": "Troy Lee, Fr\u00e9d\u00e9ric Magniez, and Miklos Santha",
+    "title": "Improved quantum query algorithms for triangle finding andassociativity testing.",
+    "links": {
+      "arXiv:1210.1014": "http://arxiv.org/abs/1210.1014"
+    },
+    "extra": ""
+  },
+  "176": {
+    "ref_id": 176,
+    "authors": "Silvano Garnerone, Paolo Zanardi, and Daniel A. Lidar",
+    "title": "Adiabatic quantum algorithm for search engine ranking.",
+    "links": {},
+    "extra": "<em>Physical Review Letters</em> 108:230506, 2012."
+  },
+  "177": {
+    "ref_id": 177,
+    "authors": "R. D. Somma, S. Boixo, H. Barnum, and E. Knill",
+    "title": "Quantum simulations of classical annealing.",
+    "links": {
+      "arXiv:0804.1571": "http://arxiv.org/abs/0804.1571"
+    },
+    "extra": "<em>Physical Review Letters</em> 101:130504, 2008."
+  },
+  "178": {
+    "ref_id": 178,
+    "authors": "Daniel J. Bernstein, Stacey Jeffery, Tanja Lange, and Alexander Meurer",
+    "title": "Quantum algorithms for the subset-sum problem.",
+    "links": {
+      "from cr.yp.to": "http://cr.yp.to/qsubsetsum/qsubsetsum-20130407.pdf"
+    },
+    "extra": ""
+  },
+  "179": {
+    "ref_id": 179,
+    "authors": "Boris Altshuler, Hari Krovi, and J\u00e9r\u00e9mie Roland",
+    "title": "Anderson localization casts clouds over adiabatic quantum optimization.",
+    "links": {
+      "arXiv:0912.0746": "http://arxiv.org/abs/0912.0746"
+    },
+    "extra": "<em>Proceedings of the National Academy of Sciences</em> 107(28):12446-12450, 2010."
+  },
+  "180": {
+    "ref_id": 180,
+    "authors": "Ben Reichardt",
+    "title": "The quantum adiabatic optimization algorithm and local minima.",
+    "links": {
+      "Erratum": "http://www-bcf.usc.edu/~breichar/Correction.txt"
+    },
+    "extra": "In <em>Proceedings of STOC 2004</em>, pg. 502-510. ["
+  },
+  "181": {
+    "ref_id": 181,
+    "authors": "Edward Farhi, Jeffrey Goldstone, and Sam Gutmann",
+    "title": "Quantum adiabatic evolution algorithms versus simulated annealing.",
+    "links": {
+      "arXiv:quant-ph/0201031": "http://arxiv.org/abs/quant-ph/0201031"
+    },
+    "extra": ""
+  },
+  "182": {
+    "ref_id": 182,
+    "authors": "E. Farhi, J. Goldstone, D. Gosset, S. Gutmann, H. B. Meyer, and P. Shor",
+    "title": "Quantum adiabatic algorithms, small gaps, and different paths.",
+    "links": {
+      "arXiv:0909.4766": "http://arxiv.org/abs/0909.4766"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 11(3/4):181-214, 2011."
+  },
+  "183": {
+    "ref_id": 183,
+    "authors": "Sergey Bravyi, David P. DiVincenzo, Roberto I. Oliveira, and Barbara M. Terhal",
+    "title": "The Complexity of Stoquastic Local Hamiltonian Problems.",
+    "links": {
+      "arXiv:quant-ph/0606140": "http://arxiv.org/abs/quant-ph/0606140"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 8(5):361-385, 2008."
+  },
+  "184": {
+    "ref_id": 184,
+    "authors": "Rolando D. Somma and Sergio Boixo",
+    "title": "Spectral gap amplification.",
+    "links": {
+      "arXiv:1110.2494": "http://arxiv.org/abs/1110.2494"
+    },
+    "extra": "<em>SIAM Journal on Computing</em>, 42:593-610, 2013."
+  },
+  "185": {
+    "ref_id": 185,
+    "authors": "Sabine Jansen, Mary-Beth Ruskai, Ruedi Seiler",
+    "title": "Bounds for the adiabatic approximation with applications to quantum computation.",
+    "links": {
+      "arXiv:quant-ph/0603175": "http://arxiv.org/abs/quant-ph/0603175"
+    },
+    "extra": "<em>Journal of Mathematical Physics</em>, 48:102111, 2007."
+  },
+  "186": {
+    "ref_id": 186,
+    "authors": "E. Farhi, J. Goldstone, S. Gutmann, J. Lapan, A. Lundgren, and D. Preda",
+    "title": "A Quantum Adiabatic Evolution Algorithm Applied to Random Instances of an NP-Complete Problem.",
+    "links": {
+      "arXiv:quant-ph/0104129": "http://arxiv.org/abs/quant-ph/0104129"
+    },
+    "extra": "<em>Science</em>, 292(5516):472-475, 2001."
+  },
+  "187": {
+    "ref_id": 187,
+    "authors": "Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Daniel Nagaj",
+    "title": "How to make the quantum adiabatic algorithm fail.",
+    "links": {
+      "arXiv:quant-ph/0512159": "http://arxiv.org/abs/quant-ph/0512159"
+    },
+    "extra": "<em>International Journal of Quantum Information</em>, 6(3):503-516, 2008."
+  },
+  "188": {
+    "ref_id": 188,
+    "authors": "Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Daniel Nagaj",
+    "title": "Unstructured randomness, small gaps, and localization.",
+    "links": {
+      "arXiv:1010.0009": "http://arxiv.org/abs/1010.0009"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 11(9/10):840-854, 2011."
+  },
+  "189": {
+    "ref_id": 189,
+    "authors": "Edward Farhi, Jeffrey Goldstone, Sam Gutmann",
+    "title": "Quantum adiabatic evolution algorithms with different paths.",
+    "links": {
+      "arXiv:quant-ph/0208135": "http://arxiv.org/abs/quant-ph/0208135"
+    },
+    "extra": ""
+  },
+  "190": {
+    "ref_id": 190,
+    "authors": "Wim van Dam, Michele Mosca, and Umesh Vazirani",
+    "title": "How powerful is adiabatic quantum computation?",
+    "links": {
+      "arXiv:quant-ph/0206003": "http://arxiv.org/abs/quant-ph/0206003",
+      "this": "http://www.cs.berkeley.edu/~vazirani/pubs/qao.ps"
+    },
+    "extra": "In <em>Proceedings of FOCS 2001</em>, pg. 279-287. <a href=\"http://arxiv.org/abs/quant-ph/0206003\">arXiv:quant-ph/0206003</a> [See also"
+  },
+  "191": {
+    "ref_id": 191,
+    "authors": "E. Farhi, D. Gosset, I. Hen, A. W. Sandvik, P. Shor, A. P. Young, and F. Zamponi",
+    "title": "The performance of the quantum adiabatic algorithm on randominstances of two optimization problems on regular hypergraphs.",
+    "links": {
+      "arXiv:1208.3757": "http://arxiv.org/abs/1208.3757"
+    },
+    "extra": "<em>Physical Review A</em>, 86:052334, 2012."
+  },
+  "192": {
+    "ref_id": 192,
+    "authors": "Kristen L. Pudenz and Daniel A. Lidar",
+    "title": "Quantum adiabatic machine learning.",
+    "links": {
+      "arXiv:1109.0325": "http://arxiv.org/abs/1109.0325"
+    },
+    "extra": "<em>Quantum Information Processing</em>, 12:2027, 2013."
+  },
+  "193": {
+    "ref_id": 193,
+    "authors": "Frank Gaitan and Lane Clark",
+    "title": "Ramsey numbers and adiabatic quantum computing.",
+    "links": {
+      "arXiv:1103.1345": "http://arxiv.org/abs/1103.1345"
+    },
+    "extra": "<em>Physical Review Letters</em>, 108:010501, 2012."
+  },
+  "194": {
+    "ref_id": 194,
+    "authors": "Frank Gaitan and Lane Clark",
+    "title": "Graph isomorphism and adiabatic quantum computing.",
+    "links": {
+      "arXiv:1304.5773": "http://arxiv.org/abs/1304.5773"
+    },
+    "extra": "<em>Physical Review A</em>, 89(2):022342, 2014."
+  },
+  "195": {
+    "ref_id": 195,
+    "authors": "Hartmut Neven, Vasil S. Denchev, Geordie Rose, and William G. Macready",
+    "title": "Training a binary classifier with the quantum adiabatic algorithm.",
+    "links": {
+      "arXiv:0811.0416": "http://arxiv.org/abs/0811.0416"
+    },
+    "extra": ""
+  },
+  "196": {
+    "ref_id": 196,
+    "authors": "Robert Beals",
+    "title": "Quantum computation of Fourier transforms over symmetric groups.",
+    "links": {},
+    "extra": "In <em>Proceedings of STOC 1997</em>, pg. 48-53."
+  },
+  "197": {
+    "ref_id": 197,
+    "authors": "Dave Bacon, Isaac L. Chuang, and Aram W. Harrow",
+    "title": "The quantum Schur transform: I. efficient qudit circuits.",
+    "links": {
+      "arXiv:quant-ph/0601001": "http://arxiv.org/abs/quant-ph/0601001"
+    },
+    "extra": "In <em>Proceedings of SODA 2007</em>, pg. 1235-1244."
+  },
+  "198": {
+    "ref_id": 198,
+    "authors": "S. Morita, H. Nishimori",
+    "title": "Mathematical foundation of quantum annealing.",
+    "links": {},
+    "extra": "<em>Journal of Methematical Physics</em>, 49(12):125210, 2008."
+  },
+  "199": {
+    "ref_id": 199,
+    "authors": "A. B. Finnila, M. A. Gomez, C. Sebenik, C. Stenson, J. D. Doll",
+    "title": "Quantum annealing: a new method for minimizing multidimensionalfunctions.",
+    "links": {},
+    "extra": "<em>Chemical Physics Letters</em>, 219:343-348, 1994."
+  },
+  "200": {
+    "ref_id": 200,
+    "authors": "D. Gavinsky and T. Ito",
+    "title": "A quantum query algorithm for the graph collision problem.",
+    "links": {
+      "arXiv:1204.1527": "http://arxiv.org/abs/1204.1527"
+    },
+    "extra": ""
+  },
+  "201": {
+    "ref_id": 201,
+    "authors": "Andris Ambainis, Kaspars Balodis, J\u0101nis Iraids, Raitis Ozols, andJuris Smotrovs",
+    "title": "Parameterized quantum query complexity of graph collision.",
+    "links": {
+      "arXiv:1305.1021": "http://arxiv.org/abs/1305.1021"
+    },
+    "extra": ""
+  },
+  "202": {
+    "ref_id": 202,
+    "authors": "Kevin C. Zatloukal",
+    "title": "Classical and quantum algorithms for testing equivalence ofgroup extensions.",
+    "links": {
+      "arXiv:1305.1327": "http://arxiv.org/abs/1305.1327"
+    },
+    "extra": ""
+  },
+  "203": {
+    "ref_id": 203,
+    "authors": "Andrew Childs and G\u00e1bor Ivanyos",
+    "title": "Quantum computation of discrete logarithms in semigroups.",
+    "links": {
+      "arXiv:1310.6238": "http://arxiv.org/abs/1310.6238"
+    },
+    "extra": ""
+  },
+  "204": {
+    "ref_id": 204,
+    "authors": "Matan Banin and Boaz Tsaban",
+    "title": "A reduction of semigroup DLP to classic DLP.",
+    "links": {
+      "arXiv:1310.7903": "http://arxiv.org/abs/1310.7903"
+    },
+    "extra": ""
+  },
+  "205": {
+    "ref_id": 205,
+    "authors": "D. W. Berry, R. Cleve, and R. D. Somma",
+    "title": "Exponential improvement in precision for Hamiltonian-evolution simulation.",
+    "links": {
+      "arXiv:1308.5424": "http://arxiv.org/abs/1308.5424"
+    },
+    "extra": ""
+  },
+  "206": {
+    "ref_id": 206,
+    "authors": "Fran\u00e7ois Le Gall and Harumichi Nishimura",
+    "title": "Quantum algorithms for matrix products over semirings.",
+    "links": {
+      "arXiv:1310.3898": "http://arxiv.org/abs/1310.3898"
+    },
+    "extra": ""
+  },
+  "207": {
+    "ref_id": 207,
+    "authors": "Nolan Wallach",
+    "title": "A quantum polylog algorithm for non-normal maximal cyclic hiddensubgroups in the affine group of a finite field.",
+    "links": {
+      "arXiv:1308.1415": "http://arxiv.org/abs/1308.1415"
+    },
+    "extra": ""
+  },
+  "208": {
+    "ref_id": 208,
+    "authors": "Lov Grover",
+    "title": "Fixed-point quantum search.",
+    "links": {
+      "arXiv:quant-ph/0503205": "http://arxiv.org/abs/quant-ph/0503205"
+    },
+    "extra": "<em>Phys. Rev. Lett. 95(15):150501, 2005.</em>"
+  },
+  "209": {
+    "ref_id": 209,
+    "authors": "Tathagat Tulsi, Lov Grover, and Apoorva Patel",
+    "title": "A new algorithm for fixed point quantum search.",
+    "links": {
+      "arXiv:quant-ph/0505007": "http://arxiv.org/abs/quant-ph/0505007"
+    },
+    "extra": "<em>Quantum Information and Computation 6(6):483-494, 2005.</em>"
+  },
+  "210": {
+    "ref_id": 210,
+    "authors": "Guoming Wang",
+    "title": "Quantum algorithms for approximating the effective resistances of electrical networks.",
+    "links": {
+      "arXiv:1311.1851": "http://arxiv.org/abs/1311.1851"
+    },
+    "extra": ""
+  },
+  "211": {
+    "ref_id": 211,
+    "authors": "Dominic W. Berry, Andrew M. Childs, Richard Cleve, Robin Kothari, and Rolando D. Somma",
+    "title": "Exponential improvement in precision for simulating sparse Hamiltonians",
+    "links": {
+      "arXiv:1312.1414": "http://arxiv.org/abs/1312.1414"
+    },
+    "extra": ""
+  },
+  "212": {
+    "ref_id": 212,
+    "authors": "Thomas Decker, Peter H\u00f8yer, Gabor Ivanyos, and Miklos Santha",
+    "title": "Polynomial time quantum algorithms for certain bivariate hidden polynomial problems",
+    "links": {
+      "arXiv:1305.1543": "http://arxiv.org/abs/1305.1543"
+    },
+    "extra": ""
+  },
+  "213": {
+    "ref_id": 213,
+    "authors": "Kirsten Eisentr\u00e4ger, Sean Hallgren, Alexei Kitaev, and Fang Song",
+    "title": "A quantum algorithm for computing the unit group of an arbitrary degree number field",
+    "links": {},
+    "extra": "In <em>Proceedings of STOC 2014</em> pg. 293-302."
+  },
+  "214": {
+    "ref_id": 214,
+    "authors": "Seth Lloyd, Masoud Mohseni, and Patrick Robentrost",
+    "title": "Quantum algorithms for supervised and unsupervised machine learning",
+    "links": {
+      "arXiv:1307.0411": "http://arxiv.org/abs/1307.0411"
+    },
+    "extra": ""
+  },
+  "215": {
+    "ref_id": 215,
+    "authors": "Ashley Montanaro",
+    "title": "Quantum pattern matching fast on average",
+    "links": {
+      "arXiv:1408.1816": "http://arxiv.org/abs/1408.1816"
+    },
+    "extra": ""
+  },
+  "216": {
+    "ref_id": 216,
+    "authors": "Charles H. Bennett, Ethan Bernstein, Gilles Brassard, and Umesh Vazirani",
+    "title": "Strengths and weaknesses of quantum computing",
+    "links": {
+      "arXiv:quant-ph/9701001": "http://arxiv.org/abs/quant-ph/9701001"
+    },
+    "extra": "<em>SIAM J. Comput. 26(5):1524-1540, 1997</em>"
+  },
+  "217": {
+    "ref_id": 217,
+    "authors": "H. Ramesh and V. Vinay",
+    "title": "String matching in \\( \\widetilde{O}(\\sqrt{n} + \\sqrt{m}) \\)quantum time",
+    "links": {
+      "arXiv:quant-ph/0011049": "http://arxiv.org/abs/quant-ph/0011049"
+    },
+    "extra": "<em>Journal of Discrete Algorithms 1:103-110, 2003</em>"
+  },
+  "218": {
+    "ref_id": 218,
+    "authors": "Greg Kuperberg",
+    "title": "Another subexponential-time quantum algorithm for the dihedralhidden subgroup problem",
+    "links": {
+      "arXiv:1112.3333": "http://arxiv.org/abs/1112.3333"
+    },
+    "extra": "In <em>Proceedings of TQC pg. 20-34, 2013</em>"
+  },
+  "219": {
+    "ref_id": 219,
+    "authors": "Peter H\u00f8yer, Jan Neerbek, and Yaoyun Shi",
+    "title": "Quantum complexities of ordered searching, sorting, and elementdistinctness",
+    "links": {
+      "arXiv:quant-ph/0102078": "http://arxiv.org/abs/quant-ph/0102078"
+    },
+    "extra": "In <em>Proceedings of ICALP pg. 346-357, 2001</em>"
+  },
+  "220": {
+    "ref_id": 220,
+    "authors": "Amnon Ta-Shma",
+    "title": "Inverting well conditioned matrices in quantum logspace",
+    "links": {},
+    "extra": "In <em>Proceedings of STOC 2013</em> pg. 881-890."
+  },
+  "221": {
+    "ref_id": 221,
+    "authors": "Nathan Wiebe, Ashish Kapoor, and Krysta Svore",
+    "title": "Quantum deep learning",
+    "links": {
+      "arXiv:1412.3489": "http://arxiv.org/abs/1412.3489"
+    },
+    "extra": ""
+  },
+  "222": {
+    "ref_id": 222,
+    "authors": "Seth Lloyd, Silvano Garnerone, and Paolo Zanardi",
+    "title": "Quantum algorithms for topological and geometric analysis of big data",
+    "links": {
+      "arXiv:1408.3106": "http://arxiv.org/abs/1408.3106"
+    },
+    "extra": ""
+  },
+  "223": {
+    "ref_id": 223,
+    "authors": "David A. Meyer and James Pommersheim",
+    "title": "Single-query learning from abelian and non-abelian Hammingdistance oracles",
+    "links": {
+      "arXiv:0912.0583": "http://arxiv.org/abs/0912.0583"
+    },
+    "extra": ""
+  },
+  "224": {
+    "ref_id": 224,
+    "authors": "Markus Hunziker, David A. Meyer, Jihun Park, James Pommersheim, andMitch Rothstein",
+    "title": "The geometry of quantum learning",
+    "links": {
+      "arXiv:quant-ph/0309059": "http://arxiv.org/abs/quant-ph/0309059"
+    },
+    "extra": "<em>Quantum Information Processing 9:321-341, 2010.</em>"
+  },
+  "225": {
+    "ref_id": 225,
+    "authors": "Lawrence M. Ioannou and Michele Mosca",
+    "title": "Limitations on some simple adiabatic quantum algorithms",
+    "links": {
+      "arXiv:quant-ph/0702241": "http://arxiv.org/abs/quant-ph/0702241"
+    },
+    "extra": "<em>International Journal of Quantum Information, 6(3):419-426, 2008.</em>"
+  },
+  "226": {
+    "ref_id": 226,
+    "authors": "Michael Jarret and Stephen P. Jordan",
+    "title": "Adiabatic optimization without local minima",
+    "links": {
+      "arXiv:1405.7552": "http://arxiv.org/abs/1405.7552"
+    },
+    "extra": "<em>Quantum Information and Computation, 15(3/4):0181-0199, 2015.</em>"
+  },
+  "227": {
+    "ref_id": 227,
+    "authors": "Matthew B. Hastings, Dave Wecker, Bela Bauer, and Matthias Troyer",
+    "title": "Improving quantum algorithms for quantum chemistry",
+    "links": {
+      "arXiv:1403.1539": "http://arxiv.org/abs/1403.1539"
+    },
+    "extra": "<em>Quantum Information and Computation, 15(1/2):0001-0021, 2015.</em>"
+  },
+  "228": {
+    "ref_id": 228,
+    "authors": "Stephen P. Jordan, Keith S. M. Lee, and John Preskill",
+    "title": "Quantum simulation of scattering in scalar quantum field theories",
+    "links": {
+      "arXiv:1112.4833": "http://arxiv.org/abs/1112.4833"
+    },
+    "extra": "<em>Quantum Information and Computation, 14(11/12):1014-1080, 2014.</em>"
+  },
+  "229": {
+    "ref_id": 229,
+    "authors": "Stephen P. Jordan, Keith S. M. Lee, and John Preskill",
+    "title": "Quantum algorithms for fermionic quantum field theories",
+    "links": {
+      "arXiv:1404.7115": "http://arxiv.org/abs/1404.7115"
+    },
+    "extra": ""
+  },
+  "230": {
+    "ref_id": 230,
+    "authors": "Gavin K. Brennen, Peter Rohde, Barry C. Sanders, and Sukhi Singh",
+    "title": "Multi-scale quantum simulation of quantum field theory using wavelets",
+    "links": {
+      "arXiv:1412.0750": "http://arxiv.org/abs/1412.0750"
+    },
+    "extra": ""
+  },
+  "231": {
+    "ref_id": 231,
+    "authors": "Hefeng Wang, Sabre Kais, Al\u00e1n Aspuru-Guzik, and Mark R. Hoffmann.",
+    "title": "Quantum algorithm for obtaining the energy spectrum of molecularsystems",
+    "links": {
+      "arXiv:0907.0854": "http://arxiv.org/abs/0907.0854"
+    },
+    "extra": "<em>Physical Chemistry Chemical Physics, 10(35):5388-5393, 2008.</em>"
+  },
+  "232": {
+    "ref_id": 232,
+    "authors": "Ivan Kassal and Al\u00e1n Aspuru-Guzik",
+    "title": "Quantum algorithm for molecular properties and geometry optimization",
+    "links": {
+      "arXiv:0908.1921": "http://arxiv.org/abs/0908.1921"
+    },
+    "extra": "<em>Journal of Chemical Physics, 131(22), 2009.</em>"
+  },
+  "233": {
+    "ref_id": 233,
+    "authors": "James D. Whitfield, Jacob Biamonte, and Al\u00e1n Aspuru-Guzik",
+    "title": "Simulation of electronic structure Hamiltonians using quantum computers",
+    "links": {
+      "arXiv:1001.3855": "http://arxiv.org/abs/1001.3855"
+    },
+    "extra": "<em>Molecular Physics, 109(5):735-750, 2011.</em>"
+  },
+  "234": {
+    "ref_id": 234,
+    "authors": "Borzu Toloui and Peter J. Love",
+    "title": "Quantum algorithms for quantum chemistry based on the sparsityof the CI-matrix",
+    "links": {
+      "arXiv:1312.2529": "http://arxiv.org/abs/1312.2579"
+    },
+    "extra": ""
+  },
+  "235": {
+    "ref_id": 235,
+    "authors": "James D. Whitfield",
+    "title": "Spin-free quantum computational simulations and symmetry adapted states",
+    "links": {
+      "arXiv:1306.1147": "http://arxiv.org/abs/1306.1147"
+    },
+    "extra": "<em>Journal of Chemical Physics, 139(2):021105, 2013.</em>"
+  },
+  "236": {
+    "ref_id": 236,
+    "authors": "Andrew W. Cross, Graeme Smith, and John A. Smolin",
+    "title": "Quantum learning robust to noise",
+    "links": {
+      "arXiv:1407.5088": "http://arxiv.org/abs/1407.5088"
+    },
+    "extra": ""
+  },
+  "237": {
+    "ref_id": 237,
+    "authors": "Aram W. Harrow and David J. Rosenbaum",
+    "title": "Uselessness for an oracle model with internal randomness",
+    "links": {
+      "arXiv:1111.1462": "http://arxiv.org/abs/1111.1462"
+    },
+    "extra": "<em>Quantum Information and Computation 14(7/8):608-624, 2014</em>"
+  },
+  "238": {
+    "ref_id": 238,
+    "authors": "Jon R. Grice and David A. Meyer",
+    "title": "A quantum algorithm for Viterbi decoding of classicalconvolutional codes",
+    "links": {
+      "arXiv:1405.7479": "http://arxiv.org/abs/1405.7479"
+    },
+    "extra": ""
+  },
+  "239": {
+    "ref_id": 239,
+    "authors": "Alexander Barg and Shiyu Zhou",
+    "title": "A quantum decoding algorithm of the simplex code",
+    "links": {
+      "author's homepage": "http://www.ece.umd.edu/~abarg/reprints/rm1dq.pdf"
+    },
+    "extra": "<em>Proceedings of the 36th Annual Allerton Conference, 1998</em> Available at"
+  },
+  "240": {
+    "ref_id": 240,
+    "authors": "Guoming Wang",
+    "title": "Span-program-based quantum algorithm for tree detection",
+    "links": {
+      "arXiv:1309.7713": "http://arxiv.org/abs/1309.7713"
+    },
+    "extra": ""
+  },
+  "241": {
+    "ref_id": 241,
+    "authors": "Fran\u00e7ois Le Gall, Harumichi Nishimura, and Seiichiro Tani",
+    "title": "Quantum algorithm for finding constant-sized sub-hypergraphsover 3-uniform hypergraphs",
+    "links": {
+      "arXiv:1310.4127": "http://arxiv.org/abs/1310.4127"
+    },
+    "extra": "In <em>Proceedings of COCOON, 2014. pg. 429-440</em>"
+  },
+  "242": {
+    "ref_id": 242,
+    "authors": "Edward Farhi, Jeffrey Goldstone, and Sam Gutmann",
+    "title": "A quantum approximate optimization algorithm",
+    "links": {
+      "arXiv:1411.4028": "http://arxiv.org/abs/1411.4028"
+    },
+    "extra": ""
+  },
+  "243": {
+    "ref_id": 243,
+    "authors": "Edward Farhi, Jeffrey Goldstone, and Sam Gutmann",
+    "title": "A quantum approximate optimization algorithm applied to abounded occurrence constraint problem",
+    "links": {
+      "arXiv:1412.6062": "http://arxiv.org/abs/1412.6062"
+    },
+    "extra": ""
+  },
+  "244": {
+    "ref_id": 244,
+    "authors": "Dominic W. Berry, Andrew M. Childs, Richard Cleve, Robin Kothari, andRolando D. Somma",
+    "title": "Simulating Hamiltonian dynamics with a truncated Taylor series",
+    "links": {
+      "arXiv:1412.4687": "http://arxiv.org/abs/1412.4687"
+    },
+    "extra": ""
+  },
+  "245": {
+    "ref_id": 245,
+    "authors": "Dominic W. Berry, Andrew M. Childs, and Robin Kothari",
+    "title": "Hamiltonian simulation with nearly optimal dependence on all parameters",
+    "links": {
+      "arXiv:1501.01715": "http://arxiv.org/abs/1501.01715"
+    },
+    "extra": ""
+  },
+  "246": {
+    "ref_id": 246,
+    "authors": "Scott Aaronson",
+    "title": "Read the fine print",
+    "links": {
+      "fulltext": "http://www.scottaaronson.com/papers/qml.pdf"
+    },
+    "extra": "<em>Nature Physics</em> 11:291-293, 2015. ["
+  },
+  "247": {
+    "ref_id": 247,
+    "authors": "Alexander Elgart and George A. Hagedorn",
+    "title": "A note on the switching adiabatic theorem",
+    "links": {
+      "arXiv:1204.2318": "http://arxiv.org/abs/1204.2318"
+    },
+    "extra": "<em>Journal of Mathematical Physics</em> 53(10):102202, 2012."
+  },
+  "248": {
+    "ref_id": 248,
+    "authors": "Daniel J. Bernstein, Johannes Buchmann, and Erik Dahmen,",
+    "title": "<i>Eds.</i>",
+    "links": {
+      "Springer": "http://www.springer.com/mathematics/numbers/book/978-3-540-88701-0"
+    },
+    "extra": "Post-Quantum Cryptography"
+  },
+  "249": {
+    "ref_id": 249,
+    "authors": "B. D. Clader, B. C. Jacobs, and C. R. Sprouse",
+    "title": "Preconditioned quantum linear system algorithm",
+    "links": {
+      "arXiv:1301.2340": "http://arxiv.org/abs/1301.2340"
+    },
+    "extra": "<em>Phys. Rev. Lett.</em> 110:250504, 2013."
+  },
+  "250": {
+    "ref_id": 250,
+    "authors": "S. Lloyd, M. Mohseni, and P. Rebentrost",
+    "title": "Quantum principal component analysis",
+    "links": {
+      "arXiv:1307.0401": "http://arxiv.org/abs/1307.0401"
+    },
+    "extra": "<em>Nature Physics.</em> 10(9):631, 2014."
+  },
+  "251": {
+    "ref_id": 251,
+    "authors": "Patrick Rebentrost, Masoud Mohseni, and Seth Lloyd",
+    "title": "Quantum support vector machine for big data classification",
+    "links": {
+      "arXiv:1307.0471": "http://arxiv.org/abs/1307.0471"
+    },
+    "extra": "<em>Phys. Rev. Lett.</em> 113, 130503, 2014."
+  },
+  "252": {
+    "ref_id": 252,
+    "authors": "J. M. Pollard",
+    "title": "Theorems on factorization and primality testing",
+    "links": {},
+    "extra": "<em>Proceedings of the Cambridge Philosophical Society.</em> 76:521-228, 1974."
+  },
+  "253": {
+    "ref_id": 253,
+    "authors": "L. Babai, R. Beals, and A. Seress",
+    "title": "Polynomial-time theory of matrix groups",
+    "links": {},
+    "extra": "In <em>Proceedings of STOC 2009</em>, pg. 55-64."
+  },
+  "254": {
+    "ref_id": 254,
+    "authors": "Neil J. Ross and Peter Selinger",
+    "title": "Optimal ancilla-free Clifford+T approximations of z-rotations",
+    "links": {
+      "arXiv:1403.2975": "http://arxiv.org/abs/1403.2975"
+    },
+    "extra": ""
+  },
+  "255": {
+    "ref_id": 255,
+    "authors": "L. A. B. Kowada, C. Lavor, R. Portugal, and C. M. H. de Figueiredo",
+    "title": "A new quantum algorithm for solving the minimum searching problem",
+    "links": {},
+    "extra": "<em>International Journal of Quantum Information, Vol. 6, No. 3, pg. 427-436</em>, 2008."
+  },
+  "256": {
+    "ref_id": 256,
+    "authors": "Sean Hallgren and Aram Harrow",
+    "title": "Superpolynomial speedups based on almost any quantum circuit",
+    "links": {
+      "arXiv:0805.0007": "http://arxiv.org/abs/0805.0007"
+    },
+    "extra": "<em>Proceedings of ICALP 2008</em>, pg. 782-795."
+  },
+  "257": {
+    "ref_id": 257,
+    "authors": "Fernando G.S.L. Brandao and Michal Horodecki",
+    "title": "Exponential quantum speed-ups are generic",
+    "links": {
+      "arXiv:1010.3654": "http://arxiv.org/abs/1010.3654"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, Vol. 13, Pg. 0901, 2013"
+  },
+  "258": {
+    "ref_id": 258,
+    "authors": "Scott Aaronson and Andris Ambainis",
+    "title": "Forrelation: A problem that optimally separates quantum from classical computing.",
+    "links": {
+      "arXiv:1411.5729": "http://arxiv.org/abs/1411.5729"
+    },
+    "extra": ""
+  },
+  "259": {
+    "ref_id": 259,
+    "authors": "Z. Gedik",
+    "title": "Computational speedup with a single qutrit",
+    "links": {
+      "arXiv:1403.5861": "http://arxiv.org/abs/1403.5861"
+    },
+    "extra": ""
+  },
+  "260": {
+    "ref_id": 260,
+    "authors": "Boaz Barak, Ankur Moitra, Ryan O'Donnell, Prasad Raghavendra, OdedRegev, David Steurer, Luca Trevisan, Aravindan Vijayaraghavan, DavidWitmer, and John Wright",
+    "title": "Beating the random assignment on constraint satisfaction problems of bounded degree",
+    "links": {
+      "arXiv:1505.03424": "http://arxiv.org/abs/1505.03424"
+    },
+    "extra": ""
+  },
+  "261": {
+    "ref_id": 261,
+    "authors": "David Cornwell",
+    "title": "Amplified Quantum Transforms",
+    "links": {
+      "arXiv:1406.0190": "http://arxiv.org/abs/1406.0190"
+    },
+    "extra": ""
+  },
+  "262": {
+    "ref_id": 262,
+    "authors": "T. Laarhoven, M. Mosca, and J. van de Pol",
+    "title": "Solving the shortest vector problem in lattices faster using quantum search",
+    "links": {
+      "arXiv:1301.6176": "http://arxiv.org/abs/1301.6176"
+    },
+    "extra": "<em>Proceedings of PQCrypto13</em>, pp. 83-101, 2013."
+  },
+  "263": {
+    "ref_id": 263,
+    "authors": "Andrew M. Childs, Robin Kothari, and Rolando D. Somma",
+    "title": "Quantum linear systems algorithm with exponentially improveddependence on precision",
+    "links": {
+      "arXiv:1511.02306": "http://arxiv.org/abs/1511.02306"
+    },
+    "extra": ""
+  },
+  "264": {
+    "ref_id": 264,
+    "authors": "Ashley Montanaro",
+    "title": "Quantum walk speedup of backtracking algorithms",
+    "links": {
+      "arXiv:1509.02374": "http://arxiv.org/abs/1509.02374"
+    },
+    "extra": ""
+  },
+  "265": {
+    "ref_id": 265,
+    "authors": "Ashley Montanaro",
+    "title": "Quantum speedup of Monte Carlo methods",
+    "links": {
+      "arXiv:1504.06987": "http://arxiv.org/abs/1504.06987"
+    },
+    "extra": ""
+  },
+  "266": {
+    "ref_id": 266,
+    "authors": "Andris Ambainis, Aleksandrs Belovs, Oded Regev, and Ronald de Wolf",
+    "title": "Efficient quantum algorithms for (gapped) group testing andjunta testing",
+    "links": {
+      "arXiv:1507.03126": "http://arxiv.org/abs/1507.03126"
+    },
+    "extra": ""
+  },
+  "267": {
+    "ref_id": 267,
+    "authors": "A. Atici and R. A. Servedio",
+    "title": "Quantum algorithms for learning and testing juntas",
+    "links": {
+      "arXiv:0707.3479": "http://arxiv.org/abs/0707.3479"
+    },
+    "extra": "<em>Quantum Information Processing</em>, 6(5):323-348, 2007."
+  },
+  "268": {
+    "ref_id": 268,
+    "authors": "Aleksandrs Belovs",
+    "title": "Quantum algorithms for learning symmetric juntas via theadversary bound",
+    "links": {
+      "arXiv:1311.6777": "http://arxiv.org/abs/1311.6777"
+    },
+    "extra": "<em>Computational Complexity</em>, 24(2):255-293, 2015. (Also appears in proceedings of CCC'14)."
+  },
+  "269": {
+    "ref_id": 269,
+    "authors": "Stacey Jeffery and Shelby Kimmel",
+    "title": "NAND-trees, average choice complexity, and effective resistance",
+    "links": {
+      "arXiv:1511.02235": "http://arxiv.org/abs/1511.02235"
+    },
+    "extra": ""
+  },
+  "270": {
+    "ref_id": 270,
+    "authors": "Scott Aaronson, Shalev Ben-David, and Robin Kothari",
+    "title": "Separations in query complexity using cheat sheets",
+    "links": {
+      "arXiv:1511.01937": "http://arxiv.org/abs/1511.01937"
+    },
+    "extra": ""
+  },
+  "271": {
+    "ref_id": 271,
+    "authors": "Fr\u00e9d\u00e9ric Grosshans, Thomas Lawson, Fran\u00e7oisMorain, and Benjamin Smith",
+    "title": "Factoring safe semiprimes with a single quantum query",
+    "links": {
+      "arXiv:1511.04385": "http://arxiv.org/abs/1511.04385"
+    },
+    "extra": ""
+  },
+  "272": {
+    "ref_id": 272,
+    "authors": "Agnis \u0100ri\u0146\u0161",
+    "title": "Span-program-based quantum algorithms for graph bipartitenessand connectivity",
+    "links": {
+      "arXiv:1510.07825": "http://arxiv.org/abs/1510.07825"
+    },
+    "extra": ""
+  },
+  "273": {
+    "ref_id": 273,
+    "authors": "Juan Bermejo-Vega and Kevin C. Zatloukal",
+    "title": "Abelian hypergroups and quantum computation",
+    "links": {
+      "arXiv:1509.05806": "http://arxiv.org/abs/1509.05806"
+    },
+    "extra": ""
+  },
+  "274": {
+    "ref_id": 274,
+    "authors": "Andrew Childs and Jeffrey Goldstone",
+    "title": "Spatial search by quantum walk",
+    "links": {
+      "arXiv:quant-ph/0306054": "http://arxiv.org/abs/quant-ph/0306054"
+    },
+    "extra": "<em>Physical Review A</em>, 70:022314, 2004."
+  },
+  "275": {
+    "ref_id": 275,
+    "authors": "Shantanav Chakraborty, Leonardo Novo, Andris Ambainis, and Yasser Omar",
+    "title": "Spatial search by quantum walk is optimal for almost all graphs",
+    "links": {
+      "arXiv:1508.01327": "http://arxiv.org/abs/1508.01327"
+    },
+    "extra": ""
+  },
+  "276": {
+    "ref_id": 276,
+    "authors": "Fran\u00e7ois Le Gall",
+    "title": "Improved quantum algorithm for triangle finding viacombinatorial arguments",
+    "links": {
+      "arXiv:1407.0085": "http://arxiv.org/abs/1407.0085"
+    },
+    "extra": "In <em>Proceedings of the 55th IEEE Annual Symposium on Foundations of Computer Science (FOCS)</em>, pg. 216-225, 2014."
+  },
+  "277": {
+    "ref_id": 277,
+    "authors": "Ashley Montanaro",
+    "title": "The quantum complexity of approximating the frequency moments",
+    "links": {
+      "arXiv:1505.00113": "http://arxiv.org/abs/1505.00113"
+    },
+    "extra": ""
+  },
+  "278": {
+    "ref_id": 278,
+    "authors": "Rolando D. Somma",
+    "title": "Quantum simulations of one dimensional quantum systems",
+    "links": {
+      "arXiv:1503.06319": "http://arxiv.org/abs/1503.06319"
+    },
+    "extra": ""
+  },
+  "279": {
+    "ref_id": 279,
+    "authors": "Bill Fefferman and Cedric Yen-Yu Lin",
+    "title": "A complete characterization of unitary quantum space",
+    "links": {
+      "arXiv:1604.01384": "http://arxiv.org/abs/1604.01384"
+    },
+    "extra": ""
+  },
+  "280": {
+    "ref_id": 280,
+    "authors": "Tsuyoshi Ito and Stacey Jeffery",
+    "title": "Approximate span programs",
+    "links": {
+      "arXiv:1507.00432": "http://arxiv.org/abs/1507.00432"
+    },
+    "extra": ""
+  },
+  "281": {
+    "ref_id": 281,
+    "authors": "Arnau Riera, Christian Gogolin, and Jens Eisert",
+    "title": "Thermalization in nature and on a quantum computer",
+    "links": {
+      "arXiv:1102.2389": "http://arxiv.org/abs/1102.2389"
+    },
+    "extra": "<em>Physical Review Letters</em>, 108:080402 (2012)"
+  },
+  "282": {
+    "ref_id": 282,
+    "authors": "Michael J. Kastoryano and Fernando G. S. L. Brandao",
+    "title": "Quantum Gibbs Samplers: the commuting case",
+    "links": {
+      "arXiv:1409.3435": "http://arxiv.org/abs/1409.3435"
+    },
+    "extra": "<em>Communications in Mathematical Physics</em>, 344(3):915-957 (2016)"
+  },
+  "283": {
+    "ref_id": 283,
+    "authors": "Andrew M. Childs, David Jao, and Vladimir Soukharev",
+    "title": "Constructing elliptic curve isogenies in quantum subexponential time",
+    "links": {
+      "arXiv:1012.4019": "http://arxiv.org/abs/1012.4019"
+    },
+    "extra": "<em>Journal of Mathematical Cryptology</em>, 8(1):1-29 (2014)"
+  },
+  "284": {
+    "ref_id": 284,
+    "authors": "Markus Grassl, Brandon Langenberg, Martin Roetteler, and Rainer Steinwandt",
+    "title": "Applying Grover's algorithm to AES: quantum resource estimates",
+    "links": {
+      "arXiv:1512.04965": "http://arxiv.org/abs/1512.04965"
+    },
+    "extra": ""
+  },
+  "285": {
+    "ref_id": 285,
+    "authors": "M. Ami, O. Di Matteo, V. Gheorghiu, M. Mosca, A. Parent, and J. Schanck",
+    "title": "Estimating the cost of generic quantum pre-image attacks onSHA-2 and SHA-3",
+    "links": {
+      "arXiv:1603.09383": "http://arxiv.org/abs/1603.09383"
+    },
+    "extra": ""
+  },
+  "286": {
+    "ref_id": 286,
+    "authors": "Marc Kaplan, Gaetan Leurent, Anthony Leverrier, and Maria Naya-Plasencia",
+    "title": "Quantum differential and linear cryptanalysis",
+    "links": {
+      "arXiv:1510.05836": "http://arxiv.org/abs/1510.05836"
+    },
+    "extra": ""
+  },
+  "287": {
+    "ref_id": 287,
+    "authors": "Scott Fluhrer",
+    "title": "Quantum Cryptanalysis of NTRU",
+    "links": {
+      "Cryptology ePrint Archive: Report 2015/676": "https://eprint.iacr.org/2015/676"
+    },
+    "extra": ""
+  },
+  "288": {
+    "ref_id": 288,
+    "authors": "Marc Kaplan",
+    "title": "Quantum attacks against iterated block ciphers",
+    "links": {
+      "arXiv:1410.1434": "http://arxiv.org/abs/1410.1434"
+    },
+    "extra": ""
+  },
+  "289": {
+    "ref_id": 289,
+    "authors": "H. Kuwakado and M. Morii",
+    "title": "Quantum distinguisher between the 3-round Feistel cipher and the random permutation",
+    "links": {},
+    "extra": "In <em>Proceedings of IEEE International Symposium on Information Theory (ISIT)</em>, pg. 2682-2685, 2010."
+  },
+  "290": {
+    "ref_id": 290,
+    "authors": "H. Kuwakado and M. Morii",
+    "title": "Security on the quantum-type Even-Mansour cipher",
+    "links": {},
+    "extra": "In <em>Proceedings of International Symposium on Information Theory and its Applications (ISITA)</em>, pg. 312-316, 2012."
+  },
+  "291": {
+    "ref_id": 291,
+    "authors": "Martin Roetteler and Rainer Steinwandt",
+    "title": "A note on quantum related-key attacks",
+    "links": {
+      "arXiv:1306.2301": "http://arxiv.org/abs/1306.2301"
+    },
+    "extra": ""
+  },
+  "292": {
+    "ref_id": 292,
+    "authors": "Thomas Santoli and Christian Schaffner",
+    "title": "Using Simon's algorithm to attack symmetric-key cryptographic primitives",
+    "links": {
+      "arXiv:1603.07856": "http://arxiv.org/abs/1603.07856"
+    },
+    "extra": ""
+  },
+  "293": {
+    "ref_id": 293,
+    "authors": "Rolando D. Somma",
+    "title": "A Trotter-Suzuki approximation for Lie groups with applications to Hamiltonian simulation",
+    "links": {
+      "arXiv:1512.03416": "http://arxiv.org/abs/1512.03416"
+    },
+    "extra": ""
+  },
+  "294": {
+    "ref_id": 294,
+    "authors": "Guang Hao Low and Isaac Chuang",
+    "title": "Optimal Hamiltonian simulation by quantum signal processing",
+    "links": {
+      "arXiv:1606.02685": "http://arxiv.org/abs/1606.02685"
+    },
+    "extra": ""
+  },
+  "295": {
+    "ref_id": 295,
+    "authors": "Dominic W. Berry and Leonardo Novo",
+    "title": "Corrected quantum walk for optimal Hamiltonian simulation",
+    "links": {
+      "arXiv:1606.03443": "http://arxiv.org/abs/1606.03443"
+    },
+    "extra": ""
+  },
+  "296": {
+    "ref_id": 296,
+    "authors": "Ashley Montanaro and Sam Pallister",
+    "title": "Quantum algorithms and the finite element method",
+    "links": {
+      "arXiv:1512.05903": "http://arxiv.org/abs/1512.05903"
+    },
+    "extra": ""
+  },
+  "297": {
+    "ref_id": 297,
+    "authors": "Lin-Chun Wan, Chao-Hua Yu, Shi-Jie Pan, Fei Gao, and Qiao-Yan Wen",
+    "title": "Quantum algorithm for the Toeplitz systems",
+    "links": {
+      "arXiv:1608.02184": "http://arxiv.org/abs/1608.02184"
+    },
+    "extra": ""
+  },
+  "298": {
+    "ref_id": 298,
+    "authors": "Salvatore Mandra, Gian Giacomo Guerreschi, and Alan Aspuru-Guzik",
+    "title": "Faster than classical quantum algorithm for dense formulas of exact satisfiability and occupation problems",
+    "links": {
+      "arXiv:1512.00859": "http://arxiv.org/abs/1512.00859"
+    },
+    "extra": ""
+  },
+  "299": {
+    "ref_id": 299,
+    "authors": "J. Adcock, E. Allen, M. Day, S. Frick, J. Hinchliff, M. Johnson, S. Morley-Short, S. Pallister, A. Price, and S. Stanisic",
+    "title": "Advances in quantum machine learning",
+    "links": {
+      "arXiv:1512.02900": "http://arxiv.org/abs/1512.02900"
+    },
+    "extra": ""
+  },
+  "300": {
+    "ref_id": 300,
+    "authors": "Cedric Yen-Yu Lin and Yechao Zhu",
+    "title": "Performance of QAOA on typical instances of constraint satisfaction problems with bounded degree",
+    "links": {
+      "arXiv:1601.01744": "http://arxiv.org/abs/1601.01744"
+    },
+    "extra": ""
+  },
+  "301": {
+    "ref_id": 301,
+    "authors": "Dave Wecker, Matthew B. Hastings, and Matthias Troyer",
+    "title": "Training a quantum optimizer",
+    "links": {
+      "arXiv:1605.05370": "http://arxiv.org/abs/1605.05370"
+    },
+    "extra": ""
+  },
+  "302": {
+    "ref_id": 302,
+    "authors": "Edward Farhi and Aram W. Harrow",
+    "title": "Quantum supremacy through the quantum approximate optimization algorithm",
+    "links": {
+      "arXiv:1602.07674": "http://arxiv.org/abs/1602.07674"
+    },
+    "extra": ""
+  },
+  "303": {
+    "ref_id": 303,
+    "authors": "Thomas G. Wong",
+    "title": "Quantum walk search on Johnson graphs",
+    "links": {
+      "arXiv:1601.04212": "http://arxiv.org/abs/1601.04212"
+    },
+    "extra": ""
+  },
+  "304": {
+    "ref_id": 304,
+    "authors": "Jonatan Janmark, David A. Meyer, and Thomas G. Wong",
+    "title": "Global symmetry is unnecessary for fast quantum search",
+    "links": {
+      "arXiv:1403.2228": "http://arxiv.org/abs/1403.2228"
+    },
+    "extra": "<em>Physical Review Letters</em> 112:210502, 2014."
+  },
+  "305": {
+    "ref_id": 305,
+    "authors": "David A. Meyer and Thomas G. Wong",
+    "title": "Connectivity is a poor indicator of fast quantum search",
+    "links": {
+      "arXiv:1409.5876": "http://arxiv.org/abs/1409.5876"
+    },
+    "extra": "<em>Physical Review Letters</em> 114:110503, 2014."
+  },
+  "306": {
+    "ref_id": 306,
+    "authors": "Thomas G. Wong",
+    "title": "Spatial search by continuous-time quantum walk with multiple marked vertices",
+    "links": {
+      "arXiv:1501.07071": "http://arxiv.org/abs/1409.5876"
+    },
+    "extra": "<em>Quantum Information Processing</em> 15(4):1411-1443, 2016."
+  },
+  "307": {
+    "ref_id": 307,
+    "authors": "Anirban Naryan Chowdhury and Rolando D. Somma",
+    "title": "Quantum algorithms for Gibbs sampling and hitting-time estimation",
+    "links": {
+      "arXiv:1603.02940": "http://arxiv.org/abs/1603.02940"
+    },
+    "extra": ""
+  },
+  "308": {
+    "ref_id": 308,
+    "authors": "Edward Farhi, Shelby Kimmel, and Kristan Temme",
+    "title": "A quantum version of Schoning's algorithm applied to quantum 2-SAT",
+    "links": {
+      "arXiv:1603.06985": "http://arxiv.org/abs/1603.06985"
+    },
+    "extra": ""
+  },
+  "309": {
+    "ref_id": 309,
+    "authors": "Iordanis Kerenidis and Anupam Prakash",
+    "title": "Quantum recommendation systems",
+    "links": {
+      "67": "http://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16054",
+      "1868-8969": "http://drops.dagstuhl.de/opus/volltexte/2017/8154/pdf/LIPIcs-ITCS-2017-49.pdf",
+      "arXiv:1603.08675": "http://arxiv.org/abs/1603.08675"
+    },
+    "extra": "<em>Innovations in Theoretical Computer Science (ITCS 2017)</em>, LIPIcs, vol. <a href=\"http://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16054\">67</a>, pg. <a href=\"http://drops.dagstuhl.de/opus/volltexte/2017/8154/pdf/LIPIcs-ITCS-2017-49.pdf\">1868-8969</a> . ["
+  },
+  "310": {
+    "ref_id": 310,
+    "authors": "Markus Reiher, Nathan Wiebe, Krysta M. Svore, Dave Wecker, and Matthias Troyer",
+    "title": "Elucidating reaction mechanisms on quantum computers",
+    "links": {
+      "arXiv:1605.03590": "http://arxiv.org/abs/1605.03590"
+    },
+    "extra": ""
+  },
+  "311": {
+    "ref_id": 311,
+    "authors": "Aram W. Harrow and Ashley Montanaro",
+    "title": "Sequential measurements, disturbance, and property testing",
+    "links": {
+      "arXiv:1607.03236": "http://arxiv.org/abs/1607.03236"
+    },
+    "extra": ""
+  },
+  "312": {
+    "ref_id": 312,
+    "authors": "Martin Roetteler",
+    "title": "Quantum algorithms for abelian difference sets and applications to dihedral hidden subgroups",
+    "links": {
+      "arXiv:1608.02005": "http://arxiv.org/abs/1608.02005"
+    },
+    "extra": ""
+  },
+  "313": {
+    "ref_id": 313,
+    "authors": "Fernando G.S.L. Brandao and Krysta Svore",
+    "title": "Quantum speed-ups for semidefinite programming",
+    "links": {
+      "arXiv:1609.05537": "http://arxiv.org/abs/1609.05537"
+    },
+    "extra": ""
+  },
+  "314": {
+    "ref_id": 314,
+    "authors": "Z-C Yang, A. Rahmani, A. Shabani, H. Neven, and C. Chamon",
+    "title": "Optimizing variational quantum algorithms using Pontryagins's minimum principle",
+    "links": {
+      "arXiv:1607.06473": "http://arxiv.org/abs/1607.06473"
+    },
+    "extra": ""
+  },
+  "315": {
+    "ref_id": 315,
+    "authors": "Gilles Brassard, Peter H\u00f8yer, and Alain Tapp",
+    "title": "Quantum cryptanalysis of hash and claw-free functions",
+    "links": {},
+    "extra": "In <em>Proceedings of the 3rd Latin American symposium on Theoretical Informatics (LATIN'98)</em>, pg. 163-169, 1998."
+  },
+  "316": {
+    "ref_id": 316,
+    "authors": "Daniel J. Bernstein",
+    "title": "Cost analysis of hash collisions: Will quantum computers make SHARCS obsolete?",
+    "links": {
+      "here": "https://cr.yp.to/hash/collisioncost-20090517.pdf"
+    },
+    "extra": "In <em>Proceedings of the 4th Workshop on Special-purpose Hardware for Attacking Cryptographic Systems (SHARCS'09)</em>, pg. 105-116, 2009. [available"
+  },
+  "317": {
+    "ref_id": 317,
+    "authors": "Chris Cade, Ashley Montanaro, and Aleksandrs Belovs",
+    "title": "Time and space efficient quantum algorithms for detecting cycles and testing bipartiteness",
+    "links": {
+      "arXiv:1610.00581": "http://arxiv.org/abs/1610.00581"
+    },
+    "extra": ""
+  },
+  "318": {
+    "ref_id": 318,
+    "authors": "A. Belovs and B. Reichardt",
+    "title": "Span programs and quantum algorithms for st-connectivity and claw detection",
+    "links": {
+      "arXiv:1203.2603": "http://arxiv.org/abs/1203.2603"
+    },
+    "extra": "In <em>European Symposium on Algorithms (ESA'12)</em>, pg. 193-204, 2012."
+  },
+  "319": {
+    "ref_id": 319,
+    "authors": "Titouan Carette, Mathieu Lauri\u00e8re, and Fr\u00e9d\u00e9ric Magniez",
+    "title": "Extended learning graphs for triangle finding",
+    "links": {
+      "arXiv:1609.07786": "http://arxiv.org/abs/1609.07786"
+    },
+    "extra": ""
+  },
+  "320": {
+    "ref_id": 320,
+    "authors": "F. Le Gall and N. Shogo",
+    "title": "Quantum algorithm for triangle finding in sparse graphs",
+    "links": {},
+    "extra": "In <em>Proceedings of the 26th International Symposium on Algorithms and Computation (ISAAC'15)</em>, pg. 590-600, 2015."
+  },
+  "321": {
+    "ref_id": 321,
+    "authors": "Or Sattath and Itai Arad",
+    "title": "A constructive quantum Lov\u00e1sz local lemma for commuting projectors",
+    "links": {
+      "arXiv:1310.7766": "http://arxiv.org/abs/1310.7766"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 15(11/12)987-996pg, 2015."
+  },
+  "322": {
+    "ref_id": 322,
+    "authors": "Martin Schwarz, Toby S. Cubitt, and Frank Verstraete",
+    "title": "An information-theoretic proof of the constructive commutative quantum Lov\u00e1sz local lemma",
+    "links": {
+      "arXiv:1311.6474": "http://arxiv.org/abs/1311.6474"
+    },
+    "extra": ""
+  },
+  "323": {
+    "ref_id": 323,
+    "authors": "C. Shoen, E. Solano, F. Verstraete, J. I. Cirac, and M. M. Wolf",
+    "title": "Sequential generation of entangled multi-qubit states",
+    "links": {
+      "arXiv:quant-ph/0501096": "http://arxiv.org/abs/quant-ph/0501096"
+    },
+    "extra": "<em>Physical Review Letters</em>, 95:110503, 2005."
+  },
+  "324": {
+    "ref_id": 324,
+    "authors": "C. Shoen, K. Hammerer, M. M. Wolf, J. I. Cirac, and E. Solano",
+    "title": "Sequential generation of matrix-product states in cavity QED",
+    "links": {
+      "arXiv:quant-ph/0612101": "http://arxiv.org/abs/quant-ph/0612101"
+    },
+    "extra": "<em>Physical Review A</em>, 75:032311, 2007."
+  },
+  "325": {
+    "ref_id": 325,
+    "authors": "Yimin Ge, Andr\u00e1s Moln\u00e1r, and J. Ignacio Cirac",
+    "title": "Rapid adiabatic preparation of injective PEPS and Gibbs states",
+    "links": {
+      "arXiv:1508.00570": "http://arxiv.org/abs/1508.00570"
+    },
+    "extra": "<em>Physical Review Letters</em>, 116:080503, 2016."
+  },
+  "326": {
+    "ref_id": 326,
+    "authors": "Martin Schwarz, Kristan Temme, and Frank Verstraete",
+    "title": "Preparing projected entangled pair states on a quantum computer",
+    "links": {
+      "arXiv:1104.1410": "http://arxiv.org/abs/1104.1410"
+    },
+    "extra": "<em>Physical Review Letters</em>, 108:110502, 2012."
+  },
+  "327": {
+    "ref_id": 327,
+    "authors": "Martin Schwarz, Toby S. Cubitt, Kristan Temme, Frank Verstraete, and David Perez-Garcia",
+    "title": "Preparing topological PEPS on a quantum computer",
+    "links": {
+      "arXiv:1211.4050": "http://arxiv.org/abs/1211.4050"
+    },
+    "extra": "<em>Physical Review A</em>, 88:032321, 2013."
+  },
+  "328": {
+    "ref_id": 328,
+    "authors": "M. Schwarz, O. Buerschaper, and J. Eisert",
+    "title": "Approximating local observables on projected entangled pair states",
+    "links": {
+      "arXiv:1606.06301": "http://arxiv.org/abs/1606.06301"
+    },
+    "extra": ""
+  },
+  "329": {
+    "ref_id": 329,
+    "authors": "Jean-Fran\u00e7ois Biasse and Fang Song",
+    "title": "Efficient quantum algorithms for computing class groups and solving the principal ideal problem in arbitrary degree number fields",
+    "links": {},
+    "extra": "<em>Proceedings of the 27th Annual ACM-SIAM Symposium on DiscreteAlgorithms (SODA '16)</em>, pg. 893-902, 2016."
+  },
+  "330": {
+    "ref_id": 330,
+    "authors": "Peter H\u00f8yer and Mojtaba Komeili",
+    "title": "Efficient quantum walk on the grid with multiple marked elements",
+    "links": {
+      "arXiv:1612.08958": "https://arxiv.org/abs/1612.08958"
+    },
+    "extra": "<em>Proceedings of the 34th Symposium on Theoretical Aspects of Computer Science (STACS 2017)</em>, 42, 2016."
+  },
+  "331": {
+    "ref_id": 331,
+    "authors": "Peter Wittek",
+    "title": "Quantum Machine Learning: what quantum computing means to data mining",
+    "links": {},
+    "extra": "Academic Press, 2014."
+  },
+  "332": {
+    "ref_id": 332,
+    "authors": "Maria Schuld, Ilya Sinayskiy, and Francesco Petruccione",
+    "title": "An introduction to quantum machine learning",
+    "links": {
+      "arXiv:1409.3097": "https://arxiv.org/abs/1409.3097"
+    },
+    "extra": "<em>Contemporary Physics</em>, 56(2):172, 2014."
+  },
+  "333": {
+    "ref_id": 333,
+    "authors": "J. Biamonte, P. Wittek, N. Pancotti, P. Rebentrost, N. Wiebe, and S. Lloyd",
+    "title": "Quantum machine learning",
+    "links": {
+      "arXiv:1611.09347": "https://arxiv.org/abs/1611.09347"
+    },
+    "extra": ""
+  },
+  "334": {
+    "ref_id": 334,
+    "authors": "Esma A\u00efmeur, Gilles Brassard, and S\u00e9bastien Gambs",
+    "title": "Machine learning in a quantum world",
+    "links": {},
+    "extra": "In <em>Advances in Artificial Intelligence: 19th Conference of the Canadian Society for Computational Studies of Intelligence</em> pg. 431-442, Springer, 2006."
+  },
+  "335": {
+    "ref_id": 335,
+    "authors": "Vedran Dunjko, Jacob Taylor, and Hans Briegel",
+    "title": "Quantum-enhanced machine learning",
+    "links": {},
+    "extra": "<em>Phys. Rev. Lett</em> 117:130501, 2016."
+  },
+  "336": {
+    "ref_id": 336,
+    "authors": "Nathan Wiebe, Ashish Kapoor, and Krysta Svore",
+    "title": "Quantum algorithms for nearest-neighbor methods for supervised and unsupervised learning",
+    "links": {
+      "arXiv:1401.2142": "https://arxiv.org/abs/1401.2142"
+    },
+    "extra": "<em>Quantum Information and Computation</em> 15(3/4): 0318-0358, 2015."
+  },
+  "337": {
+    "ref_id": 337,
+    "authors": "Seokwon Yoo, Jeongho Bang, Changhyoup Lee, and Junhyoug Lee",
+    "title": "A quantum speedup in machine learning: finding a N-bit Boolean function for a classification",
+    "links": {
+      "arXiv:1303.6055": "https://arxiv.org/abs/1303.6055"
+    },
+    "extra": "<em>New Journal of Physics</em> 6(10):103014, 2014."
+  },
+  "338": {
+    "ref_id": 338,
+    "authors": "Maria Schuld, Ilya Sinayskiy, and Francesco Petruccione",
+    "title": "Prediction by linear regression on a quantum computer",
+    "links": {
+      "arXiv:1601.07823": "https://arxiv.org/abs/1601.07823"
+    },
+    "extra": "<em>Physical Review A</em> 94:022342, 2016."
+  },
+  "339": {
+    "ref_id": 339,
+    "authors": "Zhikuan Zhao, Jack K. Fitzsimons, and Joseph F. Fitzsimons",
+    "title": "Quantum assisted Gaussian process regression",
+    "links": {
+      "arXiv:1512.03929": "https://arxiv.org/abs/1512.03929"
+    },
+    "extra": ""
+  },
+  "340": {
+    "ref_id": 340,
+    "authors": "Esma A\u00efmeur, Gilles Brassard, and S\u00e9bastien Gambs",
+    "title": "Quantum speed-up for unsupervised learning",
+    "links": {},
+    "extra": "<em>Machine Learning</em>, 90(2):261-287, 2013."
+  },
+  "341": {
+    "ref_id": 341,
+    "authors": "Nathan Wiebe, Ashish Kapoor, and Krysta Svore",
+    "title": "Quantum perceptron models",
+    "links": {
+      "arXiv:1602.04799": "https://arxiv.org/abs/1602.04799"
+    },
+    "extra": "Advances in Neural Information Processing Systems 29 (NIPS 2016), pg. 3999\u20134007, 2016."
+  },
+  "342": {
+    "ref_id": 342,
+    "authors": "G. Paparo, V. Dunjko, A. Makmal, M. Martin-Delgado, and H. Briegel",
+    "title": "Quantum speedup for active learning agents",
+    "links": {
+      "arXiv:1401.4997": "https://arxiv.org/abs/1401.4997"
+    },
+    "extra": "<em>Physical Review X</em> 4(3):031002, 2014."
+  },
+  "343": {
+    "ref_id": 343,
+    "authors": "Daoyi Dong, Chunlin Chen, Hanxiong Li, and Tzyh-Jong Tarn",
+    "title": "Quantum reinforcement learning",
+    "links": {},
+    "extra": "<em>IEEE Transactions on Systems, Man, and Cybernetics- Part B (Cybernetics)</em> 38(5):1207, 2008."
+  },
+  "344": {
+    "ref_id": 344,
+    "authors": "Daniel Crawford, Anna Levit, Navid Ghadermarzy, Jaspreet S. Oberoi, and Pooya Ronagh",
+    "title": "Reinforcement learning using quantum Boltzmann machines",
+    "links": {
+      "arXiv:1612.05695": "https://arxiv.org/abs/1612.05695"
+    },
+    "extra": ""
+  },
+  "345": {
+    "ref_id": 345,
+    "authors": "Steven H. Adachi and Maxwell P. Henderson",
+    "title": "Application of Quantum Annealing to Training of Deep Neural Networks",
+    "links": {
+      "arXiv:1510.06356": "https://arxiv.org/abs/1510.06356"
+    },
+    "extra": ""
+  },
+  "346": {
+    "ref_id": 346,
+    "authors": "M. Benedetti, J. Realpe-G\u00f3mez, R. Biswas, and A. Perdomo-Ortiz",
+    "title": "Quantum-assisted learning of graphical models with arbitrary pairwise connectivity",
+    "links": {
+      "arXiv:1609.02542": "https://arxiv.org/abs/1609.02542"
+    },
+    "extra": ""
+  },
+  "347": {
+    "ref_id": 347,
+    "authors": "M. H. Amin, E. Andriyash, J. Rolfe, B. Kulchytskyy, and R. Melko",
+    "title": "Quantum Boltzmann machine",
+    "links": {
+      "arXiv:1601.02036": "https://arxiv.org/abs/1601.02036"
+    },
+    "extra": ""
+  },
+  "348": {
+    "ref_id": 348,
+    "authors": "Peter Wittek and Christian Gogolin",
+    "title": "Quantum enhanced inference in Markov logic networks",
+    "links": {
+      "arXiv:1611.08104": "https://arxiv.org/abs/1611.08104"
+    },
+    "extra": "<em>Scientific Reports</em> 7:45672, 2017."
+  },
+  "349": {
+    "ref_id": 349,
+    "authors": "N. H. Bshouty and J. C. Jackson",
+    "title": "Learning DNF over the uniform distribution using a quantum example oracle",
+    "links": {},
+    "extra": "<em>SIAM Journal on Computing</em> 28(3):1136-1153, 1999."
+  },
+  "350": {
+    "ref_id": 350,
+    "authors": "Srinivasan Arunachalam and Ronald de Wolf",
+    "title": "A survey of quantum learning theory",
+    "links": {
+      "arXiv:1701.06806": "https://arxiv.org/abs/1701.06806"
+    },
+    "extra": ""
+  },
+  "351": {
+    "ref_id": 351,
+    "authors": "Rocco A. Servedio and Steven J. Gortler",
+    "title": "Equivalences and separations between quantum and classical learnability",
+    "links": {},
+    "extra": "<em>SIAM Journal on Computing</em>, 33(5):1067-1092, 2017."
+  },
+  "352": {
+    "ref_id": 352,
+    "authors": "Srinivasan Arunachalam and Ronald de Wolf",
+    "title": "Optimal quantum sample complexity of learning algorithms",
+    "links": {
+      "arXiv:1607.00932": "https://arxiv.org/abs/1607.00932"
+    },
+    "extra": ""
+  },
+  "353": {
+    "ref_id": 353,
+    "authors": "Alex Monr\u00e0s, Gael Sent\u00eds, and Peter Wittek",
+    "title": "Inductive quantum learning: why you are doing it almost right",
+    "links": {
+      "arXiv:1605.07541": "https://arxiv.org/abs/1605.07541"
+    },
+    "extra": ""
+  },
+  "354": {
+    "ref_id": 354,
+    "authors": "A. Bisio, G. Chiribella, G. M. D'Ariano, S. Facchini, and P. Perinotti",
+    "title": "Optimal quantum learning of a unitary transformation",
+    "links": {
+      "arXiv:0903.0543": "https://arxiv.org/abs/0903.0543"
+    },
+    "extra": "<em>Physical Review A</em> 81:032324, 2010."
+  },
+  "355": {
+    "ref_id": 355,
+    "authors": "M. Sasaki, A. Carlini, and R. Jozsa",
+    "title": "Quantum template matching",
+    "links": {
+      "arXiv:quant-ph/0102020": "https://arxiv.org/abs/quant-ph/0102020"
+    },
+    "extra": "<em>Physical Review A</em> 64:022317, 2001."
+  },
+  "356": {
+    "ref_id": 356,
+    "authors": "Masahide Sasaki and Alberto Carlini",
+    "title": "Quantum learning and universal quantum matching machine",
+    "links": {
+      "arXiv:quant-ph/0202173": "https://arxiv.org/abs/quant-ph/0202173"
+    },
+    "extra": "<em>Physical Review A</em> 66:022303, 2002."
+  },
+  "357": {
+    "ref_id": 357,
+    "authors": "Esma A\u00efmeur, Gilles Brassard, and S\u00e9bastien Gambs",
+    "title": "Quantum clustering algorithms",
+    "links": {},
+    "extra": "In <em>Proceedings of the 24th International Conference on Machine Learning (ICML)</em>, pg. 1-8, 2007."
+  },
+  "358": {
+    "ref_id": 358,
+    "authors": "Iordanis Kerenidis and Anupam Prakash",
+    "title": "Quantum gradient descent for linear systems and least squares",
+    "links": {
+      "arXiv:1704.04992": "https://arxiv.org/abs/1704.04992"
+    },
+    "extra": ""
+  },
+  "359": {
+    "ref_id": 359,
+    "authors": "Dan Boneh and Mark Zhandry",
+    "title": "Quantum-secure message authentication codes",
+    "links": {},
+    "extra": "In <em>Proceedings of Eurocrypt</em>, pg. 592-608, 2013."
+  },
+  "360": {
+    "ref_id": 360,
+    "authors": "A. M. Childs, W. van Dam, S-H Hung, and I. E. Shparlinski",
+    "title": "Optimal quantum algorithm for polynomial interpolation",
+    "links": {
+      "arXiv:1509.09271": "https://arxiv.org/abs/1509.09271"
+    },
+    "extra": "In <em>Proceedings of the 43rd International Colloquium on Automata, Languages, and Programming (ICALP)</em>, pg. 16:1-16:13, 2016."
+  },
+  "361": {
+    "ref_id": 361,
+    "authors": "Volker Strassen",
+    "title": "Einige Resultate \u00fcber Berechnungskomplexit\u00e4t",
+    "links": {},
+    "extra": "In <em>Jahresbericht der Deutschen Mathematiker-Vereinigung</em>, 78(1):1-8, 1976/1977."
+  },
+  "362": {
+    "ref_id": 362,
+    "authors": "Stacey Jeffery",
+    "title": "<a href=\"http://uwspace.uwaterloo.ca/handle/10012/8710\">Frameworks for Quantum Algorithms</a>",
+    "links": {
+      "Frameworks for Quantum Algorithms": "http://uwspace.uwaterloo.ca/handle/10012/8710"
+    },
+    "extra": ""
+  },
+  "363": {
+    "ref_id": 363,
+    "authors": "Seiichiro Tani",
+    "title": "An improved claw finding algorithm using quantum walk",
+    "links": {
+      "arXiv:0708.2584": "https://arxiv.org/abs/0708.2584"
+    },
+    "extra": "In <em>Mathematical Foundations of Computer Science (MFCS)</em>, pg. 536-547, 2007."
+  },
+  "364": {
+    "ref_id": 364,
+    "authors": "K. Iwama and A. Kawachi",
+    "title": "A new quantum claw-finding algorithm for three functions",
+    "links": {},
+    "extra": "<em>New Generation Computing</em>, 21(4):319-327, 2003."
+  },
+  "365": {
+    "ref_id": 365,
+    "authors": "D. J. Bernstein, N. Heninger, P. Lou, and L. Valenta",
+    "title": "Post-quantum RSA",
+    "links": {
+      "2017/351": "https://eprint.iacr.org/2017/351"
+    },
+    "extra": ""
+  },
+  "366": {
+    "ref_id": 366,
+    "authors": "Francois Fillion-Gourdeau, Steve MacLean, and Raymond Laflamme",
+    "title": "Quantum algorithm for the dsolution of the Dirac equation",
+    "links": {
+      "arXiv:1611.05484": "https://arxiv.org/abs/1611.05484"
+    },
+    "extra": ""
+  },
+  "367": {
+    "ref_id": 367,
+    "authors": "Ali Hamed Moosavian and Stephen Jordan",
+    "title": "Faster quantum algorithm to simulate Fermionic quantum field theory",
+    "links": {
+      "arXiv:1711.04006": "https://arxiv.org/abs/1711.04006"
+    },
+    "extra": ""
+  },
+  "368": {
+    "ref_id": 368,
+    "authors": "Pedro C.S. Costa, Stephen Jordan, and Aaron Ostrander",
+    "title": "Quantum algorithm for simulating the wave equation",
+    "links": {
+      "arXiv:1711.05394": "https://arxiv.org/abs/1711.05394"
+    },
+    "extra": ""
+  },
+  "369": {
+    "ref_id": 369,
+    "authors": "Jeffrey Yepez",
+    "title": "Highly covariant quantum lattice gas model of the Dirac equation",
+    "links": {
+      "arXiv:1106.0739": "https://arxiv.org/abs/1711.05394"
+    },
+    "extra": ""
+  },
+  "370": {
+    "ref_id": 370,
+    "authors": "Jeffrey Yepez",
+    "title": "Quantum lattice gas model of Dirac particles in 1+1 dimensions",
+    "links": {
+      "arXiv:1307.3595": "https://arxiv.org/abs/1307.3595"
+    },
+    "extra": ""
+  },
+  "371": {
+    "ref_id": 371,
+    "authors": "Bruce M. Boghosian and Washington Taylor",
+    "title": "Simulating quantum mechanics on a quantum computer",
+    "links": {
+      "arXiv:quant-ph/9701019": "https://arxiv.org/abs/quant-ph/9701019"
+    },
+    "extra": "<em>Physica D</em> 120:30-42, 1998. ["
+  },
+  "372": {
+    "ref_id": 372,
+    "authors": "Yimin Ge, Jordi Tura, and J. Ignacio Cirac",
+    "title": "Faster ground state preparation and high-precision ground energy estimation on a quantum computer",
+    "links": {
+      "arXiv:1712.03193": "https://arxiv.org/abs/1712.03193"
+    },
+    "extra": ""
+  },
+  "373": {
+    "ref_id": 373,
+    "authors": "Renato Portugal",
+    "title": "Element distinctness revisited",
+    "links": {
+      "arXiv:1711.11336": "https://arxiv.org/abs/1711.11336"
+    },
+    "extra": ""
+  },
+  "374": {
+    "ref_id": 374,
+    "authors": "Kanav Setia and James D. Whitfield",
+    "title": "Bravyi-Kitaev superfast simulation of fermions on a quantum computer",
+    "links": {
+      "arXiv:1712.00446": "https://arxiv.org/abs/1712.00446"
+    },
+    "extra": ""
+  },
+  "375": {
+    "ref_id": 375,
+    "authors": "Richard Cleve and Chunhao Wang",
+    "title": "Efficient quantum algorithms for simulating Lindblad evolution",
+    "links": {
+      "arXiv:1612.09512": "https://arxiv.org/abs/1612.09512"
+    },
+    "extra": ""
+  },
+  "376": {
+    "ref_id": 376,
+    "authors": "M. Kliesch, T. Barthel, C. Gogolin, M. Kastoryano, and J. Eisert",
+    "title": "Dissipative quantum Church-Turing theorem",
+    "links": {
+      "arXiv:1105.3986": "https://arxiv.org/abs/1105.3986"
+    },
+    "extra": "<em>Physical Review Letters</em> 107(12):120501, 2011. ["
+  },
+  "377": {
+    "ref_id": 377,
+    "authors": "A. M. Childs and T. Li",
+    "title": "Efficient simulation of sparse Markovian quantum dynamics",
+    "links": {
+      "arXiv:1611.05543": "https://arxiv.org/abs/1611.05543"
+    },
+    "extra": ""
+  },
+  "378": {
+    "ref_id": 378,
+    "authors": "R. Di Candia, J. S. Pedernales, A. del Campo, E. Solano, and J. Casanova",
+    "title": "Quantum simulation of dissipative processes without reservoir engineering",
+    "links": {},
+    "extra": "<em>Scientific Reports</em> 5:9981, 2015."
+  },
+  "379": {
+    "ref_id": 379,
+    "authors": "R. Babbush, D. Berry, M. Kieferov\u00e1, G. H. Low, Y. Sanders, A. Sherer, and N. Wiebe",
+    "title": "Improved techniques for preparing eigenstates of Fermionic Hamiltonians",
+    "links": {
+      "arXiv:1711.10460": "https://arxiv.org/abs/1711.10460"
+    },
+    "extra": ""
+  },
+  "380": {
+    "ref_id": 380,
+    "authors": "D. Poulin, A. Kitaev, D. S. Steiger, M. B. Hasting, and M. Troyer",
+    "title": "Fast quantum algorithm for spectral properties",
+    "links": {
+      "arXiv:1711.11025": "https://arxiv.org/abs/1711.11025"
+    },
+    "extra": ""
+  },
+  "381": {
+    "ref_id": 381,
+    "authors": "Guang Hao Low and Isaac Chuang",
+    "title": "Hamiltonian simulation bt qubitization",
+    "links": {
+      "arXiv:1610.06546": "https://arxiv.org/abs/1610.06546"
+    },
+    "extra": ""
+  },
+  "382": {
+    "ref_id": 382,
+    "authors": "F.G.S.L. Brand\u00e3o, A. Kalev, T. Li, C. Y.-Y. Lin, K. M. Svore, and X. Wu",
+    "title": "Quantum SDP Solvers: Large Speed-ups, Optimality, and Applications to Quantum Learning",
+    "links": {
+      "arXiv:1710.02581": "https://arxiv.org/abs/1710.02581"
+    },
+    "extra": "<em>Proceedings of ICALP 2019</em> ["
+  },
+  "383": {
+    "ref_id": 383,
+    "authors": "M. Eker\u00e5 and J. H\u00e5stad",
+    "title": "Quantum Algorithms for Computing Short Discrete Logarithms and Factoring RSA Integers",
+    "links": {
+      "Proceedings of PQCrypto 2017": "https://link.springer.com/chapter/10.1007/978-3-319-59879-6_20"
+    },
+    "extra": ""
+  },
+  "384": {
+    "ref_id": 384,
+    "authors": "M. Eker\u00e5",
+    "title": "On post-processing in the quantum algorithm for computing short discrete logarithms",
+    "links": {
+      "IACR ePrint Archive Report 2017/1122": "https://eprint.iacr.org/2017/1122"
+    },
+    "extra": ""
+  },
+  "385": {
+    "ref_id": 385,
+    "authors": "D. J. Bernstein, J.-F. Biasse, and M. Mosca",
+    "title": "A low-resource quantum factoring algorithm",
+    "links": {
+      "Proceedings of PQCrypto 2017": "https://link.springer.com/chapter/10.1007/978-3-319-59879-6_19"
+    },
+    "extra": ""
+  },
+  "386": {
+    "ref_id": 386,
+    "authors": "Jianxin Chen, Andrew M. Childs, and Shih-Han Hung",
+    "title": "Quantum algorithm for multivariate polynomial interpolation",
+    "links": {
+      "arXiv:1701.03990": "http://arxiv.org/abs/1701.03990"
+    },
+    "extra": "<em>Proceedings of the Royal Society A</em>, 474:20170480, 2017."
+  },
+  "387": {
+    "ref_id": 387,
+    "authors": "Lisa Hales and Sean Hallgren",
+    "title": "An improved quantum Fourier transform algorithm and applications.",
+    "links": {},
+    "extra": "In <i>Proceedings of FOCS 2000</i>, pg. 515-525."
+  },
+  "388": {
+    "ref_id": 388,
+    "authors": "Igor Shparlinski and Arne Winterhof",
+    "title": "Quantum period reconstruction of approximate sequences",
+    "links": {},
+    "extra": "<em>Information Processing Letters</em>, 103:211-215, 2007."
+  },
+  "389": {
+    "ref_id": 389,
+    "authors": "Alexander Russell and Igor E. Shparlinski",
+    "title": "Classical and quantum function reconstruction via character evaluation",
+    "links": {},
+    "extra": "<em>Journal of Complexity</em>, 20:404-422, 2004."
+  },
+  "390": {
+    "ref_id": 390,
+    "authors": "Sean Hallgren, Alexander Russell, and Igor Shparlinski",
+    "title": "Quantum noisy rational function reconstruction",
+    "links": {},
+    "extra": "<em>Proceedings of COCOON 2005</em>, pg. 420-429."
+  },
+  "391": {
+    "ref_id": 391,
+    "authors": "G. Ivanyos, M. Karpinski, M. Santha, N. Saxena, and I. Shparlinski",
+    "title": "Polynomial interpolation and identity testing from high powers over finite fields",
+    "links": {},
+    "extra": "<em>Algorithmica</em>, 80:560-575, 2017."
+  },
+  "392": {
+    "ref_id": 392,
+    "authors": "Qi Cheng",
+    "title": "Primality Proving via One Round in ECPP and One Iteration in AKS",
+    "links": {},
+    "extra": "<em>Journal of Cryptology</em>, Volume 20, Issue 3, pg. 375-387, July 2007."
+  },
+  "393": {
+    "ref_id": 393,
+    "authors": "Daniel J. Bernstein",
+    "title": "Proving primality in essentially quartic random time",
+    "links": {},
+    "extra": "<em>Mathematics of Computation</em>, Vol. 76, pg. 389-403, 2007."
+  },
+  "394": {
+    "ref_id": 394,
+    "authors": "F. Morain",
+    "title": "Implementing the asymptotically fast version of the elliptic curve primality proving algorithm",
+    "links": {},
+    "extra": "<em>Mathematics of Computation</em>, Vol. 76, pg. 493-505, 2007."
+  },
+  "395": {
+    "ref_id": 395,
+    "authors": "Alvaro Donis-Vela and Juan Carlos Garcia-Escartin",
+    "title": "A quantum primality test with order finding",
+    "links": {
+      "arXiv:1711.02616": "https://arxiv.org/abs/1711.02616"
+    },
+    "extra": ""
+  },
+  "396": {
+    "ref_id": 396,
+    "authors": "H. F. Chau and H.-K. Lo",
+    "title": "Primality test via quantum factorization",
+    "links": {
+      "arXiv:quant-ph/9508005": "https://arxiv.org/abs/quant-ph/9508005"
+    },
+    "extra": "<em>International Journal of Modern Physics C</em>, Vol. 8, No. 2, pg. 131-138, 1997. ["
+  },
+  "397": {
+    "ref_id": 397,
+    "authors": "David Harvey and Joris Van Der Hoeven",
+    "title": "Integer multiplication in time \\( O(n \\log \\ n) \\)",
+    "links": {
+      "hal-02070778": "https://hal.archives-ouvertes.fr/hal-02070778"
+    },
+    "extra": ""
+  },
+  "398": {
+    "ref_id": 398,
+    "authors": "Charles Greathouse",
+    "title": "<em>personal communication</em>",
+    "links": {},
+    "extra": ", 2019."
+  },
+  "399": {
+    "ref_id": 399,
+    "authors": "Ewin Tang",
+    "title": "A quantum-inspired classical algorithm for recommendation systems",
+    "links": {
+      "arXiv:1807.04271": "https://arxiv.org/abs/1807.04271"
+    },
+    "extra": "In <i>Proceedings of STOC 2019</i>, pg. 217-228. ["
+  },
+  "400": {
+    "ref_id": 400,
+    "authors": "Ewin Tang",
+    "title": "Quantum-inspired classical algorithms for principal component analysis and supervised clustering",
+    "links": {
+      "arXiv:1811.00414": "https://arxiv.org/abs/1811.00414"
+    },
+    "extra": ""
+  },
+  "401": {
+    "ref_id": 401,
+    "authors": "L. Wossnig, Z. Zhao, and A. Prakash",
+    "title": "A quantum linear system algorithm for dense matrices",
+    "links": {
+      "arXiv:1704.06174": "https://arxiv.org/abs/1704.06174"
+    },
+    "extra": "<em>Physical Review Letters</em> vol. 120, no. 5, pg. 050502, 2018."
+  },
+  "402": {
+    "ref_id": 402,
+    "authors": "Zhikuan Zhao, Alejandro Pozas-Kerstjens, Patrick Rebentrost, and Peter Wittek",
+    "title": "Bayesian Deep Learning on a Quantum Computer",
+    "links": {
+      "arXiv:1806.11463": "https://arxiv.org/abs/1806.11463"
+    },
+    "extra": "<em>Quantum Machine Intelligence</em> vol. 1, pg. 41-51, 2019. ["
+  },
+  "403": {
+    "ref_id": 403,
+    "authors": "Anja Becker, Jean-Sebastien Coron, and Antoine Joux",
+    "title": "Improved generic algorithms for hard knapsacks",
+    "links": {
+      "IACR eprint 2011/474": "http://eprint.iacr.org/2011/474"
+    },
+    "extra": "<em>Proceedings of Eurocrypt 2011</em> pg. 364-385 ["
+  },
+  "404": {
+    "ref_id": 404,
+    "authors": "Kun Zhang and Vladimir E. Korepin",
+    "title": "Low depth quantum search algorithm",
+    "links": {
+      "arXiv:1908.04171": "https://arxiv.org/abs/1908.04171"
+    },
+    "extra": ""
+  },
+  "405": {
+    "ref_id": 405,
+    "authors": "Andriyan Bayo Suksmono and Yuichiro Minato",
+    "title": "Finding Hadamard matrices by a quantum annealing machine",
+    "links": {
+      "arXiv:1902.07890": "https://arxiv.org/abs/1902.07890"
+    },
+    "extra": "<em>Scientific Reports</em> 9:14380, 2019. ["
+  },
+  "406": {
+    "ref_id": 406,
+    "authors": "G\u00e1bor Ivanyos, Anupam Prakash, and Miklos Santha",
+    "title": "On learning linear functions from subset and its applications in quantum computing",
+    "links": {
+      "": "https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16083",
+      "arXiv:1806.09660": "https://arxiv.org/abs/1806.09660"
+    },
+    "extra": "<em>26th Annual European Symposium on Algorithms (ESA 2018)</em>, <a href=\"https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16083\"></a> LIPIcs volume 112, 2018. ["
+  },
+  "407": {
+    "ref_id": 407,
+    "authors": "G\u00e1bor Ivanyos",
+    "title": "On solving systems of random linear disequations",
+    "links": {
+      "arXiv:0704.2988": "https://arxiv.org/abs/0704.2988"
+    },
+    "extra": "<em>Quantum Information and Computation</em>, 8(6):579-594, 2008. ["
+  },
+  "408": {
+    "ref_id": 408,
+    "authors": "A. Ambainis, K. Balodis, J. Iraids, M. Kokainis, K. Prusis, and J. Vihrovs",
+    "title": "Quantum speedups for exponential-time dynamic programming algorithms",
+    "links": {
+      "arXiv:1807.05209": "https://arxiv.org/abs/1807.05209"
+    },
+    "extra": "<em>Proceedings of the 30th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 19)</em>, pg. 1783-1793, 2019. ["
+  },
+  "409": {
+    "ref_id": 409,
+    "authors": "Dominic W. Berry, Andrew M. Childs, Aaron Ostrander, and Guoming Wang",
+    "title": "Quantum algorithm for linear differential equations with exponentially improved dependence on precision",
+    "links": {
+      "arXiv:1701.03684": "https://arxiv.org/abs/1701.03684"
+    },
+    "extra": "<em>Communications in Mathematical Physics</em>, 356(3):1057-1081, 2017. ["
+  },
+  "410": {
+    "ref_id": 410,
+    "authors": "Sarah K. Leyton and Tobias J. Osborne",
+    "title": "Quantum algorithm to solve nonlinear differential equations",
+    "links": {
+      "arXiv:0812.4423": "https://arxiv.org/abs/0812.4423"
+    },
+    "extra": ""
+  },
+  "411": {
+    "ref_id": 411,
+    "authors": "Y. Cao, A. Papageorgiou, I. Petras, J. Traub, and S. Kais",
+    "title": "Quantum algorithm and circuit design solving the Poisson equation",
+    "links": {
+      "arXiv:1207.2485": "https://arxiv.org/abs/1207.2485"
+    },
+    "extra": "<em>New Journal of Physics</em> 15(1):013021, 2013. ["
+  },
+  "412": {
+    "ref_id": 412,
+    "authors": "S. Wang, Z. Wang, W. Li, L. Fan, Z. Wei, and Y. Gu",
+    "title": "Quantum fast Poisson solver: the algorithm and modular circuit design",
+    "links": {
+      "arXiv:1910.09756": "https://arxiv.org/abs/1910.09756"
+    },
+    "extra": ""
+  },
+  "413": {
+    "ref_id": 413,
+    "authors": "A. Scherer, B. Valiron, S.-C. Mau, S. Alexander, E. van den Berg, and T. Chapuran",
+    "title": "Concrete resource analysis of the quantum linear system algorithm used to compute the electromagnetic scattering crossection of a 2D target",
+    "links": {
+      "arXiv:1505.06552": "https://arxiv.org/abs/1505.06552"
+    },
+    "extra": "<em>Quantum Information Processing</em> 16:60, 2017. ["
+  },
+  "414": {
+    "ref_id": 414,
+    "authors": "Juan Miguel Arrazola, Timjan Kalajdziavski, Christian Weedbrook, and Seth Lloyd",
+    "title": "Quantum algorithm for nonhomogeneous linear partial differential equations",
+    "links": {
+      "arXiv:1809.02622": "https://arxiv.org/abs/1809.02622"
+    },
+    "extra": "<em>Physical Review A</em> 100:032306, 2019. ["
+  },
+  "415": {
+    "ref_id": 415,
+    "authors": "Andrew Childs and Jin-Peng Liu",
+    "title": "Quantum spectral methods for differential equations",
+    "links": {
+      "arXiv:1901.00961": "https://arxiv.org/abs/1901.00961"
+    },
+    "extra": ""
+  },
+  "416": {
+    "ref_id": 416,
+    "authors": "Alexander Engle, Graeme Smith, and Scott E. Parker",
+    "title": "A quantum algorithm for the Vlasov equation",
+    "links": {
+      "arXiv:1907.09418": "https://arxiv.org/abs/1907.09418"
+    },
+    "extra": ""
+  },
+  "417": {
+    "ref_id": 417,
+    "authors": "Shouvanik Chakrabarti, Andrew M. Childs, Tongyang Li, and Xiaodi Wu",
+    "title": "Quantum algorithms and lower bounds for convex optimization",
+    "links": {
+      "arXiv:1809.01731": "https://arxiv.org/abs/1809.01731"
+    },
+    "extra": ""
+  },
+  "418": {
+    "ref_id": 418,
+    "authors": "S. Chakrabarti, A. M. Childs, S.-H. Hung, T. Li, C. Wang, and X. Wu",
+    "title": "Quantum algorithm for estimating volumes of convex bodies",
+    "links": {
+      "arXiv:1908.03903": "https://arxiv.org/abs/1908.03903"
+    },
+    "extra": ""
+  },
+  "419": {
+    "ref_id": 419,
+    "authors": "Joran van Apeldoorn, Andr\u00e1s Gily\u00e9n, Sander Gribling, and Ronald de Wolf",
+    "title": "Convex optimization using quantum oracles",
+    "links": {
+      "arXiv:1809.00643": "https://arxiv.org/abs/1809.00643"
+    },
+    "extra": ""
+  },
+  "420": {
+    "ref_id": 420,
+    "authors": "Nai-Hui Chia, Andr\u00e1as Gily\u00e9n, Tongyang Li, Han-Hsuan Lin, Ewin Tang, and Chunhao Wang",
+    "title": "Sampling-based sublinear low-rank matrix arithmetic framework for dequantizing quantum machine learning",
+    "links": {
+      "arXiv:1910.06151": "https://arxiv.org/abs/1910.06151"
+    },
+    "extra": "<em>Proceedings of STOC 2020</em>, pg. 387-400 ["
+  },
+  "421": {
+    "ref_id": 421,
+    "authors": "Andris Ambainis and Martins Kokainis",
+    "title": "Quantum algorithm for tree size estimation, with applications to backtracking and 2-player games",
+    "links": {
+      "arXiv:1704.06774": "https://arxiv.org/abs/1704.06774"
+    },
+    "extra": "<em>Proceedings of STOC 2017</em>, pg. 989-1002 ["
+  },
+  "422": {
+    "ref_id": 422,
+    "authors": "Fernando G.S L. Brand\u00e3o, Richard Kueng, Daniel Stilck Fran\u00e7a",
+    "title": "Faster quantum and classical SDP approximations for quadratic binary optimization",
+    "links": {
+      "arXiv:1909.04613": "https://arxiv.org/abs/1909.04613"
+    },
+    "extra": ""
+  },
+  "423": {
+    "ref_id": 423,
+    "authors": "Matthew B. Hastings",
+    "title": "Classical and Quantum Algorithms for Tensor Principal Component Analysis",
+    "links": {
+      "arXiv:1907.12724": "https://arxiv.org/abs/1907.12724"
+    },
+    "extra": "<em>Quantum</em> 4:237, 2020. ["
+  },
+  "424": {
+    "ref_id": 424,
+    "authors": "Joran van Apeldoorn, Andr\u00e1s Gily\u00e9n, Sander Gribling, and Ronald de Wolf",
+    "title": "Quantum SDP-Solvers: Better upper and lower bounds",
+    "links": {
+      "arXiv:1705.01843": "https://arxiv.org/abs/1705.01843"
+    },
+    "extra": "<em>Quantum</em> 4:230, 2020. ["
+  },
+  "425": {
+    "ref_id": 425,
+    "authors": "J-P Liu, H. Kolden, H. Krovi, N. Loureiro, K. Trivisa, and A. M. Childs",
+    "title": "Efficient quantum algorithm for dissipative nonlinear differential equations",
+    "links": {
+      "arXiv:2011.03185": "https://arxiv.org/abs/2011.03185"
+    },
+    "extra": ""
+  },
+  "426": {
+    "ref_id": 426,
+    "authors": "S. Lloyd, G. De Palma, C. Gokler, B. Kiani, Z-W Liu, M. Marvian, F. Tennie, and T. Palmer",
+    "title": "Quantum algorithm for nonlinear differential equations",
+    "links": {
+      "arXiv:2011.06571": "https://arxiv.org/abs/2011.06571"
+    },
+    "extra": ""
+  },
+  "427": {
+    "ref_id": 427,
+    "authors": "Yunchao Liu, Srinivasan Arunachalam, and Kristan Temme",
+    "title": "A rigorous and robust quantum speed-up in supervised machine learning",
+    "links": {
+      "arXiv:2010.02174": "https://arxiv.org/abs/2010.02174"
+    },
+    "extra": ""
+  },
+  "428": {
+    "ref_id": 428,
+    "authors": "Matthew B. Hastings",
+    "title": "The power of adiabatic quantum computation with no sign problem",
+    "links": {
+      "arXiv:2005.03791": "https://arxiv.org/abs/2005.03791"
+    },
+    "extra": ""
+  },
+  "429": {
+    "ref_id": 429,
+    "authors": "Nathan Ramusat and Vincenzo Savona",
+    "title": "A quantum algorithm for the direct estimation of the steady state of open quantum systems",
+    "links": {
+      "arXiv:2008.07133": "https://arxiv.org/abs/2008.07133"
+    },
+    "extra": ""
+  }
+}
