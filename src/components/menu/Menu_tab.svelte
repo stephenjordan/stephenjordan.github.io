@@ -1,10 +1,11 @@
 <script>
     import Categories_menu from "./categories_menu/Categories_menu.svelte";
+    import {to_display} from "../../storage/globalStore";
 
     export let data;
 
     // Section specialized for when the menu tab is "Algorithm categories"
-    import {display_categories, display_algorithms} from "../../storage/globalStore";
+    import {display_categories} from "../../storage/globalStore";
 
     let local_display_categories = false;
 
@@ -14,6 +15,8 @@
             local_display_categories = true;
             // Toggle display_categories
             $display_categories = !$display_categories;
+        } else {
+            $to_display = data.to_display;
         }
     }
 

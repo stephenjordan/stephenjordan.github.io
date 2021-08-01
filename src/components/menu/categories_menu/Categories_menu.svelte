@@ -7,6 +7,7 @@
 
 <div>
     <div id="menu" transition:slide>
+        <Categories_menu_tab data={{"name": "All algorithms"}} />
         {#each Object.entries(algorithms.default) as [cat, algs]}
             <Categories_menu_tab data={{"name": cat}}/>
             {/each}

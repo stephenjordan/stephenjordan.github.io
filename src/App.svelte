@@ -4,16 +4,25 @@
     import Display_info from "./components/display_info/Display_info.svelte";
     import Menu from "./components/menu/Menu.svelte";
     import Footer from "./components/footer/Footer.svelte";
-    import {display_menu} from "./storage/globalStore";
+    import {display_algorithms} from "./storage/globalStore";
 
-    let name = 'world';
-    let container = document.getElementById("men");
-    document.addEventListener('click', function( event ) {
-        if (container !== event.target && !container.contains(event.target)) {
-            console.log('clicking outside the div');
-            $display_menu = false;
-        }
+    document.addEventListener("click", (evt) => {
+        const flyoutElement = document.getElementById("men");
+        let targetElement = evt.target; // clicked element
+
+        do {
+            if (targetElement === flyoutElement) {
+                // This is a click inside. Do nothing, just return.
+                return;
+            }
+            // Go up the DOM
+            targetElement = targetElement.parentNode;
+        } while (targetElement);
+
+        // This is a click outside.
+        $display_algorithms = false;
     });
+
 </script>
 
 <main class="grid-container">
@@ -50,6 +59,5 @@
     'footer footer';
         grid-template-columns: min-content;
     }
-
 
 </style>

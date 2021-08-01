@@ -1,12 +1,20 @@
 <script>
-    import {algs_of_cat_menu} from "../../../storage/globalStore";
+    import {to_display, algs_of_cat_menu, display_algorithms} from "../../../storage/globalStore";
 
     export let data;
 
+    function act() {
+        if (data.name === "All algorithms") {
+            $to_display = "all_algs";
+        } else {
+            $algs_of_cat_menu = data.name;
+            $display_algorithms = true;
+        }
+    }
 
 </script>
 
-<div class="cat_menu_tab w3-round-xlarge" on:click={() => {$algs_of_cat_menu = data.name;}}>
+<div class="cat_menu_tab w3-round-xlarge" class:all-algs={data.name === "All algorithms"} on:click={act}>
     {data.name}
 </div>
 
@@ -31,6 +39,10 @@
     .cat_menu_tab:active {
         box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
         transform: translateY(3px) translateX(3px);
+    }
+
+    .all-algs {
+        background-color: darkkhaki;
     }
 
 </style>
