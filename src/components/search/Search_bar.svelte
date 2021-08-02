@@ -1,5 +1,5 @@
 <script>
-    import {algorithms, to_display, alg_to_display, show_search_results} from "../../storage/globalStore";
+    import {algorithms, show_search_results} from "../../storage/globalStore";
     import Search_result from "./Search_result.svelte";
 
     let text_search = "";
@@ -18,7 +18,6 @@
                 }
             }
         }
-        console.log(to_return);
         return to_return;
     }
 </script>
