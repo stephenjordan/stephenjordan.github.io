@@ -13,4 +13,9 @@
     <br>
     <p>Last updated: February 1st, 2021</p>
     <p>Date created: April 22nd, 2011</p>
+    <br>
+    <p>This is a comprehensive catalog of quantum algorithms. If you notice any errors or
+        omissions, please email me at stephen.jordan@microsoft.com. (Alternatively, you may
+        submit a pull request to the <a href="https://github.com/stephenjordan/stephenjordan.github.io" target="_blank">repository</a> on github.)
+        Your help is appreciated and will be acknowledged.</p>
 </div>
