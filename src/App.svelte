@@ -4,7 +4,12 @@
     import Display_info from "./components/display_info/Display_info.svelte";
     import Menu from "./components/menu/Menu.svelte";
     import Footer from "./components/footer/Footer.svelte";
-    import {display_algorithms, display_categories, display_menu, show_search_results} from "./storage/globalStore";
+    import {
+        display_algorithms,
+        show_search_results,
+        screen_width,
+        screen_width_breakpoint
+    } from "./storage/globalStore";
 
     // Check for clicks inside and out of the menu
     document.addEventListener("click", (evt) => {
@@ -44,7 +49,9 @@
 
 </script>
 
-<main class="grid-container">
+<svelte:window bind:innerWidth={$screen_width}/>
+
+<main class={$screen_width > screen_width_breakpoint ? "grid-container" : "grid-container-mobile"}>
     <div class="header">
         <Header/>
     </div>
@@ -75,6 +82,17 @@
     'header header'
     'search-bar search-bar'
     'menu display-info'
+    'footer footer';
+        grid-template-columns: min-content;
+    }
+
+    .grid-container-mobile {
+        display: grid;
+        grid-template-areas:
+    'header header'
+    'search-bar search-bar'
+    'menu menu'
+    'display-info display-info'
     'footer footer';
         grid-template-columns: min-content;
     }

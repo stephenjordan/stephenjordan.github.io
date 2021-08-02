@@ -1,13 +1,19 @@
 <script>
     import {slide} from 'svelte/transition';
     import Menu_tab from "./Menu_tab.svelte";
-    import {display_menu, display_categories, display_algorithms} from "../../storage/globalStore";
+    import {
+        display_menu,
+        display_categories,
+        display_algorithms,
+        screen_width,
+        screen_width_breakpoint
+    } from "../../storage/globalStore";
     import Algorithms_menu from "./categories_menu/algorithms_menu/Algorithms_menu.svelte";
 
 </script>
 
 <div class="menu-wrapper">
-    <i id="menu-icon" class="fa fa-bars w3-button w3-ripple w3-hover-blue w3-xlarge w3-round-large" on:click={() => {$display_menu = !$display_menu; $display_categories = false; $display_algorithms = false;}}></i>
+    <i id="menu-icon" class="fa fa-bars w3-button w3-ripple w3-hover-blue w3-round-large {$screen_width > screen_width_breakpoint ? 'w3-large' : 'w3-xxlarge'}" on:click={() => {$display_menu = !$display_menu; $display_categories = false; $display_algorithms = false;}}></i>
     {#if $display_menu}
         <div id="menu" class="grid-container" transition:slide>
             <div class="menu-tabs">
@@ -40,7 +46,9 @@
     }
 
     #menu-icon {
+        display: block;
         transition: 0.3s;
+        margin: auto;
     }
 
     #menu {
