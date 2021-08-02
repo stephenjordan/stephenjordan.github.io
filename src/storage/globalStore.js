@@ -18,6 +18,8 @@ let display_algorithms = writable(false);
 
 // Algorithm to display
 let alg_to_display = writable({});
+let prev_alg = writable({});
+let next_alg = writable({});
 
 // Search results
 let show_search_results = writable(false);
@@ -35,6 +37,8 @@ export {
     display_categories,
     display_algorithms,
     alg_to_display,
+    prev_alg,
+    next_alg,
     show_search_results,
     screen_width,
     screen_width_breakpoint

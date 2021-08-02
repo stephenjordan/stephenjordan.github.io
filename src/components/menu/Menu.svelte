@@ -49,6 +49,7 @@
         display: block;
         transition: 0.3s;
         margin: auto;
+        background-color: #f1f1f1;
     }
 
     #menu {

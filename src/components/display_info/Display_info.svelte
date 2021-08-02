@@ -8,14 +8,7 @@
     import Other_surveys from "./other_surveys/Other_surveys.svelte";
     import Terminology from "./terminology/Terminology.svelte";
     import About from "./about/About.svelte";
-
-    let unique = {};
-
-    function restart() {
-        unique = {};
-    }
-
-    $: $alg_to_display, restart();
+    import Display_algorithm from "./algorithm/Display_algorithm.svelte";
 
 </script>
 
@@ -23,10 +16,7 @@
     {#if $to_display === "all_algs"}
         <All_algs />
     {:else if $to_display === "algorithm"}
-        <h2>Algorithm information</h2>
-        {#key unique}
-            <Algorithm alg_data={$alg_to_display} alone={true}/>
-        {/key}
+        <Display_algorithm />
     {:else if $to_display === "acknowledgments"}
         <Acknowledgments/>
     {:else if $to_display === "references"}

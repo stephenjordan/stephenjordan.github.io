@@ -43,6 +43,7 @@
 <div id="algorithm-wrapper" transition:slide>
     <p><b>Algorithm id</b>: {@html alg_data.alg_id}</p>
     <p><b>Name</b>: {@html alg_data.name}</p>
+    <p><b>Category</b>: {@html alg_data.category}</p>
     <p><b>Speedup</b>: {@html alg_data.speedup}</p>
     <p><b>Description</b>: {@html alg_data.description}</p>
     {#if !alone}
