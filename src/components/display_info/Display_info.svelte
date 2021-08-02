@@ -15,7 +15,7 @@
         <All_algs />
     {:else if $to_display === "algorithm"}
         <h2>Algorithm information</h2>
-        <Algorithm alg_data={$alg_to_display} refresh={true}/>
+        <Algorithm alg_data={$alg_to_display} alone={true}/>
     {:else if $to_display === "acknowledgments"}
         <Acknowledgments/>
     {:else if $to_display === "references"}

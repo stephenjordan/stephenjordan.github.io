@@ -21,7 +21,7 @@
                 <p>{@html data.authors}</p>
                 <p>{@html data.title}</p>
                 {#each Object.entries(data.links) as [link_name, url]}
-                    <p><a href={url}>{link_name}</a></p>
+                    <p><a href={url} target="_blank">{link_name}</a></p>
                 {/each}
                 <p>{@html data.extra}</p>
             </td>
