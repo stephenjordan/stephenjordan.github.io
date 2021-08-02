@@ -1,5 +1,5 @@
 <script>
-    import {afterUpdate, onMount} from "svelte";
+    import {afterUpdate} from "svelte";
     import {slide} from 'svelte/transition';
     import {references} from "../../../storage/globalStore";
     import Reference from "../references/Reference.svelte";
@@ -40,7 +40,7 @@
 
 </script>
 
-<div>
+<div id="algorithm-wrapper" transition:slide>
     <p><b>Algorithm id</b>: {@html alg_data.alg_id}</p>
     <p><b>Name</b>: {@html alg_data.name}</p>
     <p><b>Speedup</b>: {@html alg_data.speedup}</p>
@@ -49,12 +49,27 @@
         <button on:click={toggleShowReferences}>Show references</button>
     {/if}
     {#if alone || show_references}
-        <div transition:slide={{'duration': 1000}}>
+        <div id="references" transition:slide>
             <p><b>References</b>:</p>
-            {#each getRelevantReferences(Object.values(alg_data.references)) as reference}
-                <Reference data={reference}/>
-            {/each}
+            <div id="list-references">
+                {#each getRelevantReferences(Object.values(alg_data.references)) as reference}
+                    <Reference data={reference}/>
+                {/each}
+            </div>
         </div>
     {/if}
 
 </div>
+
+<style>
+    #algorithm-wrapper {
+        background-color: #f8f8f8;
+        padding: 15px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+
+    #list-references {
+        padding-left: 20px;
+    }
+</style>

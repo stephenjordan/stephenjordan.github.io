@@ -1,8 +1,8 @@
 <script>
-    import {scale} from 'svelte/transition';
+    import {slide} from 'svelte/transition';
 </script>
 
-<div>
+<div transition:slide>
     <h2>Acknowledgments</h2>
     <p>
         I thank the following people for contributing their expertise (in

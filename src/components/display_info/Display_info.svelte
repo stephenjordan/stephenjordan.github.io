@@ -9,6 +9,14 @@
     import Terminology from "./terminology/Terminology.svelte";
     import About from "./about/About.svelte";
 
+    let unique = {};
+
+    function restart() {
+        unique = {};
+    }
+
+    $: $alg_to_display, restart();
+
 </script>
 
 <div id="display-info">
@@ -16,7 +24,9 @@
         <All_algs />
     {:else if $to_display === "algorithm"}
         <h2>Algorithm information</h2>
-        <Algorithm alg_data={$alg_to_display} alone={true}/>
+        {#key unique}
+            <Algorithm alg_data={$alg_to_display} alone={true}/>
+        {/key}
     {:else if $to_display === "acknowledgments"}
         <Acknowledgments/>
     {:else if $to_display === "references"}

@@ -1,4 +1,8 @@
-<div>
+<script>
+    import {slide} from 'svelte/transition';
+</script>
+
+<div transition:slide>
     <h2>About</h2>
     <p>Author:</p>
     <p><a href="https://www.microsoft.com/en-us/research/people/stjorda/">

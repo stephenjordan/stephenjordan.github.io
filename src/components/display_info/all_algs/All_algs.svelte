@@ -2,6 +2,7 @@
     import {algorithms} from "../../../storage/globalStore";
     import Algorithm from "../algorithm/Algorithm.svelte";
     import {afterUpdate} from "svelte";
+    import {slide} from 'svelte/transition';
 
     afterUpdate(() => {
         MathJax.typeset();
@@ -9,7 +10,7 @@
 
 </script>
 
-<div>
+<div transition:slide>
     <h2>All algorithms</h2>
     {#each Object.entries(algorithms.default) as [category, algs]}
         {#each Object.entries(algs) as [alg_id, alg]}

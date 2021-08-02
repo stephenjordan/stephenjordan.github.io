@@ -26,5 +26,16 @@ let show_search_results = writable(false);
 let screen_width = writable(0);
 const screen_width_breakpoint = 768;
 
-
-export {algorithms, references, to_display, algs_of_cat_menu, display_menu, display_categories, display_algorithms, alg_to_display, show_search_results, screen_width, screen_width_breakpoint};
+export {
+    algorithms,
+    references,
+    to_display,
+    algs_of_cat_menu,
+    display_menu,
+    display_categories,
+    display_algorithms,
+    alg_to_display,
+    show_search_results,
+    screen_width,
+    screen_width_breakpoint
+};
