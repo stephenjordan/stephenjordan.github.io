@@ -4,8 +4,9 @@
     import Display_info from "./components/display_info/Display_info.svelte";
     import Menu from "./components/menu/Menu.svelte";
     import Footer from "./components/footer/Footer.svelte";
-    import {display_algorithms} from "./storage/globalStore";
+    import {display_algorithms, display_categories, display_menu, show_search_results} from "./storage/globalStore";
 
+    // Check for clicks inside and out of the menu
     document.addEventListener("click", (evt) => {
         const flyoutElement = document.getElementById("men");
         let targetElement = evt.target; // clicked element
@@ -23,13 +24,31 @@
         $display_algorithms = false;
     });
 
+    // Check for clicks inside and outside of the search bar
+    document.addEventListener("click", (evt) => {
+        const flyoutElement = document.getElementById("search");
+        let targetElement = evt.target; // clicked element
+
+        do {
+            if (targetElement === flyoutElement) {
+                // This is a click inside. Do nothing, just return.
+                return;
+            }
+            // Go up the DOM
+            targetElement = targetElement.parentNode;
+        } while (targetElement);
+
+        // This is a click outside.
+        $show_search_results = false;
+    });
+
 </script>
 
 <main class="grid-container">
     <div class="header">
         <Header/>
     </div>
-    <div class="search-bar">
+    <div id="search" class="search-bar">
         <Search_bar/>
     </div>
     <div id="men" class="menu">

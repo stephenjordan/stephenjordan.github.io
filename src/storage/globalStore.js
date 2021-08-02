@@ -19,5 +19,8 @@ let display_algorithms = writable(false);
 // Algorithm to display
 let alg_to_display = writable({});
 
+// Search results
+let show_search_results = writable(false);
 
-export {algorithms, references, to_display, algs_of_cat_menu, display_menu, display_categories, display_algorithms, alg_to_display};
+
+export {algorithms, references, to_display, algs_of_cat_menu, display_menu, display_categories, display_algorithms, alg_to_display, show_search_results};

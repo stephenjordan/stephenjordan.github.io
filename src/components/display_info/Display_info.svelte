@@ -7,6 +7,7 @@
     import Translations from "./translations/Translations.svelte";
     import Other_surveys from "./other_surveys/Other_surveys.svelte";
     import Terminology from "./terminology/Terminology.svelte";
+    import About from "./about/About.svelte";
 
 </script>
 
@@ -26,11 +27,13 @@
         <Other_surveys/>
     {:else if $to_display === "terminology"}
         <Terminology/>
+    {:else if $to_display === "about"}
+        <About/>
     {/if}
 </div>
 
 <style>
     #display-info {
-        padding: 0 15px;
+        padding: 0 15px 35px 15px;
     }
 </style>
