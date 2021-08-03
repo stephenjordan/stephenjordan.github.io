@@ -1,0 +1,76 @@
+<script>
+    import {afterUpdate} from "svelte";
+    import {slide} from 'svelte/transition';
+    import {references} from "../../../storage/globalStore";
+    import Reference from "../references/Reference.svelte";
+
+    export let alg_data;
+    export let alone;  // Determine if Mathjax needs refreshing. Helpful to avoid many unnecessary refreshes
+
+    afterUpdate(() => {
+        if (alone) {
+            MathJax.typeset();
+        }
+    })
+
+    function getRelevantReferences(ref_ids) {
+        let added = [];
+        let to_return = [];
+        // Ref_ids start at 1, not 0
+        for(let i = 0; i < ref_ids.length; i++) {
+            if (!added.includes(ref_ids[i])) {  // Avoid duplicates
+                added.push(ref_ids[i]);
+                to_return.push(references.default[ref_ids[i]]);
+            }
+        }
+
+        // Sort the array of references according to ref_id
+        to_return.sort(function(a, b) {
+            return a.ref_id - b.ref_id;
+        })
+
+        return to_return;
+    }
+
+    let show_references = false;
+
+    function toggleShowReferences() {
+        show_references = !show_references;
+    }
+
+</script>
+
+<div id="algorithm-wrapper" transition:slide>
+    <p><b>Algorithm id</b>: {@html alg_data.alg_id}</p>
+    <p><b>Name</b>: {@html alg_data.name}</p>
+    <p><b>Category</b>: {@html alg_data.category}</p>
+    <p><b>Speedup</b>: {@html alg_data.speedup}</p>
+    <p><b>Description</b>: {@html alg_data.description}</p>
+    {#if !alone}
+        <button on:click={toggleShowReferences}>Show references</button>
+    {/if}
+    {#if alone || show_references}
+        <div id="references" transition:slide>
+            <p><b>References</b>:</p>
+            <div id="list-references">
+                {#each getRelevantReferences(Object.values(alg_data.references)) as reference}
+                    <Reference data={reference}/>
+                {/each}
+            </div>
+        </div>
+    {/if}
+
+</div>
+
+<style>
+    #algorithm-wrapper {
+        background-color: #f8f8f8;
+        padding: 15px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+
+    #list-references {
+        padding-left: 20px;
+    }
+</style>
