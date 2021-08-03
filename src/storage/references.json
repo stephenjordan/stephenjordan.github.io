@@ -68,7 +68,7 @@
       "arXiv:quant-ph/0703015": "http://arxiv.org/abs/quant-ph/0703015",
       "arXiv:0704.3628": "http://arxiv.org/abs/0704.3628"
     },
-    "extra": "In <em>Proceedings of the 48th IEEE Symposium on the Foundations of Computer Science</em>, pages 363-372, 2007. <a href=\"http://arxiv.org/abs/quant-ph/0703015\">arXiv:quant-ph/0703015</a> and"
+    "extra": "In <em>Proceedings of the 48th IEEE Symposium on the Foundations of Computer Science</em>, pages 363-372, 2007."
   },
   "9": {
     "ref_id": 9,
@@ -209,10 +209,8 @@
   "25": {
     "ref_id": 25,
     "authors": "Andrew M. Childs",
-    "title": "<em><a href=\"http://www.math.uwaterloo.ca/~amchilds/papers/thesis.pdf\">Quantum information processing in continuous time</a></em>",
-    "links": {
-      "Quantum information processing in continuous time": "http://www.math.uwaterloo.ca/~amchilds/papers/thesis.pdf"
-    },
+    "title": "<em><a target='_blank' href=\"http://www.math.uwaterloo.ca/~amchilds/papers/thesis.pdf\">Quantum information processing in continuous time</a></em>",
+    "links": {},
     "extra": ""
   },
   "26": {
@@ -388,7 +386,7 @@
   "46": {
     "ref_id": 46,
     "authors": "Joseph Geraci and Frank Van Bussel",
-    "title": "A theorem on the quantum evaluation of weight enumerators for acertain class of cyclic Codes with a note on cyclotomic cosets.",
+    "title": "A theorem on the quantum evaluation of weight enumerators for a certain class of cyclic Codes with a note on cyclotomic cosets.",
     "links": {
       "arXiv:cs/0703129": "http://arxiv.org/abs/cs/0703129"
     },
@@ -530,7 +528,7 @@
     "links": {
       "arXiv:0809.2307": "http://arxiv.org/abs/0809.2307"
     },
-    "extra": ". PhD thesis, Massachusetts Institute of Technology, 2008."
+    "extra": "PhD thesis, Massachusetts Institute of Technology, 2008."
   },
   "63": {
     "ref_id": 63,
@@ -633,9 +631,7 @@
     "ref_id": 74,
     "authors": "Michele Mosca",
     "title": "<em><a href=\"http://www.iqc.ca/~mmosca/web/papers/moscathesis.pdf\">Quantum Computer Algorithms</a></em>",
-    "links": {
-      "Quantum Computer Algorithms": "http://www.iqc.ca/~mmosca/web/papers/moscathesis.pdf"
-    },
+    "links": {},
     "extra": ""
   },
   "75": {
@@ -652,7 +648,7 @@
     "authors": "Michael A. Nielsen and Isaac L. Chuang.",
     "title": "<em>Quantum Computation and Quantum Information</em>",
     "links": {},
-    "extra": ". Cambridge University Press, Cambridge, UK, 2000."
+    "extra": "Cambridge University Press, Cambridge, UK, 2000."
   },
   "77": {
     "ref_id": 77,
@@ -865,7 +861,7 @@
       "arXiv:quant-ph/9807027": "http://arxiv.org/abs/quant-ph/9807027",
       "arXiv:quant-ph/0010077": "http://arxiv.org/abs/quant-ph/0010077"
     },
-    "extra": "<em>Physical Review A</em>, 60(4):2742, 1999. <a href=\"http://arxiv.org/abs/quant-ph/9807027\">arXiv:quant-ph/9807027</a> and"
+    "extra": "<em>Physical Review A</em>, 60(4):2742, 1999."
   },
   "101": {
     "ref_id": 101,
@@ -888,7 +884,7 @@
   "103": {
     "ref_id": 103,
     "authors": "A. M. Childs, A. J. Landahl, and P. A. Parrilo",
-    "title": "Quantum algorithms for the ordered search problem via semidefiniteprogramming.",
+    "title": "Quantum algorithms for the ordered search problem via semidefinite programming.",
     "links": {
       "arXiv:quant-ph/0608161": "http://arxiv.org/abs/quant-ph/0608161"
     },
@@ -1083,7 +1079,7 @@
   "126": {
     "ref_id": 126,
     "authors": "Aaron Denney, Cristopher Moore, and Alex Russell",
-    "title": "Finding conjugate stabilizer subgroups in PSL(2;q) and relatedgroups.",
+    "title": "Finding conjugate stabilizer subgroups in PSL(2;q) and related groups.",
     "links": {
       "arXiv:0809.2445": "http://arxiv.org/abs/0809.2445"
     },
@@ -1101,7 +1097,7 @@
   "128": {
     "ref_id": 128,
     "authors": "Fran\u00e7ois Le Gall",
-    "title": "An efficient quantum algorithm for some instances of the groupisomorphism problem.",
+    "title": "An efficient quantum algorithm for some instances of the group isomorphism problem.",
     "links": {
       "arXiv:1001.0608": "http://arxiv.org/abs/1001.0608"
     },
@@ -1202,7 +1198,7 @@
     "links": {
       "arXiv:quant-ph/0506265": "http://arxiv.org/abs/quant-ph/0506265"
     },
-    "extra": "In <em>Proceedings of 32nd International Colloquium on Automata,Languages and Programming.</em> LNCS 3580, pg. 1312-1324, 2005."
+    "extra": "In <em>Proceedings of 32nd International Colloquium on Automata, Languages and Programming.</em> LNCS 3580, pg. 1312-1324, 2005."
   },
   "140": {
     "ref_id": 140,
@@ -1284,7 +1280,7 @@
   "149": {
     "ref_id": 149,
     "authors": "Ben Reichardt",
-    "title": "Span programs and quantum query complexity: The general adversarybound is nearly tight for every Boolean function.",
+    "title": "Span programs and quantum query complexity: The general adversary bound is nearly tight for every Boolean function.",
     "links": {
       "arXiv:0904.2759": "http://arxiv.org/abs/0904.2759"
     },
@@ -1347,7 +1343,7 @@
     "links": {
       "arXiv:1010.2745": "http://arxiv.org/abs/1010.2745"
     },
-    "extra": "<i>J. Phys. A: Math. Theor.</i> 47, 105301, 2014. ["
+    "extra": "<i>J. Phys. A: Math. Theor.</i> 47, 105301, 2014."
   },
   "157": {
     "ref_id": 157,
@@ -1386,7 +1382,7 @@
   "161": {
     "ref_id": 161,
     "authors": "Stacey Jeffery, Robin Kothari, and Fr\u00e9d\u00e9ric Magniez",
-    "title": "Improving quantum query complexity of Boolean matrixmultiplication using graph collision.",
+    "title": "Improving quantum query complexity of Boolean matrix multiplication using graph collision.",
     "links": {
       "arXiv:1112.5855": "http://arxiv.org/abs/1112.5855"
     },
@@ -1440,7 +1436,7 @@
   "167": {
     "ref_id": 167,
     "authors": "Andris Ambainis and Ashley Montanaro",
-    "title": "Quantum algorithms for search with wildcards and combinatorialgroup testing.",
+    "title": "Quantum algorithms for search with wildcards and combinatorial group testing.",
     "links": {
       "arXiv:1210.1148": "http://arxiv.org/abs/1210.1148"
     },
@@ -1512,7 +1508,7 @@
   "175": {
     "ref_id": 175,
     "authors": "Troy Lee, Fr\u00e9d\u00e9ric Magniez, and Miklos Santha",
-    "title": "Improved quantum query algorithms for triangle finding andassociativity testing.",
+    "title": "Improved quantum query algorithms for triangle finding and associativity testing.",
     "links": {
       "arXiv:1210.1014": "http://arxiv.org/abs/1210.1014"
     },
@@ -1559,7 +1555,7 @@
     "links": {
       "Erratum": "http://www-bcf.usc.edu/~breichar/Correction.txt"
     },
-    "extra": "In <em>Proceedings of STOC 2004</em>, pg. 502-510. ["
+    "extra": "In <em>Proceedings of STOC 2004</em>, pg. 502-510."
   },
   "181": {
     "ref_id": 181,
@@ -1650,12 +1646,12 @@
       "arXiv:quant-ph/0206003": "http://arxiv.org/abs/quant-ph/0206003",
       "this": "http://www.cs.berkeley.edu/~vazirani/pubs/qao.ps"
     },
-    "extra": "In <em>Proceedings of FOCS 2001</em>, pg. 279-287. <a href=\"http://arxiv.org/abs/quant-ph/0206003\">arXiv:quant-ph/0206003</a> [See also"
+    "extra": "In <em>Proceedings of FOCS 2001</em>, pg. 279-287."
   },
   "191": {
     "ref_id": 191,
     "authors": "E. Farhi, D. Gosset, I. Hen, A. W. Sandvik, P. Shor, A. P. Young, and F. Zamponi",
-    "title": "The performance of the quantum adiabatic algorithm on randominstances of two optimization problems on regular hypergraphs.",
+    "title": "The performance of the quantum adiabatic algorithm on random instances of two optimization problems on regular hypergraphs.",
     "links": {
       "arXiv:1208.3757": "http://arxiv.org/abs/1208.3757"
     },
@@ -1723,7 +1719,7 @@
   "199": {
     "ref_id": 199,
     "authors": "A. B. Finnila, M. A. Gomez, C. Sebenik, C. Stenson, J. D. Doll",
-    "title": "Quantum annealing: a new method for minimizing multidimensionalfunctions.",
+    "title": "Quantum annealing: a new method for minimizing multidimensional functions.",
     "links": {},
     "extra": "<em>Chemical Physics Letters</em>, 219:343-348, 1994."
   },
@@ -1738,7 +1734,7 @@
   },
   "201": {
     "ref_id": 201,
-    "authors": "Andris Ambainis, Kaspars Balodis, J\u0101nis Iraids, Raitis Ozols, andJuris Smotrovs",
+    "authors": "Andris Ambainis, Kaspars Balodis, J\u0101nis Iraids, Raitis Ozols, and Juris Smotrovs",
     "title": "Parameterized quantum query complexity of graph collision.",
     "links": {
       "arXiv:1305.1021": "http://arxiv.org/abs/1305.1021"
@@ -1748,7 +1744,7 @@
   "202": {
     "ref_id": 202,
     "authors": "Kevin C. Zatloukal",
-    "title": "Classical and quantum algorithms for testing equivalence ofgroup extensions.",
+    "title": "Classical and quantum algorithms for testing equivalence of group extensions.",
     "links": {
       "arXiv:1305.1327": "http://arxiv.org/abs/1305.1327"
     },
@@ -1793,7 +1789,7 @@
   "207": {
     "ref_id": 207,
     "authors": "Nolan Wallach",
-    "title": "A quantum polylog algorithm for non-normal maximal cyclic hiddensubgroups in the affine group of a finite field.",
+    "title": "A quantum polylog algorithm for non-normal maximal cyclic hidden subgroups in the affine group of a finite field.",
     "links": {
       "arXiv:1308.1415": "http://arxiv.org/abs/1308.1415"
     },
@@ -1890,7 +1886,7 @@
   "218": {
     "ref_id": 218,
     "authors": "Greg Kuperberg",
-    "title": "Another subexponential-time quantum algorithm for the dihedralhidden subgroup problem",
+    "title": "Another subexponential-time quantum algorithm for the dihedral hidden subgroup problem",
     "links": {
       "arXiv:1112.3333": "http://arxiv.org/abs/1112.3333"
     },
@@ -1941,7 +1937,7 @@
   },
   "224": {
     "ref_id": 224,
-    "authors": "Markus Hunziker, David A. Meyer, Jihun Park, James Pommersheim, andMitch Rothstein",
+    "authors": "Markus Hunziker, David A. Meyer, Jihun Park, James Pommersheim, and Mitch Rothstein",
     "title": "The geometry of quantum learning",
     "links": {
       "arXiv:quant-ph/0309059": "http://arxiv.org/abs/quant-ph/0309059"
@@ -2005,7 +2001,7 @@
   "231": {
     "ref_id": 231,
     "authors": "Hefeng Wang, Sabre Kais, Al\u00e1n Aspuru-Guzik, and Mark R. Hoffmann.",
-    "title": "Quantum algorithm for obtaining the energy spectrum of molecularsystems",
+    "title": "Quantum algorithm for obtaining the energy spectrum of molecular systems",
     "links": {
       "arXiv:0907.0854": "http://arxiv.org/abs/0907.0854"
     },
@@ -2068,7 +2064,7 @@
   "238": {
     "ref_id": 238,
     "authors": "Jon R. Grice and David A. Meyer",
-    "title": "A quantum algorithm for Viterbi decoding of classicalconvolutional codes",
+    "title": "A quantum algorithm for Viterbi decoding of classical convolutional codes",
     "links": {
       "arXiv:1405.7479": "http://arxiv.org/abs/1405.7479"
     },
@@ -2081,7 +2077,7 @@
     "links": {
       "author's homepage": "http://www.ece.umd.edu/~abarg/reprints/rm1dq.pdf"
     },
-    "extra": "<em>Proceedings of the 36th Annual Allerton Conference, 1998</em> Available at"
+    "extra": "<em>Proceedings of the 36th Annual Allerton Conference, 1998</em>"
   },
   "240": {
     "ref_id": 240,
@@ -2121,7 +2117,7 @@
   },
   "244": {
     "ref_id": 244,
-    "authors": "Dominic W. Berry, Andrew M. Childs, Richard Cleve, Robin Kothari, andRolando D. Somma",
+    "authors": "Dominic W. Berry, Andrew M. Childs, Richard Cleve, Robin Kothari, and Rolando D. Somma",
     "title": "Simulating Hamiltonian dynamics with a truncated Taylor series",
     "links": {
       "arXiv:1412.4687": "http://arxiv.org/abs/1412.4687"
@@ -2144,7 +2140,7 @@
     "links": {
       "fulltext": "http://www.scottaaronson.com/papers/qml.pdf"
     },
-    "extra": "<em>Nature Physics</em> 11:291-293, 2015. ["
+    "extra": "<em>Nature Physics</em> 11:291-293, 2015."
   },
   "247": {
     "ref_id": 247,
@@ -2368,7 +2364,7 @@
   "272": {
     "ref_id": 272,
     "authors": "Agnis \u0100ri\u0146\u0161",
-    "title": "Span-program-based quantum algorithms for graph bipartitenessand connectivity",
+    "title": "Span-program-based quantum algorithms for graph bipartiteness and connectivity",
     "links": {
       "arXiv:1510.07825": "http://arxiv.org/abs/1510.07825"
     },
@@ -2699,11 +2695,9 @@
     "authors": "Iordanis Kerenidis and Anupam Prakash",
     "title": "Quantum recommendation systems",
     "links": {
-      "67": "http://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16054",
-      "1868-8969": "http://drops.dagstuhl.de/opus/volltexte/2017/8154/pdf/LIPIcs-ITCS-2017-49.pdf",
       "arXiv:1603.08675": "http://arxiv.org/abs/1603.08675"
     },
-    "extra": "<em>Innovations in Theoretical Computer Science (ITCS 2017)</em>, LIPIcs, vol. <a href=\"http://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16054\">67</a>, pg. <a href=\"http://drops.dagstuhl.de/opus/volltexte/2017/8154/pdf/LIPIcs-ITCS-2017-49.pdf\">1868-8969</a> . ["
+    "extra": "<em>Innovations in Theoretical Computer Science (ITCS 2017)</em>, LIPIcs, vol. <a target='_blank' href=\"http://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16054\">67</a>, pg. <a target='_blank' href=\"http://drops.dagstuhl.de/opus/volltexte/2017/8154/pdf/LIPIcs-ITCS-2017-49.pdf\">1868-8969</a>."
   },
   "310": {
     "ref_id": 310,
@@ -2764,7 +2758,7 @@
     "links": {
       "here": "https://cr.yp.to/hash/collisioncost-20090517.pdf"
     },
-    "extra": "In <em>Proceedings of the 4th Workshop on Special-purpose Hardware for Attacking Cryptographic Systems (SHARCS'09)</em>, pg. 105-116, 2009. [available"
+    "extra": "In <em>Proceedings of the 4th Workshop on Special-purpose Hardware for Attacking Cryptographic Systems (SHARCS'09)</em>, pg. 105-116, 2009."
   },
   "317": {
     "ref_id": 317,
@@ -3150,10 +3144,8 @@
   "362": {
     "ref_id": 362,
     "authors": "Stacey Jeffery",
-    "title": "<a href=\"http://uwspace.uwaterloo.ca/handle/10012/8710\">Frameworks for Quantum Algorithms</a>",
-    "links": {
-      "Frameworks for Quantum Algorithms": "http://uwspace.uwaterloo.ca/handle/10012/8710"
-    },
+    "title": "<a target='_blank' href=\"http://uwspace.uwaterloo.ca/handle/10012/8710\">Frameworks for Quantum Algorithms</a>",
+    "links": {},
     "extra": ""
   },
   "363": {
@@ -3233,7 +3225,7 @@
     "links": {
       "arXiv:quant-ph/9701019": "https://arxiv.org/abs/quant-ph/9701019"
     },
-    "extra": "<em>Physica D</em> 120:30-42, 1998. ["
+    "extra": "<em>Physica D</em> 120:30-42, 1998."
   },
   "372": {
     "ref_id": 372,
@@ -3278,7 +3270,7 @@
     "links": {
       "arXiv:1105.3986": "https://arxiv.org/abs/1105.3986"
     },
-    "extra": "<em>Physical Review Letters</em> 107(12):120501, 2011. ["
+    "extra": "<em>Physical Review Letters</em> 107(12):120501, 2011."
   },
   "377": {
     "ref_id": 377,
@@ -3330,7 +3322,7 @@
     "links": {
       "arXiv:1710.02581": "https://arxiv.org/abs/1710.02581"
     },
-    "extra": "<em>Proceedings of ICALP 2019</em> ["
+    "extra": "<em>Proceedings of ICALP 2019</em>"
   },
   "383": {
     "ref_id": 383,
@@ -3440,7 +3432,7 @@
     "links": {
       "arXiv:quant-ph/9508005": "https://arxiv.org/abs/quant-ph/9508005"
     },
-    "extra": "<em>International Journal of Modern Physics C</em>, Vol. 8, No. 2, pg. 131-138, 1997. ["
+    "extra": "<em>International Journal of Modern Physics C</em>, Vol. 8, No. 2, pg. 131-138, 1997."
   },
   "397": {
     "ref_id": 397,
@@ -3465,7 +3457,7 @@
     "links": {
       "arXiv:1807.04271": "https://arxiv.org/abs/1807.04271"
     },
-    "extra": "In <i>Proceedings of STOC 2019</i>, pg. 217-228. ["
+    "extra": "In <i>Proceedings of STOC 2019</i>, pg. 217-228."
   },
   "400": {
     "ref_id": 400,
@@ -3492,7 +3484,7 @@
     "links": {
       "arXiv:1806.11463": "https://arxiv.org/abs/1806.11463"
     },
-    "extra": "<em>Quantum Machine Intelligence</em> vol. 1, pg. 41-51, 2019. ["
+    "extra": "<em>Quantum Machine Intelligence</em> vol. 1, pg. 41-51, 2019."
   },
   "403": {
     "ref_id": 403,
@@ -3501,7 +3493,7 @@
     "links": {
       "IACR eprint 2011/474": "http://eprint.iacr.org/2011/474"
     },
-    "extra": "<em>Proceedings of Eurocrypt 2011</em> pg. 364-385 ["
+    "extra": "<em>Proceedings of Eurocrypt 2011</em> pg. 364-385"
   },
   "404": {
     "ref_id": 404,
@@ -3519,7 +3511,7 @@
     "links": {
       "arXiv:1902.07890": "https://arxiv.org/abs/1902.07890"
     },
-    "extra": "<em>Scientific Reports</em> 9:14380, 2019. ["
+    "extra": "<em>Scientific Reports</em> 9:14380, 2019."
   },
   "406": {
     "ref_id": 406,
@@ -3529,7 +3521,7 @@
       "": "https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16083",
       "arXiv:1806.09660": "https://arxiv.org/abs/1806.09660"
     },
-    "extra": "<em>26th Annual European Symposium on Algorithms (ESA 2018)</em>, <a href=\"https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16083\"></a> LIPIcs volume 112, 2018. ["
+    "extra": "<a target='_blank' href=\"https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16083\"><em>26th Annual European Symposium on Algorithms (ESA 2018)</em></a>, LIPIcs volume 112, 2018."
   },
   "407": {
     "ref_id": 407,
@@ -3538,7 +3530,7 @@
     "links": {
       "arXiv:0704.2988": "https://arxiv.org/abs/0704.2988"
     },
-    "extra": "<em>Quantum Information and Computation</em>, 8(6):579-594, 2008. ["
+    "extra": "<em>Quantum Information and Computation</em>, 8(6):579-594, 2008."
   },
   "408": {
     "ref_id": 408,
@@ -3547,7 +3539,7 @@
     "links": {
       "arXiv:1807.05209": "https://arxiv.org/abs/1807.05209"
     },
-    "extra": "<em>Proceedings of the 30th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 19)</em>, pg. 1783-1793, 2019. ["
+    "extra": "<em>Proceedings of the 30th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 19)</em>, pg. 1783-1793, 2019."
   },
   "409": {
     "ref_id": 409,
@@ -3556,7 +3548,7 @@
     "links": {
       "arXiv:1701.03684": "https://arxiv.org/abs/1701.03684"
     },
-    "extra": "<em>Communications in Mathematical Physics</em>, 356(3):1057-1081, 2017. ["
+    "extra": "<em>Communications in Mathematical Physics</em>, 356(3):1057-1081, 2017."
   },
   "410": {
     "ref_id": 410,
@@ -3574,7 +3566,7 @@
     "links": {
       "arXiv:1207.2485": "https://arxiv.org/abs/1207.2485"
     },
-    "extra": "<em>New Journal of Physics</em> 15(1):013021, 2013. ["
+    "extra": "<em>New Journal of Physics</em> 15(1):013021, 2013."
   },
   "412": {
     "ref_id": 412,
@@ -3592,7 +3584,7 @@
     "links": {
       "arXiv:1505.06552": "https://arxiv.org/abs/1505.06552"
     },
-    "extra": "<em>Quantum Information Processing</em> 16:60, 2017. ["
+    "extra": "<em>Quantum Information Processing</em> 16:60, 2017."
   },
   "414": {
     "ref_id": 414,
@@ -3601,7 +3593,7 @@
     "links": {
       "arXiv:1809.02622": "https://arxiv.org/abs/1809.02622"
     },
-    "extra": "<em>Physical Review A</em> 100:032306, 2019. ["
+    "extra": "<em>Physical Review A</em> 100:032306, 2019."
   },
   "415": {
     "ref_id": 415,
@@ -3655,7 +3647,7 @@
     "links": {
       "arXiv:1910.06151": "https://arxiv.org/abs/1910.06151"
     },
-    "extra": "<em>Proceedings of STOC 2020</em>, pg. 387-400 ["
+    "extra": "<em>Proceedings of STOC 2020</em>, pg. 387-400"
   },
   "421": {
     "ref_id": 421,
@@ -3664,7 +3656,7 @@
     "links": {
       "arXiv:1704.06774": "https://arxiv.org/abs/1704.06774"
     },
-    "extra": "<em>Proceedings of STOC 2017</em>, pg. 989-1002 ["
+    "extra": "<em>Proceedings of STOC 2017</em>, pg. 989-1002"
   },
   "422": {
     "ref_id": 422,
@@ -3682,7 +3674,7 @@
     "links": {
       "arXiv:1907.12724": "https://arxiv.org/abs/1907.12724"
     },
-    "extra": "<em>Quantum</em> 4:237, 2020. ["
+    "extra": "<em>Quantum</em> 4:237, 2020."
   },
   "424": {
     "ref_id": 424,
@@ -3691,7 +3683,7 @@
     "links": {
       "arXiv:1705.01843": "https://arxiv.org/abs/1705.01843"
     },
-    "extra": "<em>Quantum</em> 4:230, 2020. ["
+    "extra": "<em>Quantum</em> 4:230, 2020."
   },
   "425": {
     "ref_id": 425,

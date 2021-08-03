@@ -28,7 +28,7 @@
         {#if $show_search_results}
             <div class="dropdown-content">
                 {#each getResults(text_search) as res}
-                    <Search_result result_data={res} />
+                    <Search_result result_data={res} matching_text={text_search}/>
                 {/each}
             </div>
         {/if}

@@ -13,7 +13,7 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: rgb(0,100,200) !important;
 	text-decoration: none;
 }
 
