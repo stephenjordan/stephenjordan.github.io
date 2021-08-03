@@ -24,7 +24,7 @@
 
 <div id="search-bar">
     <div class="dropdown">
-        <input bind:value={text_search} id="search-input" type="text" placeholder="Search algorithms..." on:click={() => {$show_search_results = true; text_search = "";}}>
+        <input bind:value={text_search} id="search-input" type="text" placeholder="Search all algorithms..." on:click={() => {$show_search_results = true; text_search = "";}}>
         {#if $show_search_results}
             <div class="dropdown-content">
                 {#each getResults(text_search) as res}
