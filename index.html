@@ -52,7 +52,9 @@ the special case of factoring &ldquo;semiprimes&rdquo;, which are
 widely used in cryptography, is given in [<a href="#GLFB15">271</a>]. 
 If small factors exist, Shor's algorithm can be beaten by a quantum 
 algorithm using Grover search to speed up the elliptic curve factorization 
-method [<a href="#PQRSA">366</a>]. Additional optimized versions of Shor's algorithm are given in [<a href="#EH17">384</a>, <a href="#BBM17">386</a>]. There are proposed classical public-key 
+method [<a href="#PQRSA">366</a>]. Additional optimized versions of Shor's algorithm are given in
+[<a href="#EH17">384</a>, <a href="#BBM17">386</a>, <a href="#GE21">431</a>].
+There are proposed classical public-key 
 cryptosystems not believed to be broken by quantum algorithms, <i>cf.</i> 
 [<a href="#BBD09">248</a>]. At the core of Shor's factoring algorithm is 
 order finding, which can be reduced to the <a href="#abelian_HSP">Abelian hidden subgroup problem</a>, 
@@ -73,7 +75,9 @@ on a quantum computer in poly(<i>n</i>) time. The fastest known
 classical algorithm requires time superpolynomial in <i>n</i>. By similar
 techniques to those in [<a href="#Shor_factoring">82</a>], quantum computers
 can solve the discrete logarithm problem on elliptic curves, thereby breaking
-elliptic curve cryptography [<a href="#Zalka_ellip">109</a>, <a href="#BL95">14</a>]. A further optimization to Shor's algorithm is given in [<a href="#E17">385</a>]. The superpolynomial quantum speedup has also been extended to the discrete
+elliptic curve cryptography [<a href="#Zalka_ellip">109</a>, <a href="#BL95">14</a>].
+Further optimizations to Shor's algorithm are given in [<a href="#E17">385</a>, <a href="#RNSL17">432</a>].
+The superpolynomial quantum speedup has also been extended to the discrete
 logarithm problem on semigroups [<a href="#Childs_Ivanyos">203</a>,
 <a href="#Banin_Tsaban">204</a>]. See also <a href="#abelian_HSP">Abelian hidden subgroup</a>.
 <br /><br />
@@ -328,7 +332,7 @@ unlikely to be feasible.
  between inputs [<a href="#Ambainis_linear">138</a>], approximate 
  definite integrals [<a href="#integration">77</a>], and converge to a
  fixed-point
- [<a href="#G05">208</a>, <a href="#TGP05">209</a>]. Considerations on optimizing
+ [<a href="#G05">208</a>, <a href="#TGP05">209</a>, <a href="#GSLW19">433</a>]. Considerations on optimizing
  the depth of quantum search circuits are given in [<a href="#ZK19">405</a>]. The
  generalization of Grover's algorithm known as amplitude estimation
  [<a href="#Amplitude">17</a>]
@@ -1056,7 +1060,8 @@ quantum algorithm for <i>k</i>-junta testing given in
 [<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>] 
 as well as thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>] 
 for some classes of Hamiltonians and equilibrium states for some classes of master equations [<a href="#RS20">430</a>]. Efficient quantum algorithms have been also obtained for preparing certain classes of tensor network states 
-[<a href="#SSVCW05">323</a>,<a href="#SHWCS07">324</a>,<a href="#GMC16">325</a>,<a href="#STV12">326</a>,<a href="#SCTVP13">327</a>,<a href="#SBE16">328</a>].
+[<a href="#SSVCW05">323</a>,<a href="#SHWCS07">324</a>,<a href="#GMC16">325</a>,<a href="#STV12">326</a>,<a href="#SCTVP13">327</a>,<a href="#SBE16">328</a>]. Interestingly, simulating Hamiltonian time evolution,
+as well as some problems preparing ground and thermal states can all be done as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
 <br /><br />
 
 <b>Algorithm:</b> Knot Invariants <br />
@@ -1408,7 +1413,9 @@ In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum
 computers can invert well-conditioned  \( n \times n \) matrices
 using only \( O( \log n ) \) qubits, whereas the best classical
 algorithm uses order \( \log^2 n \) bits. Subsequent improvements to
-this quantum algorithm are given in [<a href="#FL16">279</a>].
+this quantum algorithm are given in [<a href="#FL16">279</a>]. Variants of the linear systems problem, including
+the computation of Moore-Penrose pseudoinverses, can be obtained as special cases of the quantum singular
+value transformation [<a href="#GSLW19">433</a>].
 <br /><br />
 
 <b>Algorithm: </b> Machine Learning <br />
@@ -1422,10 +1429,11 @@ other headings. In
 [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>,<a href="#SSP16">338</a>,<a href="#ZFF15">339</a>,<a href="#KP17">359</a>,<a href="#ZPK19">403</a>],
 quantum algorithms for solving linear systems [<a href="#HHL08">104</a>] are
 applied to speed up cluster-finding, principal component analysis,
-binary classification, training of neural networks, and various forms of regression, provided the data satisfies certain conditions. However, a number of quantum machine learning algorithms based on
+binary classification, training of neural networks, and various forms of regression, provided the data satisfies certain conditions. (See also [<a href="#GSLW19">433</a>] for subsequent improvements
+to quantum principal component analysis.) However, a number of quantum machine learning algorithms based on
 linear systems have subsequently been "dequantized". Specifically, Tang showed in [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>] that the 
 problems of recommendation systems and principal component analysis solved by the quantum algorithms of [<a href="#RML13">251</a>,<a href="#KP16">309</a>] can in fact also be solved in polynomial time randomized classical algorithms.
-A cluster-finding method not based on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>]. The papers 
+A cluster-finding method not based on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>].  The papers 
 [<a href="#PL12">192</a>,<a href="#NDRM08">195</a>,<a href="#CLGOR16">344</a>,<a href="#AH15">345</a>,<a href="#BRRP16">346</a>,<a href="#AARBM16">348</a>]
 explore the use of adiabatic optimization techniques to speed up the training of
 classifiers. In [<a href="#WKS14">221</a>], a method is proposed for
@@ -1478,7 +1486,7 @@ the components of \( \mathbf{x}(t) \). The algorithm works by reducing the probl
 the quantum linear algebra primitive of [<a href="#HHL08">104</a>]. In [<a href="#BCOW17">410</a>] an improved quantum algorithm for this problem was given
 which brings the epsilon dependence down to \( \mathrm{poly log}(1/\epsilon) \). A quantum algorithm for solving nonlinear differential equations (again in the
 sense of obtaining a solution encoded in the amplitudes) is described in [<a href="#LO08">411</a>], which has exponential scaling in <i>t</i>. 
-In [<a href="#LKK20">426</a>,<a href="#LDP20">427</a>] quantum algorithms are given for solving nonlinear differential equations that scale as \( O(t^2) \).
+In [<a href="#LKK20">426</a>,<a href="#LDP20">427</a>,<a href="#AFJ22">434</a>] quantum algorithms are given for solving nonlinear differential equations that scale as \( O(t^2) \).
 These are applicable to a restricted class of nonlinear differential equations. In particular, their solutions must not grow or shrink in magnitude too rapidly.
 Partial differential equations can be reduced to ordinary differential equations through discretization, and higher order differential equations can be
 reduced to first order through additiona of auxiliary variables. Consequently, these more general problems can be solved through the methods of
@@ -1490,7 +1498,7 @@ with preconditioning. In [<a href="#CJO17">369</a>] a quantum algorithm is given
 with finite differences and massaging it into the form of a Schrodinger equation which is then simulated using the method of [<a href="#BCK15">245</a>]. The
 problem solved by [<a href="#CJO17">369</a>] is not equivalent to that solved by [<a href="#CJS13">249</a>] because in [<a href="#CJS13">249</a>] the problem
 is reduced to a time-indepent one through assuming sinusoidal time dependence and applying separation of variables, whereas [<a href="#CJO17">369</a>] solves
-the time-dependent problem. The quantum speedup achieved over classical methods for solving the wave equation in <i>d</i>-dimensiona is polynomial for fixed
+the time-dependent problem. The quantum speedup achieved over classical methods for solving the wave equation in <i>d</i>-dimensions is polynomial for fixed
 <i>d</i> but expontial in <i>d</i>. Concrete resource estimates for quantum algorithms to solve differential equations are given in 
 [<a href="#CPP13">412</a>, <a href="#WWL19">413</a>, <a href="#SVM17">414</a>]. A quantum algorithm for solving linear partial differential equations using
 continuous-variable quantum computing is given in [<a href="#AKW19">415</a>]. In [<a href="#MP16">296</a>] quantum finite element methods are analyzed in
@@ -4842,6 +4850,36 @@ pg. 431-442, Springer, 2006.
 <br /><em><a href="https://arxiv.org/abs/2008.07133">arXiv:2008.07133</a></em>
 <br /><br /></dd>
 
+<dt><a name="GE21">431</a></dt>
+<dd>Craig Gidney and Martin Ekera
+<br />How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits
+<br /><em>Quantum</em> 5:433, 2021.
+<br />[<a href="https://arxiv.org/abs/1905.09749">arXiv:1905.09749</a>]
+<br /><br /></dd>
+
+<dt><a name="RNSL17">432</a></dt>
+<dd>
+  Martin Roetteler, Michael Naehrig, Krysta M. Svore, and Kristin Lauter
+<br />Quantum resource estimates for computing elliptic curve discrete logarithms
+<br /><em>Proceedings of ASIACRYPT 2017</em>
+<br /><a href="https://arxiv.org/abs/1706.06752">arXiv:1706.06752</a>"
+<br /><br /></dd>
+
+<dt><a name="GSLW19">433</a></dt>
+<dd>
+  Andr&aacute;s Gily&eacute;n, Yuan Su, Guang Hao Low, and Nathan Wiebe
+<br />Quantum singular value transformation and beyond: exponential improvements for quantum matrix arithmetics
+<br /><em>Proceedings of STOC 2019</em>, pg. 193-204
+<br /><a href="https://arxiv.org/abs/1806.01838">arXiv:1806.01838</a>.
+<br /><br /></dd>
+
+<dt><a name="AFJ22">434</a></dt>
+<dd>
+  Dong An, Di Fang, Stephen Jordan, Jin-Peng Liu, Guang Hao Low, and Jiasu Wang
+<br />Efficient quantum algorithm for nonlinear reaction-diffusion equations and energy estimation
+<br /><em><a href="https://arxiv.org/abs/2205.01141">arXiv:2205.01141</a></em>, 2022.
+<br /><br /></dd>
+
 </dl>
 </div>
 <div id="sidebar">
@@ -4896,7 +4934,7 @@ Author:<br /><br />
 <div style="clear: both;"></div>
 <br />
 
-Last updated: February 1, 2021<br />
+Last updated: October 8, 2022<br />
 Date created: April 22, 2011<br /><br />
 
 </div>
