@@ -36,6 +36,7 @@ Although I cannot guarantee a prompt response, your help is appreciated and will
 
 <b>Algorithm:</b> Factoring<br />
 <b>Speedup:</b> Superpolynomial<br /> 
+<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a><br />
 <b>Description:</b> Given an <i>n</i>-bit integer, find the prime
 factorization. The quantum algorithm of Peter Shor solves this in
 \( \widetilde{O} (n^3) \) time
@@ -316,6 +317,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Searching <br />
 <b>Speedup:</b> Polynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a><br />
 <b>Description:</b> We are given an oracle with <i>N</i>
  allowed inputs. For one input <i>w</i> ("the winner") the corresponding output is
  1, and for all other inputs the corresponding output is 0. The task is to find 
@@ -358,6 +360,7 @@ unlikely to be feasible.
 <a name="abelian_HSP"></a>
 <b>Algorithm:</b> Abelian Hidden Subgroup <br />
 <b>Speedup:</b> Superpolynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/simon">Classiq</a><br />
 <b>Description:</b> Let <i>G</i> be a finitely generated Abelian group, and let
  <i>H</i> be some subgroup of <i>G</i> such that <i>G/H</i> is finite. Let <i>f</i>
  be a function on <i>G</i> such that for any \( g_1,g_2 \in G \), \( f(g_1) = f(g_2) \)
@@ -417,6 +420,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Bernstein-Vazirani <br />
 <b>Speedup:</b> Polynomial Directly, Superpolynomial Recursively <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/bernstein_vazirani">Classiq</a><br />
 <b>Description:</b> We are given an oracle whose input is <i>n</i>
  bits and whose output is one bit. Given input \( x \in \{0,1\}^n \), the output is 
  \( x \odot h \), where <i>h</i> is the "hidden" string of <i>n</i> bits, and 
@@ -485,6 +489,7 @@ Fourier transform of another.
 
 <b>Algorithm:</b> Hidden Shift <br />
 <b>Speedup:</b> Superpolynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/hidden_shift">Classiq</a><br />
 <b>Description:</b> We are given oracle access to some function <i>f</i> on 
  \( \mathbb{Z}_N \). We know that <i>f(x) = g(x+s)</i> where <i>g</i> is a known function 
  and <i>s</i> is an unknown shift. The hidden shift problem is to find <i>s</i>. By
@@ -1043,6 +1048,7 @@ quantum algorithm for <i>k</i>-junta testing given in
 
 <b>Algorithm:</b> Quantum Simulation <br />
 <b>Speedup:</b> Superpolynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq</a><br />
 <b>Description:</b> It is believed that for any physically realistic Hamiltonian 
 <i>H</i> on <i>n</i> degrees of freedom, the corresponding time evolution operator 
  \( e^{-i H t} \) can be implemented using poly(<i>n,t</i>) gates. Unless BPP=BQP,
@@ -1132,6 +1138,7 @@ Freedman [<a href="#Freedman">42</a>,
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
 <b>Speedup: </b> Superpolynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a><br />
 <b>Description:</b> For many combinatorial optimization problems,
 finding the exact optimal solution is NP-complete. There are also hardness-of-approximation
 results proving that finding an approximation with sufficiently
@@ -1287,6 +1294,7 @@ equations over finite fields [<a href="#vanDam_zeros">87</a>].
 
 <b>Algorithm:</b> Constraint Satisfaction <br />
 <b>Speedup:</b> Polynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/grover">Classiq</a><br />
 <b>Description:</b> Constraint satisfaction problems, many of which
 are NP-hard, are ubiquitous in computer science, a canonical example
 being 3-SAT. If one wishes to satisfy as many constraints as possible
@@ -1386,6 +1394,7 @@ be extracted with a factor of <i>d</i> fewer quantum queries than are required c
 
 <b>Algorithm:</b> Linear Systems<br />
 <b>Speedup:</b> Superpolynomial<br />
+<b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq(hhl)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq(qsvt)</a><br />
 <b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and 
 some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> 
 for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix
@@ -1425,6 +1434,7 @@ value transformation [<a href="#GSLW19">433</a>].
 
 <b>Algorithm: </b> Machine Learning <br />
 <b>Speedup:</b> Varies<br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qsvm">Classiq(qsvm)</a>, <a href="https://short.classiq.io/autoencoder">Classiq(autoencoder)</a><br />
 <b>Description:</b> 
 Maching learning encompasses a wide variety of computational problems
 and can be attacked by a wide variety of algorithmic techniques. This
