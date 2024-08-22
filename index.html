@@ -39,7 +39,7 @@ Although I cannot guarantee a prompt response, your help is appreciated and will
 
 <b>Algorithm:</b> Factoring<br />
 <b>Speedup:</b> Superpolynomial<br /> 
-<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a><br />
 <b>Description:</b> Given an <i>n</i>-bit integer, find the prime
 factorization. The quantum algorithm of Peter Shor solves this in
 \( \widetilde{O} (n^3) \) time
@@ -321,7 +321,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Searching <br />
 <b>Speedup:</b> Polynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a><br />
 <b>Description:</b> We are given an oracle with <i>N</i>
  allowed inputs. For one input <i>w</i> ("the winner") the corresponding output is
  1, and for all other inputs the corresponding output is 0. The task is to find 
@@ -364,7 +364,7 @@ unlikely to be feasible.
 <a name="abelian_HSP"></a>
 <b>Algorithm:</b> Abelian Hidden Subgroup <br />
 <b>Speedup:</b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/simon">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/simon">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/simon_algorithm.py">Cirq</a><br />
 <b>Description:</b> Let <i>G</i> be a finitely generated Abelian group, and let
  <i>H</i> be some subgroup of <i>G</i> such that <i>G/H</i> is finite. Let <i>f</i>
  be a function on <i>G</i> such that for any \( g_1,g_2 \in G \), \( f(g_1) = f(g_2) \)
@@ -424,7 +424,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Bernstein-Vazirani <br />
 <b>Speedup:</b> Polynomial Directly, Superpolynomial Recursively <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/bernstein_vazirani">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/bernstein_vazirani">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/bernstein_vazirani.py">Cirq</a><br />
 <b>Description:</b> We are given an oracle whose input is <i>n</i>
  bits and whose output is one bit. Given input \( x \in \{0,1\}^n \), the output is 
  \( x \odot h \), where <i>h</i> is the "hidden" string of <i>n</i> bits, and 
@@ -493,7 +493,7 @@ Fourier transform of another.
 
 <b>Algorithm:</b> Hidden Shift <br />
 <b>Speedup:</b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/hidden_shift">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/hidden_shift">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/hidden_shift_algorithm.py">Cirq</a><br />
 <b>Description:</b> We are given oracle access to some function <i>f</i> on 
  \( \mathbb{Z}_N \). We know that <i>f(x) = g(x+s)</i> where <i>g</i> is a known function 
  and <i>s</i> is an unknown shift. The hidden shift problem is to find <i>s</i>. By
@@ -532,7 +532,18 @@ Fourier transform of another.
 
 <b>Algorithm:</b> Polynomial interpolation <br />
 <b>Speedup:</b> Varies <br />
-<b>Description:</b> Let \( p(x) = a_d x^d + \ldots + a_1 x + a_0 \) be a polynomial over the finite field \( \mathrm{GF}(q) \). One is given access to an oracle that, given \( x \in \mathrm{GF}(q) \), returns \( p(x) \). The polynomial reconstruction problem is, by making queries to the oracle, to determine the coefficients \( a_d,\ldots,a_0 \). Classically, \( d + 1 \) queries are necessary and sufficient. (In some sources use the term reconstruction instead of interpolation for this problem.) Quantumly, \( d/2 + 1/2 \) queries are necessary and \( d/2 + 1 \) queries are sufficient [<a href="#interp1">360</a>,<a href="#interp2">361</a>]. For multivariate polynomials of degree <i>d</i> in <i>n</i> variables the interpolation problem has classical query complexity \( \binom{n+d}{d} \). As shown in [<a href="#interp3">387</a>], the quantum query complexity is \( O \left( \frac{1}{n+1} \binom{n+d}{d} \right) \) over \( \mathbb{R} \) and \( \mathbb{C} \) and it is \( O \left( \frac{d}{n+d} \binom{n+d}{d} \right) \) over \( \mathbb{F}_q \) for sufficiently large <i>q</i>. Quantum algorithms have also been discovered for the case that the oracle returns \( \chi(f(x)) \) where \( \chi \) is a quadratic character of \( \mathrm{GF}(q) \) [<a href="#RS04">390</a>], and the case where the oracle returns \( f(x)^e \) [<a href="#IKS17">392</a>]. These generalize the hidden shift algorithm of [<a href="#vanDam_shift">89</a>] and achieve an exponential speedup over classical computation. A quantum algorithm for reconstructing rational functions over finite fields given noisy and incomplete oracle access to the function values is given in [<a href="#HRS05">391</a>].
+<b>Description:</b> Let \( p(x) = a_d x^d + \ldots + a_1 x + a_0 \) be a polynomial over the finite field \( \mathrm{GF}(q) \). One is given access to an
+oracle that, given \( x \in \mathrm{GF}(q) \), returns \( p(x) \). The polynomial reconstruction problem is, by making queries to the oracle, to determine
+the coefficients \( a_d,\ldots,a_0 \). Classically, \( d + 1 \) queries are necessary and sufficient. (In some sources use the term reconstruction instead
+of interpolation for this problem.) Quantumly, \( d/2 + 1/2 \) queries are necessary and \( d/2 + 1 \) queries are sufficient
+[<a href="#interp1">360</a>,<a href="#interp2">361</a>]. For multivariate polynomials of degree <i>d</i> in <i>n</i> variables the interpolation
+problem has classical query complexity \( \binom{n+d}{d} \). As shown in [<a href="#interp3">387</a>], the quantum query complexity is
+\( O \left( \frac{1}{n+1} \binom{n+d}{d} \right) \) over \( \mathbb{R} \) and \( \mathbb{C} \) and it is \( O \left( \frac{d}{n+d} \binom{n+d}{d} \right) \) 
+over \( \mathbb{F}_q \) for sufficiently large <i>q</i>. Quantum algorithms have also been discovered for the case that the oracle returns \( \chi(f(x)) \) 
+where \( \chi \) is a quadratic character of \( \mathrm{GF}(q) \) [<a href="#RS04">390</a>], and the case where the oracle returns \( f(x)^e \) 
+[<a href="#IKS17">392</a>]. These generalize the hidden shift algorithm of [<a href="#vanDam_shift">89</a>] and achieve an exponential speedup over 
+classical computation. A quantum algorithm for reconstructing rational functions over finite fields given noisy and incomplete oracle access to the function 
+values is given in [<a href="#HRS05">391</a>].
 <br /><br />
 
 <b>Algorithm:</b> Pattern matching <br />
@@ -1147,7 +1158,7 @@ Freedman [<a href="#Freedman">42</a>,
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
 <b>Speedup: </b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a><br />
 <b>Description:</b> For many combinatorial optimization problems,
 finding the exact optimal solution is NP-complete. There are also hardness-of-approximation
 results proving that finding an approximation with sufficiently
@@ -1431,7 +1442,7 @@ bear close relationships to DQI.
 
 <b>Algorithm:</b> Linear Systems<br />
 <b>Speedup:</b> Superpolynomial<br />
-<b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq(hhl)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq(qsvt)</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq(hhl)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq(qsvt)</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq(hhl)</a><br />
 <b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and 
 some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> 
 for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix
