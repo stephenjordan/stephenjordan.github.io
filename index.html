@@ -1103,7 +1103,7 @@ first propose that quantum computers might outperform classical computers on cer
  Although the problem of finding ground energies of local  Hamiltonians is QMA-complete and therefore probably requires exponential time on a quantum 
  computer in the worst case, quantum algorithms have been developed to approximate ground states
 [<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#GTC17">373</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>],
-low energy states [<a href="#CDB24">463</a>], and thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>, <a href="#CKB23">456</a>] 
+low energy states [<a href="#CDB24">463</a>], and thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>, <a href="#CKB23">456</a>,<a href="#HMS22">491</a>] 
 for some classes of Hamiltonians. Quantum algorithms have also been developed to prepare equilibrium states for some classes of master equations [<a href="#RS20">430</a>]. Efficient quantum algorithms have been also obtained for preparing certain classes of tensor network states 
 [<a href="#SSVCW05">323</a>,<a href="#SHWCS07">324</a>,<a href="#GMC16">325</a>,<a href="#STV12">326</a>,<a href="#SCTVP13">327</a>,<a href="#SBE16">328</a>]. Interestingly, simulating Hamiltonian time evolution,
 as well as some problems preparing ground and thermal states can all be done as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
@@ -1518,13 +1518,14 @@ and can be attacked by a wide variety of algorithmic techniques. This
 entry summarizes quantum algorithmic techniques for improved machine
 learning. Many of the quantum algorithms here are cross-listed under
 other headings. In
-[<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>,<a href="#SSP16">338</a>,<a href="#ZFF15">339</a>,<a href="#KP17">359</a>,<a href="#ZPK19">403</a>],
+[<a href="#LMR13">214</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>,<a href="#SSP16">338</a>,<a href="#ZFF15">339</a>,<a href="#KP17">359</a>,<a href="#ZPK19">403</a>],
 quantum algorithms for solving linear systems [<a href="#HHL08">104</a>] are
 applied to speed up cluster-finding, principal component analysis,
 binary classification, training of neural networks, and various forms of regression, provided the data satisfies certain conditions. (See also [<a href="#GSLW19">433</a>] for subsequent improvements
 to quantum principal component analysis.) However, a number of quantum machine learning algorithms based on
 linear systems have subsequently been "dequantized". Specifically, Tang showed in [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>] that the 
 problems of recommendation systems and principal component analysis solved by the quantum algorithms of [<a href="#RML13">251</a>,<a href="#KP16">309</a>] can in fact also be solved in polynomial time randomized classical algorithms.
+The works [<a href="#LGZ14">222</a>,<a href="#MGB22">487</a>,<a href="#AMS24">488</a>,<a href="H22">489</a>,<a href="#BSG24">490</a>] give quantum algorithms for topological data analysis by persistent homology.
 A cluster-finding method not based on the linear systems algorithm of [<a href="#HHL08">104</a>] is given in [<a href="#WKS15">336</a>].  The papers 
 [<a href="#PL12">192</a>,<a href="#NDRM08">195</a>,<a href="#CLGOR16">344</a>,<a href="#AH15">345</a>,<a href="#BRRP16">346</a>,<a href="#AARBM16">348</a>]
 explore the use of adiabatic optimization techniques for the training of
@@ -1639,6 +1640,14 @@ obtain the principal eigenvector of <i>A</i>, that is, the eigenvector correspon
 to obtain this eigenvector as a quantum state then this would be equivalent to the ground state problem. However, we instead
 want a classical description of the eigenvector. Quantum algorithms solving this and some related problems are given in [<a href="#CGW24">462</a>].
 The quantum of [<a href="#CGW24">462</a>] runs in time \( \widetilde{O}(d^{3/2}) \) whereas the best classical algorithm runs in time \( \widetilde{O}(d^2) \).
+<br /><br />
+
+<b>Algorithm:</b> Approximating Nash Equilibria<br />
+<b>Speedup:</b> Polynomial<br />
+<b>Description:</b> Given oracle access to an \( m \times n \) payoff matrix of a zero-sum game, we wish to compute an \(\epsilon\)-approximate Nash equilibrium.
+Classically, the best algorithm for this has runtime \( \widetilde{O}((m+n) \epsilon^{-2}) \). The quantum algorithm of [<a href="#BGJ23">485</a>],
+improving on the prior result of [<a href="#AG19">486</a>] achieves this in runtime \( \widetilde{O}( \sqrt{m+n} \epsilon^{-2.5} + \epsilon^{-3}) \) by
+making a connection between Nash equilibria and Gibbs sampling.
 <br /><br />
 
 <hr />
@@ -2650,8 +2659,7 @@ computation.
 <dt><a name="Garnerone">114</a></dt>
 <dd>
 Silvano Garnerone, Annalisa Marzuoli, and Mario Rasetti
-<br /> Efficient quantum processing of 3-manifold topological
-invariants.
+<br /> Efficient quantum processing of 3-manifold topological invariants.
 <br /><em>Advances in Theoretical and Mathematical Physics</em>,
 13(6):1601-1652, 2009.
 <br />[<a href="http://arxiv.org/abs/quant-ph/0703037">arXiv:quant-ph/0703037</a>]
@@ -5315,6 +5323,60 @@ pg. 431-442, Springer, 2006.
 <br />Provably accurate simulation of gauge theories and bosonic systems
 <br /><em>Quantum</em>, 6:816, 2022.
 <br />[<a href="https://arxiv.org/abs/2110.06942">arXiv:2110.06942</a>]
+<br /><br /></dd>
+
+<dt><a name="BGJ23">485</a></dt>
+<dd>
+  Adam Bouland, Yosheb Getachew, Yujia Jin, Aaron Sidford, and Kevin Tian
+<br />Quantum Speedups for zero-sum games via improved dynamic Gibbs sampling
+<br /><em>Proceedings of ICML23</em>, 2023.
+<br />[<a href="https://arxiv.org/abs/2301.03763">arXiv:2301.03763</a>]
+<br /><br /></dd>
+
+<dt><a name="AG19">486</a></dt>
+<dd>
+  Joran van Apeldoorn and András Gilyén
+<br />Quantum algorithms for zero-sum games
+<br /><em><a href="https://arxiv.org/abs/1904.03180">arXiv:1904.03180</a></em>, 2019.
+<br /><br /></dd>
+
+<dt><a name="MGB22">487</a></dt>
+<dd>
+  Sam McArdle, András Gilyén, and Mario Berta
+<br />A streamlined quantum algorithm for topological data analysis with exponentially fewer qubits
+<br /><em><a href="https://arxiv.org/abs/2209.12887">arXiv:2209.12887</a></em>, 2022.
+<br /><br /></dd>
+
+<dt><a name="AMS24">488</a></dt>
+<dd>
+  Bernardo Ameneyro, Vasileios Maroulas, and George Siopsis
+<br />Quantum persistent homology
+<br /><em>Journal of Applied and Computational Topology</em>, 1-20, 2024.
+<br />[<a href="https://arxiv.org/abs/2202.12965">arXiv:2202.12965</a>]
+<br /><br /></dd>
+
+<dt><a name="H22">489</a></dt>
+<dd>
+  Ryu Hayakawa
+<br />Quantum algorithm for persistent Betti numbers and topological data analysis
+<br /><em>Quantum</em>, 6:873, 2022.
+<br />[<a href="https://arxiv.org/abs/2111.00433">arXiv:2111.00433</a>]
+<br /><br /></dd>
+
+<dt><a name="BSG24">490</a></dt>
+<dd>
+  Dominic W. Berry, Yuan Su, Casper Gyurik, Robbie King, Joao Basso, Alexander Del Toro Barba, Abhishek Rajput, Nathan Wiebe, Vedran Dunjko, and Ryan Babbush
+<br />Analyzing prospects for quantum advantage in topological data analysis
+<br /><em>PRX Quantum</em>, 5:010319, 2022.
+<br />[<a href="https://arxiv.org/abs/2209.13581">arXiv:2209.13581</a>]
+<br /><br /></dd>
+
+<dt><a name="HMS22">491</a></dt>
+<dd>
+  Zoe Holmes, Gopikrishnan Muraleedharan, Rolando D. Somma, Yigit Subasi, and Burak Şahinoğlu
+<br />Quantum algorithms from fluctuation theorems: Thermal-state preparation
+<br /><em>Quantum</em>, 6:825, 2022.
+<br />[<a href="https://arxiv.org/abs/2203.08882">arXiv:2203.08882</a>]
 <br /><br /></dd>
 
 </dl>
