@@ -356,7 +356,8 @@ unlikely to be feasible.
  amplitude amplification enables a quadratic quantum speedup over the best
  classical 3-SAT algorithm, as shown in [<a href="#Ambainis_SIGACT">133</a>]. Quadratic
  speedups for other constraint satisfaction problems are obtained in 
- [<a href="#CGF">134</a>]. For further examples of application of
+ [<a href="#CGF">134</a>]. (Slightly superquadratic speedups relative to brute search are obtained
+ using means beyond amplitude amplification in [<a href="#H18">493</a>,<a href="#DPC23">492</a>].) For further examples of application of
  Grover search and amplitude amplification see
  [<a href="#C14">261</a>, <a href="#LMP13">262</a>]. A problem closely
  related to, but harder than, Grover search, is spatial search, in
@@ -1089,17 +1090,18 @@ first propose that quantum computers might outperform classical computers on cer
  consisting of a kinetic term \( \sum_{i=1}^n \nabla_i^2 \) plus a potential term \( V(\mathbf{x}_1,\ldots,\mathbf{x}_n) \). The works
  [<a href="#Aharonov_Tashma">5</a>,<a href="#Childs_thesis">25</a>,<a href="#Cleve_sim">12</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCK15">245</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>]
  consider general sparse Hamiltonians. The works [<a href="#Childs_Wiebe12">170</a>,<a href="#BCCKS14b">244</a>,<a href="#LC16b">382</a>] consider Hamiltonians
- expressible as a linear combination of efficiently implementable unitary operators. Some works, such as [<a href="#Som15b">293</a>,<a href="#LW18">470</a>], consider the problem of simulating Hamiltonians \(H = \sum_j H_j \), where each \(e^{i H_j t} \) 
+ expressible as a linear combination of efficiently implementable unitary operators. Some works, such as [<a href="#Som15b">293</a>,<a href="#LW18">470</a>,<a href="#YC22">496</a>], consider the problem of simulating Hamiltonians \(H = \sum_j H_j \), where each \(e^{i H_j t} \) 
  is efficiently implementable, while remaining indifferent to the nature of the implementation. The works [<a href="#PQS11">468</a>,<a href="#KSB19">469</a>,<a href="#BCS20">467</a>,<a href="#MF23">466</a>] consider the problems that arise in simulating time-dependent Hamiltonians.
  The works [<a href="#HHK18">478</a>,<a href="#CS19">479</a>] show that geometrically local Hamiltonians on lattices of fixed dimension can be simulated more efficiently than general Hamiltonians.
  Specifically, they show that the quantum runtime in this case is essentially linear in the spacetime volume of the process being simulated. A related result on the efficiency implications of approximate locality
  in systems of interacting Bosons is given in [<a href="#KVS24">480</a>]. If the state being simulated is low energy then the operator norm of the Hamiltonian yields only a loose upper bound on Trotter error; tighter
  upper bounds in this case are given in [<a href="#SS21">481</a>,<a href="#GZL24">482</a>,<a href="#HZA24">483</a>]. Other works consider specific physical settings, such as chemical dynamics
  [<a href="#Kassal_sim">63</a>,<a href="#Lidar_sim">68</a>,<a href="#HWBT15">227</a>,<a href="#RWSWT16">310</a>,<a href="#SW17">375</a>], condensed matter physics
- [<a href="#Abrams_sim">1</a>,<a href="#Wu_sim">99</a>, <a href="#Ortiz">145</a>], relativistic quantum mechanics (the Dirac and Klein-Gordon equations) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a href="#Yepez11">370</a>,<a href="Yepez13">371</a>],
- open quantum systems [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a href="#DPCSC15">379</a>,<a href="ALL23">458</a>], 
- and quantum field theory
- [<a href="#Byrnes">107</a>,<a href="#JLP12">166</a>,<a href="#JLP14a">228</a>,<a href="#JLP14b">229</a>,<a href="#BRSS14">230</a>,<a href="#MJ17">368</a>,<a href="#TAM22">484</a>].
+ [<a href="#Abrams_sim">1</a>,<a href="#Wu_sim">99</a>, <a href="#Ortiz">145</a>], relativistic quantum mechanics (the Dirac and Klein-Gordon equations) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a href="#Yepez11">370</a>,<a href="#Yepez13">371</a>],
+ open quantum systems [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a href="#DPCSC15">379</a>,<a href="#ALL23">458</a>], 
+ quantum field theory
+ [<a href="#Byrnes">107</a>,<a href="#JLP12">166</a>,<a href="#JLP14a">228</a>,<a href="#JLP14b">229</a>,<a href="#BRSS14">230</a>,<a href="#MJ17">368</a>,<a href="#TAM22">484</a>],
+ and conformal field theory [<a href="#OS21">495</a>].
  Although the problem of finding ground energies of local  Hamiltonians is QMA-complete and therefore probably requires exponential time on a quantum 
  computer in the worst case, quantum algorithms have been developed to approximate ground states
 [<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#GTC17">373</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>],
@@ -1353,7 +1355,7 @@ checking of all possible solutions. Nevertheless, a polynomial quantum
 speedup over the fastest known classical algorithm for 3-SAT is given
 in [<a href="#Ambainis_SIGACT">133</a>], and polynomial quantum
 speedups for some other constraint satisfaction problems are given in
-[<a href="#CGF">134</a>, <a href="#MGAG15">298</a>]. In [<a href="#BKF19">423</a>] a quadratic
+[<a href="#CGF">134</a>,<a href="#MGAG15">298</a>,<a href="#H18">493</a>,<a href="#DPC23">492</a>]. In [<a href="#BKF19">423</a>] a quadratic
 quantum speedup for approximate solutions to homogeneous QUBO/Ising problems
 is obtained by building upon the quantum algorithm for semidefinite programming.
 A commonly used classical algorithm for constraint satisfaction is
@@ -1448,9 +1450,9 @@ also quantum speedups for combinatorial optimization problems that, relative to 
 search space, lack local optima other than the global optimum. In particular, single query quantum algorithms for
 finding the minima of basins based on Hamming  distance were given in
 [<a href="#Hogg">147</a>,<a href="#Hunziker_Meyer">148</a>,<a href="#MP09">223</a>].
-See also: <a href="#gradients">Gradient Estimation</a> and <a href="#semidefinite">Semidefinite Programming</a>.
 Some no-go results on quantum speedup for general convex optimization in the presence of an oracle for gradients
-are given in [<a href="#GKN20">477</a>].
+are given in [<a href="#GKN20">477</a>]. A quadratic speedup for convex optimization problems arising in the context
+of linear regression is given in [<a href="#CdW21">497</a>]. See also: <a href="#gradients">Gradient Estimation</a> and <a href="#semidefinite">Semidefinite Programming</a>.
 <br /><br />
 
 <b>Algorithm:</b> Optimization by Decoded Quantum Interferometry<br />
@@ -1464,7 +1466,7 @@ over to the decoding problem and can in some cases be exploited. In particular, 
 field \( \mathbb{F}_p \) that approximates as well as possible a given data set are reduced via DQI to decoding of Reed-Solomon codes. Becuase efficient
 classical algorithms are known that decode Reed-Solomon codes with many errors (half their distance), DQI achieves a very good approximation to the original
 polynomial regression problems, which is not known to be achievable by any classical polynomial time algorithm, thus achieving apparent exponential speedup.
-The results of [<a href="#SOK24">454</a>] giving a quartic speedup for a problem of planted inference and the results of [<a href="YZ24">455</a>] giving
+The results of [<a href="#SOK24">454</a>] giving a quartic speedup for a problem of planted inference and the results of [<a href="#YZ24">455</a>] giving
 an exponential separation between quantum and classical query complexity for a random oracle, although not originally phrased as quantum optimization algorithms,
 bear close relationships to DQI.
 <br /><br />
@@ -1484,7 +1486,7 @@ procedure can be extended to non-Hermitian and even non-square <i>A</i>. The
 runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \)
 in [<a href="#Ambainis_linear">138</a>]. Exponentially improved
 scaling of runtime with precision was obtained in
-[<a href="#CKS15">263</a>]. Some methods to extend this algorithm to apply to non-sparse matrices
+[<a href="#CKS15">263</a>]. Further improvement was achieved in [<a href="#CYS22">494</a>]. Some methods to extend this algorithm to apply to non-sparse matrices
 have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to
 be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic
 scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear
@@ -1870,8 +1872,7 @@ Gilles Brassard, Peter H&oslash;yer, and Alain Tapp
 <dd>
 Harry Buhrman and Robert &#352;palek
 <br />Quantum verification of matrix products.
-<br />In <em>Proceedings of the 17th ACM-SIAM Symposium on Discrete
-  Algorithms</em>, pages 880-889, 2006.
+<br />In <em>Proceedings of the 17th ACM-SIAM Symposium on Discrete Algorithms</em>, pages 880-889, 2006.
 <br />[<a href="http://arxiv.org/abs/quant-ph/0409035">arXiv:quant-ph/0409035</a>]
 <br /><br /></dd>
 
@@ -1887,16 +1888,14 @@ David Bulger
 Harry Burhrman, Christoph D&#252;rr, Mark Heiligman, Peter H&oslash;yer,
   Fr&eacute;d&eacute;ric Magniez, Miklos Santha, and Ronald de Wolf
 <br />Quantum algorithms for element distinctness.
-<br />In <em>Proceedings of the 16th IEEE Annual Conference on
-  Computational Complexity</em>, pages 131-137, 2001.
+<br />In <em>Proceedings of the 16th IEEE Annual Conference on Computational Complexity</em>, pages 131-137, 2001.
 <br />[<a href="http://arxiv.org/abs/quant-ph/0007016">arXiv:quant-ph/0007016</a>]
 <br /><br /></dd>
 
 <dt><a name="CKL_NAHS">22</a></dt>
 <dd>
 Dong Pyo Chi, Jeong San Kim, and Soojoon Lee
-<br />Notes on the hidden subgroup problem on some semi-direct product
-  groups.
+<br />Notes on the hidden subgroup problem on some semi-direct product groups.
 <br /><i> Phys. Lett. A</i> 359(2):114-116, 2006.
 <br />[<a href="http://arxiv.org/abs/quant-ph/0604172">arXiv:quant-ph/0604172</a>]
 <br /><br /></dd>
@@ -1905,8 +1904,7 @@ Dong Pyo Chi, Jeong San Kim, and Soojoon Lee
 <dd>
 A. M. Childs, L. J. Schulman, and U. V. Vazirani
 <br />Quantum algorithms for hidden nonlinear structures.
-<br />In <em>Proceedings of the 48th IEEE Symposium on Foundations of
-  Computer Science</em>, pages 395-404, 2007.
+<br />In <em>Proceedings of the 48th IEEE Symposium on Foundations of Computer Science</em>, pages 395-404, 2007.
 <br />[<a href="http://arxiv.org/abs/0705.2784">arXiv:0705.2784</a>]
 <br /><br /></dd>
 
@@ -1930,8 +1928,7 @@ Andrew M. Childs
 Andrew M. Childs, Richard Cleve, Enrico Deotto, Edward Farhi, Sam Gutmann, and
   Daniel A. Spielman
 <br />Exponential algorithmic speedup by quantum walk.
-<br />In <em>Proceedings of the 35th ACM Symposium on Theory of
-  Computing</em>, pages 59-68, 2003.
+<br />In <em>Proceedings of the 35th ACM Symposium on Theory of Computing</em>, pages 59-68, 2003.
 <br />[<a href="http://arxiv.org/abs/quant-ph/0209131">arXiv:quant-ph/0209131</a>]
 <br /><br /></dd>
 
@@ -1940,7 +1937,7 @@ Andrew M. Childs, Richard Cleve, Enrico Deotto, Edward Farhi, Sam Gutmann, and
 Andrew M. Childs, Richard Cleve, Stephen P. Jordan, and David Yonge-Mallo
 <br />Discrete-query quantum algorithm for NAND trees.
 <br /><em>Theory of Computing</em>, 5:119-123, 2009.
-<br /><[a href="http://arxiv.org/abs/quant-ph/0702160">arXiv:quant-ph/0702160</a>]
+<br />[<a href="http://arxiv.org/abs/quant-ph/0702160">arXiv:quant-ph/0702160</a>]
 <br /><br /></dd>
 
 <dt><a name="CvD_NAHS">28</a></dt>
@@ -5377,6 +5374,52 @@ pg. 431-442, Springer, 2006.
 <br />Quantum algorithms from fluctuation theorems: Thermal-state preparation
 <br /><em>Quantum</em>, 6:825, 2022.
 <br />[<a href="https://arxiv.org/abs/2203.08882">arXiv:2203.08882</a>]
+<br /><br /></dd>
+
+<dt><a name="DPC23">492</a></dt>
+<dd>
+  Alexander M. Dalzell, Nicola Pancotti, Earl T. Campbell, and Fernando G.S.L. Brandão
+<br />Mind the gap: Achieving a super-Grover quantum speedup by jumping to the end
+<br /><em>Proceedings of STOC23</em>, 1131 - 1144, 2023.
+<br />[<a href="https://arxiv.org/abs/2212.01513">arXiv:2212.01513</a>]
+<br /><br /></dd>
+
+<dt><a name="H18">493</a></dt>
+<dd>
+  M. B. Hastings
+<br />A short path quantum algorithm for exact optimization
+<br /><em>Quantum</em>, 2:78, 2018.
+<br />[<a href="https://arxiv.org/abs/1802.10124">arXiv:1802.10124</a>]
+<br /><br /></dd>
+
+<dt><a name="CYS22">494</a></dt>
+<dd>
+  Pedro C.S. Costa, Dong An, Yuval R. Sanders, Yuan Su, Ryan Babbush, and Dominic W. Berry
+<br />Optimal Scaling Quantum Linear-Systems Solver via Discrete Adiabatic Theorem
+<br /><em>PRX Quantum</em>, 3:040303, 2022.
+<br />[<a href="https://arxiv.org/abs/2111.08152">arXiv:2111.08152</a>]
+<br /><br /></dd>
+
+<dt><a name="OS21">495</a></dt>
+<dd>
+  Tobias J. Osborne and Alexander Stottmeister
+<br />Quantum simulation of conformal field theory
+<br /><em><a href="https://arxiv.org/abs/2109.14214">arXiv:2109.14214</a></em>, 2021.
+<br /><br /></dd>
+
+<dt><a name="YC22">496</a></dt>
+<dd>
+  Changhao Yi and Elizabeth Crosson
+<br />Spectral analysis of product formulas for quantum simulation
+<br /><em>npj Quantum Information</em>, 8:38, 2022.
+<br />[<a href="https://arxiv.org/abs/2102.12655">arXiv:2102.12655</a>]
+<br /><br /></dd>
+
+<dt><a name="CdW21">497</a></dt>
+<dd>
+  Yanlin Chen and Ronald de Wolf
+<br />Quantum algorithms and lower bounds for linear regression with norm constraints
+<br /><em><a href="https://arxiv.org/abs/2110.13086">arXiv:2110.13086</a></em>, 2021.
 <br /><br /></dd>
 
 </dl>
