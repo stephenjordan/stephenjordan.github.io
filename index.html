@@ -10,10 +10,10 @@
 	<meta name="description" content="A comprehensive list of quantum algorithms." />
         <meta name="keywords" content="quantum algorithm algorithms zoo list catalog" />
 	<meta name="author" content="Stephen Jordan" />
-        <link rel="stylesheet" type="text/css" href="newzoo.css" />
-	<script type="text/javascript" async
-		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+  <link rel="stylesheet" type="text/css" href="newzoo.css" />
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon_16px.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon_32px.png">
   <link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon_48px.png">
@@ -219,7 +219,7 @@ to \( O(n^2 (\log \ n)^3) \) [<a href="#Greathouse">399</a>].
  and searching.
 <br /><br />
 
-<b>Algorithm:</b> Matrix Elements of Group Representations<br />
+<b>Algorithm:</b> Matrix Elements and Kronecker Coefficients of Group Representations<br />
 <b>Speedup:</b> Superpolynomial<br />
 <b>Description:</b> All representations of finite groups and compact linear
 groups can be expressed as unitary matrices given an appropriate choice of
@@ -237,7 +237,12 @@ Direct implementations of individual irreducible representations for
 the groups U(n), SU(n), SO(n), and \( A_n \) by efficient quantum
 circuits are given in [<a href="#SPJ08">106</a>]. Instances that appear
 to be exponentially hard for known classical algorithms are also
-identified in [<a href="#SPJ08">106</a>].<br /><br />
+identified in [<a href="#SPJ08">106</a>]. Kronecker coefficients count the multiplicity
+of a given irreducible representation in the tensor product of a given pair of irreducible
+representations. In [<a href="#BCG23">460</a>] it is shown that normalized Kronecker coefficients of the symmetric
+group can be approximated to within an additive inverse polynomial error by a polynomial
+time quantum algorithm, whereas no polynomial time classical algorithm achieving this is
+known.<br /><br />
 
 <b>Algorithm:</b> Verifying Matrix Products <br />
 <b>Speedup:</b> Polynomial <br />
@@ -332,8 +337,8 @@ unlikely to be feasible.
  subsequently been generalized to search in the presence of multiple
  "winners" [<a href="#BBHT98">15</a>], evaluate the sum of an arbitrary
  function [<a href="#BBHT98">15</a>,<a href="#BHT98">16</a>,<a href="#Mos98">73</a>],
- find the global minimum of an arbitrary function 
- [<a href="#DH96">35</a>,<a href="#NW99">75</a>, <a href="#KLPF08">255</a>], take advantage of alternative
+ find the mean, meadian, and global minimum of an arbitrary function 
+ [<a href="#DH96">35</a>,<a href="#NW99">75</a>, <a href="#KLPF08">255</a>,<a href="#KO23">465</a>], take advantage of alternative
  initial states [<a href="#Biham">100</a>] or nonuniform probabilistic priors
  [<a href="#Montanaro">123</a>], work with oracles whose runtime varies 
  between inputs [<a href="#Ambainis_linear">138</a>], approximate 
@@ -699,10 +704,9 @@ than through quantum queries to an oracle providing individual bits.
  [<a href="#Ambainis_distinctness">7</a>,<a href="#Belovs_Lee">154</a>],
  the best quantum query complexity for <i>k</i>-distinctness is
  \( O(n^{3/4 - 1/(4(2^k-1))}) \)
- [<a href="#Belovs12">172</a>, <a href="#Childs_Jeffery_Kothari_Magniez13">173</a>].
-  For <i>k</i>=2,3 this is also the time-complexity, up to logarithmic 
- factors, by  [<a href="#Ambainis_distinctness">7</a>]. For \( k > 3\) the fastest known
-  quantum algorithm has time complexity \( O(n^{(k-1)/k}) \) [<a href="#Jefferythesis">363</a>].
+ [<a href="#Belovs12">172</a>, <a href="#Childs_Jeffery_Kothari_Magniez13">173</a>]. The series of works
+ [<a href="#Ambainis_distinctness">7</a>, <a href="#Jefferythesis">363</a>], culminating in [<a href="#JZ23">464</a>], show
+ that this is also the quantum time complexity for all <i>k</i>, up to logarithmic factors.
  Given two functions <i>f</i> and <i>g</i>, on domains of
  size <i>N</i> and <i>M</i>, respectively a claw is a pair <i>x,y</i> such that <i>f(x) =
  g(y)</i>. In the case that <i>N</i>=<i>M</i>, the algorithm of  [<a href="#Ambainis_distinctness">7</a>]
@@ -1075,22 +1079,22 @@ quantum algorithm for <i>k</i>-junta testing given in
  this problem is not solvable in general on a classical computer in polynomial time.
  Many techniques for quantum simulation have been developed for
  general classes of Hamiltonians
- [<a href="#Childs_thesis">25</a>,<a href="#Zalka_sim">95</a>,<a href="#Wiesner_sim">92</a>,<a href="#Aharonov_Tashma">5</a>,<a href="#Cleve_sim">12</a>,<a href="#Childs_Wiebe12">170</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCCKS14b">244</a>,<a href="#BCK15">245</a>,<a href="#Som15">278</a>,<a href="#Som15">293</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>,<a href="#BT97">372</a>,<a href="#LC16b">382</a>],
+ [<a href="#Childs_thesis">25</a>,<a href="#Zalka_sim">95</a>,<a href="#Wiesner_sim">92</a>,<a href="#Aharonov_Tashma">5</a>,<a href="#Cleve_sim">12</a>,<a href="#Childs_Wiebe12">170</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCCKS14b">244</a>,<a href="#BCK15">245</a>,<a href="#Som15">278</a>,<a href="#Som15">293</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>,<a href="#BT97">372</a>,<a href="#LC16b">382</a>,<a href="#MF23">466</a>],
  chemical dynamics
  [<a href="#Kassal_sim">63</a>,<a href="#Lidar_sim">68</a>,<a href="#HWBT15">227</a>,<a href="#RWSWT16">310</a>,<a href="#SW17">375</a>], condensed
  matter physics
  [<a href="#Abrams_sim">1</a>,<a href="#Wu_sim">99</a>, <a href="#Ortiz">145</a>], relativistic quantum mechanics (the Dirac and Klein-Gordon equations) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a href="#Yepez11">370</a>,<a href="Yepez13">371</a>],
- open quantum systems [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a href="#DPCSC15">379</a>], 
+ open quantum systems [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a href="#DPCSC15">379</a>,<a href="ALL23">458</a>], 
  and quantum field theory
  [<a href="#Byrnes">107</a>,<a href="#JLP12">166</a>,<a href="#JLP14a">228</a>,<a href="#JLP14b">229</a>,<a href="#BRSS14">230</a>,<a href="#MJ17">368</a>].
  The exponential complexity of classically simulating quantum systems led Feynman to 
  first propose that quantum computers might outperform classical computers on certain tasks 
 [<a href="#Feynman">40</a>]. Although the problem of finding ground energies of local 
  Hamiltonians is QMA-complete and therefore probably requires exponential time on a quantum 
- computer in the worst case, quantum algorithms have been developed to approximate ground 
-[<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>] 
-as well as thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>] 
-for some classes of Hamiltonians and equilibrium states for some classes of master equations [<a href="#RS20">430</a>]. Efficient quantum algorithms have been also obtained for preparing certain classes of tensor network states 
+ computer in the worst case, quantum algorithms have been developed to approximate ground states
+[<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#GTC17">373</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>],
+low energy states [<a href="#CDB24">463</a>], and thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>, <a href="#CKB23">456</a>] 
+for some classes of Hamiltonians. Quantum algorithms have also been developed to prepare equilibrium states for some classes of master equations [<a href="#RS20">430</a>]. Efficient quantum algorithms have been also obtained for preparing certain classes of tensor network states 
 [<a href="#SSVCW05">323</a>,<a href="#SHWCS07">324</a>,<a href="#GMC16">325</a>,<a href="#STV12">326</a>,<a href="#SCTVP13">327</a>,<a href="#SBE16">328</a>]. Interestingly, simulating Hamiltonian time evolution,
 as well as some problems preparing ground and thermal states can all be done as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
 <br /><br />
@@ -1182,6 +1186,7 @@ QAOA relative to classical computing is an active area of research
 <a href="#Chamon">314</a>,<a href="#SLC24">451</a>, <a href="#BFM22">452</a>].
 <br /><br />
 
+<a name="semidefinite"></a>
 <b>Algorithm:</b> Semidefinite Programming <br />
 <b>Speedup: </b> Polynomial (with some exceptions)<br />
 <b>Description:</b> Given a list of <i>m</i> + 1 Hermitian \(n \times n \)
@@ -1312,7 +1317,7 @@ equations over finite fields [<a href="#vanDam_zeros">87</a>].
 <a name="ONML"></a>
 <h2>Optimization, Numerics, and Machine Learning</h2>
 
-<b>Algorithm:</b> Constraint Satisfaction by Tree Search<br />
+<b>Algorithm:</b>Polynomial Quantum Speedups for Constraint Satisfaction Problems<br />
 <b>Speedup:</b> Polynomial <br />
 <b>Implementation:</b> <a href="https://short.classiq.io/grover">Classiq</a><br />
 <b>Description:</b> Constraint satisfaction problems, many of which
@@ -1417,11 +1422,13 @@ optimization and volume estimation in <i>d</i> dimensions one gets a quadratic s
 just as was found earlier for the special case of minimizing quadratic forms.
 As shown in [<a href="#Roetteler_quad">130</a>,<a href="#Montanaro_polynomials">146</a>],
 quadratic forms and multilinear polynomials in <i>d</i> variables over a finite field may 
-be extracted with a factor of <i>d</i> fewer quantum queries than are required classically. There are
+be extracted with a factor of <i>d</i> fewer quantum queries than are required classically. In [<a href="#AG23">461</a>]
+a quantum algorithm is given that achieves a polynomial speedup for linear programming. There are
 also quantum speedups for combinatorial optimization problems that, relative to the natural topology of the
 search space, lack local optima other than the global optimum. In particular, single query quantum algorithms for
 finding the minima of basins based on Hamming  distance were given in
-[<a href="#Hogg">147</a>,<a href="#Hunziker_Meyer">148</a>,<a href="#MP09">223</a>]. See also: <a href="#gradients">Gradient Estimation</a>.
+[<a href="#Hogg">147</a>,<a href="#Hunziker_Meyer">148</a>,<a href="#MP09">223</a>].
+See also: <a href="#gradients">Gradient Estimation</a> and <a href="#semidefinite">Semidefinite Programming</a>.
 <br /><br />
 
 <b>Algorithm:</b> Optimization by Decoded Quantum Interferometry<br />
@@ -1547,7 +1554,8 @@ Berry gives a quantum algorithm for this problem that runs in time \( O(t^2 \mat
 run in time \( O ( t \ \mathrm{poly} N ) \). The final result is produced in the form of a quantum superposition state on \( O(log N) \) qubits whose amplitudes contain
 the components of \( \mathbf{x}(t) \). The algorithm works by reducing the problem to linear algebra via a high-order finite difference method and applying
 the quantum linear algebra primitive of [<a href="#HHL08">104</a>]. In [<a href="#BCOW17">410</a>] an improved quantum algorithm for this problem was given
-which brings the epsilon dependence down to \( \mathrm{poly log}(1/\epsilon) \). In [<a href="#BBK21">440</a>] it is shown that quantum simulation of the linear ODEs
+which brings the epsilon dependence down to \( \mathrm{poly log}(1/\epsilon) \). The quantum eigenvalue processing technique of [<a href="#LS24">459</a>] also yields
+efficiency improvements for solving linear differential equations. In [<a href="#BBK21">440</a>] it is shown that quantum simulation of the linear ODEs
 governing coupled classical harmonic oscillators can be solved exponentially faster on quantum computers than classical computers when the connectivity is an expander graph.
 Partial differential equations can be reduced to ordinary differential equations through discretization, and higher order differential equations can be
 reduced to first order through additiona of auxiliary variables. Consequently, these more general problems can be solved through the methods of
@@ -1600,6 +1608,15 @@ classical algorithm for this problem runs in time \( O^*(2^n) \). Using this pri
 that solve vertex ordering problems in \( O^*(1.817^n) \) vs. \( O^* (2^n) \) classically, graph bandwidth in \( O^*(2.946^n) \)
 vs. \( O^*(4.383^n) \) classically, travelling salesman and feedback arc set in \( O^*(1.729^n) \) vs. \( O^*(2^n) \) classically,
 and minimum set cover in \( O( \mathrm{poly}(m,n) 1.728^n ) \) vs. \( O(nm2^n) \) classically.
+<br /><br />
+
+<b>Algorithm:</b> Computing the Principal Eigenvector<br />
+<b>Speedup:</b> Polynomial<br />
+<b>Description:</b> Given query access to the matrix elements of a \( d \times d \) Hermitian matrix <i>A</i>, our problem is to
+obtain the principal eigenvector of <i>A</i>, that is, the eigenvector corresponding to the largest eigenvalue. If we wished
+to obtain this eigenvector as a quantum state then this would be equivalent to the ground state problem. However, we instead
+want a classical description of the eigenvector. Quantum algorithms solving this and some related problems are given in [<a href="#CGW24">462</a>].
+The quantum of [<a href="#CGW24">462</a>] runs in time \( \widetilde{O}(d^{3/2}) \) whereas the best classical algorithm runs in time \( \widetilde{O}(d^2) \).
 <br /><br />
 
 <hr />
@@ -5131,6 +5148,82 @@ pg. 431-442, Springer, 2006.
   Xujie Song, Tong Liu, Shengbo Eben Li, Jingliang Duan, Wenxuan Wang, and Keqiang Li
 <br />Training multi-layer neural networks on Ising machine
 <br /><em><a href="https://arxiv.org/abs/2311.03408">arXiv:2311.03408</a></em>.
+<br /><br /></dd>
+
+<dt><a name="CKB23">457</a></dt>
+<dd>
+  Chi-Fang Chen, Michael J. Kastoryano, Fernando G.S.L. Brand&atilde;o, Andr&aacute;s Gily&eacute;n
+<br />Quantum Thermal State Preparation
+<br /><em><a href="https://arxiv.org/abs/2303.18224">arXiv:2303.18224</a></em>.
+<br /><br /></dd>
+
+<dt><a name="ALL23">458</a></dt>
+<dd>
+  Dong An, Jin-Peng Liu and Lin Lin
+<br />Linear combination of Hamiltonian simulation for nonunitary dynamics with optimal state preparation cost
+<br /><em>Physical Review Letters</em> 131(15):150603, 2023.
+<br /><a href="https://arxiv.org/abs/2303.01029">arXiv:2303.01029</a>.
+<br /><br /></dd>
+
+<dt><a name="LS24">459</a></dt>
+<dd>
+  Guang Hao Low and Yuan Su
+<br />Quantum eigenvalue processing
+<br /><em><a href="https://arxiv.org/abs/2401.06240">arXiv:2401.06240</a></em>.
+<br /><br /></dd>
+
+<dt><a name="BCG23">460</a></dt>
+<dd>
+  Sergey Bravyi, Anirban Chowdhury, David Gosset, Vojtěch Havlíček, and Guanyu Zhu
+<br />Quantum complexity of the Kronecker coefficients
+<br /><em>PRX Quantum</em> 5(1):010329, 2023.
+<br /><a href="https://arxiv.org/abs/2302.11454">arXiv:2302.11454</a>.
+<br /><br /></dd>
+
+<dt><a name="AG23">461</a></dt>
+<dd>
+  Simon Apers and Sander Gribling
+<br />Quantum speedups for linear programming via interior point methods
+<br /><em><a href="https://arxiv.org/abs/2311.03215">arXiv:2311.03215</a></em>.
+<br /><br /></dd>
+
+<dt><a name="CGW24">462</a></dt>
+<dd>
+  Yanlin Chen, András Gilyén, and Ronald de Wolf
+<br />A quantum speed-up for approximating the top eigenvectors of a matrix
+<br /><em><a href="https://arxiv.org/abs/2405.14765">arXiv:2405.14765</a></em>.
+<br /><br /></dd>
+
+<dt><a name="CDB24">463</a></dt>
+<dd>
+  Chi-Fang Chen, Alexander M. Dalzell, Mario Berta, Fernando G. S. L. Brandão, and Joel A. Tropp
+<br />Sparse random Hamiltonians are quantumly easy
+<br /><em>Physical Review X</em> 14(1):011014, 2024.
+<br /><a href="https://arxiv.org/abs/2302.03394">arXiv:2302.03394</a>.
+<br /><br /></dd>
+
+<dt><a name="JZ23">464</a></dt>
+<dd>
+  Stacey Jeffery and Sebastian Zur
+<br />Multidimensional quantum walks
+<br /><em>Proceedings of STOC23</em>, 1125-1130, 2023.
+<br /><a href="https://arxiv.org/abs/2208.13492">arXiv:2208.13492</a>.
+<br /><br /></dd>
+
+<dt><a name="KO23">465</a></dt>
+<dd>
+  Robin Kothari and Ryan O'Donnell
+<br />Mean estimation when you have the source code; or, quantum Monte Carlo methods
+<br /><em>Proceedings of SODA23</em>, 1186-1215, 2023.
+<br /><a href="https://arxiv.org/abs/2208.07544">arXiv:2208.07544</a>.
+<br /><br /></dd>
+
+<dt><a name="MF23">466</a></dt>
+<dd>
+  Kaoru Mizuta and Keisuke Fujii
+<br />Optimal Hamiltonian simulation for time-periodic systems
+<br /><em>Quantum</em>, 7:962, 2023.
+<br /><a href="https://arxiv.org/abs/2209.05048">arXiv:2209.05048</a>.
 <br /><br /></dd>
 
 </dl>
