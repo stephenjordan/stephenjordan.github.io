@@ -337,8 +337,8 @@ unlikely to be feasible.
  subsequently been generalized to search in the presence of multiple
  "winners" [<a href="#BBHT98">15</a>], evaluate the sum of an arbitrary
  function [<a href="#BBHT98">15</a>,<a href="#BHT98">16</a>,<a href="#Mos98">73</a>],
- find the mean, meadian, and global minimum of an arbitrary function 
- [<a href="#DH96">35</a>,<a href="#NW99">75</a>, <a href="#KLPF08">255</a>,<a href="#KO23">465</a>], take advantage of alternative
+ find the mean, median, and global minimum of an arbitrary function 
+ [<a href="#DH96">35</a>,<a href="#NW99">75</a>, <a href="#KLPF08">255</a>,<a href="#KO23">465</a>,<a href="#CHJ22">472</a>], take advantage of alternative
  initial states [<a href="#Biham">100</a>] or nonuniform probabilistic priors
  [<a href="#Montanaro">123</a>], work with oracles whose runtime varies 
  between inputs [<a href="#Ambainis_linear">138</a>], approximate 
@@ -610,7 +610,12 @@ than through quantum queries to an oracle providing individual bits.
  <i>et al.</i> [<a href="#Durr_graphs">34</a>] show that the quantum query complexity 
  of finding a minimum spanning tree of weighted graphs, and deciding connectivity for 
  directed and undirected graphs have \( \Theta(n^{3/2}) \) quantum query complexity,
- and that finding lowest weight paths has \( O(n^{3/2}\log^2 n) \) quantum query complexity. Deciding whether a graph is bipartite, detecting cycles, and deciding whether a given vertex can be reached from another (st-connectivity) can all be achieved using a number of queries and quantum gates that both scale as \( \widetilde{O}(n^{3/2}) \), and only logarithmically many qubits, as shown in [<a href="#CMB16">317</a>], building upon [<a href="#Berzina">13</a>, <a href="#Arins">272</a>, <a href="#BR12">318</a>]. A span-program-based quantum algorithm for detecting trees of a given
+ and that finding lowest weight paths has \( O(n^{3/2}\log^2 n) \) quantum query complexity. 
+ Deciding whether a graph is bipartite, detecting cycles, and deciding whether a given vertex 
+ can be reached from another (st-connectivity) can all be achieved using a number of queries and 
+ quantum gates that both scale as \( \widetilde{O}(n^{3/2}) \), and only logarithmically many qubits, 
+ as shown in [<a href="#CMB16">317</a>], building upon [<a href="#Berzina">13</a>, <a href="#Arins">272</a>, <a href="#BR12">318</a>]. 
+ A span-program-based quantum algorithm for detecting trees of a given
  size as minors in \( \widetilde{O}(n) \) time is given in
  [<a href="#Wang13">240</a>]. A graph property is 
  sparse if there exists a constant <i>c</i> such that every graph with the property has
@@ -1077,10 +1082,17 @@ quantum algorithm for <i>k</i>-junta testing given in
 <i>H</i> on <i>n</i> degrees of freedom, the corresponding time evolution operator 
  \( e^{-i H t} \) can be implemented using poly(<i>n,t</i>) gates. Unless BPP=BQP,
  this problem is not solvable in general on a classical computer in polynomial time.
- Many techniques for quantum simulation have been developed for
- general classes of Hamiltonians
- [<a href="#Childs_thesis">25</a>,<a href="#Zalka_sim">95</a>,<a href="#Wiesner_sim">92</a>,<a href="#Aharonov_Tashma">5</a>,<a href="#Cleve_sim">12</a>,<a href="#Childs_Wiebe12">170</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCCKS14b">244</a>,<a href="#BCK15">245</a>,<a href="#Som15">278</a>,<a href="#Som15">293</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>,<a href="#BT97">372</a>,<a href="#LC16b">382</a>,<a href="#MF23">466</a>],
- chemical dynamics
+ Many techniques for quantum simulation have been developed in the abstract for
+ general classes of Hamiltonians. Specifically, [<a href="#Zalka_sim">95</a>,<a href="#Wiesner_sim">92</a>,<a href="#BT97">372</a>,<a href="#Som15">278</a>] consider <i>n</i>-body first-quantized Hamiltonians
+ consisting of a kinetic term \( \sum_{i=1}^n \nabla_i^2 \) plus a potential term \( V(\mathbf{x}_1,\ldots,\mathbf{x}_n) \). The works
+ [<a href="#Aharonov_Tashma">5</a>,<a href="#Childs_thesis">25</a>,<a href="#Cleve_sim">12</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCK15">245</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>]
+ consider general sparse Hamiltonians. The works [<a href="#Childs_Wiebe12">170</a>,<a href="#BCCKS14b">244</a>,<a href="#LC16b">382</a>] consider Hamiltonians
+ expressible as a linear combination of efficiently implementable unitary operators. Some works, such as [<a href="#Som15b">293</a>,<a href="#LW18">470</a>], consider the problem of simulating Hamiltonians \(H = \sum_j H_j \), where each \(e^{i H_j t} \) 
+ is efficiently implementable, while remaining indifferent to the nature of the implementation. The works [<a href="#PQS11">468</a>,<a href="#KSB19">469</a>,<a href="#BCS20">467</a>,<a href="#MF23">466</a>] consider the problems that arise in simulating time-dependent Hamiltonians.
+ The works [<a href="#HHK18">478</a>,<a href="#CS19">479</a>] show that geometrically local Hamiltonians on lattices of fixed dimension can be simulated more efficiently than general Hamiltonians.
+ Specifically, they show that the quantum runtime in this case is essentially linear in the spacetime volume of the process being simulated. A related result on the efficiency implications of approximate locality
+ in systems of interacting Bosons is given in [<a href="#KVS24">480</a>].
+ Other works consider specific physical settings, such as chemical dynamics
  [<a href="#Kassal_sim">63</a>,<a href="#Lidar_sim">68</a>,<a href="#HWBT15">227</a>,<a href="#RWSWT16">310</a>,<a href="#SW17">375</a>], condensed
  matter physics
  [<a href="#Abrams_sim">1</a>,<a href="#Wu_sim">99</a>, <a href="#Ortiz">145</a>], relativistic quantum mechanics (the Dirac and Klein-Gordon equations) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a href="#Yepez11">370</a>,<a href="Yepez13">371</a>],
@@ -1153,11 +1165,10 @@ Freedman [<a href="#Freedman">42</a>,
  functions on quantum computers are given in [<a href="#Arad_Landau">112</a>,<a href="#VdN">113</a>,<a href="#Geraci_QWGT1">45</a>,<a href="#Geraci_exact">47</a>]. 
  A BQP-completeness result (where the "energies" are allowed to be complex) is also given in 
  [<a href="#VdN">113</a>]. A method for approximating partition functions by simulating 
- thermalization processes is given in [<a href="#Poulin_Wocjan">121</a>]. A quadratic speedup
- for the approximation of general partition functions is given in
- [<a href="#WCAN">122</a>]. A method based on quantum walks, achieving
- polynomial speedup for evaluating partition functions is given in
- [<a href="#M15b">265</a>].
+ thermalization processes is given in [<a href="#Poulin_Wocjan">121</a>]. Polynomial speedups for
+ the approximation of certain general classes partition functions are given in
+ [<a href="#WCAN">122</a>,<a href="#CH23">471</a>]. A method based on quantum walks, achieving
+ polynomial speedup for evaluating partition functions is given in [<a href="#M15b">265</a>].
 <br /><br />
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
@@ -1182,8 +1193,8 @@ better approximation ratio (in fact, the approximation ratio
 saturating the limit set by hardness-of-approximation) was
 subsequently discovered [<a href="#BMO15">260</a>]. Presently, the power of
 QAOA relative to classical computing is an active area of research 
-[<a href="#LZ16">300</a>, <a href="#WHT16">301</a>, <a href="#FH16">302</a>, 
-<a href="#Chamon">314</a>,<a href="#SLC24">451</a>, <a href="#BFM22">452</a>].
+[<a href="#LZ16">300</a>,<a href="#WHT16">301</a>,<a href="#FH16">302</a>, 
+<a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>].
 <br /><br />
 
 <a name="semidefinite"></a>
@@ -1312,6 +1323,17 @@ equations over finite fields [<a href="#vanDam_zeros">87</a>].
  [<a href="#Wocjan_matrix">60</a>]. Thus, quantum computers can solve it in polynomial
  time, but classical computers probably cannot.
 <br /><br />
+
+<b>Algorithm:</b> Probabilistic Sampling <br />
+<b>Speedup:</b> Superpolynomial <br />
+<b>Description:</b> Although most computational problems are formulated either as decision problems or search problems,
+one can also consider the complexity of sampling from a given distribution of bit strings. In [<a href="#SB09">474</a>,<a href="#AA11">473</a>],
+it was shown that quantum computers can efficiently sample from certain distributions that cannot be exactly sampled from by any efficient
+classical randomized algorithm unless the Polynomial Hierarchy collapses to the third level. Sampling problems of this
+type have subsequently been used in experiments demonstrating the ability of present-day quantum computers to perform
+tasks that are beyond the reach of classical supercomputers. This is sometimes referred to as "quantum supremacy". Some
+quantum algorithms achieving polynomial speedup for sampling problems with known practical applications have also been devised [<a href="#CLL22">475</a>].
+<br /><br />
 <hr/>
 
 <a name="ONML"></a>
@@ -1429,6 +1451,8 @@ search space, lack local optima other than the global optimum. In particular, si
 finding the minima of basins based on Hamming  distance were given in
 [<a href="#Hogg">147</a>,<a href="#Hunziker_Meyer">148</a>,<a href="#MP09">223</a>].
 See also: <a href="#gradients">Gradient Estimation</a> and <a href="#semidefinite">Semidefinite Programming</a>.
+Some no-go results on quantum speedup for general convex optimization in the presence of an oracle for gradients
+are given in [<a href="#GKN20">477</a>].
 <br /><br />
 
 <b>Algorithm:</b> Optimization by Decoded Quantum Interferometry<br />
@@ -4085,7 +4109,7 @@ pg. 2682-2685, 2010.
 <br /><em><a href="http://arxiv.org/abs/1603.07856">arXiv:1603.07856</a></em>, 2016. 
 <br /><br /></dd>
 
-<dt><a name="Som15">293</a></dt>
+<dt><a name="Som15b">293</a></dt>
 <dd>Rolando D. Somma
 <br />A Trotter-Suzuki approximation for Lie groups with applications to Hamiltonian simulation
 <br /><em><a href="http://arxiv.org/abs/1512.03416">arXiv:1512.03416</a></em>, 2015. 
@@ -4644,7 +4668,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="LC16b">382</a></dt>
 <dd>Guang Hao Low and Isaac Chuang
-<br />Hamiltonian simulation bt qubitization
+<br />Hamiltonian simulation by qubitization
 <br /><em><a href="https://arxiv.org/abs/1610.06546">arXiv:1610.06546</a></em>, 2016.
 <br /><br /></dd>
 
@@ -5100,7 +5124,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Adam Bouland, Wim van Dam, Hamed Joorati, Iordanis Kerenidis, Anupam Prakash
 <br />Prospects and challenges of quantum finance
-<br /><em><a href="https://arxiv.org/abs/2011.06492">arXiv:2011.06492</a></em>.
+<br /><em><a href="https://arxiv.org/abs/2011.06492">arXiv:2011.06492</a></em>, 2020.
 <br /><br /></dd>
 
 <dt><a name="SLC24">451</a></dt>
@@ -5125,14 +5149,14 @@ pg. 431-442, Springer, 2006.
 <dd>
   Stephen P. Jordan, Noah Shutty, Mary Wootters, Adam Zalcman, Alexander Schmidhuber, Robbie King, Sergei V. Isakov, and Ryan Babbush
 <br />Optimization by Decoded Quantum Interferometry
-<br /><em><a href="https://arxiv.org/abs/2408.08292">arXiv:2408.08292</a></em>.
+<br /><em><a href="https://arxiv.org/abs/2408.08292">arXiv:2408.08292</a></em>, 2024.
 <br /><br /></dd>
 
 <dt><a name="SOK24">454</a></dt>
 <dd>
   Alexander Schmidhuber, Ryan O'Donnell, Robin Kothari, Ryan Babbush
 <br />Quartic quantum speedups for planted inference
-<br /><em><a href="https://arxiv.org/abs/2406.19378">arXiv:2406.19378</a></em>.
+<br /><em><a href="https://arxiv.org/abs/2406.19378">arXiv:2406.19378</a></em>, 2024.
 <br /><br /></dd>
 
 <dt><a name="YZ24">455</a></dt>
@@ -5169,7 +5193,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Guang Hao Low and Yuan Su
 <br />Quantum eigenvalue processing
-<br /><em><a href="https://arxiv.org/abs/2401.06240">arXiv:2401.06240</a></em>.
+<br /><em><a href="https://arxiv.org/abs/2401.06240">arXiv:2401.06240</a></em>, 2024.
 <br /><br /></dd>
 
 <dt><a name="BCG23">460</a></dt>
@@ -5184,14 +5208,14 @@ pg. 431-442, Springer, 2006.
 <dd>
   Simon Apers and Sander Gribling
 <br />Quantum speedups for linear programming via interior point methods
-<br /><em><a href="https://arxiv.org/abs/2311.03215">arXiv:2311.03215</a></em>.
+<br /><em><a href="https://arxiv.org/abs/2311.03215">arXiv:2311.03215</a></em>, 2023.
 <br /><br /></dd>
 
 <dt><a name="CGW24">462</a></dt>
 <dd>
   Yanlin Chen, András Gilyén, and Ronald de Wolf
 <br />A quantum speed-up for approximating the top eigenvectors of a matrix
-<br /><em><a href="https://arxiv.org/abs/2405.14765">arXiv:2405.14765</a></em>.
+<br /><em><a href="https://arxiv.org/abs/2405.14765">arXiv:2405.14765</a></em>, 2024.
 <br /><br /></dd>
 
 <dt><a name="CDB24">463</a></dt>
@@ -5225,6 +5249,116 @@ pg. 431-442, Springer, 2006.
 <br /><em>Quantum</em>, 7:962, 2023.
 <br /><a href="https://arxiv.org/abs/2209.05048">arXiv:2209.05048</a>.
 <br /><br /></dd>
+
+<dt><a name="BCS20">467</a></dt>
+<dd>
+  Dominic W. Berry, Andrew M. Childs, Yuan Su, Xin Wang, and Nathan Wiebe
+<br />Time-dependent Hamiltonian simulation with L1-norm scaling
+<br /><em>Quantum</em>, 4:254, 2020.
+<br /><a href="https://arxiv.org/abs/1906.07115">arXiv:1906.07115</a>.
+<br /><br /></dd>
+
+<dt><a name="PQS11">468</a></dt>
+<dd>
+  David Poulin, Angie Qarry, Rolando Somma, and Frank Verstraete
+<br />Quantum simulation of time-dependent Hamiltonians and the convenient illusion of Hilbert space
+<br /><em>Physical Review Letters</em>, 106(17):170501, 2011.
+<br /><a href="https://arxiv.org/abs/1102.1360">arXiv:1102.1360</a>.
+<br /><br /></dd>
+
+<dt><a name="KSB19">469</a></dt>
+<dd>
+  Mária Kieferová, Artur Scherer, and Dominic W. Berry
+<br />Simulating the dynamics of time-dependent Hamiltonians with a truncated Dyson series
+<br /><em>Physical Review A</em>, 99(4):042314, 2019.
+<br /><a href="https://arxiv.org/abs/1805.00582">arXiv:1805.00582</a>.
+<br /><br /></dd>
+
+<dt><a name="LW18">470</a></dt>
+<dd>
+  Guang Hao Low and Nathan Wiebe
+<br />Hamiltonian simulation in the interaction picture
+<br /><em><a href="https://arxiv.org/abs/1805.00675">arXiv:1805.00675</a></em>, 2018.
+<br /><br /></dd>
+
+<dt><a name="CH23">471</a></dt>
+<dd>
+  Arjan Cornelissen and Yassine Hamoudi
+<br />A sublinear-time quantum algorithm for approximating partition functions
+<br /><em>Proceedings of SODA23</em>, 1245-1264, 2023.
+<br /><em><a href="https://arxiv.org/abs/2207.08643">arXiv:2207.08643</a></em>.
+<br /><br /></dd>
+
+<dt><a name="CHJ22">472</a></dt>
+<dd>
+  Arjan Cornelissen, Yassine Hamoudi, Sofiene Jerbi
+<br />Near-optimal quantum algorithms for multivariate mean estimation
+<br /><em>Proceedings of STOC22</em>, 33-43, 2022.
+<br /><em><a href="https://arxiv.org/abs/2111.09787">arXiv:2111.09787</a></em>.
+<br /><br /></dd>
+
+<dt><a name="AA11">473</a></dt>
+<dd>
+  Scott Aaronson and Alex Arkhipov
+<br />The computational complexity of linear optics
+<br /><em>Proceedings of STOC11</em>, 333-342, 2011.
+<br /><em><a href="https://arxiv.org/abs/1011.3245">arXiv:1011.3245</a></em>.
+<br /><br /></dd>
+
+<dt><a name="SB09">474</a></dt>
+<dd>
+  Dan Shepherd and Michael J. Bremner
+<br />Temporally unstructured quantum computation
+<br /><em>Proceedings of the Royal Society A</em>, 465(2105):1413-1439, 2009.
+<br /><em><a href="https://arxiv.org/abs/0809.0847">arXiv:0809.0847</a></em>.
+<br /><br /></dd>
+
+<dt><a name="CLL22">475</a></dt>
+<dd>
+  Andrew M. Childs, Tongyang Li, Jin-Peng Liu, Chunhao Wang, Ruizhe Zhang
+<br />Quantum algorithms for sampling log-concave distributions and estimating normalizing constants
+<br /><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 35:23205-23217, 2022.
+<br /><em><a href="https://arxiv.org/abs/2210.06539">arXiv:2210.06539</a></em>.
+<br /><br /></dd>
+
+<dt><a name="BM22">476</a></dt>
+<dd>
+  Sami Boulebnane and Ashley Montanaro
+<br />Solving boolean satisfiability problems with the quantum approximate optimization algorithm
+<br /><em><a href="https://arxiv.org/abs/2208.06909">arXiv:2208.06909</a></em>, 2022.
+<br /><br /></dd>
+
+<dt><a name="GKN20">477</a></dt>
+<dd>
+  Ankit Garg, Robin Kothari, Praneeth Netrapalli, and Suhail Sherif
+<br />No quantum speedup over gradient descent for non-smooth convex optimization
+<br /><em><a href="https://arxiv.org/abs/2010.01801">arXiv:2010.01801</a></em>, 2020.
+<br /><br /></dd>
+
+<dt><a name="HHK18">478</a></dt>
+<dd>
+  Jeongwan Haah, Matthew B. Hastings, Robin Kothari, and Guang Hao Low
+<br />Quantum algorithm for simulating real time evolution of lattice Hamiltonians
+<br /><em>SIAM Journal on Computing</em>, 52(6):10.1137, 2018.
+<br /><em><a href="https://arxiv.org/abs/1801.03922">arXiv:1801.03922</a></em>.
+<br /><br /></dd>
+
+<dt><a name="CS19">479</a></dt>
+<dd>
+  Andrew M. Childs and Yuan Su
+<br />Nearly optimal lattice simulation by product formulas
+<br /><em>Physical Review Letters</em>, 123(5):050503, 2019.
+<br /><em><a href="https://arxiv.org/abs/1901.00564">arXiv:1901.00564</a></em>.
+<br /><br /></dd>
+
+<dt><a name="KVS24">480</a></dt>
+<dd>
+  Tomotaka Kuwahara, Tan Van Vu, and Keiji Saito 
+<br />Effective light cone and digital quantum simulation of interacting bosons
+<br /><em>Nature Communications</em>, 15:2520, 2024.
+<br /><em><a href="https://arxiv.org/abs/2206.14736">arXiv:2206.14736</a></em>.
+<br /><br /></dd>
+
 
 </dl>
 </div>
