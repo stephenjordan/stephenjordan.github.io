@@ -1171,56 +1171,6 @@ Freedman [<a href="#Freedman">42</a>,
  polynomial speedup for evaluating partition functions is given in [<a href="#M15b">265</a>].
 <br /><br />
 
-<b>Algorithm:</b> Quantum Approximate Optimization <br />
-<b>Speedup: </b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a><br />
-<b>Description:</b> For many combinatorial optimization problems,
-finding the exact optimal solution is NP-complete. There are also hardness-of-approximation
-results proving that finding an approximation with sufficiently
-small error bound is NP-complete. For certain problems there is a gap
-between the best error bound achieved by a polynomial-time classical
-approximation algorithm and the error bound proven to be NP-hard. In
-this regime there is potential for exponential speedup by quantum
-computation. In [<a href="#FGG14a">242</a>] a new quantum algorithmic
-technique called the Quantum Approximate Optimization Algorithm (QAOA) 
-was proposed for finding approximate solutions to
-combinatorial optimization problems. In [<a href="#FGG14b">243</a>] it
-was subsequently shown that QAOA solves a combinatorial
-optimization problem called Max E3LIN2 with a better approximation
-ratio than any polynomial-time classical algorithm known at the
-time. However, an efficient classical algorithm achieving an even
-better approximation ratio (in fact, the approximation ratio
-saturating the limit set by hardness-of-approximation) was
-subsequently discovered [<a href="#BMO15">260</a>]. Presently, the power of
-QAOA relative to classical computing is an active area of research 
-[<a href="#LZ16">300</a>,<a href="#WHT16">301</a>,<a href="#FH16">302</a>, 
-<a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>].
-<br /><br />
-
-<a name="semidefinite"></a>
-<b>Algorithm:</b> Semidefinite Programming <br />
-<b>Speedup: </b> Polynomial (with some exceptions)<br />
-<b>Description:</b> Given a list of <i>m</i> + 1 Hermitian \(n \times n \)
-matrices \(C, A_1, A_2, \ldots, A_m\) and <i>m</i> numbers 
-\(b_1, \ldots, b_m \), the problem of semidefinite programming is to
-find the positive semidefinite \( n \times n \)
-matrix <i>X</i> that maximizes tr(<i>CX</i>) subject to the
-constraints \( \mathrm{tr} (A_j X) \leq b_j \) for \( j = 1,2,\ldots,
-m \). Semidefinite programming has many applications in operations
-research, combinatorial optimization, and quantum information, and it
-includes linear programming as a special case. Introduced in 
-[<a href="#BS16">313</a>], and subsequently improved in [<a href="#BKL17">383</a>, <a href="#AGG20">425</a>],
-quantum algorithms are now known that can approximately solve semidefinite programs to within \( \pm \epsilon \) in time 
-\( O (\sqrt{m} \log m \cdot \mathrm{poly}(\log n, r, \epsilon^{-1})) \), where <i>r</i> is
-the rank of the semidefinite program. This constitutes a quadratic speedup over the fastest
-classical algorithms when <i>r</i> is small compared to <i>n</i>. The quantum algorithm is
-based on amplitude amplification and quantum Gibbs sampling [<a href="#Poulin_Wocjan">121</a>, <a href="#CS16">307</a>].
-In a model in which input is provided in the form of quantum states the quantum algorithm
-for semidefinite programming can achieve superpolynomial speedup, as discussed in [<a href="#BKL17">383</a>],
-although recent dequantization results [<a href="#CGL20">421</a>] delineate limitations on
-the context in which superpolynomial quantum speedup for semidefinite programs is possible.
-<br /><br />
-
 <b>Algorithm:</b> Zeta Functions <br />
 <b>Speedup:</b> Superpolynomial <br />
 <b>Description:</b> Let  <i>f</i>(<i>x</i>,<i>y</i>) be a degree-<i>d</i>
@@ -1411,6 +1361,32 @@ Some quantum simulation algorithms also use adiabatic state
 preparation.
 <br /><br />
 
+<b>Algorithm:</b> Quantum Approximate Optimization <br />
+<b>Speedup: </b> Superpolynomial <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a><br />
+<b>Description:</b> For many combinatorial optimization problems,
+finding the exact optimal solution is NP-complete. There are also hardness-of-approximation
+results proving that finding an approximation with sufficiently
+small error bound is NP-complete. For certain problems there is a gap
+between the best error bound achieved by a polynomial-time classical
+approximation algorithm and the error bound proven to be NP-hard. In
+this regime there is potential for exponential speedup by quantum
+computation. In [<a href="#FGG14a">242</a>] a new quantum algorithmic
+technique called the Quantum Approximate Optimization Algorithm (QAOA) 
+was proposed for finding approximate solutions to
+combinatorial optimization problems. In [<a href="#FGG14b">243</a>] it
+was subsequently shown that QAOA solves a combinatorial
+optimization problem called Max E3LIN2 with a better approximation
+ratio than any polynomial-time classical algorithm known at the
+time. However, an efficient classical algorithm achieving an even
+better approximation ratio (in fact, the approximation ratio
+saturating the limit set by hardness-of-approximation) was
+subsequently discovered [<a href="#BMO15">260</a>]. Presently, the power of
+QAOA relative to classical computing is an active area of research 
+[<a href="#LZ16">300</a>,<a href="#WHT16">301</a>,<a href="#FH16">302</a>, 
+<a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>].
+<br /><br />
+
 <a name="gradients"></a>
 <b>Algorithm:</b> Gradient Estimation and Learning Polynomials<br />
 <b>Speedup:</b> Polynomial <br />
@@ -1431,6 +1407,30 @@ queries. The quantum algorithm of [<a href="#mythesis">62</a>] can also extract 
 matrix elements of the quadratic form using <i>O(d)</i> queries, and  more generally, all
 \( d^n \) <i>n</i>th derivatives of a smooth function of <i>d</i> variables in \( O(d^{n-1}) \)
 queries. See also: <a href="#convex_optimization">convex optimization</a>.
+<br /><br />
+
+<a name="semidefinite"></a>
+<b>Algorithm:</b> Semidefinite Programming <br />
+<b>Speedup: </b> Polynomial (with some exceptions)<br />
+<b>Description:</b> Given a list of <i>m</i> + 1 Hermitian \(n \times n \)
+matrices \(C, A_1, A_2, \ldots, A_m\) and <i>m</i> numbers 
+\(b_1, \ldots, b_m \), the problem of semidefinite programming is to
+find the positive semidefinite \( n \times n \)
+matrix <i>X</i> that maximizes tr(<i>CX</i>) subject to the
+constraints \( \mathrm{tr} (A_j X) \leq b_j \) for \( j = 1,2,\ldots,
+m \). Semidefinite programming has many applications in operations
+research, combinatorial optimization, and quantum information, and it
+includes linear programming as a special case. Introduced in 
+[<a href="#BS16">313</a>], and subsequently improved in [<a href="#BKL17">383</a>, <a href="#AGG20">425</a>],
+quantum algorithms are now known that can approximately solve semidefinite programs to within \( \pm \epsilon \) in time 
+\( O (\sqrt{m} \log m \cdot \mathrm{poly}(\log n, r, \epsilon^{-1})) \), where <i>r</i> is
+the rank of the semidefinite program. This constitutes a quadratic speedup over the fastest
+classical algorithms when <i>r</i> is small compared to <i>n</i>. The quantum algorithm is
+based on amplitude amplification and quantum Gibbs sampling [<a href="#Poulin_Wocjan">121</a>, <a href="#CS16">307</a>].
+In a model in which input is provided in the form of quantum states the quantum algorithm
+for semidefinite programming can achieve superpolynomial speedup, as discussed in [<a href="#BKL17">383</a>],
+although recent dequantization results [<a href="#CGL20">421</a>] delineate limitations on
+the context in which superpolynomial quantum speedup for semidefinite programs is possible.
 <br /><br />
 
 <a name="convex_optimization"></a>
@@ -1650,6 +1650,17 @@ The quantum of [<a href="#CGW24">462</a>] runs in time \( \widetilde{O}(d^{3/2})
 Classically, the best algorithm for this has runtime \( \widetilde{O}((m+n) \epsilon^{-2}) \). The quantum algorithm of [<a href="#BGJ23">485</a>],
 improving on the prior result of [<a href="#AG19">486</a>] achieves this in runtime \( \widetilde{O}( \sqrt{m+n} \epsilon^{-2.5} + \epsilon^{-3}) \) by
 making a connection between Nash equilibria and Gibbs sampling.
+<br /><br />
+
+<b>Algorithm:</b> Lattice Problems by Filtering<br />
+<b>Speedup:</b> Exponential<br />
+<b>Description:</b> We are given a set of basis vectors in \( \mathbb{Z}^n \) and we consider the lattice \( \mathcal{L} \) defined by all integer linear combinations
+of these basis vectors. In general, finding the shortest nonzero vector in \( \mathcal{L} \) is an NP-hard problem. Given a target point \( \mathbf{x} \in \mathbb{Z}^n \), finding the
+nearest element of \( \mathcal{L} \) is also NP-hard. There are various problems of finding approximately optimal solutions, or finding solutions given certain promises on the $\mathcal{L}$
+that are not known to be NP-hard yet lack known polynomial time classical solutions. Such problems, versions of which underlie many post-quantum cryptosystems, provide very important
+targets for quantum algorithms research. In [<a href="#CLZ22">498</a>], Chen, Liu, and Zhandry obtained polynomial time quantum algorithms for some lattice problems that do not have known polynomial-time classical solutions. These quantum algorithms apply in a parameter regime that does not break the any of the main candidate post-quantum cryptosystems. A key ingredient
+in these algorithms is the observation from [<a href="#Regev_lattice">78</a>, <a href="#Aharonov_Tashma">5</a>]. that the quantum Fourier transform allows efficient reductions in both directinos between shortest vector problems on a lattice and nearest vector problems on the dual lattice. In [<a href="#CLZ22">498</a>], the authors add also a new ingredient,
+which is a filtering technique that uses quantum measurements in nontrivial bases to improve the parameters of these reductions in such a way as to achieve quantum advantage.
 <br /><br />
 
 <hr />
@@ -5420,6 +5431,14 @@ pg. 431-442, Springer, 2006.
   Yanlin Chen and Ronald de Wolf
 <br />Quantum algorithms and lower bounds for linear regression with norm constraints
 <br /><em><a href="https://arxiv.org/abs/2110.13086">arXiv:2110.13086</a></em>, 2021.
+<br /><br /></dd>
+
+<dt><a name="CLZ22">498</a></dt>
+<dd>
+  Yilei Chen, Qipeng Liu, and Mark Zhandry
+<br />Quantum algorithms for variants of average-case lattice problems via filtering
+<br /><em>Proceedings of EUROCRYPT22</em>, 372 - 401, 2022.
+<br />[<a href="https://arxiv.org/abs/2108.11015">arXiv:2108.11015</a>]
 <br /><br /></dd>
 
 </dl>
