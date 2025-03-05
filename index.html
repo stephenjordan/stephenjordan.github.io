@@ -38,7 +38,7 @@ Although I cannot guarantee a prompt response, your help is appreciated and will
 
 <b>Algorithm:</b> Factoring<br />
 <b>Speedup:</b> Superpolynomial<br /> 
-<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a>, <a href="https://pennylane.ai/codebook/shors-algorithm">PennyLane</a><br />
 <b>Description:</b> Given an <i>n</i>-bit integer, find the prime
 factorization. The quantum algorithm of Peter Shor solves this in
 \( \widetilde{O} (n^3) \) time
@@ -324,7 +324,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Searching <br />
 <b>Speedup:</b> Polynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_grovers_algorithm">PennyLane</a><br />
 <b>Description:</b> We are given an oracle with <i>N</i>
  allowed inputs. For one input <i>w</i> ("the winner") the corresponding output is
  1, and for all other inputs the corresponding output is 0. The task is to find 
@@ -426,7 +426,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Bernstein-Vazirani <br />
 <b>Speedup:</b> Polynomial Directly, Superpolynomial Recursively <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/bernstein_vazirani">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/bernstein_vazirani.py">Cirq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/bernstein_vazirani">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/bernstein_vazirani.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_qutrits_bernstein_vazirani">PennyLane</a><br />
 <b>Description:</b> We are given an oracle whose input is <i>n</i>
  bits and whose output is one bit. Given input \( x \in \{0,1\}^n \), the output is 
  \( x \odot h \), where <i>h</i> is the "hidden" string of <i>n</i> bits, and 
@@ -446,7 +446,7 @@ Fourier transform of another.
 
 <b>Algorithm:</b> Deutsch-Jozsa <br />
 <b>Speedup:</b> Exponential over P, none over BPP<br />
-<b>Implementation:</b> <a href="https://short.classiq.io/deutsch_josza">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/deutsch_josza">Classiq</a>, <a href="https://pennylane.ai/codebook/basic-quantum-algorithms/deutsch-jozsa">PennyLane</a><br />
 <b>Description:</b> We are given an oracle whose input is <i>n</i> bits and whose output
  is one bit. We are promised that out of the \( 2^n \) possible inputs, either all of them,
  none of them, or half of them yield output 1. The task is to distinguish the balanced case
@@ -1071,7 +1071,7 @@ quantum algorithm for <i>k</i>-junta testing given in
 
 <b>Algorithm:</b> Quantum Simulation <br />
 <b>Speedup:</b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq</a>, <a href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a><br />
 <b>Description:</b> The exponential complexity of classically simulating quantum systems led Feynman to 
 first propose that quantum computers might outperform classical computers on certain tasks 
 [<a href="#Feynman">40</a>]. It is now believed that for any physically realistic Hamiltonian 
@@ -1284,7 +1284,7 @@ quantum algorithms achieving polynomial speedup for sampling problems with known
 
 <b>Algorithm:</b>Polynomial Quantum Speedups for Constraint Satisfaction Problems<br />
 <b>Speedup:</b> Polynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/grover">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/grover">Classiq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_QUBO">PennyLane</a><br />
 <b>Description:</b> Constraint satisfaction problems, many of which
 are NP-hard, are ubiquitous in computer science, a canonical example
 being 3-SAT. If one wishes to satisfy as many constraints as possible
@@ -1349,7 +1349,7 @@ preparation.
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
 <b>Speedup: </b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_qaoa_intro">PennyLane</a><br />
 <b>Description:</b> For many combinatorial optimization problems,
 finding the exact optimal solution is NP-complete. There are also hardness-of-approximation
 results proving that finding an approximation with sufficiently
@@ -1497,7 +1497,7 @@ value transformation [<a href="#GSLW19">433</a>].
 
 <a name="ML"><b>Algorithm: </b> Machine Learning <br /></a>
 <b>Speedup:</b> Varies<br />
-<b>Implementation:</b> <a href="https://short.classiq.io/qsvm">Classiq(qsvm)</a>, <a href="https://short.classiq.io/autoencoder">Classiq(autoencoder)</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qsvm">Classiq(qsvm)</a>, <a href="https://short.classiq.io/autoencoder">Classiq(autoencoder)</a>, <a href="https://pennylane.ai/qml/demos/tutorial_variational_classifier">PennyLane</a><br />
 <b>Description:</b> 
 Maching learning encompasses a wide variety of computational problems
 and can be attacked by a wide variety of algorithmic techniques. This
