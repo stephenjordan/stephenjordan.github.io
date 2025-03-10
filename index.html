@@ -38,7 +38,7 @@ Although I cannot guarantee a prompt response, your help is appreciated and will
 
 <b>Algorithm:</b> Factoring<br />
 <b>Speedup:</b> Superpolynomial<br /> 
-<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a>, <a href="https://pennylane.ai/codebook/shors-algorithm">PennyLane</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a>, <a href="https://pennylane.ai/codebook/shors-algorithm">PennyLane</a>, <a href="https://qrisp.eu/reference/Algorithms/Shor.html#shor">PennyLane</a><br />
 <b>Description:</b> Given an <i>n</i>-bit integer, find the prime
 factorization. The quantum algorithm of Peter Shor solves this in
 \( \widetilde{O} (n^3) \) time
@@ -71,7 +71,7 @@ the synthesis of quantum circuits [<a href="#RS12">254</a>].
 
 <b>Algorithm:</b> Discrete-log<br /> 
 <b>Speedup:</b> Superpolynomial<br />
-<b>Implementation:</b> <a href="https://short.classiq.io/discrete_log">Classiq</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/discrete_log">Classiq</a>, <a href="https://github.com/diehoq/quantum-elliptic-curve-logarithm">Qrisp</a><br />
 <b>Description:</b> We are given three <i>n</i>-bit
 numbers <i>a</i>, <i>b</i>, and <i>N</i>, with the promise that 
 \( b = a^s \mod N \) for some <i>s</i>. The task is to find <i>s</i>.
@@ -324,7 +324,7 @@ unlikely to be feasible.
 
 <b>Algorithm:</b> Searching <br />
 <b>Speedup:</b> Polynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_grovers_algorithm">PennyLane</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_grovers_algorithm">PennyLane</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a>, <a href="https://qrisp.eu/reference/Algorithms/Grover.html">Qrisp (Grover)</a>, <a href="https://qrisp.eu/reference/Algorithms/quantum_counting.html">Qrisp (Quantum Counting)</a>, <a href="https://qrisp.eu/reference/Primitives/amplitude_amplification.html">Qrisp (Amplitude Amplification)</a><br />
 <b>Description:</b> We are given an oracle with <i>N</i>
  allowed inputs. For one input <i>w</i> ("the winner") the corresponding output is
  1, and for all other inputs the corresponding output is 0. The task is to find 
@@ -1071,7 +1071,7 @@ quantum algorithm for <i>k</i>-junta testing given in
 
 <b>Algorithm:</b> Quantum Simulation <br />
 <b>Speedup:</b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq</a>, <a href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq</a>, <a href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a>, <a href="https://qrisp.eu/general/tutorial/H2.html#ham-sim-fundamentals">Qrisp</a> <br />
 <b>Description:</b> The exponential complexity of classically simulating quantum systems led Feynman to 
 first propose that quantum computers might outperform classical computers on certain tasks 
 [<a href="#Feynman">40</a>]. It is now believed that for any physically realistic Hamiltonian 
@@ -1284,7 +1284,7 @@ quantum algorithms achieving polynomial speedup for sampling problems with known
 
 <b>Algorithm:</b>Polynomial Quantum Speedups for Constraint Satisfaction Problems<br />
 <b>Speedup:</b> Polynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/grover">Classiq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_QUBO">PennyLane</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/grover">Classiq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_QUBO">PennyLane</a>, <a href="https://qrisp.eu/reference/Algorithms/QuantumBacktrackingTree.html">Qrisp (Quantum Backtracking)</a><br /> 
 <b>Description:</b> Constraint satisfaction problems, many of which
 are NP-hard, are ubiquitous in computer science, a canonical example
 being 3-SAT. If one wishes to satisfy as many constraints as possible
@@ -1349,7 +1349,7 @@ preparation.
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
 <b>Speedup: </b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_qaoa_intro">PennyLane</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_qaoa_intro">PennyLane</a>, <a href="https://qrisp.eu/reference/Algorithms/qaoa/QAOA.html#qaoa">Qrisp</a><br />
 <b>Description:</b> For many combinatorial optimization problems,
 finding the exact optimal solution is NP-complete. There are also hardness-of-approximation
 results proving that finding an approximation with sufficiently
@@ -1457,7 +1457,7 @@ bear close relationships to DQI.
 
 <b>Algorithm:</b> Linear Systems<br />
 <b>Speedup:</b> Superpolynomial<br />
-<b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq(hhl)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq(qsvt)</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq(hhl)</a><br />
+<b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq(HHL)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq(QSVT)</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq(HHL)</a>, <a href="https://pennylane.ai/qml/demos/linear_equations_hhl_qrisp_catalyst">Qrisp/Pennylane(HHL)</a><br />
 <b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and 
 some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> 
 for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix
