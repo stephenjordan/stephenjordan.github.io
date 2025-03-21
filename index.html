@@ -1561,12 +1561,14 @@ phase estimation together with amplitude amplification.
 \( \mathbf{x}(0) \) one wishes to compute the solution \( \mathbf{x}(t) \) at some later time <i>t</i> to some precision \( \epsilon \) in
 the sense that the normalized vector \( x(t)/\|x(t)\| \) produced has distance at most \( \epsilon \) from the exact solution. In [<a href="#Berry10">156</a>],
 Berry gives a quantum algorithm for this problem that runs in time \( O(t^2 \mathrm{poly}(1/\epsilon) \mathrm{poly log} N) \), whereas the fastest classical algorithms
-run in time \( O ( t \ \mathrm{poly} N ) \). The final result is produced in the form of a quantum superposition state on \( O(log N) \) qubits whose amplitudes contain
+run in time \( O ( t \ \mathrm{poly} N ) \). The final result is produced in the form of a quantum superposition state on \( O(\log N) \) qubits whose amplitudes contain
 the components of \( \mathbf{x}(t) \). The algorithm works by reducing the problem to linear algebra via a high-order finite difference method and applying
 the quantum linear algebra primitive of [<a href="#HHL08">104</a>]. In [<a href="#BCOW17">410</a>] an improved quantum algorithm for this problem was given
 which brings the epsilon dependence down to \( \mathrm{poly log}(1/\epsilon) \). The quantum eigenvalue processing technique of [<a href="#LS24">459</a>] also yields
 efficiency improvements for solving linear differential equations. In [<a href="#BBK21">440</a>] it is shown that quantum simulation of the linear ODEs
 governing coupled classical harmonic oscillators can be solved exponentially faster on quantum computers than classical computers when the connectivity is an expander graph.
+Related quantum algorithms have been developed to efficiently simulate certain dynamical systems with exponentially many fermionic degrees of freedom [<a href="#SLT24">513</a>],
+bosonic  degrees of freedom [<a href="#BCS25">514</a>], and more general degrees of freedom [<a href="#SKK24">512</a>].
 Partial differential equations can be reduced to ordinary differential equations through discretization, and higher order differential equations can be
 reduced to first order through additiona of auxiliary variables. Consequently, these more general problems can be solved through the methods of
 [<a href="#Berry10">156</a>, <a href="#HHL08">104</a>]. However, quantum algorithms designed to solve these problems directly may be more
@@ -1703,6 +1705,7 @@ chronological order).
 <li><a href="https://xjsong.cn/">Xujie Song</a></li>
 <li><a href="https://alexisfimeyer.github.io/">Alexis Fimeyer</a></li>
 <li>Xiang Li</li>
+<li><a href="https://scholar.google.com/citations?user=6cDyH-MAAAAJ">Diego Garcia Martin</a></li>
 </ul>
 <br />
 
@@ -5520,6 +5523,28 @@ pg. 431-442, Springer, 2006.
 <br /><em><a href="https://arxiv.org/abs/2501.12378">arXiv:2501.12378</a></em>, 2025.
 <br /><br /></dd>
 
+<dt><a name="SKK24">512</a></dt>
+<dd>
+  Rolando D. Somma, Robbie King, Robin Kothari, Thomas O'Brien, and Ryan Babbush
+<br />Shadow Hamiltonian Simulation
+<br /><em><a href="https://arxiv.org/abs/2407.21775">arXiv:2407.21775</a></em>, 2024.
+<br /><br /></dd>
+
+<dt><a name="SLT24">513</a></dt>
+<dd>
+  Maarten Stroeks, Daan Lenterman, Barbara Terhal, Yaroslav Herasymenko
+<br />Solving Free Fermion Problems on a Quantum Computer
+<br /><em><a href="https://arxiv.org/abs/2409.04550">arXiv:2409.04550</a></em>, 2024.
+<br /><br /></dd>
+
+<dt><a name="BCS25">514</a></dt>
+<dd>
+  Alice Barthe, M. Cerezo, Andrew T. Sornborger, Martín Larocca, and Diego García-Martín
+<br />Gate-Based Quantum Simulation of Gaussian Bosonic Circuits on Exponentially Many Modes
+<br /><em>Physical Review Letters</em>, 134:070604, 2025.
+<br />[<a href="https://arxiv.org/abs/2407.06290">arXiv:2407.06290</a>]
+<br /><br /></dd>
+
 </dl>
 </div>
 <div id="sidebar">
@@ -5533,6 +5558,14 @@ pg. 431-442, Springer, 2006.
 <a href="#acknowledgments">Acknowledgments</a><br />
 <a href="#references">References</a><br /><br />
 </div>
+
+<h2>About</h2>
+Author: Stephen P. Jordan, Google Quantum AI<br />
+Cite as: <a href="zoo.bib">bibtex</a><br />
+Last updated: March 21, 2025<br />
+Date created: April 22, 2011<br /><br />
+<div style="clear: both;"></div>
+<br />
 
 <h2>Translations</h2>
 This page has been translated into:
@@ -5565,16 +5598,7 @@ then I call the speedup superpolynomial. Otherwise I call it polynomial.
 For a review of the \( O, \Omega, \Theta, \widetilde{O}, ... \) notations see the
 <a href="http://en.wikipedia.org/wiki/Big_O_notation">Wikipedia article</a>.</p>
 
-<h2>About</h2>
-Author:<br /><br />
-<img src="sjordanface2.png" width="50" height="66" alt="author photo" style="float: left; margin-right:5px;" />
-Stephen Jordan<br /><br />
-Google Research<br />
-<div style="clear: both;"></div>
-<br />
 
-Last updated: March 5, 2025<br />
-Date created: April 22, 2011<br /><br />
 
 </div>
 <div id="footer">
