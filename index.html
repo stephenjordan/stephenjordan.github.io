@@ -218,7 +218,7 @@ to \( O(n^2 (\log \ n)^3) \) [<a href="#Greathouse">399</a>].
  and searching.
 <br /><br />
 
-<b>Algorithm:</b> Matrix Elements and Kronecker Coefficients of Group Representations<br />
+<b>Algorithm:</b> Matrix Elements and Multiplicity Coefficients of Group Representations<br />
 <b>Speedup:</b> Superpolynomial<br />
 <b>Description:</b> All representations of finite groups and compact linear
 groups can be expressed as unitary matrices given an appropriate choice of
@@ -238,10 +238,14 @@ circuits are given in [<a href="#SPJ08">106</a>]. Instances that appear
 to be exponentially hard for known classical algorithms are also
 identified in [<a href="#SPJ08">106</a>]. Kronecker coefficients count the multiplicity
 of a given irreducible representation in the tensor product of a given pair of irreducible
-representations. In [<a href="#BCG23">460</a>] it is shown that normalized Kronecker coefficients of the symmetric
+representations. In [<a href="#BCG23">460</a>] it was shown that normalized Kronecker coefficients of the symmetric
 group can be approximated to within an additive inverse polynomial error by a polynomial
-time quantum algorithm, whereas no polynomial time classical algorithm achieving this is
-known.<br /><br />
+time quantum algorithm, whereas no polynomial time classical algorithm achieving this was
+known at the time. These quantum speedups were generalized to other multiplicity coefficients 
+of the symmetric group in [<a href="#LH24">516</a>]. Prompted by these results, the state of the art in classical algorithms
+for computing Kronecker coefficients and more general multiplicity coefficients was improved in [<a href="G25">515</a>].
+Nevertheless, as discussed in [<a href="#LH24">516</a>], these advances do not eliminate all quantum speedups for approximating
+multiplicity coefficients. <br /><br />
 
 <b>Algorithm:</b> Verifying Matrix Products <br />
 <b>Speedup:</b> Polynomial <br />
@@ -1706,6 +1710,7 @@ chronological order).
 <li><a href="https://alexisfimeyer.github.io/">Alexis Fimeyer</a></li>
 <li>Xiang Li</li>
 <li><a href="https://scholar.google.com/citations?user=6cDyH-MAAAAJ">Diego Garcia Martin</a></li>
+<li><a href="https://cnls.lanl.gov/external/people/Martin_Larocca.php">Martin Larocca</a></li>
 </ul>
 <br />
 
@@ -5545,6 +5550,20 @@ pg. 431-442, Springer, 2006.
 <br />[<a href="https://arxiv.org/abs/2407.06290">arXiv:2407.06290</a>]
 <br /><br /></dd>
 
+<dt><a name="G25">515</a></dt>
+<dd>
+  Greta Panova
+<br />Polynomial time classical versus quantum algorithms for representation theoretic multiplicities
+<br /><em><a href="https://arxiv.org/abs/2502.20253">arXiv:2502.20253</a></em>, 2025.
+<br /><br /></dd>
+
+<dt><a name="LH24">516</a></dt>
+<dd>
+  Martin Larocca, Vojtech Havlicek
+<br />Quantum Algorithms for Representation-Theoretic Multiplicities
+<br /><em><a href="https://arxiv.org/abs/2407.17649">arXiv:2407.17649</a></em>, 2024.
+<br /><br /></dd>
+
 </dl>
 </div>
 <div id="sidebar">
@@ -5562,7 +5581,7 @@ pg. 431-442, Springer, 2006.
 <h2>About</h2>
 Author: Stephen P. Jordan, Google Quantum AI<br />
 Cite as: <a href="zoo.bib">bibtex</a><br />
-Last updated: March 21, 2025<br />
+Last updated: March 31, 2025<br />
 Date created: April 22, 2011<br /><br />
 <div style="clear: both;"></div>
 <br />
