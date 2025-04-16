@@ -1075,7 +1075,7 @@ quantum algorithm for <i>k</i>-junta testing given in
 
 <b>Algorithm:</b> Quantum Simulation <br />
 <b>Speedup:</b> Superpolynomial <br />
-<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq</a>, <a href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a>, <a href="https://qrisp.eu/general/tutorial/H2.html#ham-sim-fundamentals">Qrisp</a> <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq (Hamiltonian)</a>, <a href="https://short.classiq.io/thermal_state_preparation">Classiq (Thermal)</a>, <a href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a>, <a href="https://qrisp.eu/general/tutorial/H2.html#ham-sim-fundamentals">Qrisp</a> <br />
 <b>Description:</b> The exponential complexity of classically simulating quantum systems led Feynman to 
 first propose that quantum computers might outperform classical computers on certain tasks 
 [<a href="#Feynman">40</a>]. It is now believed that for any physically realistic Hamiltonian 
@@ -1312,6 +1312,7 @@ A general quantum speedup for backtracking algorithms is given in
 
 <a name="adiabatic"><b>Algorithm:</b> Adiabatic Algorithms <br /></a>
 <b>Speedup: </b> Unknown <br />
+<b>Implementation:</b> <a href="https://short.classiq.io/adiabatic_qlsp">Classiq (Linear Solver)</a><br /> 
 <b>Description:</b> In adiabatic quantum computation one starts with
 an initial Hamiltonian whose ground state is easy to prepare, and
 slowly varies the Hamiltonian to one whose ground state encodes the
@@ -1346,7 +1347,7 @@ constructed in [<a href="#SB12">184</a>] by adapting techniques from
 proposed for several specific problems, including PageRank
 [<a href="#GZL12">176</a>], machine learning
 [<a href="#PL12">192</a>, <a href="#NDRM08">195</a>], finding Hadamard
-matrices [<a href="#SM19">406</a>], and graph problems [<a href="#GC11">193</a>, <a href="#GC13">194</a>].
+matrices [<a href="#SM19">406</a>], solving linear systems [<a href="#AL22">517</a>, <a href="#CA22">518</a>] and graph problems [<a href="#GC11">193</a>, <a href="#GC13">194</a>].
 Some quantum simulation algorithms also use adiabatic state
 preparation.
 <br /><br />
@@ -5563,6 +5564,27 @@ pg. 431-442, Springer, 2006.
 <br />Quantum Algorithms for Representation-Theoretic Multiplicities
 <br /><em><a href="https://arxiv.org/abs/2407.17649">arXiv:2407.17649</a></em>, 2024.
 <br /><br /></dd>
+
+<dt><a name="AL22">517</a></dt>
+<dd>
+  Dong An and Lin Lin  
+  <br />Quantum Linear System Solver Based on Time-optimal Adiabatic Quantum Computing and Quantum Approximate Optimization Algorithm  
+  <br /><em>ACM Transactions on Quantum Computing</em>, 3(2):1–28, 2022.  
+  <br />[<a href="https://arxiv.org/abs/1909.05500">arXiv:1909.05500</a>]  
+  <br /><br />
+</dd>
+
+
+
+<dt><a name="CA22">518</a></dt>
+<dd>
+  Paolo C. S. Costa, Dong An, Yuval R. Sanders, Yuan Su, Ryan Babbush, and Dominic W. Berry  
+  <br />Optimal Scaling Quantum Linear-Systems Solver via Discrete Adiabatic Theorem  
+  <br /><em>PRX Quantum</em>, 3:040303, 2022.
+  <br />[<a href="https://arxiv.org/abs/2111.08152">arXiv:2111.08152</a>]  
+  <br /><br />
+</dd>
+
 
 </dl>
 </div>
