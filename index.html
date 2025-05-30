@@ -1612,7 +1612,7 @@ of fluid dynamics. A quantum heuristic for solving the Black-Scholes equation by
 in [<a href="#GRS24">449</a>].
 <br /><br />
 
-<b>Algorithm:</b> Quantum Dynamic Programming<br />
+<b>Algorithm:</b> Quantum Dynamic Programming based on Grover search<br />
 <b>Speedup:</b> Polynomial<br />
 <b>Description:</b> In [<a href="#ABI18">409</a>] the authors introduce a problem called path-in-the-hypercube. In this problem, one given
 a subgraph of the hypercube and asked whether there is a path along this subgraph that starts from the all zeros vertex,
@@ -1625,6 +1625,14 @@ classical algorithm for this problem runs in time \( O^*(2^n) \). Using this pri
 that solve vertex ordering problems in \( O^*(1.817^n) \) vs. \( O^* (2^n) \) classically, graph bandwidth in \( O^*(2.946^n) \)
 vs. \( O^*(4.383^n) \) classically, travelling salesman and feedback arc set in \( O^*(1.729^n) \) vs. \( O^*(2^n) \) classically,
 and minimum set cover in \( O( \mathrm{poly}(m,n) 1.728^n ) \) vs. \( O(nm2^n) \) classically.
+<br /><br />
+
+<b>Algorithm:</b> Quantum Dynamic Programming based on hermitian-map exponentiation<br />
+<b>Speedup:</b> Exponential circut depth reduction of best known predecesor at cost of exponential circuit width increase<br />
+<b>Description:</b> In [<a href="#SGTN25">319</a>] the authors show that quantum algorithms for density-matrix exponentiation [<a href="#S">409</a>], and in general hermitian-map exponentiation [<a href="#S">409</a>], allow to coherently perform a quantum variant of dynamic programming.
+Due to the no-cloning theorem, the procedure aiming to implement \(n\) recursion steps is initialized with \( M^n \) copies of the initial state.
+For each recursion step \(k\), \(M\) copies of the recursion state at step \(k\) are used by calling hermitian-map exponentiation to implement the recursion step and to produce one recursion state at step \(k+1\) which accounts for the exponential increase of the circuit width.
+Compared to previous proposals for quantum recursions such as the fixed-point Grover search or double-bracket quantum algorithms, this approach provides an exponential circuit depth reduction for recursions which are expressed as a constant product of unitaries consituting memory calls in form of a hermitian-map exponentiation but this speed-up over the preceding protocols is conditioned on all-to-all connectivity, e.g. in distributed quantum computing.
 <br /><br />
 
 <b>Algorithm:</b> Computing the Principal Eigenvector<br />
@@ -5582,6 +5590,15 @@ pg. 431-442, Springer, 2006.
   <br />Optimal Scaling Quantum Linear-Systems Solver via Discrete Adiabatic Theorem  
   <br /><em>PRX Quantum</em>, 3:040303, 2022.
   <br />[<a href="https://arxiv.org/abs/2111.08152">arXiv:2111.08152</a>]  
+  <br /><br />
+</dd>
+
+<dt><a name="SGTN25">519</a></dt>
+<dd>
+  Jeongrak Son, Marek Gluza, Ryuji Takagi, Nelly H. Y. Ng
+  <br />Quantum Dynamic Programming  
+  <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
+  <br />[<a href="https://arxiv.org/abs/2403.09187">arXiv:2403.09187</a>]  
   <br /><br />
 </dd>
 
