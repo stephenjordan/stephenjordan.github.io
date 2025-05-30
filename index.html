@@ -1629,9 +1629,8 @@ and minimum set cover in \( O( \mathrm{poly}(m,n) 1.728^n ) \) vs. \( O(nm2^n) \
 
 <b>Algorithm:</b> Quantum Dynamic Programming based on hermitian-map exponentiation<br />
 <b>Speedup:</b> Exponential circut depth reduction of best known predecesor at cost of exponential circuit width increase<br />
-<b>Description:</b> In [<a href="#SGTN25">319</a>] the authors show that quantum algorithms for density-matrix exponentiation [<a href="#S">409</a>], and in general hermitian-map exponentiation [<a href="#S">409</a>], allow to coherently perform a quantum variant of dynamic programming.
+<b>Description:</b> In [<a href="#SGTN25">319</a>] the authors show that quantum algorithms for density-matrix exponentiation [<a href="#LMR13b">250</a>], and in general hermitian-map exponentiation [<a href="#WLLHMDL23">320</a>], allow to coherently perform a quantum variant of dynamic programming.
 Due to the no-cloning theorem, the procedure aiming to implement \(n\) recursion steps is initialized with \( M^n \) copies of the initial state.
-For each recursion step \(k\), \(M\) copies of the recursion state at step \(k\) are used by calling hermitian-map exponentiation to implement the recursion step and to produce one recursion state at step \(k+1\) which accounts for the exponential increase of the circuit width.
 Compared to previous proposals for quantum recursions such as the fixed-point Grover search or double-bracket quantum algorithms, this approach provides an exponential circuit depth reduction for recursions which are expressed as a constant product of unitaries consituting memory calls in form of a hermitian-map exponentiation but this speed-up over the preceding protocols is conditioned on all-to-all connectivity, e.g. in distributed quantum computing.
 <br /><br />
 
@@ -5602,6 +5601,14 @@ pg. 431-442, Springer, 2006.
   <br /><br />
 </dd>
 
+<dt><a name="WLLHMDL23">520</a></dt>
+<dd>
+  Fuchuan Wei, Zhenhuan Liu, Guoding Liu, Zizhao Han, Xiongfeng Ma, Dong-Ling Deng, Zhengwei Liu
+  <br />Simulating non-completely positive actions via exponentiation of Hermitian-preserving maps  
+  <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
+  <br />[<a href="https://arxiv.org/abs/2308.07956">arXiv:2308.07956</a>]  
+  <br /><br />
+</dd>
 
 </dl>
 </div>
