@@ -1612,7 +1612,7 @@ of fluid dynamics. A quantum heuristic for solving the Black-Scholes equation by
 in [<a href="#GRS24">449</a>].
 <br /><br />
 
-<b>Algorithm:</b> Quantum Dynamic Programming<br />
+<b>Algorithm:</b> Quantum Dynamic Programming based on Grover search<br />
 <b>Speedup:</b> Polynomial<br />
 <b>Description:</b> In [<a href="#ABI18">409</a>] the authors introduce a problem called path-in-the-hypercube. In this problem, one given
 a subgraph of the hypercube and asked whether there is a path along this subgraph that starts from the all zeros vertex,
@@ -1625,6 +1625,13 @@ classical algorithm for this problem runs in time \( O^*(2^n) \). Using this pri
 that solve vertex ordering problems in \( O^*(1.817^n) \) vs. \( O^* (2^n) \) classically, graph bandwidth in \( O^*(2.946^n) \)
 vs. \( O^*(4.383^n) \) classically, travelling salesman and feedback arc set in \( O^*(1.729^n) \) vs. \( O^*(2^n) \) classically,
 and minimum set cover in \( O( \mathrm{poly}(m,n) 1.728^n ) \) vs. \( O(nm2^n) \) classically.
+<br /><br />
+
+<b>Algorithm:</b> Quantum Dynamic Programming based on hermitian-map exponentiation<br />
+<b>Speedup:</b> Exponential circut depth reduction over best known predecesor at cost of exponential circuit width increase<br />
+<b>Description:</b> In [<a href="#SGTN25">319</a>] the authors show that quantum algorithms for density-matrix exponentiation [<a href="#LMR13b">250</a>], and in general hermitian-map exponentiation [<a href="#WLLHMDL23">320</a>], allow to coherently perform a quantum variant of dynamic programming.
+Due to the no-cloning theorem, the procedure aiming to implement \(n\) recursion steps is initialized with \( M^n \) copies of the initial state.
+Compared to previous proposals for quantum recursions such as the fixed-point Grover search or double-bracket quantum algorithms, this approach provides an exponential circuit depth reduction for recursions which are expressed as a constant product of unitaries consituting memory calls in form of a hermitian-map exponentiation but this speed-up over the preceding protocols is conditioned on all-to-all connectivity, e.g. in distributed quantum computing.
 <br /><br />
 
 <b>Algorithm:</b> Computing the Principal Eigenvector<br />
@@ -1654,6 +1661,20 @@ targets for quantum algorithms research. In [<a href="#CLZ22">498</a>], Chen, Li
 in these algorithms is the observation from [<a href="#Regev_lattice">78</a>, <a href="#Aharonov_Tashma">5</a>]. that the quantum Fourier transform allows efficient reductions in both directinos between shortest vector problems on a lattice and nearest vector problems on the dual lattice. In [<a href="#CLZ22">498</a>], the authors add also a new ingredient,
 which is a filtering technique that uses quantum measurements in nontrivial bases to improve the parameters of these reductions in such a way as to achieve quantum advantage.
 <br /><br />
+
+<b>Algorithm:</b> Double-bracket quantum algorithms<br />
+<b>Speedup:</b> Unknown<br />
+<b>Implementation:</b> <a href="https://github.com/marekgluza/DBQITE/blob/main/README.md">Numpy</a>, <a href="https://github.com/qiboteam/boostvqe">Qibo</a>, <a href="https://qrisp.eu/reference/Algorithms/QITE.html">Qrisp</a><br />
+<b>Description:</b> Double-bracket flows (DBF) are non-unitary matrix-valued differential equations whose stable equilibria arise as unitary rotations of the input matrix and can encode solutions to optimization problems, linear programming, QR decomposition, sorting and others [<a href="#HM">321</a>].
+In [<a href="#G24">322</a>], Gluza proposed to use group-commutators to implement linear discretizations of these equations in the Hamiltonian simulation oracle model of the input matrix and described convergence properties of recursive quantum algorithm for matrix diagonalization that approximates the Glazek-Wilson-Wegner DBF but has an inefficient runtime.
+In [<a href="#S24">323</a>] Gluza et al. showed that imaginary-time evolution is the Brockett DBF and gave a quantum algorithm DB-QITE converging to the ground-state, with exponential rate in the number of recursive steps if system size is fixed, ground-state unique and initialization has a non-trivial overlap with it.
+In [<a href="#S24">324</a>] Suzuki et al. proved unitary synthesis formulas for quantum signal processing via polynomials using the Hamiltonian simulation oracle and gave a quantum algorithm DB-QSP with exponential runtime in the degree of Hamiltonian but not involving post-selection.
+The common feature of these algorithms is the use of approximations to exponentials of commutators by product formulas, synthesis of unitaries without auxiliary qubits and exponential convergence to fix-points.
+DBFs are Riemannian-gradient descent flows on the unitary manifold which explains the appearance of commutators (exponentials of commutators are Riemannian gradients on the unitary manifold) and exponential convergence to fix-points (gradient descent algorithms converge with linear exponent)  [<a href="#HM">321</a>].
+
+<br /><br />
+
+
 
 <hr />
 
@@ -5585,6 +5606,23 @@ pg. 431-442, Springer, 2006.
   <br /><br />
 </dd>
 
+<dt><a name="SGTN25">519</a></dt>
+<dd>
+  Jeongrak Son, Marek Gluza, Ryuji Takagi, Nelly H. Y. Ng
+  <br />Quantum Dynamic Programming  
+  <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
+  <br />[<a href="https://arxiv.org/abs/2403.09187">arXiv:2403.09187</a>]  
+  <br /><br />
+</dd>
+
+<dt><a name="WLLHMDL23">520</a></dt>
+<dd>
+  Fuchuan Wei, Zhenhuan Liu, Guoding Liu, Zizhao Han, Xiongfeng Ma, Dong-Ling Deng, Zhengwei Liu
+  <br />Simulating non-completely positive actions via exponentiation of Hermitian-preserving maps  
+  <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
+  <br />[<a href="https://arxiv.org/abs/2308.07956">arXiv:2308.07956</a>]  
+  <br /><br />
+</dd>
 
 </dl>
 </div>
