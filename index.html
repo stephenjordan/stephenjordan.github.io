@@ -1311,45 +1311,14 @@ A general quantum speedup for backtracking algorithms is given in
 [<a href="#M15a">264</a>] and further improved in [<a href="#AK17">422</a>].<br /><br />
 
 <a name="adiabatic"><b>Algorithm:</b> Adiabatic Algorithms <br /></a>
-<b>Speedup: </b> Unknown <br />
+<b>Speedup: </b> A plausible example of superpolynomial speedup appears in [<a href="#LZW23">530</a>] <br />
 <b>Implementation:</b> <a href="https://short.classiq.io/adiabatic_qlsp">Classiq (Linear Solver)</a><br /> 
-<b>Description:</b> In adiabatic quantum computation one starts with
-an initial Hamiltonian whose ground state is easy to prepare, and
-slowly varies the Hamiltonian to one whose ground state encodes the
-solution to some computational problem. By the adiabatic theorem, the
-system will track the instantaneous ground state provided the
-variation of the Hamiltonian is sufficiently slow. The runtime of an
-adiabatic algorithm scales at worst as \(1/ \gamma^3 \) where \( \gamma \)
-is the minimum eigenvalue gap between the ground state
-and the first excited state [<a href="#JRS06">185</a>]. If the
-Hamiltonian is varied sufficiently smoothly, one can improve this to
-\( \widetilde{O}(1/\gamma^2) \) [<a href="#EH12">247</a>]. Optimization by adiabatic
-quantum computation traces back to the pioneering works of 
-[<a href="#Farhi_adiabatic">96</a>, <a href="#FGGLLP01">186</a>,<a href="#FGSSD94">199</a>, <a href="#MN08">198</a>, <a href="#KN98">509</a>].
-Adiabatic quantum algorithms for
-optimization problems typically use "stoquastic" Hamiltonians, which
-do not suffer from the sign problem. Such algorithms are sometimes
-referred to as quantum annealing. Adiabatic quantum computation with
-non-stoquastic Hamiltonians is as powerful as the quantum circuit 
-model [<a href="#Aharonov_adiabatic">97</a>]. Adiabatic algorithms
-using stoquastic Hamiltonians are probably less powerful
-[<a href="#BDOT06">183</a>], but are likely more powerful
-than classical computation [<a href="#H20a">429</a>]. The asymptotic runtime of adiabatic
-optimization algorithms is notoriously difficult to analyze, but some
-progress has been achieved
-[<a href="#AKR09">179</a>,<a href="#R04">180</a>,<a href="#FGG02">181</a>,<a href="#FGGGMS09">182</a>,<a href="#FGGN05">187</a>,<a href="#FGGS10">188</a>,<a href="#FGG02B">189</a>,<a href="#vDMV01">190</a>,<a href="#FGHSSYZ12">191</a>,<a href="#IM08">226</a>,<a href="#YS22">508</a>].
-Adiabatic quantum computers can perform a process somewhat analogous
-to Grover search in \( O(\sqrt{N}) \) time
-[<a href="#Roland_Cerf">98</a>]. Adiabatic quantum algorithms
-achieving quadratic speedup for a more general class of problems are
-constructed in [<a href="#SB12">184</a>] by adapting techniques from
-[<a href="#Szegedy">85</a>]. Adiabatic quantum algorithms have been
-proposed for several specific problems, including PageRank
-[<a href="#GZL12">176</a>], machine learning
-[<a href="#PL12">192</a>, <a href="#NDRM08">195</a>], finding Hadamard
-matrices [<a href="#SM19">406</a>], solving linear systems [<a href="#AL22">517</a>, <a href="#CA22">518</a>] and graph problems [<a href="#GC11">193</a>, <a href="#GC13">194</a>].
-Some quantum simulation algorithms also use adiabatic state
-preparation.
+<b>Description:</b> In adiabatic quantum computation one starts with an initial Hamiltonian whose ground state is easy to prepare, and
+slowly varies the Hamiltonian to one whose ground state encodes the solution to some computational problem. By the adiabatic theorem, the
+system will track the instantaneous ground state provided the variation of the Hamiltonian is sufficiently slow. The runtime of an
+adiabatic algorithm scales at worst as \(1/ \gamma^3 \) where \( \gamma \) is the minimum eigenvalue gap between the ground state
+and the first excited state [<a href="#JRS06">185</a>]. If the Hamiltonian is varied sufficiently smoothly, one can improve this to
+\( \widetilde{O}(1/\gamma^2) \) [<a href="#EH12">247</a>]. Optimization by adiabatic quantum computation traces back to the pioneering works of [<a href="#Farhi_adiabatic">96</a>, <a href="#FGGLLP01">186</a>,<a href="#FGSSD94">199</a>, <a href="#MN08">198</a>, <a href="#KN98">509</a>]. Adiabatic quantum algorithms for optimization problems typically use "stoquastic" Hamiltonians, which do not suffer from the sign problem. Such algorithms are sometimes referred to as quantum annealing. Adiabatic quantum computation with non-stoquastic Hamiltonians is as powerful as the quantum circuit model [<a href="#Aharonov_adiabatic">97</a>]. Adiabatic algorithms using stoquastic Hamiltonians are probably less powerful [<a href="#BDOT06">183</a>], but are likely more powerful than classical computation [<a href="#H20a">429</a>]. The asymptotic runtime of adiabatic optimization algorithms is notoriously difficult to analyze, but some progress has been achieved [<a href="#AKR09">179</a>,<a href="#R04">180</a>,<a href="#FGG02">181</a>,<a href="#FGGGMS09">182</a>,<a href="#FGGN05">187</a>,<a href="#FGGS10">188</a>,<a href="#FGG02B">189</a>,<a href="#vDMV01">190</a>,<a href="#FGHSSYZ12">191</a>,<a href="#IM08">226</a>,<a href="#YS22">508</a>]. In the case that the Hamiltonian is a continuous variable laplacian plus potential (or discretization of such) adiabatic optimization is sometimes referred to as quantum Hamiltonian descent [<a href="#LHLW23">529</a>]. A problem that is solved by quantum Hamiltonian descent in polynomial time but for which no polynomial time classical algorithm seems to be known is given in [<a href="#LZW23">530</a>]. Adiabatic quantum computers can perform a process somewhat analogous to Grover search in \( O(\sqrt{N}) \) time [<a href="#Roland_Cerf">98</a>]. Adiabatic quantum algorithms achieving quadratic speedup for a more general class of problems are constructed in [<a href="#SB12">184</a>] by adapting techniques from [<a href="#Szegedy">85</a>]. Adiabatic quantum algorithms have been proposed for several specific problems, including PageRank [<a href="#GZL12">176</a>], machine learning [<a href="#PL12">192</a>, <a href="#NDRM08">195</a>], finding Hadamard matrices [<a href="#SM19">406</a>], solving linear systems [<a href="#AL22">517</a>, <a href="#CA22">518</a>] and graph problems [<a href="#GC11">193</a>, <a href="#GC13">194</a>]. Some quantum simulation algorithms also use adiabatic state preparation.
 <br /><br />
 
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
@@ -1498,6 +1467,11 @@ algorithm uses order \( \log^2 n \) bits. Subsequent improvements to
 this quantum algorithm are given in [<a href="#FL16">279</a>]. Variants of the linear systems problem, including
 the computation of Moore-Penrose pseudoinverses, can be obtained as special cases of the quantum singular
 value transformation [<a href="#GSLW19">433</a>].
+<br /><br />
+
+<b>Algorithm:</b> Estimating Determinants and Other Spectral Sums<br />
+<b>Speedup:</b> Superpolynomial<br />
+<b>Description:</b> Let <i>A</i> be a matrix of dimension \( 2^n \times 2^n \). Suppose <i>A</i> is Hermitian and has only poly(<i>n</i>) nonzero entries per row. Given an oracle for these nonzero entries, the unitary \( e^{-i A t} \) can be approximated by a quantum circuit with only poly(<i>n,t</i>) gates using standard techniques for Hamiltonian simulation. Through the use of such unitary time evolutions, Kitaev's phase estimation algorithm allows an approximate measurement in the eigenbasis of <i>A</i>. If we apply such a measurement to the maximally mixed state, we will sample uniformly from the eigenvalues of <i>A</i>. Such samples can be used for Monte Carlo estimations of spectral sums, that is, sums of the form \( \sum_{i=1}^{2^n} f(\lambda_i) \) where <i>f</i> is a function of interest and \(\lambda_1, \ldots, \lambda_{2^n} \) are the eigenvalues of <i>A</i>. In particular, taking \( f(\lambda) = \log (\lambda) \) one can express the logarithm of the determinant of <i>A</i> as a spectral sum. Computing such a sum classically has worst case computational cost that is exponential in \( n \). Thus the above method using phase estimation on maximally mixed states, proposed in [<a href="#LS20">527</a>], constitutes a superpolynomial quantum speedup. Further exposition and analysis of this method was later given in [<a href="#GLM25">528</a>].
 <br /><br />
 
 <a name="ML"><b>Algorithm: </b> Machine Learning <br /></a>
@@ -5550,7 +5524,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="SLT24">513</a></dt>
 <dd>
-  Maarten Stroeks, Daan Lenterman, Barbara Terhal, Yaroslav Herasymenko
+  Maarten Stroeks, Daan Lenterman, Barbara Terhal, and Yaroslav Herasymenko
 <br />Solving Free Fermion Problems on a Quantum Computer
 <br /><em><a href="https://arxiv.org/abs/2409.04550">arXiv:2409.04550</a></em>, 2024.
 <br /><br /></dd>
@@ -5572,7 +5546,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="LH24">516</a></dt>
 <dd>
-  Martin Larocca, Vojtech Havlicek
+  Martin Larocca and Vojtech Havlicek
 <br />Quantum Algorithms for Representation-Theoretic Multiplicities
 <br /><em><a href="https://arxiv.org/abs/2407.17649">arXiv:2407.17649</a></em>, 2024.
 <br /><br /></dd>
@@ -5597,7 +5571,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="SGTN25">519</a></dt>
 <dd>
-  Jeongrak Son, Marek Gluza, Ryuji Takagi, Nelly H. Y. Ng
+  Jeongrak Son, Marek Gluza, Ryuji Takagi, and Nelly H. Y. Ng
   <br />Quantum Dynamic Programming  
   <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
   <br />[<a href="https://arxiv.org/abs/2403.09187">arXiv:2403.09187</a>]  
@@ -5606,7 +5580,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="WLLHMDL23">520</a></dt>
 <dd>
-  Fuchuan Wei, Zhenhuan Liu, Guoding Liu, Zizhao Han, Xiongfeng Ma, Dong-Ling Deng, Zhengwei Liu
+  Fuchuan Wei, Zhenhuan Liu, Guoding Liu, Zizhao Han, Xiongfeng Ma, Dong-Ling Deng, and Zhengwei Liu
   <br />Simulating non-completely positive actions via exponentiation of Hermitian-preserving maps  
   <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
   <br />[<a href="https://arxiv.org/abs/2308.07956">arXiv:2308.07956</a>]  
@@ -5632,7 +5606,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="RPP22">523</a></dt>
 <dd>
-  Matteo Robbiati, Edoardo Pedicillo, Andrea Pasquale, Xiaoyue Li, Andrew Wright, Renato M. S. Farias, Khanh Uyen Giang, Jeongrak Son, Johannel Kn&ouml;rzer, Siong Thye Goh, Jun Yong Khoo, Nelly H. Y. Ng, Zo&euml; Holmes, Stefano Cerrazza, Marek Gluza
+  Matteo Robbiati, Edoardo Pedicillo, Andrea Pasquale, Xiaoyue Li, Andrew Wright, Renato M. S. Farias, Khanh Uyen Giang, Jeongrak Son, Johannel Kn&ouml;rzer, Siong Thye Goh, Jun Yong Khoo, Nelly H. Y. Ng, Zo&euml; Holmes, Stefano Cerrazza, and Marek Gluza
   <br />Double-bracket quantum algorithms for high fidelity ground state preparation
   <br />[<a href="https://arxiv.org/abs/2408.03987">arXiv:2208.03987</a>]
   <br /><br />
@@ -5640,7 +5614,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="GST24">524</a></dt>
 <dd>
-  Marek Gluza, Jeongrak Son, Bi Hong Tiang, Yudai Suzuki, Zo&euml; Holmes, Nelly H. Y. Ng
+  Marek Gluza, Jeongrak Son, Bi Hong Tiang, Yudai Suzuki, Zo&euml; Holmes, and Nelly H. Y. Ng
   <br />Double-bracket quantum algorithms for quantum imaginary-time evolution
   <br />[<a href="https://arxiv.org/abs/2412.04554">arXiv:2412.04554</a>]
   <br /><br />
@@ -5648,7 +5622,7 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="ZSX25">525</a></dt>
 <dd>
-  Ren&eacute; Zander, Raphael Seidel, Li Xiaoyue, Marek Gluza
+  Ren&eacute; Zander, Raphael Seidel, Li Xiaoyue, and Marek Gluza
   <br />Role of Riemannian geometry in double-bracket quantum imaginary-time
   <br />[<a href="https://arxiv.org/abs/2504.01065">arXiv:2504.01065</a>]
   <br /><br />
@@ -5656,9 +5630,41 @@ pg. 431-442, Springer, 2006.
 
 <dt><a name="STS25">526</a></dt>
 <dd>
-  Yudai Suzuki, Bi Hong Tiang, Jeongrak Son, Nelly H. Y. Ng, Zo&euml; Holmes, Marek Gluza
+  Yudai Suzuki, Bi Hong Tiang, Jeongrak Son, Nelly H. Y. Ng, Zo&euml; Holmes, and Marek Gluza
   <br />Double-bracket algorithm for quantum signal processing without post-selection
   <br />[<a href="https://arxiv.org/abs/2504.01077">arXiv:2504.01077</a>]
+  <br /><br />
+</dd>
+
+<dt><a name="LS20">527</a></dt>
+<dd>
+  Alessandro Luongo and Changpeng Shao
+  <br />Quantum algorithms for spectral sums
+  <br /><emph><a href="https://arxiv.org/abs/2011.06475">arXiv:2011.06475</a></emph>, 2020.
+  <br /><br />
+</dd>
+
+<dt><a name="GLM25">528</a></dt>
+<dd>
+  Vittorio Giovannetti, Seth Lloyd, and Lorenzo Maccone
+  <br />A quantum algorithm for estimating the determinant
+  <br /><emph><a href="https://arxiv.org/abs/2504.11049">arXiv:2504.11049</a></emph>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="LHLW23">529</a></dt>
+<dd>
+  Jiaqi Leng, Ethan Hickman, Joseph Li, and Xiaodi Wu
+  <br />Quantum Hamiltonian descent
+  <br /><emph><a href="https://arxiv.org/abs/2303.01471">arXiv:2303.04171</a></emph>, 2023.
+  <br /><br />
+</dd>
+
+<dt><a name="LZW23">530</a></dt>
+<dd>
+  Jiaqi Leng, Yufan Zheng, and Xiaodi Wu
+  <br />A quantum-classical performance separation in nonconvex optimization
+  <br /><emph><a href="https://arxiv.org/abs/2311.00811">arXiv:2311.00811</a></emph>, 2023.
   <br /><br />
 </dd>
 
