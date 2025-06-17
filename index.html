@@ -348,7 +348,7 @@ Freedman [<a href="#Freedman">42</a>,
 <b>Algorithm:</b> Quantum Approximate Optimization <br />
 <b>Speedup: </b> Superpolynomial <br />
 <b>Implementation:</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a>, <a href="https://pennylane.ai/qml/demos/tutorial_qaoa_intro">PennyLane</a>, <a href="https://qrisp.eu/reference/Algorithms/qaoa/QAOA.html#qaoa">Qrisp</a><br />
-<b>Description:</b> For many combinatorial optimization problems, finding the exact optimal solution is NP-complete. There are also hardness-of-approximation results proving that finding an approximation with sufficiently small error bound is NP-complete. For certain problems there is a gap between the best error bound achieved by a polynomial-time classical approximation algorithm and the error bound proven to be NP-hard. In this regime there is potential for exponential speedup by quantum computation. In [<a href="#FGG14a">242</a>] a new quantum algorithmic technique called the Quantum Approximate Optimization Algorithm (QAOA) was proposed for finding approximate solutions to combinatorial optimization problems. In [<a href="#FGG14b">243</a>] it was subsequently shown that QAOA solves a combinatorial optimization problem called Max E3LIN2 with a better approximation ratio than any polynomial-time classical algorithm known at the time. However, an efficient classical algorithm achieving an even better approximation ratio (in fact, the approximation ratio saturating the limit set by hardness-of-approximation) was subsequently discovered [<a href="#BMO15">260</a>]. Presently, the power of QAOA relative to classical computing is an active area of research [<a href="#LZ16">300</a>,<a href="#WHT16">301</a>,<a href="#FH16">302</a>, <a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>].
+<b>Description:</b> For many combinatorial optimization problems, finding the exact optimal solution is NP-complete. There are also hardness-of-approximation results proving that finding an approximation with sufficiently small error bound is NP-complete. For certain problems there is a gap between the best error bound achieved by a polynomial-time classical approximation algorithm and the error bound proven to be NP-hard. In this regime there is potential for exponential speedup by quantum computation. In [<a href="#FGG14a">242</a>] a new quantum algorithmic technique called the Quantum Approximate Optimization Algorithm (QAOA) was proposed for finding approximate solutions to combinatorial optimization problems. In [<a href="#FGG14b">243</a>] it was subsequently shown that QAOA solves a combinatorial optimization problem called Max E3LIN2 with a better approximation ratio than any polynomial-time classical algorithm known at the time. However, an efficient classical algorithm achieving an even better approximation ratio (in fact, the approximation ratio saturating the limit set by hardness-of-approximation) was subsequently discovered [<a href="#BMO15">260</a>]. Presently, the power of QAOA relative to classical computing is an active area of research [<a href="#LZ16">300</a>,<a href="#WHT16">301</a>,<a href="#FH16">302</a>, <a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>]. Recent techniques have enabled the analysis of QAOA at relatively large depth, and provide some evidence to suggest potential quantum advantage [<a href="#FGRV25">531</a>, <a href="#BKL25">532</a>].
 <br /><br />
 
 <a name="gradients"><b>Algorithm:</b> Gradient Estimation and Learning Polynomials<br /></a>
@@ -4467,6 +4467,22 @@ pg. 431-442, Springer, 2006.
   Jiaqi Leng, Yufan Zheng, and Xiaodi Wu
   <br />A quantum-classical performance separation in nonconvex optimization
   <br /><emph><a href="https://arxiv.org/abs/2311.00811">arXiv:2311.00811</a></emph>, 2023.
+  <br /><br />
+</dd>
+
+<dt><a name="FGRV25">531</a></dt>
+<dd>
+  Edward Farhi, Sam Gutmann, Daniel Ranard, and Benjamin Villalonga
+  <br />Lower bounding the MaxCut of high girth 3-regular graphs using the QAOA
+  <br /><emph><a href="https://arxiv.org/abs/2503.12789">arXiv:2503.12789</a></emph>, 2023.
+  <br /><br />
+</dd>
+
+<dt><a name="BKL25">532</a></dt>
+<dd>
+  Sami Boulebnane, Abid Khan, Minzhao Liu, Jeffrey Larson, Dylan Herman, Ruslan Shaydulin, and Marco Pistoia
+  <br />Evidence that the Quantum Approximate Optimization Algorithm Optimizes the Sherrington-Kirkpatrick Model Efficiently in the Average Case
+  <br /><emph><a href="https://arxiv.org/abs/2505.07929">arXiv:2505.07929</a></emph>, 2023.
   <br /><br />
 </dd>
 
