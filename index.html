@@ -277,10 +277,16 @@ A function \(f:\{0,1\}^n \to \{0,1\}\) is a <i>k</i>-junta if it depends on at m
 
 <a name="BQP"><h2>Approximation and Simulation Algorithms</h2></a>
 
-<b>Algorithm:</b> Quantum Simulation <br />
+<b>Algorithm:</b> Simulating Quantum Hamiltonian Dynamics <br />
 <b>Speedup:</b> Superpolynomial <br />
 <b>Implementation:</b> <a href="https://short.classiq.io/simulation">Classiq (Hamiltonian)</a>, <a href="https://short.classiq.io/thermal_state_preparation">Classiq (Thermal)</a>, <a href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a>, <a href="https://qrisp.eu/general/tutorial/H2.html#ham-sim-fundamentals">Qrisp</a> <br />
-<b>Description:</b> The exponential complexity of classically simulating quantum systems led Feynman to first propose that quantum computers might outperform classical computers on certain tasks [<a href="#Feynman">40</a>]. It is now believed that for any physically realistic Hamiltonian <i>H</i> on <i>n</i> degrees of freedom, the corresponding time evolution operator \( e^{-i H t} \) can be implemented using poly(<i>n,t</i>) gates. Unless BPP=BQP, this problem is not solvable in general on a classical computer in polynomial time. Many techniques for quantum simulation have been developed in the abstract for general classes of Hamiltonians. Specifically, [<a href="#Zalka_sim">95</a>,<a href="#Wiesner_sim">92</a>,<a href="#BT97">372</a>,<a href="#Som15">278</a>] consider <i>n</i>-body first-quantized Hamiltonians consisting of a kinetic term \( \sum_{i=1}^n \nabla_i^2 \) plus a potential term \( V(\mathbf{x}_1,\ldots,\mathbf{x}_n) \). The works [<a href="#Aharonov_Tashma">5</a>,<a href="#Childs_thesis">25</a>,<a href="#Cleve_sim">12</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCK15">245</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>] consider general sparse Hamiltonians. The works [<a href="#Childs_Wiebe12">170</a>,<a href="#BCCKS14b">244</a>,<a href="#LC16b">382</a>] consider Hamiltonians expressible as a linear combination of efficiently implementable unitary operators. Some works, such as [<a href="#Som15b">293</a>,<a href="#LW18">470</a>,<a href="#YC22">496</a>], consider the problem of simulating Hamiltonians \(H = \sum_j H_j \), where each \(e^{i H_j t} \) is efficiently implementable, while remaining indifferent to the nature of the implementation. The works [<a href="#PQS11">468</a>,<a href="#KSB19">469</a>,<a href="#BCS20">467</a>,<a href="#MF23">466</a>] consider the problems that arise in simulating time-dependent Hamiltonians. The works [<a href="#HHK18">478</a>,<a href="#CS19">479</a>] show that geometrically local Hamiltonians on lattices of fixed dimension can be simulated more efficiently than general Hamiltonians. Specifically, they show that the quantum runtime in this case is essentially linear in the spacetime volume of the process being simulated. A related result on the efficiency implications of approximate locality in systems of interacting Bosons is given in [<a href="#KVS24">480</a>]. If the state being simulated is low energy then the operator norm of the Hamiltonian yields only a loose upper bound on Trotter error; tighter upper bounds in this case are given in [<a href="#SS21">481</a>,<a href="#GZL24">482</a>,<a href="#HZA24">483</a>]. Other works consider specific physical settings, such as chemical dynamics [<a href="#Kassal_sim">63</a>,<a href="#Lidar_sim">68</a>,<a href="#HWBT15">227</a>,<a href="#RWSWT16">310</a>,<a href="#SW17">375</a>], condensed matter physics [<a href="#Abrams_sim">1</a>,<a href="#Wu_sim">99</a>, <a href="#Ortiz">145</a>], relativistic quantum mechanics (the Dirac and Klein-Gordon equations) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a href="#Yepez11">370</a>,<a href="#Yepez13">371</a>], open quantum systems [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a href="#DPCSC15">379</a>,<a href="#ALL23">458</a>,<a href="#LLW24">499</a>,<a href="#WW24">501</a>,<a href="#PSW23">503</a>,<a href="#MSK22">504</a>,<a href="#PW23">505</a>,<a href="#PW23b">506</a>,<a href="#LW23">507</a>], quantum field theory [<a href="#Byrnes">107</a>,<a href="#JLP12">166</a>,<a href="#JLP14a">228</a>,<a href="#JLP14b">229</a>,<a href="#BRSS14">230</a>,<a href="#MJ17">368</a>,<a href="#TAM22">484</a>], and conformal field theory [<a href="#OS21">495</a>]. Although the problem of finding ground energies of local  Hamiltonians is QMA-complete and therefore probably requires exponential time on a quantum computer in the worst case, quantum algorithms have been developed to approximate ground states [<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#GTC17">373</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>], low energy states [<a href="#CDB24">463</a>], and thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>,<a href="#CKB23">456</a>,<a href="#HMS22">491</a>,<a href="#CKG23">500</a>,<a href="#JI24">502</a>] for some classes of Hamiltonians. Quantum algorithms have also been developed to prepare equilibrium states for some classes of master equations [<a href="#RS20">430</a>]. Efficient quantum algorithms have been also obtained for preparing certain classes of tensor network states [<a href="#SSVCW05">323</a>,<a href="#SHWCS07">324</a>,<a href="#GMC16">325</a>,<a href="#STV12">326</a>,<a href="#SCTVP13">327</a>,<a href="#SBE16">328</a>]. Interestingly, simulating Hamiltonian time evolution, as well as some problems preparing ground and thermal states can all be done as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
+<b>Description:</b> The exponential complexity of classically simulating quantum systems led Feynman to first propose that quantum computers might outperform classical computers on certain tasks [<a href="#Feynman">40</a>]. It is now believed that for any physically realistic Hamiltonian <i>H</i> on <i>n</i> degrees of freedom, the corresponding time evolution operator \( e^{-i H t} \) can be implemented using poly(<i>n,t</i>) gates. Unless BPP=BQP, this problem is not solvable in general on a classical computer in polynomial time. Many techniques for quantum simulation have been developed in the abstract for general classes of Hamiltonians. Specifically, [<a href="#Zalka_sim">95</a>,<a href="#Wiesner_sim">92</a>,<a href="#BT97">372</a>,<a href="#Som15">278</a>] consider <i>n</i>-body first-quantized Hamiltonians consisting of a kinetic term \( \sum_{i=1}^n \nabla_i^2 \) plus a potential term \( V(\mathbf{x}_1,\ldots,\mathbf{x}_n) \). The works [<a href="#Aharonov_Tashma">5</a>,<a href="#Childs_thesis">25</a>,<a href="#Cleve_sim">12</a>,<a href="#BCS13">205</a>,<a href="#BCCKS14">211</a>,<a href="#BCK15">245</a>,<a href="#LC16">294</a>,<a href="#BN16">295</a>] consider general sparse Hamiltonians. The works [<a href="#Childs_Wiebe12">170</a>,<a href="#BCCKS14b">244</a>,<a href="#LC16b">382</a>] consider Hamiltonians expressible as a linear combination of efficiently implementable unitary operators. Some works, such as [<a href="#Som15b">293</a>,<a href="#LW18">470</a>,<a href="#YC22">496</a>], consider the problem of simulating Hamiltonians \(H = \sum_j H_j \), where each \(e^{i H_j t} \) is efficiently implementable, while remaining indifferent to the nature of the implementation. The works [<a href="#PQS11">468</a>,<a href="#KSB19">469</a>,<a href="#BCS20">467</a>,<a href="#MF23">466</a>] consider the problems that arise in simulating time-dependent Hamiltonians. The works [<a href="#HHK18">478</a>,<a href="#CS19">479</a>] show that geometrically local Hamiltonians on lattices of fixed dimension can be simulated more efficiently than general Hamiltonians. Specifically, they show that the quantum runtime in this case is essentially linear in the spacetime volume of the process being simulated. A related result on the efficiency implications of approximate locality in systems of interacting Bosons is given in [<a href="#KVS24">480</a>]. If the state being simulated is low energy then the operator norm of the Hamiltonian yields only a loose upper bound on Trotter error; tighter upper bounds in this case are given in [<a href="#SS21">481</a>,<a href="#GZL24">482</a>,<a href="#HZA24">483</a>]. Other works consider specific physical settings, such as chemical dynamics [<a href="#Kassal_sim">63</a>,<a href="#Lidar_sim">68</a>,<a href="#HWBT15">227</a>,<a href="#RWSWT16">310</a>,<a href="#SW17">375</a>], condensed matter physics [<a href="#Abrams_sim">1</a>,<a href="#Wu_sim">99</a>, <a href="#Ortiz">145</a>], relativistic quantum mechanics (the Dirac and Klein-Gordon equations) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a href="#Yepez11">370</a>,<a href="#Yepez13">371</a>], open quantum systems [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a href="#DPCSC15">379</a>,<a href="#ALL23">458</a>,<a href="#LLW24">499</a>,<a href="#WW24">501</a>,<a href="#PSW23">503</a>,<a href="#MSK22">504</a>,<a href="#PW23">505</a>,<a href="#PW23b">506</a>,<a href="#LW23">507</a>], quantum field theory [<a href="#Byrnes">107</a>,<a href="#JLP12">166</a>,<a href="#JLP14a">228</a>,<a href="#JLP14b">229</a>,<a href="#BRSS14">230</a>,<a href="#MJ17">368</a>,<a href="#TAM22">484</a>], and conformal field theory [<a href="#OS21">495</a>].
+<br /><br />
+
+<b>Algorithm:</b> Preparing Eigenstates and Thermal States <br />
+<b>Speedup:</b> Superpolynomial <br />
+<b>Description:</b>
+Although the problem of finding ground energies of local  Hamiltonians is QMA-complete and therefore probably requires exponential time on a quantum computer in the worst case, quantum algorithms have been developed to approximate ground states [<a href="#Aspuru_science">102</a>,<a href="#WKAH08">231</a>,<a href="#KA09">232</a>,<a href="#WBA11">233</a>,<a href="#TL13">234</a>,<a href="#W13">235</a>,<a href="#FKT16">308</a>,<a href="#SA15">321</a>,<a href="#SCV13">322</a>,<a href="#GTC17">373</a>,<a href="#BBK17">380</a>,<a href="#PKS17">381</a>], low energy states [<a href="#CDB24">463</a>], and thermal states [<a href="#Metropolis">132</a>,<a href="#Poulin_Wocjan">121</a>,<a href="#RGE12">281</a>,<a href="#KB16">282</a>,<a href="#CS16">307</a>,<a href="#CKB23">456</a>,<a href="#HMS22">491</a>,<a href="#CKG23">500</a>,<a href="#JI24">502</a>] for some classes of Hamiltonians. Quantum algorithms have also been developed to prepare equilibrium states for some classes of master equations [<a href="#RS20">430</a>]. Efficient quantum algorithms have been also obtained for preparing certain classes of tensor network states [<a href="#SSVCW05">323</a>,<a href="#SHWCS07">324</a>,<a href="#GMC16">325</a>,<a href="#STV12">326</a>,<a href="#SCTVP13">327</a>,<a href="#SBE16">328</a>]. Interestingly, simulating Hamiltonian time evolution, as well as some problems preparing ground and thermal states can all be done as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>]. A versatile method for preparing eigenstates and thermal states of Hamiltonians by simulating a sequence of imaginary time evolutions and exploiting locality was introduced in [<a href="#MST20">533</a>].
 <br /><br />
 
 <b>Algorithm:</b> Knot Invariants <br />
@@ -4401,7 +4407,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Marek Gluza
   <br />Double-bracket quantum algorithms for diagonalization 
-  <br /><em>Quantum</em>, 8, 1316, 2012.
+  <br /><em>Quantum</em> 8, 1316, 2012.
   <br />[<a href="https://arxiv.org/abs/2206.11772">arXiv:2206.11772</a>]
   <br /><br />
 </dd>
@@ -4410,7 +4416,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Matteo Robbiati, Edoardo Pedicillo, Andrea Pasquale, Xiaoyue Li, Andrew Wright, Renato M. S. Farias, Khanh Uyen Giang, Jeongrak Son, Johannel Kn&ouml;rzer, Siong Thye Goh, Jun Yong Khoo, Nelly H. Y. Ng, Zo&euml; Holmes, Stefano Cerrazza, and Marek Gluza
   <br />Double-bracket quantum algorithms for high fidelity ground state preparation
-  <br />[<a href="https://arxiv.org/abs/2408.03987">arXiv:2208.03987</a>]
+  <br /><em><a href="https://arxiv.org/abs/2408.03987">arXiv:2208.03987</a></em>, 2024
   <br /><br />
 </dd>
 
@@ -4418,7 +4424,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Marek Gluza, Jeongrak Son, Bi Hong Tiang, Yudai Suzuki, Zo&euml; Holmes, and Nelly H. Y. Ng
   <br />Double-bracket quantum algorithms for quantum imaginary-time evolution
-  <br />[<a href="https://arxiv.org/abs/2412.04554">arXiv:2412.04554</a>]
+  <br /><em><a href="https://arxiv.org/abs/2412.04554">arXiv:2412.04554</a></em>, 2024
   <br /><br />
 </dd>
 
@@ -4426,7 +4432,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Ren&eacute; Zander, Raphael Seidel, Li Xiaoyue, and Marek Gluza
   <br />Role of Riemannian geometry in double-bracket quantum imaginary-time
-  <br />[<a href="https://arxiv.org/abs/2504.01065">arXiv:2504.01065</a>]
+  <br /><em><a href="https://arxiv.org/abs/2504.01065">arXiv:2504.01065</a></em>, 2025
   <br /><br />
 </dd>
 
@@ -4434,7 +4440,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Yudai Suzuki, Bi Hong Tiang, Jeongrak Son, Nelly H. Y. Ng, Zo&euml; Holmes, and Marek Gluza
   <br />Double-bracket algorithm for quantum signal processing without post-selection
-  <br />[<a href="https://arxiv.org/abs/2504.01077">arXiv:2504.01077</a>]
+  <br /><em><a href="https://arxiv.org/abs/2504.01077">arXiv:2504.01077</a></em>, 2025
   <br /><br />
 </dd>
 
@@ -4442,7 +4448,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Alessandro Luongo and Changpeng Shao
   <br />Quantum algorithms for spectral sums
-  <br /><emph><a href="https://arxiv.org/abs/2011.06475">arXiv:2011.06475</a></emph>, 2020.
+  <br /><em><a href="https://arxiv.org/abs/2011.06475">arXiv:2011.06475</a></em>, 2020.
   <br /><br />
 </dd>
 
@@ -4450,7 +4456,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Vittorio Giovannetti, Seth Lloyd, and Lorenzo Maccone
   <br />A quantum algorithm for estimating the determinant
-  <br /><emph><a href="https://arxiv.org/abs/2504.11049">arXiv:2504.11049</a></emph>, 2025.
+  <br /><em><a href="https://arxiv.org/abs/2504.11049">arXiv:2504.11049</a></em>, 2025.
   <br /><br />
 </dd>
 
@@ -4458,7 +4464,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Jiaqi Leng, Ethan Hickman, Joseph Li, and Xiaodi Wu
   <br />Quantum Hamiltonian descent
-  <br /><emph><a href="https://arxiv.org/abs/2303.01471">arXiv:2303.04171</a></emph>, 2023.
+  <br /><em><a href="https://arxiv.org/abs/2303.01471">arXiv:2303.04171</a></em>, 2023.
   <br /><br />
 </dd>
 
@@ -4466,7 +4472,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Jiaqi Leng, Yufan Zheng, and Xiaodi Wu
   <br />A quantum-classical performance separation in nonconvex optimization
-  <br /><emph><a href="https://arxiv.org/abs/2311.00811">arXiv:2311.00811</a></emph>, 2023.
+  <br /><em><a href="https://arxiv.org/abs/2311.00811">arXiv:2311.00811</a></em>, 2023.
   <br /><br />
 </dd>
 
@@ -4474,7 +4480,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Edward Farhi, Sam Gutmann, Daniel Ranard, and Benjamin Villalonga
   <br />Lower bounding the MaxCut of high girth 3-regular graphs using the QAOA
-  <br /><emph><a href="https://arxiv.org/abs/2503.12789">arXiv:2503.12789</a></emph>, 2023.
+  <br /><em><a href="https://arxiv.org/abs/2503.12789">arXiv:2503.12789</a></em>, 2023.
   <br /><br />
 </dd>
 
@@ -4482,7 +4488,16 @@ pg. 431-442, Springer, 2006.
 <dd>
   Sami Boulebnane, Abid Khan, Minzhao Liu, Jeffrey Larson, Dylan Herman, Ruslan Shaydulin, and Marco Pistoia
   <br />Evidence that the Quantum Approximate Optimization Algorithm Optimizes the Sherrington-Kirkpatrick Model Efficiently in the Average Case
-  <br /><emph><a href="https://arxiv.org/abs/2505.07929">arXiv:2505.07929</a></emph>, 2023.
+  <br /><em><a href="https://arxiv.org/abs/2505.07929">arXiv:2505.07929</a></em>, 2023.
+  <br /><br />
+</dd>
+
+<dt><a name="MST20">533</a></dt>
+<dd>
+  Mario Motta, Chong Sun, Adrian Teck Keng Tan, Matthew J. O' Rourke, Erika Ye, Austin J. Minnich, Fernando G. S. L. Brandao, and Garnet Kin-Lic Chan
+  <br />Determining eigenstates and thermal states on a quantum computer using quantum imaginary time evolution
+  <br /><em>Nature Physics</em> 16, 205-210, 2020.
+  <br />[<a href="https://arxiv.org/abs/1901.07653">arXiv:1901.07653</a>]
   <br /><br />
 </dd>
 
