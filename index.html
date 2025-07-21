@@ -104,7 +104,7 @@ multiplicity coefficients. <br /><br />
 
 <b>Algorithm:</b> Quantum Cryptanalysis <br />
 <b>Speedup:</b> Various <br />
-<b>Description:</b> It is well-known that Shor's algorithms for factoring and discrete logarithms [<a href="#Shor_factoring">82</a>,<a href="#Shor_factoring94">125</a>] completely break the RSA and Diffie-Hellman cryptosystems, as well as their elliptic-curve-based variants [<a href="#Zalka_ellip">109</a>, <a href="#BL95">14</a>]. (A number of "post-quantum" public-key cryptosystems have been proposed to replace these primitives, which are not known to be broken by quantum attacks.) Beyond Shor's algorithm, there is a growing body of work on quantum algorithms specifically designed to attack cryptosystems. These generally fall into three categories. The first is quantum algorithms providing polynomial or sub-exponential time attacks on cryptosystems under standard assumptions. In particular, the algorithm of Childs, Jao, and Soukharev for finding isogenies of elliptic curves breaks certain elliptic curve based cryptosystems in subexponential time that were not already broken by Shor's algorithm [<a href="#CJS14">283</a>]. The second category is quantum algorithms achieving polynomial improvement over known classical cryptanalytic attacks by speeding up parts of these classical algorithms using Grover search, quantum collision finding, etc. Such attacks on private-key [<a href="#GLRS15">284</a>, <a href="#AMGMPS16">285</a>, <a href="#K14">288</a>, <a href="#BHT98b">315</a>, <a href="#B09">316</a>] and public-key [<a href="#LMP13">262</a>, <a href="#F15">287</a>] primitives, do not preclude the use of the associated cryptosystems but may influence choice of key size. The third category is attacks that make use of quantum superposition queries to block ciphers. These attacks in many cases completely break the cryptographic primitives [<a href="#KLLNP16">286</a>, <a href="#KM10">289</a>, <a href="#KM12">290</a>, <a href="#RS13">291</a>, <a href="#SS16">292</a>]. However, in most practical situations such superposition queries are 
+<b>Description:</b> It is well-known that Shor's algorithms for factoring and discrete logarithms [<a href="#Shor_factoring">82</a>,<a href="#Shor_factoring94">125</a>] completely break the RSA and Diffie-Hellman cryptosystems, as well as their elliptic-curve-based variants [<a href="#Zalka_ellip">109</a>, <a href="#BL95">14</a>]. (A number of "post-quantum" public-key cryptosystems have been proposed to replace these primitives, which are not known to be broken by quantum attacks.) Beyond Shor's algorithm, there is a growing body of work on quantum algorithms specifically designed to attack cryptosystems. These generally fall into three categories. The first is quantum algorithms providing polynomial or sub-exponential time attacks on cryptosystems under standard assumptions. In particular, the algorithm of Childs, Jao, and Soukharev for finding isogenies of elliptic curves breaks certain elliptic curve based cryptosystems in subexponential time that were not already broken by Shor's algorithm [<a href="#CJS14">283</a>]. The quantum algorithm of Eldar and Hallgren gives a solution to certain lattice problems [<a href="#EH22">537</a>] which may be a speedup over classical algorithms provided the parameter regime of the instance is chosen carefully [<a href="#DW21">538</a>]. A quantum line of attack on multivariate cryptosystems, whose potential advantage over classical attacks remains incompletely understood, is given in [<a href="#CG22">539</a>, <a href="#CGY25">540</a>, <a href="#DGG23">541</a>]. The second category is quantum algorithms achieving polynomial improvement over known classical cryptanalytic attacks by speeding up parts of these classical algorithms using Grover search, quantum collision finding, etc. Such attacks on private-key [<a href="#GLRS15">284</a>, <a href="#AMGMPS16">285</a>, <a href="#K14">288</a>, <a href="#BHT98b">315</a>, <a href="#B09">316</a>] and public-key [<a href="#LMP13">262</a>, <a href="#F15">287</a>, <a href="#CL21">536</a>] primitives, do not preclude the use of the associated cryptosystems but may influence choice of key size. The third category is attacks that make use of quantum superposition queries to block ciphers. These attacks in many cases completely break the cryptographic primitives [<a href="#KLLNP16">286</a>, <a href="#KM10">289</a>, <a href="#KM12">290</a>, <a href="#RS13">291</a>, <a href="#SS16">292</a>]. However, in most practical situations such superposition queries are 
 unlikely to be feasible.
 
 <hr />
@@ -4514,6 +4514,56 @@ pg. 431-442, Springer, 2006.
 <br />In <em>Proceedings of Eurocrypt</em>, pg. 221-251, 2022.
 <br />[<a href="2205.14023">arXiv:2205.14023</a>]
 <br /><br /></dd>
+
+<dt><a name="CL21">536</a></dt>
+<dd>André Chailloux and Johanna Loyer 
+<br />Lattice Sieving via Quantum Random Walks
+<br />In <em>Proceedings of Asiacrypt</em>, pg. 63-91, 2021.
+<br />[<a href="2105.05608">arXiv:2105.05608</a>]
+<br /><br /></dd>
+
+<dt><a name="EH22">537</a></dt>
+<dd>
+  Lior Eldar and Sean Hallgren
+  <br />An efficient quantum algorithm for lattice problems achieving subexponential approximation factor
+  <br /><em><a href="https://arxiv.org/abs/2201.13450">arXiv:2201.13450</a></em>, 2022.
+  <br /><br />
+</dd>
+
+<dt><a name="DW21">538</a></dt>
+<dd>
+  Leo Ducas and Wessel van Woerden
+  <br />A note on a Claim of Eldar and Hallgren: LLL already solves it
+  <br /><em><a href="https://github.com/lducas/BDD-note">github</a></em>, 2021.
+  <br /><br />
+</dd>
+
+<dt><a name="CG22">539</a></dt>
+<dd>
+  Yu-Ao Chen and Xiao-Shan Gao
+  <br />Quantum Algorithm for Boolean Equation Solving and Quantum Algebraic Attack on Cryptosystems
+  <br /><em>Journal of Systems Science and Complexity</em> 35, 373-412, 2022.
+  <br />[<a href="https://arxiv.org/abs/1712.06239">arXiv:1712.06239</a>]
+  <br /><br />
+</dd>
+
+<dt><a name="CGY25">540</a></dt>
+<dd>
+  Yu-Ao Chen, Xiao-Shan Gao, and Chun-Ming Yuan 
+  <br />Quantum Algorithm for Optimization and Polynomial System Solving over Finite Field and Application to Cryptanalysis
+  <br /><em>Journal of Systems Science and Complexity</em>, 2025.
+  <br />[<a href="https://arxiv.org/abs/1802.03856">arXiv:1802.03856</a>]
+  <br /><br />
+</dd>
+
+<dt><a name="DGG23">541</a></dt>
+<dd>
+  Jintai Ding, Vlad Gheorghiu, András Gilyén, Sean Hallgren, and Jianqiang Li
+  <br />Limitations of the Macaulay matrix approach for using the HHL algorithm to solve multivariate polynomial systems
+  <br /><em>Quantum</em> 7, 1069, 2023.
+  <br />[<a href="https://arxiv.org/abs/2111.00405">arXiv:2111.00405</a>]
+  <br /><br />
+</dd>
 
 </dl>
 </div>
