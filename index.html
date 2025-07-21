@@ -378,8 +378,7 @@ Remarkably general results in [<a href="#CML18">418</a>,<a href="#CMH19">419</a>
 <b>Speedup:</b> Superpolynomial <br />
 <b>Implementation:</b> <a href="https://short.classiq.io/dqi">Classiq</a><br />
 <b>Description:</b>
-In [<a href="#JSW24">453</a>] a method called Decoded Quantum Interferometry (DQI) is introduced which reduces optimization problems to decoding problems using quantum Fourier transforms. This produces approximate optima, where the number of constraints satisfied is determined by the number of errors that can be decoded. If each constraint depends on a limited number of variables then the resulting decoding problem is for a classical LDPC code. These can be decoded from large numbers of errors using efficient classical algorithms such as belief propagation. Additional structure in the constraints also translates over to the decoding problem and can in some cases be exploited. In particular, certain problems of finding a degree <i>n</i> polynomial over a finite field \( \mathbb{F}_p \) that approximates as well as possible a given data set are reduced via DQI to decoding of Reed-Solomon codes. Becuase efficient classical algorithms are known that decode Reed-Solomon codes with many errors (half their distance), DQI achieves a very good approximation to the original polynomial regression problems, which is not known to be achievable by any classical polynomial time algorithm, thus achieving apparent exponential speedup. The results of [<a href="#SOK24">454</a>] giving a quartic speedup for a problem of planted inference and the results of [<a href="#YZ24">455</a>] giving an exponential separation between quantum and classical query complexity for a random oracle, although not originally phrased as quantum optimization algorithms,
-bear close relationships to DQI.
+In [<a href="#JSW24">453</a>] a method called Decoded Quantum Interferometry (DQI) is introduced which reduces optimization problems to decoding problems using quantum Fourier transforms. This produces approximate optima, where the number of constraints satisfied is determined by the number of errors that can be decoded. If each constraint depends on a limited number of variables then the resulting decoding problem is for a classical LDPC code. These can be decoded from large numbers of errors using efficient classical algorithms such as belief propagation. Additional structure in the constraints also translates over to the decoding problem and can in some cases be exploited. In particular, certain problems of finding a degree <i>n</i> polynomial over a finite field \( \mathbb{F}_p \) that approximates as well as possible a given data set are reduced via DQI to decoding of Reed-Solomon codes. Becuase efficient classical algorithms are known that decode Reed-Solomon codes with many errors (half their distance), DQI achieves a very good approximation to the original polynomial regression problems, which is not known to be achievable by any classical polynomial time algorithm, thus achieving apparent exponential speedup. Improved quantum decoding methods, which yield an expansion in the parameter regime for which DQI can satisfy all constraints in the OPI problem were introduced in [<a href="CT24">534</a>]. The results of [<a href="#SOK24">454</a>] giving a quartic speedup for a problem of planted inference and the results of [<a href="#YZ24">455</a>] giving an exponential separation between quantum and classical query complexity for a random oracle, although not originally phrased as quantum optimization algorithms, bear close relationships to DQI.
 <br /><br />
 
 <b>Algorithm:</b> Linear Systems<br />
@@ -4498,6 +4497,14 @@ pg. 431-442, Springer, 2006.
   <br />Determining eigenstates and thermal states on a quantum computer using quantum imaginary time evolution
   <br /><em>Nature Physics</em> 16, 205-210, 2020.
   <br />[<a href="https://arxiv.org/abs/1901.07653">arXiv:1901.07653</a>]
+  <br /><br />
+</dd>
+
+<dt><a name="CT24">534</a></dt>
+<dd>
+  André Chailloux and Jean-Pierre Tillich
+  <br />Quantum advantage from soft decoders
+  <br /><em><a href="https://arxiv.org/abs/2411.12553">arXiv:2411.12553</a></em>, 2024.
   <br /><br />
 </dd>
 
