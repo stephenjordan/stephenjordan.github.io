@@ -36,7 +36,7 @@
 <b>Speedup:</b> Superpolynomial<br /> 
 <b>Implementation:</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a>, <a href="https://pennylane.ai/codebook/shors-algorithm">PennyLane</a>, <a href="https://qrisp.eu/reference/Algorithms/Shor.html#shor">Qrisp</a><br />
 <b>Description:</b> Given an <i>n</i>-bit integer, find the prime factorization. The quantum algorithm of Peter Shor solves this in
-\( \widetilde{O} (n^3) \) time [<a href="#Shor_factoring">82</a>,<a href="#Shor_factoring94">125</a>]. The fastest known classical algorithm for integer factorization is the general number field sieve, which is believed to run in time \( 2^{\widetilde{O}(n^{1/3})} \). The best rigorously proven upper bound on the classical complexity of factoring is \( O(2^{n/4+o(1)}) \) via the Pollard-Strassen algorithm [<a href="#Pol">252</a>, <a href="#Stras">362</a>]. Shor's factoring algorithm breaks RSA public-key encryption and the closely related quantum algorithms for discrete logarithms break the DSA and ECDSA digital signature schemes and the Diffie-Hellman key-exchange protocol. A quantum algorithm even faster than Shor's for the special case of factoring &ldquo;semiprimes&rdquo;, which are widely used in cryptography, is given in [<a href="#GLFB15">271</a>]. If small factors exist, Shor's algorithm can be beaten by a quantum algorithm using Grover search to speed up the elliptic curve factorization method [<a href="#PQRSA">366</a>]. Additional optimized versions of Shor's algorithm are given in [<a href="#EH17">384</a>, <a href="#BBM17">386</a>, <a href="#GE21">431</a>]. There are proposed classical public-key cryptosystems not believed to be broken by quantum algorithms, <i>cf.</i> [<a href="#BBD09">248</a>]. At the core of Shor's factoring algorithm is order finding, which can be reduced to the <a href="#abelian_HSP">Abelian hidden subgroup problem</a>, which is solved using the quantum Fourier transform. A number of other problems are known to reduce  to integer factorization including the membership problem for matrix groups over fields of odd order [<a href="#BBS09">253</a>], and certain diophantine problems relevant to the synthesis of quantum circuits [<a href="#RS12">254</a>].
+\( \widetilde{O} (n^3) \) time [<a href="#Shor_factoring">82</a>,<a href="#Shor_factoring94">125</a>]. The fastest known classical algorithm for integer factorization is the general number field sieve, which is believed to run in time \( 2^{\widetilde{O}(n^{1/3})} \). The best rigorously proven upper bound on the classical complexity of factoring is \( O(2^{n/5+o(1)}) \) from [<a href="HH21">542</a>], improving upon [<a href="#Pol">252</a>, <a href="#Stras">362</a>]. Shor's factoring algorithm breaks RSA public-key encryption and the closely related quantum algorithms for discrete logarithms break the DSA and ECDSA digital signature schemes and the Diffie-Hellman key-exchange protocol. A quantum algorithm even faster than Shor's for the special case of factoring &ldquo;semiprimes&rdquo;, which are widely used in cryptography, is given in [<a href="#GLFB15">271</a>]. If small factors exist, Shor's algorithm can be beaten by a quantum algorithm using Grover search to speed up the elliptic curve factorization method [<a href="#PQRSA">366</a>]. Additional optimized versions of Shor's algorithm are given in [<a href="#EH17">384</a>, <a href="#BBM17">386</a>, <a href="#GE21">431</a>]. There are proposed classical public-key cryptosystems not believed to be broken by quantum algorithms, <i>cf.</i> [<a href="#BBD09">248</a>]. At the core of Shor's factoring algorithm is order finding, which can be reduced to the <a href="#abelian_HSP">Abelian hidden subgroup problem</a>, which is solved using the quantum Fourier transform. A number of other problems are known to reduce  to integer factorization including the membership problem for matrix groups over fields of odd order [<a href="#BBS09">253</a>], and certain diophantine problems relevant to the synthesis of quantum circuits [<a href="#RS12">254</a>].
 <br /><br />
 
 <b>Algorithm:</b> Discrete-log<br /> 
@@ -505,6 +505,7 @@ chronological order).
 <li><a href="https://scholar.google.com/citations?user=6cDyH-MAAAAJ">Diego Garcia Martin</a></li>
 <li><a href="https://cnls.lanl.gov/external/people/Martin_Larocca.php">Martin Larocca</a></li>
 <li><a href="https://github.com/marekgluza">Marek Gluza</a></li>
+<li><a href="https://www.fffmath.com/">Yansong Feng</a></li>
 </ul>
 <br />
 
@@ -4565,6 +4566,14 @@ pg. 431-442, Springer, 2006.
   <br /><br />
 </dd>
 
+<dt><a name="HH21">542</a></dt>
+<dd>
+  David Harvey and Markus Hittmeir
+  <br />A log-log speedup for exponent one-fifth deterministic integer factorization
+  <br /><em><a href="https://arxiv.org/abs/2105.11105">arXiv:2105.11105</a></em>, 2021.
+  <br /><br />
+</dd>
+
 </dl>
 </div>
 <div id="sidebar">
@@ -4582,7 +4591,7 @@ pg. 431-442, Springer, 2006.
 <h2>About</h2>
 Author: Stephen P. Jordan, Google Quantum AI<br />
 Cite as: <a href="zoo.bib">bibtex</a><br />
-Last updated: July 21, 2025<br />
+Last updated: August 27, 2025<br />
 Date created: April 22, 2011<br /><br />
 <div style="clear: both;"></div>
 <br />
