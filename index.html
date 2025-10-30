@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
 	<title>Quantum Algorithm Zoo</title>
 	<meta name="description" content="A comprehensive list of quantum algorithms." />
         <meta name="keywords" content="quantum algorithm algorithms zoo list catalog" />
@@ -378,14 +376,14 @@ Remarkably general results in [<a href="#CML18">418</a>,<a href="#CMH19">419</a>
 <b>Speedup:</b> Superpolynomial <br />
 <b>Implementation:</b> <a href="https://short.classiq.io/dqi">Classiq</a><br />
 <b>Description:</b>
-In [<a href="#JSW24">453</a>] a method called Decoded Quantum Interferometry (DQI) is introduced which reduces optimization problems to decoding problems using quantum Fourier transforms. This produces approximate optima, where the number of constraints satisfied is determined by the number of errors that can be decoded. If each constraint depends on a limited number of variables then the resulting decoding problem is for a classical LDPC code. These can be decoded from large numbers of errors using efficient classical algorithms such as belief propagation. Additional structure in the constraints also translates over to the decoding problem and can in some cases be exploited. In particular, certain problems of finding a degree <i>n</i> polynomial over a finite field \( \mathbb{F}_p \) that approximates as well as possible a given data set are reduced via DQI to decoding of Reed-Solomon codes. Becuase efficient classical algorithms are known that decode Reed-Solomon codes with many errors (half their distance), DQI achieves a very good approximation to the original polynomial regression problems, which is not known to be achievable by any classical polynomial time algorithm, thus achieving apparent exponential speedup. Improved quantum decoding methods, which yield an expansion in the parameter regime for which DQI can satisfy all constraints in the OPI problem were introduced in [<a href="#CT24">534</a>]. The results of [<a href="#SOK24">454</a>] giving a quartic speedup for a problem of planted inference and the results of [<a href="#YZ24">455</a>] giving an exponential separation between quantum and classical query complexity for a random oracle, although not originally phrased as quantum optimization algorithms, bear close relationships to DQI.
+In [<a href="#JSW25">453</a>] a method called Decoded Quantum Interferometry (DQI) is introduced which reduces optimization problems to decoding problems using quantum Fourier transforms. This produces approximate optima, where the number of constraints satisfied is determined by the number of errors that can be decoded. If each constraint depends on a limited number of variables then the resulting decoding problem is for a classical LDPC code. These can be decoded from large numbers of errors using efficient classical algorithms such as belief propagation. Additional structure in the constraints also translates over to the decoding problem and can in some cases be exploited. In particular, certain problems of finding a degree <i>n</i> polynomial over a finite field \( \mathbb{F}_p \) that approximates as well as possible a given data set are reduced via DQI to decoding of Reed-Solomon codes. Because efficient classical algorithms are known that decode Reed-Solomon codes with many errors (half their distance), DQI achieves a very good approximation to the original polynomial regression problems, which is not known to be achievable by any classical polynomial time algorithm, thus achieving apparent exponential speedup. Improved quantum decoding methods, which yield an expansion in the parameter regime for which DQI can satisfy all constraints in the OPI problem were introduced in [<a href="#CT24">534</a>]. An extension of the DQI algorithm to problems with quadratic constraints is given in [<a href="#CH25">544</a>]. An apparent superpolynomial speedup by DQI for a problem related to algebraic geometry codes is given in [<a href="GJ25">547</a>]. A limitation on the the performance of DQI applied to MaxCut is proven in [<a href="#P25">545</a>]. A generalization of DQI for preparing Gibbs states and low energy eigenstates of Hamiltonians is given in [<a href="#SLS25">546</a>]. The results of [<a href="#SOK24">454</a>] giving a quartic speedup for a problem of planted inference and the results of [<a href="#YZ24">455</a>] giving an exponential separation between quantum and classical query complexity for a random oracle, although not originally phrased as quantum optimization algorithms, bear close relationships to DQI. DQI is a quantum algorithm built upon Regev's reduction [<a href="#Regev_lattice">78</a>,<a href="#Aharonov_Tashma">5</a>], and as such, can benefit from recent insights into this reduction, such as [<a href="#CT23">448</a>,<a href="#BCT25">449</a>,<a href="#BH25">550</a>,<a href="#BC25">551</a>].
 <br /><br />
 
 <b>Algorithm:</b> Linear Systems<br />
 <b>Speedup:</b> Superpolynomial<br />
 <b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq (HHL)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq (QSVT)</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq (HHL)</a>, <a href="https://pennylane.ai/qml/demos/linear_equations_hhl_qrisp_catalyst">Qrisp/Pennylane (HHL)</a><br />
 <b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix with  <i>O</i>(polylog <i>n</i>) nonzero entries in each row and condition number <i>k</i>. As shown in [<a href="#HHL08">104</a>], a quantum computer can in \( O(k^2 \log n) \)
-time compute to polynomial precision various expectation values of operators with respect to the vector <i>f(A)b</i> (provided that a quantum state proportional to <i>b</i> is efficiently constructable). For certain functions, such as <i>f(x)=1/x</i>, this procedure can be extended to non-Hermitian and even non-square <i>A</i>. The runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \) in [<a href="#Ambainis_linear">138</a>]. Exponentially improved scaling of runtime with precision was obtained in [<a href="#CKS15">263</a>]. Further improvement was achieved in [<a href="#CYS22">494</a>]. Some methods to extend this algorithm to apply to non-sparse matrices have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear differential equations [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], estimating electrical resistance of networks [<a href="#Wang14">210</a>], least-squares curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems [<a href="#WYPGW16">297</a>], and machine learning [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>]. However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>] and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>]. That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving that the proposed quantum algorithms for these tasks do not achieve exponential speedup. Some limitations of the quantum machine learning algorithms based on linear systems are nicely summarized in [<a href="#Aa15">246</a>]. In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum computers can invert well-conditioned  \( n \times n \) matrices using only \( O( \log n ) \) qubits, whereas the best classical algorithm uses order \( \log^2 n \) bits. Subsequent improvements to this quantum algorithm are given in [<a href="#FL16">279</a>]. Variants of the linear systems problem, including the computation of Moore-Penrose pseudoinverses, can be obtained as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
+time compute to polynomial precision various expectation values of operators with respect to the vector <i>f(A)b</i> (provided that a quantum state proportional to <i>b</i> is efficiently constructable). For certain functions, such as <i>f(x)=1/x</i>, this procedure can be extended to non-Hermitian and even non-square <i>A</i>. The runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \) in [<a href="#Ambainis_linear">138</a>]. Exponentially improved scaling of runtime with precision was obtained in [<a href="#CKS15">263</a>]. Further improvement was achieved in [<a href="#CYS22">494</a>]. Some methods to extend this algorithm to apply to non-sparse matrices have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear differential equations [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], estimating electrical resistance of networks [<a href="#Wang14">210</a>], computational chemistry [<a href="#BRJ23">543</a>], least-squares curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems [<a href="#WYPGW16">297</a>], and machine learning [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>]. However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>] and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>]. That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving that the proposed quantum algorithms for these tasks do not achieve exponential speedup. Some limitations of the quantum machine learning algorithms based on linear systems are nicely summarized in [<a href="#Aa15">246</a>]. In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum computers can invert well-conditioned  \( n \times n \) matrices using only \( O( \log n ) \) qubits, whereas the best classical algorithm uses order \( \log^2 n \) bits. Subsequent improvements to this quantum algorithm are given in [<a href="#FL16">279</a>]. Variants of the linear systems problem, including the computation of Moore-Penrose pseudoinverses, can be obtained as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
 <br /><br />
 
 <b>Algorithm:</b> Estimating Determinants and Other Spectral Sums<br />
@@ -450,12 +448,11 @@ In [<a href="#H19">424</a>] a quantum algorithm is given for an idealized proble
 <hr />
 
 <a name="acknowledgments"><h2>Acknowledgments</h2></a>
-I thank the following people for contributing their expertise (in
-chronological order).
+I thank the following people for contributing their expertise (in chronological order).
 <ul>
 <li><a href="http://qserver.usc.edu/group/index.php/people/daniel-lidar/">Daniel Lidar</a></li>
 <li><a href="http://www.cs.ucsb.edu/~vandam/">Wim van Dam</a></li>
-<li><a href="https://twitter.com/realgeordierose">Geordie Rose</a></li>
+<li><a href="https://www.geordierose.com/">Geordie Rose</a></li>
 <li><a href="https://sites.google.com/site/yikailiu00/">Yi-Kai Liu</a></li>
 <li><a href="http://www.robinkothari.com/">Robin Kothari</a></li>
 <li><a href="http://martinschwarz.wordpress.com/">Martin Schwarz</a></li>
@@ -463,7 +460,7 @@ chronological order).
 <li><a href="https://cosenal.github.io/">Alessandro Cosentino</a></li>
 <li><a href="http://www.cs.umd.edu/~amchilds/">Andrew Childs</a></li>
 <li><a href="https://homepages.cwi.nl/~jeffery/">Stacey Jeffery</a></li>
-<li><a href="http://arxiv.org/find/quant-ph/1/au:+Grover_L/0/1/0/all/0/1">Lov Grover</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lov_Grover">Lov Grover</a></li>
 <li>Eduin H. Serna</li>
 <li>Charles Greathouse</li>
 <li>Juani Bermejo-Vega</li>
@@ -477,18 +474,18 @@ chronological order).
 <li>Jeremy Singer</li>
 <li><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></li>
 <li><a href="http://www.multimagie.com/English/Schroeppel.htm">Rich Schroeppel</a></li>
-<li><a href="http://quics.umd.edu/people/yuan-su">Yuan Su</a></li>
+<li><a href="https://yuansu.me">Yuan Su</a></li>
 <li>Tim Stevens</li>
 <li>Martin Eker&aring;</li>
 <li><a href="http://web.maths.unsw.edu.au/~igorshparlinski/">Igor Shparlinski</a></li>
 <li>Timothy Chase</li>
 <li><a href="https://www.alexpozas.com">Alejandro Pozas-Kerstjens</a></li>
-<li><a href="https://www.csail.mit.edu/person/nikhil-vyas">Nikhil Vyas</a></li>
+<li>Nikhil Vyas</li>
 <li><a href="https://kevinlui.org/">Kevin Lui</a></li>
 <li><a href="http://insti.physics.sunysb.edu/~korepin/">Vladimir Korepin</a></li>
-<li><a href="https://www.stei.itb.ac.id/file/stei-script/andriyan.html">Andriyan Suksmono</a></li>
+<li>Andriyan Suksmono</li>
 <li><a href="https://en.wikipedia.org/wiki/Jack_Hidary">Jack Hidary</a></li>
-<li><a href="https://researcher.watson.ibm.com/researcher/view.php?person=ibm-donny">Donny Greenberg</a></li>
+<li><a href="https://github.com/dongreenberg">Donny Greenberg</a></li>
 <li><a href="https://github.com/nvitucci">Nicola Vitucci</a></li>
 <li><a href="https://kunalmarwaha.com">Kunal Marwaha</a></li>
 <li><a href="https://mx.linkedin.com/in/jos%C3%A9-ignacio-espinoza-camacho-0a7603146">Jos&eacute; Ignacio Espinoza Camacho</a></li>
@@ -499,13 +496,14 @@ chronological order).
 <li><a href="https://github.com/benjamintokgoez">Benjamin Tokg&ouml;z</a></li>
 <li>Armando Bellante</li>
 <li>Seongbin Park</li>
-<li><a href="https://xjsong.cn/">Xujie Song</a></li>
+<li>Xujie Song</li>
 <li><a href="https://alexisfimeyer.github.io/">Alexis Fimeyer</a></li>
 <li>Xiang Li</li>
 <li><a href="https://scholar.google.com/citations?user=6cDyH-MAAAAJ">Diego Garcia Martin</a></li>
 <li><a href="https://cnls.lanl.gov/external/people/Martin_Larocca.php">Martin Larocca</a></li>
 <li><a href="https://github.com/marekgluza">Marek Gluza</a></li>
 <li><a href="https://www.fffmath.com/">Yansong Feng</a></li>
+<li><a href="https://www.tcgcrest.org/people/srinivasa-prasannaa-v/">Srinivasa Prasannaa V</a></li>
 </ul>
 <br />
 
@@ -3876,11 +3874,12 @@ pg. 431-442, Springer, 2006.
 <br />[<a href="https://arxiv.org/abs/2110.14206">arXiv:2110.14206</a>]
 <br /><br /></dd>
 
-<dt><a name="JSW24">453</a></dt>
+<dt><a name="JSW25">453</a></dt>
 <dd>
   Stephen P. Jordan, Noah Shutty, Mary Wootters, Adam Zalcman, Alexander Schmidhuber, Robbie King, Sergei V. Isakov, and Ryan Babbush
 <br />Optimization by Decoded Quantum Interferometry
-<br /><em><a href="https://arxiv.org/abs/2408.08292">arXiv:2408.08292</a></em>, 2024.
+<br /><em>Nature</em> 646:831-836, 2025.
+<br />[<a href="https://arxiv.org/abs/2408.08292">arXiv:2408.08292</a>].
 <br /><br /></dd>
 
 <dt><a name="SOK24">454</a></dt>
@@ -4390,7 +4389,7 @@ pg. 431-442, Springer, 2006.
 <dd>
   Fuchuan Wei, Zhenhuan Liu, Guoding Liu, Zizhao Han, Xiongfeng Ma, Dong-Ling Deng, and Zhengwei Liu
   <br />Simulating non-completely positive actions via exponentiation of Hermitian-preserving maps  
-  <br /><em>Phys. Rev. Lett.</em>, 134, 180602,2025.
+  <br /><em>npj Quantum Information</em> 10:134, 2024.
   <br />[<a href="https://arxiv.org/abs/2308.07956">arXiv:2308.07956</a>]  
   <br /><br />
 </dd>
@@ -4574,6 +4573,79 @@ pg. 431-442, Springer, 2006.
   <br /><br />
 </dd>
 
+<dt><a name="BRJ23">543</a></dt>
+<dd>
+  B. Baskaran, A. S. Rawat, A. Jayashankar, D. Chakravarti, K. Sugisaki, S. Roy, S. Mandal, D. Mukherjee, and V. S. Prasannaa
+  <br />Adapting the Harrow-Hassidim-Lloyd algorithm to quantum many-body theory 
+  <br /><em>Phys. Rev. Research</em>, 5:043113, 2023.
+  <br />[<a href="https://arxiv.org/abs/2212.14781">arXiv:2212.14781</a>]  
+  <br /><br />
+</dd>
+
+<dt><a name="CH25">544</a></dt>
+<dd>
+  Daniel Cohen Hillel
+  <br />Optimization of Quadratic Constraints by Decoded Quantum Interferometry
+  <br /><em><a href="https://arxiv.org/abs/2510.08061">arXiv:2510.08061</a></em>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="P25">545</a></dt>
+<dd>
+  Ojas Parekh
+  <br />No Quantum Advantage in Decoded Quantum Interferometry for MaxCut
+  <br /><em><a href="https://arxiv.org/abs/2509.19966">arXiv:2509.19966</a></em>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="SLS25">546</a></dt>
+<dd>
+  Alexander Schmidhuber, Jonathan Z. Lu, Noah Shutty, Stephen Jordan, Alexander Poremba, and Yihui Quek
+  <br />Hamiltonian Decoded Quantum Interferometry
+  <br /><em><a href="https://arxiv.org/abs/2510.07913">arXiv:2510.07913</a></em>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="GJ25">547</a></dt>
+<dd>
+  Andi Gu and Stephen P. Jordan
+  <br />Algebraic Geometry Codes and Decoded Quantum Interferometry
+  <br /><em><a href="https://arxiv.org/abs/2510.06603">arXiv:2510.06603</a></em>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="CT23">548</a></dt>
+<dd>
+  André Chailloux and Jean-Pierre Tillich
+  <br />The Quantum Decoding Problem
+  <br /><em><a href="https://arxiv.org/abs/2310.20651">arXiv:2310.20651</a></em>, 2023.
+  <br /><br />
+</dd>
+
+<dt><a name="BCT25">549</a></dt>
+<dd>
+  Agathe Blanvillain, André Chailloux, and Jean-Pierre Tillich
+  <br />The Quantum Decoding Problem : Tight Achievability Bounds and Application to Regev's Reduction
+  <br /><em><a href="https://arxiv.org/abs/2509.24796">arXiv:2509.24796</a></em>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="BH25">550</a></dt>
+<dd>
+  André Chailloux and Paul Hermouet
+  <br />On the Quantum Equivalence between \( \textrm{S} | \textrm{LWE} \rangle \) and ISIS
+  <br /><em><a href="https://arxiv.org/abs/2510.06097">arXiv:2510.06097</a></em>, 2025.
+  <br /><br />
+</dd>
+
+<dt><a name="BC25">551</a></dt>
+<dd>
+  Quentin Buzet and André Chailloux
+  <br />Fine-Grained Unambiguous Measurements
+  <br /><em><a href="https://arxiv.org/abs/2510.07298">arXiv:2510.07298</a></em>, 2025.
+  <br /><br />
+</dd>
+
 </dl>
 </div>
 <div id="sidebar">
@@ -4591,7 +4663,7 @@ pg. 431-442, Springer, 2006.
 <h2>About</h2>
 Author: Stephen P. Jordan, Google Quantum AI<br />
 Cite as: <a href="zoo.bib">bibtex</a><br />
-Last updated: August 27, 2025<br />
+Last updated: October 30, 2025<br />
 Date created: April 22, 2011<br /><br />
 <div style="clear: both;"></div>
 <br />
