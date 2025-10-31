@@ -16,7 +16,7 @@ img {
     background: white;
 }
 
-#header {
+header {
     background: rgb(32, 115, 192);
     margin-top: 15px;
     padding: 10px;
@@ -34,7 +34,7 @@ h1 {
     margin:0;
 }
 
-#main {
+main {
     float:left;
     width:679px;
     padding:10px;
@@ -50,7 +50,7 @@ h2 {
     margin:0 0 1em;
 }
 
-#sidebar {
+aside {
     float:right;
     width:320px;
     padding:10px;
@@ -58,7 +58,7 @@ h2 {
     font-size: 14px;
 }
 
-#footer {
+footer {
     clear:both;
     padding:5px 10px 10px 10px;
     background:#EEEEEE;
@@ -68,7 +68,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-#footer p {
+footer p {
     margin:0;
 }
 
