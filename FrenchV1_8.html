@@ -6,10 +6,12 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zoo des Algorithmes Quantiques</title>
   <meta name="description" content="Une liste complète des algorithmes quantiques." />
   <meta name="keywords" content="algorithme quantique algorithmes zoo liste catalogue" />
   <meta name="author" content="Stephen Jordan" />
+  <script type="text/javascript" src="theme.js"></script>
   <link rel="stylesheet" type="text/css" href="newzoo.css" />
   <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -24,11 +26,24 @@
   <div id="wrap">
     <div id="header">
       <h1>Zoo des Algorithmes Quantiques</h1>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false"></button>
+        <a class="language-link" href="index.html">English</a>
+      </div>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#algebraic">Algèbre</a>
+        <a href="#oracular">Oracles</a>
+        <a href="#BQP">Simulation</a>
+        <a href="#ONML">Optimisation</a>
+        <a href="#acknowledgments">Remerciements</a>
+        <a href="#references">Références</a>
+        <a href="#sidebar">Infos</a>
+      </nav>
     </div>
     <div id="main">
       <div id="notice">
         <p>Ceci est un catalogue complet des algorithmes quantiques. Si vous remarquez des erreurs ou des omissions,
-          veuillez m'envoyer un e-mail à spj.jordan@gmail.com. (Alternativement, vous pouvez soumettre une pull request
+          veuillez m'envoyer un e-mail à <a href="mailto:spj.jordan@gmail.com">spj.jordan@gmail.com</a>. (Alternativement, vous pouvez soumettre une pull request
            sur ce <a href="https://github.com/stephenjordan/stephenjordan.github.io">dépôt</a> GitHub.) Bien que
           je ne puisse garantir une réponse rapide, votre aide est appréciée et sera <a
             href="#acknowledgments">reconnue</a>.</p>
