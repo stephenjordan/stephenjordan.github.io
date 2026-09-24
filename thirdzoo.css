@@ -7,7 +7,7 @@
   --paper: #ffffff;
   --wash: #eaf0f2;
   --heading: #183744;
-  --label: #344f5c;
+  --label: #075f8c;
   --accent: #184d61;
   --hover: #0d3c52;
   --notice-bg: #fff7d9;
@@ -28,7 +28,7 @@
   --paper: #192a33;
   --wash: #101b22;
   --heading: #f0f6f7;
-  --label: #cfe5eb;
+  --label: #67d0f5;
   --accent: #79bbd0;
   --hover: #c4eef7;
   --notice-bg: #383321;
@@ -157,7 +157,7 @@ h1 {
   letter-spacing: -.02em;
 }
 
-:is(main, #main) b { color: var(--label); }
+:is(main, #main) b { color: var(--label); font-weight: 800; }
 :is(main, #main) hr { margin: 38px 0; border: 0; border-top: 1px solid var(--line); }
 :is(main, #main) br + br { display: block; content: ""; margin-bottom: 14px; }
 
