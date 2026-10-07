@@ -40,14 +40,16 @@
       <b>Algorithme :</b> Factorisation<br />
       <b>Accélération :</b> Superpolynomiale<br />
       <b>Implémentation :</b> <a href="https://short.classiq.io/shor">Classiq</a>, <a
-        href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a><br />
+        href="https://github.com/quantumlib/Cirq/blob/main/examples/shor.py">Cirq</a>, <a
+        href="https://pennylane.ai/codebook/shors-algorithm">PennyLane</a>, <a
+        href="https://qrisp.eu/reference/Algorithms/Shor.html#shor">Qrisp</a><br />
       <b>Description :</b> Étant donné un entier <i>n</i>-bit, trouver la factorisation en nombres premiers.
       L'algorithme quantique de Peter Shor résout cela en \( \widetilde{O} (n^3) \) temps
       [<a href="#Shor_factoring">82</a>,<a href="#Shor_factoring94">125</a>].
       L'algorithme classique le plus rapide connu pour la factorisation d'entiers est le crible général des nombres, qui
       est censé fonctionner en temps \(
       2^{\widetilde{O}(n^{1/3})} \). La meilleure limite supérieure rigoureusement prouvée sur la complexité classique
-      de la factorisation est \( O(2^{n/4+o(1)}) \) via l'algorithme de Pollard-Strassen
+      de la factorisation est maintenant \( O(2^{n/5+o(1)}) \), d'après [<a href="#HH21">542</a>], ce qui améliore
       [<a href="#Pol">252</a>, <a href="#Stras">362</a>]. L'algorithme de factorisation de Shor brise le chiffrement à
       clé publique RSA et les algorithmes quantiques étroitement liés pour les logarithmes discrets brisent les schémas
       de signature numérique DSA et ECDSA et le protocole d'échange de clés de Diffie-Hellman. Un algorithme quantique
@@ -70,7 +72,8 @@
 
       <b>Algorithme :</b> Logarithme discret<br />
       <b>Accélération :</b> Superpolynomiale<br />
-      <b>Implémentation :</b> <a href="https://short.classiq.io/discrete_log">Classiq</a><br />
+      <b>Implémentation :</b> <a href="https://short.classiq.io/discrete_log">Classiq</a>, <a
+        href="https://github.com/diehoq/quantum-elliptic-curve-logarithm">Qrisp</a><br />
       <b>Description :</b> Nous avons trois nombres <i>n</i>-bit <i>a</i>, <i>b</i>, et <i>N</i>, avec la promesse que
       \( b = a^s \mod N \) pour un certain <i>s</i>. La tâche est de trouver <i>s</i>.
       Comme le montre Shor [<a href="#Shor_factoring">82</a>], cela peut être réalisé
@@ -242,7 +245,10 @@
       d'une représentation irréductible donnée dans le produit tensoriel d'une paire de représentations irréductibles
       données. Dans [<a href="#BCG23">460</a>], il est montré que les coefficients de Kronecker normalisés du groupe
       symétrique peuvent être approximés à une erreur additive inverse polynomiale par un algorithme quantique en temps
-      polynomial, tandis qu'aucun algorithme classique en temps polynomial n'est connu pour atteindre cela.<br /><br />
+      polynomial, tandis qu'aucun algorithme classique en temps polynomial n'est connu pour atteindre cela. Ces
+      accélérations quantiques ont été généralisées à d'autres coefficients de multiplicité du groupe symétrique
+      dans [<a href="#LH24">516</a>]. Les progrès classiques récents dans le calcul des coefficients de Kronecker
+      et de coefficients de multiplicité plus généraux sont étudiés dans [<a href="#G25">515</a>].<br /><br />
 
       <b>Algorithme :</b> Vérification des Produits de Matrices <br />
       <b>Accélération :</b> Polynomiale <br />
@@ -304,13 +310,20 @@
       Jao et Soukharev pour trouver des isogénies de courbes elliptiques brise
       certains systèmes de chiffrement basés sur des courbes elliptiques en temps subexponentiel
       qui n'ont pas déjà été brisés par l'algorithme de Shor
-      [<a href="#CJS14">283</a>]. La deuxième catégorie est des algorithmes quantiques
+      [<a href="#CJS14">283</a>]. Cette première catégorie comprend également des algorithmes quantiques
+      fournissant des attaques sur des systèmes cryptographiques fondés sur les réseaux
+      [<a href="#EH22">537</a>] ou sur des systèmes multivariés
+      [<a href="#CG22">539</a>, <a href="#CGY25">540</a>, <a href="#DGG23">541</a>]. Le résultat de
+      [<a href="#EH22">537</a>] pourrait donner une accélération par rapport aux algorithmes classiques
+      dans un régime de paramètres soigneusement choisi, tandis que [<a href="#DW21">538</a>] en discute les limites.
+      Une autre ligne d'attaque contre les cryptosystèmes multivariés, dont l'avantage potentiel reste mal compris,
+      est étudiée dans ces travaux.
       réalisant une amélioration polynomiale par rapport aux attaques cryptanalytiques classiques connues en accélérant
       des parties de ces algorithmes classiques à l'aide
       de la recherche de Grover, de la recherche de collisions quantiques, etc. De telles attaques
       sur des clés privées [<a href="#GLRS15">284</a>, <a href="#AMGMPS16">285</a>, <a href="#K14">288</a>, <a
         href="#BHT98b">315</a>, <a href="#B09">316</a>]
-      et des clés publiques [<a href="#LMP13">262</a>, <a href="#F15">287</a>] ne précluent pas l'utilisation des
+      et des clés publiques [<a href="#LMP13">262</a>, <a href="#F15">287</a>, <a href="#CL21">536</a>] ne précluent pas l'utilisation des
       systèmes de chiffrement associés mais peuvent influencer
       le choix de la taille de la clé. La troisième catégorie est des attaques qui utilisent des
       requêtes de superposition quantique sur des chiffrements par blocs. Ces attaques dans de nombreux cas brisent
@@ -328,7 +341,11 @@
       <b>Algorithme :</b> Recherche <br />
       <b>Accélération :</b> Polynomiale <br />
       <b>Implémentation :</b> <a href="https://short.classiq.io/quantum_counting">Classiq</a>, <a
-        href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a><br />
+        href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq</a>, <a
+        href="https://pennylane.ai/qml/demos/tutorial_grovers_algorithm">PennyLane</a>, <a
+        href="https://qrisp.eu/reference/Algorithms/Grover.html">Qrisp (Grover)</a>, <a
+        href="https://qrisp.eu/reference/Algorithms/quantum_counting.html">Qrisp (comptage quantique)</a>, <a
+        href="https://qrisp.eu/reference/Primitives/amplitude_amplification.html">Qrisp (amplification d'amplitude)</a><br />
       <b>Description :</b> Nous avons un oracle avec <i>N</i>
       entrées autorisées. Pour une entrée <i>w</i> ("le gagnant"), la sortie correspondante est
       1, et pour toutes les autres entrées, la sortie correspondante est 0. La tâche est de trouver
@@ -442,7 +459,8 @@
       <b>Algorithme :</b> Bernstein-Vazirani <br />
       <b>Accélération :</b> Polynomiale Directement, Superpolynomiale Récursivement <br />
       <b>Implémentation :</b> <a href="https://short.classiq.io/bernstein_vazirani">Classiq</a>, <a
-        href="https://github.com/quantumlib/Cirq/blob/main/examples/bernstein_vazirani.py">Cirq</a><br />
+        href="https://github.com/quantumlib/Cirq/blob/main/examples/bernstein_vazirani.py">Cirq</a>, <a
+        href="https://pennylane.ai/qml/demos/tutorial_qutrits_bernstein_vazirani">PennyLane</a><br />
       <b>Description :</b> Nous avons un oracle dont l'entrée est <i>n</i>
       bits et dont la sortie est un bit. Étant donné l'entrée \( x \in \{0,1\}^n \), la sortie est
       \( x \odot h \), où <i>h</i> est la chaîne "cachée" de <i>n</i> bits, et
@@ -463,7 +481,8 @@
 
       <b>Algorithme :</b> Deutsch-Jozsa <br />
       <b>Accélération :</b> Exponentielle par rapport à P, aucune par rapport à BPP<br />
-      <b>Implémentation :</b> <a href="https://short.classiq.io/deutsch_josza">Classiq</a><br />
+      <b>Implémentation :</b> <a href="https://short.classiq.io/deutsch_josza">Classiq</a>, <a
+        href="https://pennylane.ai/codebook/basic-quantum-algorithms/deutsch-jozsa">PennyLane</a><br />
       <b>Description :</b> Nous avons un oracle dont l'entrée est <i>n</i> bits et dont la sortie
       est un bit. Nous avons la promesse que parmi les \( 2^n \) entrées possibles, soit toutes,
       aucune, ou la moitié d'entre elles donnent une sortie de 1. La tâche est de distinguer le cas équilibré
@@ -1125,9 +1144,12 @@
       <a name="BQP"></a>
       <h2>Algorithmes d'Approximation et de Simulation</h2>
 
-      <b>Algorithme :</b> Simulation Quantique <br />
+      <b>Algorithme :</b> Simulation de la dynamique des Hamiltoniens quantiques <br />
       <b>Accélération :</b> Superpolynomiale <br />
-      <b>Mise en œuvre :</b> <a href="https://short.classiq.io/simulation">Classiq</a><br />
+      <b>Mise en œuvre :</b> <a href="https://short.classiq.io/simulation">Classiq (Hamiltonien)</a>, <a
+        href="https://short.classiq.io/thermal_state_preparation">Classiq (état thermique)</a>, <a
+        href="https://pennylane.ai/codebook/hamiltonian-simulation">PennyLane</a>, <a
+        href="https://qrisp.eu/general/tutorial/H2.html#ham-sim-fundamentals">Qrisp</a><br />
       <b>Description :</b> La complexité exponentielle de la simulation classique des systèmes quantiques a conduit
       Feynman à
       proposer pour la première fois que les ordinateurs quantiques pourraient surpasser les ordinateurs classiques dans
@@ -1174,7 +1196,9 @@
       (les équations de Dirac et de Klein-Gordon) [<a href="#AW16">367</a>,<a href="#CJO17">369</a>,<a
         href="#Yepez11">370</a>,<a href="#Yepez13">371</a>],
       les systèmes quantiques ouverts [<a href="#CW16">376</a>, <a href="#KBGKE11">377</a>,<a href="#CL16">378</a>,<a
-        href="#DPCSC15">379</a>,<a href="#ALL23">458</a>],
+        href="#DPCSC15">379</a>,<a href="#ALL23">458</a>,<a href="#LLW24">499</a>,<a href="#WW24">501</a>,<a
+        href="#PSW23">503</a>,<a href="#MSK22">504</a>,<a href="#PW23">505</a>,<a href="#PW23b">506</a>,<a
+        href="#LW23">507</a>],
       la théorie quantique des champs
       [<a href="#Byrnes">107</a>,<a href="#JLP12">166</a>,<a href="#JLP14a">228</a>,<a href="#JLP14b">229</a>,<a
         href="#BRSS14">230</a>,<a href="#MJ17">368</a>,<a href="#TAM22">484</a>],
@@ -1202,6 +1226,17 @@
       des valeurs singulières [<a href="#GSLW19">433</a>].
       <br /><br />
 
+      <b>Algorithme :</b> Préparation des États Propres et Thermiques <br />
+      <b>Accélération :</b> Superpolynomiale <br />
+      <b>Description :</b> Bien que trouver l'énergie fondamentale des Hamiltoniens locaux soit un problème QMA-complet
+      et nécessite donc probablement un temps exponentiel dans le pire cas, des algorithmes quantiques permettent
+      d'approximer des états fondamentaux, des états de basse énergie et des états thermiques pour certaines classes
+      d'Hamiltoniens [<a href="#Aspuru_science">102</a>,<a href="#CDB24">463</a>,<a href="#Metropolis">132</a>,<a
+      href="#HMS22">491</a>,<a href="#CKG23">500</a>,<a href="#JI24">502</a>]. Une méthode polyvalente fondée
+      sur une suite d'évolutions en temps imaginaire et exploitant la localité pour préparer des états propres et
+      thermiques a été introduite dans [<a href="#MST20">533</a>].
+      <br /><br />
+
       <b>Algorithme :</b> Invariants de Nœud <br />
       <b>Accélération :</b> Superpolynomiale <br />
       <b>Description :</b> Comme montré par
@@ -1211,7 +1246,9 @@
       résultat a été reformulé et étendu à \( e^{i 2 \pi/k} \) pour un <i>k</i> arbitraire par Aharonov
       <i>et al.</i> [<a href="#Aharonov1">4</a>,<a href="#Aharonov2">2</a>]. Wocjan et Yard ont encore
       généralisé cela, obtenant un algorithme quantique pour estimer le polynôme HOMFLY
-      [<a href="#Wocjan">93</a>], dont le polynôme de Jones est un cas particulier. Aharonov
+      [<a href="#Wocjan">93</a>], dont le polynôme de Jones est un cas particulier. Des travaux récents donnent
+      également des algorithmes quantiques pour estimer d'autres invariants topologiques, notamment les nombres de
+      Betti [<a href="#CC24">510</a>] et l'homologie de Khovanov [<a href="#CC25">511</a>]. Aharonov
       <i>et al.</i> ont ensuite montré que les ordinateurs quantiques peuvent en temps polynomial estimer une
       certaine approximation additive au polynôme de Tutte encore plus général pour les graphes planaires
       [<a href="#Aharonov3">3</a>]. On ne comprend pas entièrement pour quelle plage de paramètres
@@ -1469,7 +1506,8 @@
     <b>Algorithme :</b> Optimisation Approximative Quantique <br />
     <b>Accélération :</b> Superpolynomiale <br />
     <b>Mise en œuvre :</b> <a href="https://short.classiq.io/qaoa">Classiq</a>, <a
-      href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a><br />
+      href="https://github.com/quantumlib/Cirq/blob/main/examples/qaoa.py">Cirq</a>, <a
+      href="https://pennylane.ai/qml/demos/tutorial_qaoa_intro">PennyLane</a><br />
     <b>Description :</b> Pour de nombreux problèmes d'optimisation combinatoire,
     trouver la solution optimale exacte est NP-complet. Il existe également des résultats de dureté
     d'approximation
@@ -1490,12 +1528,14 @@
     découvert par la suite [<a href="#BMO15">260</a>]. Actuellement, le pouvoir du
     QAOA par rapport au calcul classique est un domaine de recherche actif
     [<a href="#LZ16">300</a>,<a href="#WHT16">301</a>,<a href="#FH16">302</a>,
-    <a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>].
+    <a href="#Chamon">314</a>,<a href="#SLC24">451</a>,<a href="#BFM22">452</a>,<a href="#BM22">476</a>,<a
+    href="#FGRV25">531</a>,<a href="#BKL25">532</a>].
     <br /><br />
 
     <a name="gradients"></a>
     <b>Algorithme :</b> Estimation de Gradient et Apprentissage de Polynomiales<br />
     <b>Accélération :</b> Polynomiale <br />
+    <b>Mise en œuvre :</b> <a href="https://short.classiq.io/gradient">Classiq</a><br />
     <b>Description :</b> Supposons que nous ayons un oracle pour calculer une fonction lisse
     \( f:\mathbb{R}^d \to \mathbb{R} \) avec une précision \( \pm \epsilon \). La tâche consiste à estimer
     \( \nabla f \) à un point spécifié \( \mathbf{x}_0 \in \mathbb{R}^d \). Comme montré dans
@@ -1575,6 +1615,11 @@
     une très bonne approximation des problèmes de régression polynomiale d'origine,
     ce qui n'est pas connu pour être réalisable par un algorithme classique en temps polynomial,
     atteignant ainsi une accélération exponentielle apparente.
+    Les méthodes de décodage quantique améliorées de [<a href="#CT24">534</a>] élargissent le régime de paramètres
+    dans lequel DQI peut satisfaire toutes les contraintes. Des extensions aux contraintes quadratiques
+    [<a href="#CH25">544</a>], aux codes de géométrie algébrique [<a href="#GJ25">547</a>], à la préparation
+    d'états de Gibbs [<a href="#SLS25">546</a>] et au problème MaxCut [<a href="#P25">545</a>] ont également été
+    étudiées.
     Les résultats de [<a href="#SOK24">454</a>] donnant une accélération quartique pour un problème d'inférence
     plantée et les
     résultats de [<a href="#YZ24">455</a>] donnant
@@ -1588,7 +1633,8 @@
     <b>Accélération :</b> Superpolynomiale<br />
     <b>Mise en œuvre :</b> <a href="https://short.classiq.io/hhl">Classiq(hhl)</a>, <a
       href="https://short.classiq.io/qsvt_inversion">Classiq(qsvt)</a>, <a
-      href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq(hhl)</a><br />
+      href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq(hhl)</a>, <a
+      href="https://pennylane.ai/qml/demos/linear_equations_hhl_qrisp_catalyst">Qrisp/Pennylane (HHL)</a><br />
     <b>Description :</b> Nous avons accès par oracle à une matrice \( n \times n \) <i>A</i> et
     une description d'un vecteur <i>b</i>. Nous souhaitons trouver une propriété de <i>f(A)b</i>
     pour une fonction <i>f</i> calculable efficacement. Supposons que <i>A</i> soit une matrice Hermitienne
@@ -1610,8 +1656,9 @@
     pré-calculées. Des extensions de cet algorithme quantique ont été appliquées à des problèmes d'estimation des
     sections efficaces de diffusion électromagnétique [<a href="#CJS13">249</a>] (voir aussi [<a
       href="#CJO17">369</a>] pour une approche différente),
-    la résolution d'équations différentielles [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], l'estimation
-    de la résistance électrique des réseaux [<a href="#Wang14">210</a>], l'ajustement de courbes par moindres
+    la résolution d'équations différentielles [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], la chimie
+    computationnelle [<a href="#BRJ23">543</a>], l'estimation de la résistance électrique des réseaux
+    [<a href="#Wang14">210</a>], l'ajustement de courbes par moindres
     carrés
     [<a href="#Wiebe_Braun_Lloyd12">169</a>], la résolution de systèmes de Toeplitz
     [<a href="#WYPGW16">297</a>], et l'apprentissage automatique
@@ -1636,10 +1683,23 @@
     transformation de valeur singulière quantique [<a href="#GSLW19">433</a>].
     <br /><br />
 
+    <b>Algorithme :</b> Estimation des déterminants et autres sommes spectrales<br />
+    <b>Accélération :</b> Superpolynomiale<br />
+    <b>Description :</b> Soit <i>A</i> une matrice hermitienne de dimension (2^n 	imes 2^n), avec seulement
+    poly(<i>n</i>) éléments non nuls par ligne, et supposons que l'on dispose d'un oracle pour ces éléments. La phase
+    estimation appliquée à l'état complètement mélangé permet d'échantillonner uniformément les valeurs propres de
+    <i>A</i> et d'estimer des sommes spectrales ( sum_i f(lambda_i) ). En particulier, pour
+    (f(lambda)=log(lambda)), on obtient le logarithme du déterminant de <i>A</i>. Le coût classique dans le pire
+    cas est exponentiel en <i>n</i>, tandis que la méthode proposée dans [<a href="#LS20">527</a>] donne une
+    accélération quantique superpolynomiale. Une analyse et une présentation supplémentaires sont données dans
+    [<a href="#GLM25">528</a>].
+    <br /><br />
+
     <b>Algorithme : </b> Apprentissage Automatique <br />
     <b>Accélération :</b> Varie<br />
     <b>Mise en œuvre :</b> <a href="https://short.classiq.io/qsvm">Classiq(qsvm)</a>, <a
-      href="https://short.classiq.io/autoencoder">Classiq(autoencoder)</a><br />
+      href="https://short.classiq.io/autoencoder">Classiq(autoencoder)</a>, <a
+      href="https://pennylane.ai/qml/demos/tutorial_variational_classifier">PennyLane</a><br />
     <b>Description :</b>
     L'apprentissage automatique englobe une grande variété de problèmes computationnels
     et peut être abordé par une grande variété de techniques algorithmiques. Cette
@@ -1765,6 +1825,9 @@
     régissant des oscillateurs harmoniques classiques couplés peut être résolue exponentiellement plus rapidement
     sur des ordinateurs quantiques que
     sur des ordinateurs classiques lorsque la connectivité est un graphe expanse.
+    Des algorithmes quantiques apparentés simulent efficacement certains systèmes dynamiques comportant un nombre
+    exponentiel de degrés de liberté fermioniques [<a href="#SLT24">513</a>], bosoniques [<a href="#BCS25">514</a>]
+    et plus généraux [<a href="#SKK24">512</a>].
     Les équations différentielles partielles peuvent être réduites à des équations différentielles ordinaires par
     discrétisation, et
     les équations différentielles d'ordre supérieur peuvent être
@@ -1854,7 +1917,7 @@
     dans [<a href="#GRS24">449</a>].
     <br /><br />
 
-    <b>Algorithme :</b> Programmation Dynamique Quantique<br />
+    <b>Algorithme :</b> Programmation Dynamique Quantique pour les chemins dans l'hypercube<br />
     <b>Accélération :</b> Polynomiale<br />
     <b>Description :</b> Dans [<a href="#ABI18">409</a>], les auteurs introduisent un problème appelé
     chemin-dans-le-cube. Dans
@@ -1936,6 +1999,23 @@
     ces réductions de manière à atteindre un avantage quantique.
     <br /><br />
 
+    <b>Algorithme :</b> Algorithmes quantiques à double crochet<br />
+    <b>Accélération :</b> Inconnue<br />
+    <b>Mise en œuvre :</b> <a href="https://github.com/marekgluza/DBQITE/blob/main/README.md">Numpy</a>, <a
+      href="https://github.com/qiboteam/boostvqe">Qibo</a>, <a
+      href="https://qrisp.eu/reference/Algorithms/QITE.html">Qrisp</a><br />
+    <b>Description :</b> Les flots à double crochet sont des équations différentielles matricielles non unitaires
+    dont les équilibres stables sont des rotations unitaires de la matrice d'entrée. Ils peuvent encoder des solutions
+    à des problèmes d'optimisation, de programmation linéaire, de décomposition QR et de tri [<a href="#HM12">521</a>].
+    Des algorithmes quantiques à double crochet ont été proposés pour la diagonalisation [<a href="#G24">522</a>], la
+    préparation d'états fondamentaux de haute fidélité [<a href="#RPP22">523</a>], l'évolution quantique en temps
+    imaginaire [<a href="#GST24">524</a>] et le traitement quantique du signal sans post-sélection
+    [<a href="#STS25">526</a>]. Leur convergence exponentielle s'explique par leur interprétation comme des flots de
+    descente de gradient riemanniens; le rôle de cette géométrie est étudié dans [<a href="#ZSX25">525</a>].
+    [<a href="#SGTN25">519</a>, <a href="#WLLHMDL23">520</a>] donnent aussi des méthodes pour réduire la profondeur
+    des circuits au prix d'un plus grand nombre de qubits.
+    <br /><br />
+
     <hr />
 
     <a name="acknowledgments"></a>
@@ -1945,7 +2025,7 @@
       <ul>
         <li><a href="http://qserver.usc.edu/group/index.php/people/daniel-lidar/">Daniel Lidar</a></li>
         <li><a href="http://www.cs.ucsb.edu/~vandam/">Wim van Dam</a></li>
-        <li><a href="https://twitter.com/realgeordierose">Geordie Rose</a></li>
+        <li><a href="https://www.geordierose.com/">Geordie Rose</a></li>
         <li><a href="https://sites.google.com/site/yikailiu00/">Yi-Kai Liu</a></li>
         <li><a href="http://www.robinkothari.com/">Robin Kothari</a></li>
         <li><a href="http://martinschwarz.wordpress.com/">Martin Schwarz</a></li>
@@ -1953,7 +2033,7 @@
         <li><a href="https://cosenal.github.io/">Alessandro Cosentino</a></li>
         <li><a href="http://www.cs.umd.edu/~amchilds/">Andrew Childs</a></li>
         <li><a href="https://homepages.cwi.nl/~jeffery/">Stacey Jeffery</a></li>
-        <li><a href="http://arxiv.org/find/quant-ph/1/au:+Grover_L/0/1/0/all/0/1">Lov Grover</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Lov_Grover">Lov Grover</a></li>
         <li>Eduin H. Serna</li>
         <li>Charles Greathouse</li>
         <li>Juani Bermejo-Vega</li>
@@ -1967,7 +2047,7 @@
         <li>Jeremy Singer</li>
         <li><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></li>
         <li><a href="http://www.multimagie.com/English/Schroeppel.htm">Rich Schroeppel</a></li>
-        <li><a href="http://quics.umd.edu/people/yuan-su">Yuan Su</a></li>
+        <li><a href="https://yuansu.me">Yuan Su</a></li>
         <li>Tim Stevens</li>
         <li>Martin Eker&aring;</li>
         <li><a href="http://web.maths.unsw.edu.au/~igorshparlinski/">Igor Shparlinski</a></li>
@@ -1978,7 +2058,7 @@
         <li><a href="http://insti.physics.sunysb.edu/~korepin/">Vladimir Korepin</a></li>
         <li><a href="https://www.stei.itb.ac.id/file/stei-script/andriyan.html">Andriyan Suksmono</a></li>
         <li><a href="https://en.wikipedia.org/wiki/Jack_Hidary">Jack Hidary</a></li>
-        <li><a href="https://researcher.watson.ibm.com/researcher/view.php?person=ibm-donny">Donny Greenberg</a></li>
+        <li><a href="https://github.com/dongreenberg">Donny Greenberg</a></li>
         <li><a href="https://github.com/nvitucci">Nicola Vitucci</a></li>
         <li><a href="https://kunalmarwaha.com">Kunal Marwaha</a></li>
         <li><a href="https://mx.linkedin.com/in/jos%C3%A9-ignacio-espinoza-camacho-0a7603146">Jos&eacute; Ignacio
@@ -1992,6 +2072,13 @@
         <li>Seongbin Park</li>
         <li><a href="https://xjsong.cn/">Xujie Song</a></li>
         <li><a href="https://alexisfimeyer.github.io/">Alexis Fimeyer</a></li>
+        <li>Xiang Li</li>
+        <li><a href="https://scholar.google.com/citations?user=6cDyH-MAAAAJ">Diego Garcia Martin</a></li>
+        <li><a href="https://cnls.lanl.gov/external/people/Martin_Larocca.php">Martin Larocca</a></li>
+        <li><a href="https://github.com/marekgluza">Marek Gluza</a></li>
+        <li><a href="https://www.fffmath.com/">Yansong Feng</a></li>
+        <li><a href="https://www.tcgcrest.org/people/srinivasa-prasannaa-v/">Srinivasa Prasannaa V</a></li>
+        <li>Francisca Góis</li>
       </ul>
       <br />
 
@@ -5714,6 +5801,293 @@
           <br /><br />
         </dd>
 
+        <dt><a name="LLW24">499</a></dt>
+        <dd>Xiang Li, Su-Xiang Lyu, Yao Wang, Rui-Xue Xu, Xiao Zheng, et YiJing Yan
+          <br />Vers la simulation quantique de la dynamique quantique ouverte non markovienne : une théorie universelle et compacte. (Towards Quantum Simulation of Non-Markovian Open Quantum Dynamics: A Universal and Compact Theory)
+          <br /><em>Physical Review A</em>, 110:03620, 2024.
+          <br />[<a href="https://arxiv.org/abs/2401.17255">arXiv:2401.17255</a>]<br /><br /></dd>
+
+        <dt><a name="CKG23">500</a></dt>
+        <dd>Chi-Fang Chen, Michael J. Kastoryano, et Andr&aacute;s Gily&eacute;n
+          <br />Un échantillonneur quantique de Gibbs non commutatif efficace et exact. (An efficient and exact noncommutative quantum Gibbs sampler)
+          <br /><em><a href="https://arxiv.org/abs/2311.09207">arXiv:2311.09207</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="WW24">501</a></dt>
+        <dd>Peter L. Walters et Fei Wang
+          <br />Algorithme quantique par intégrale de chemin pour simuler la dynamique quantique non markovienne des systèmes quantiques ouverts. (Path integral quantum algorithm for simulating non-Markovian quantum dynamics in open quantum systems)
+          <br /><em>Physical Review Research</em>, 6:013135, 2024.
+          <br />[<a href="https://link.aps.org/doi/10.1103/PhysRevResearch.6.013135">doi:10.1103/PhysRevResearch.6.013135</a>]<br /><br /></dd>
+
+        <dt><a name="JI24">502</a></dt>
+        <dd>Jiaqing Jiang et Sandy Irani
+          <br />Échantillonnage quantique de Metropolis par mesure faible. (Quantum Metropolis Sampling via Weak Measurement)
+          <br /><em><a href="https://arxiv.org/abs/2406.16023">arXiv:2406.16023</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="PSW23">503</a></dt>
+        <dd>Matthew Pocrnic, Dvira Segal, et Nathan Wiebe
+          <br />Simulation quantique de la dynamique lindbladienne par interactions répétées. (Quantum Simulation of Lindbladian Dynamics via Repeated Interactions)
+          <br /><em><a href="https://arxiv.org/abs/2312.05371">arXiv:2312.05371</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="MSK22">504</a></dt>
+        <dd>Mekena Metcalf, Emma Stone, Katherine Klymko, Alexander F. Kemper, Mohan Sarovar, et Wibe A. de Jong
+          <br />Méthode de Monte-Carlo par chaînes de Markov quantiques fondée sur une dynamique dissipative numérique sur ordinateur quantique. (Quantum Markov chain Monte Carlo with digital dissipative dynamics on quantum computers)
+          <br /><em>Quantum Science and Technology</em>, 7(2):025017, 2022.
+          <br />[<a href="https://iopscience.iop.org/article/10.1088/2058-9565/ac546a/meta">doi:10.1088/2058-9565/ac546a</a>]<br /><br /></dd>
+
+        <dt><a name="PW23">505</a></dt>
+        <dd>Dhrumil Patel et Mark M. Wilde
+          <br />Lindbladisation par matrice d'onde I : programmes quantiques pour simuler la dynamique markovienne. (Wave Matrix Lindbladization I: Quantum Programs for Simulating Markovian Dynamics)
+          <br /><em>Open Systems &amp; Information Dynamics</em>, 30(2):2350010, 2023.
+          <br />[<a href="https://doi.org/10.1142/S1230161223500105">doi:10.1142/S1230161223500105</a>]<br /><br /></dd>
+
+        <dt><a name="PW23b">506</a></dt>
+        <dd>Dhrumil Patel et Mark M. Wilde
+          <br />Lindbladisation par matrice d'onde II : générateurs de Lindblad généraux, combinaisons linéaires et polynômes. (Wave Matrix Lindbladization II: General Lindbladians, Linear Combinations, and Polynomials)
+          <br /><em>Open Systems &amp; Information Dynamics</em>, 30(2):2350014, 2023.
+          <br />[<a href="https://doi.org/10.1142/S1230161223500142">doi:10.1142/S1230161223500142</a>]<br /><br /></dd>
+
+        <dt><a name="LW23">507</a></dt>
+        <dd>Xiantao Li et Chunhao Wang
+          <br />Description concise et simulation efficace des systèmes quantiques ouverts non markoviens. (Succinct Description and Efficient Simulation of Non-Markovian Open Quantum Systems)
+          <br /><em>Communications in Mathematical Physics</em>, 401:147-183, 2023.
+          <br />[<a href="https://doi.org/10.1007/s00220-023-04638-4">doi:10.1007/s00220-023-04638-4</a>]<br /><br /></dd>
+
+        <dt><a name="YS22">508</a></dt>
+        <dd>Bin Yan et Nikolai A. Sinitsyn
+          <br />Solution analytique du recuit quantique non adiabatique pour un hamiltonien de spin d'Ising arbitraire. (Analytical solution for nonadiabatic quantum annealing to arbitrary Ising spin Hamiltonian)
+          <br /><em>Nature Communications</em>, 13:2212, 2022.
+          <br />[<a href="https://doi.org/10.1038/s41467-022-29887-0">doi:10.1038/s41467-022-29887-0</a>]<br /><br /></dd>
+
+        <dt><a name="KN98">509</a></dt>
+        <dd>Tadashi Kadowaki et Hidetoshi Nishimori
+          <br />Recuit quantique dans le modèle d'Ising transverse. (Quantum Annealing in the Transverse Ising Model)
+          <br /><em>Physical Review E</em>, 58:5355, 1998.
+          <br />[<a href="https://arxiv.org/abs/cond-mat/9804280">arXiv:cond-mat/9804280</a>]<br /><br /></dd>
+
+        <dt><a name="CC24">510</a></dt>
+        <dd>Chris Cade et P. Marcos Crichigno
+          <br />Complexité des systèmes supersymétriques et du problème de cohomologie. (Complexity of Supersymmetric Systems and the Cohomology Problem)
+          <br /><em>Quantum</em>, 8:1325, 2024.
+          <br />[<a href="https://arxiv.org/abs/2107.00011">arXiv:2107.00011</a>]<br /><br /></dd>
+
+        <dt><a name="CC25">511</a></dt>
+        <dd>Alexander Schmidhuber, Michele Reilly, Paolo Zanardi, Seth Lloyd, et Aaron Lauda
+          <br />Un algorithme quantique pour l'homologie de Khovanov. (A quantum algorithm for Khovanov homology)
+          <br /><em><a href="https://arxiv.org/abs/2501.12378">arXiv:2501.12378</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="SKK24">512</a></dt>
+        <dd>Rolando D. Somma, Robbie King, Robin Kothari, Thomas O'Brien, et Ryan Babbush
+          <br />Simulation hamiltonienne par ombres. (Shadow Hamiltonian Simulation)
+          <br /><em><a href="https://arxiv.org/abs/2407.21775">arXiv:2407.21775</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="SLT24">513</a></dt>
+        <dd>Maarten Stroeks, Daan Lenterman, Barbara Terhal, et Yaroslav Herasymenko
+          <br />Résolution de problèmes de fermions libres sur un ordinateur quantique. (Solving Free Fermion Problems on a Quantum Computer)
+          <br /><em><a href="https://arxiv.org/abs/2409.04550">arXiv:2409.04550</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="BCS25">514</a></dt>
+        <dd>Alice Barthe, M. Cerezo, Andrew T. Sornborger, Martín Larocca, et Diego García-Martín
+          <br />Simulation quantique par portes de circuits bosoniques gaussiens sur un nombre exponentiel de modes. (Gate-Based Quantum Simulation of Gaussian Bosonic Circuits on Exponentially Many Modes)
+          <br /><em>Physical Review Letters</em>, 134:070604, 2025.
+          <br />[<a href="https://arxiv.org/abs/2407.06290">arXiv:2407.06290</a>]<br /><br /></dd>
+
+        <dt><a name="G25">515</a></dt>
+        <dd>Greta Panova
+          <br />Algorithmes classiques et quantiques en temps polynomial pour les multiplicités en théorie des représentations. (Polynomial time classical versus quantum algorithms for representation theoretic multiplicities)
+          <br /><em><a href="https://arxiv.org/abs/2502.20253">arXiv:2502.20253</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="LH24">516</a></dt>
+        <dd>Martin Larocca et Vojtech Havlicek
+          <br />Algorithmes quantiques pour les multiplicités en théorie des représentations. (Quantum Algorithms for Representation-Theoretic Multiplicities)
+          <br /><em><a href="https://arxiv.org/abs/2407.17649">arXiv:2407.17649</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="AL22">517</a></dt>
+        <dd>Dong An et Lin Lin
+          <br />Résolution quantique de systèmes linéaires fondée sur le calcul quantique adiabatique à temps optimal et l'algorithme quantique d'optimisation approchée. (Quantum Linear System Solver Based on Time-optimal Adiabatic Quantum Computing and Quantum Approximate Optimization Algorithm)
+          <br /><em>ACM Transactions on Quantum Computing</em>, 3(2):1–28, 2022.
+          <br />[<a href="https://arxiv.org/abs/1909.05500">arXiv:1909.05500</a>]<br /><br /></dd>
+
+        <dt><a name="CA22">518</a></dt>
+        <dd>Pedro C. S. Costa, Dong An, Yuval R. Sanders, Yuan Su, Ryan Babbush, et Dominic W. Berry
+          <br />Résolution quantique de systèmes linéaires à mise à l'échelle optimale par le théorème adiabatique discret. (Optimal Scaling Quantum Linear-Systems Solver via Discrete Adiabatic Theorem)
+          <br /><em>PRX Quantum</em>, 3:040303, 2022.
+          <br />[<a href="https://arxiv.org/abs/2111.08152">arXiv:2111.08152</a>]<br /><br /></dd>
+
+        <dt><a name="SGTN25">519</a></dt>
+        <dd>Jeongrak Son, Marek Gluza, Ryuji Takagi, et Nelly H. Y. Ng
+          <br />Programmation dynamique quantique. (Quantum Dynamic Programming)
+          <br /><em>Phys. Rev. Lett.</em>, 134, 180602, 2025.
+          <br />[<a href="https://arxiv.org/abs/2403.09187">arXiv:2403.09187</a>]<br /><br /></dd>
+
+        <dt><a name="WLLHMDL23">520</a></dt>
+        <dd>Fuchuan Wei, Zhenhuan Liu, Guoding Liu, Zizhao Han, Xiongfeng Ma, Dong-Ling Deng, et Zhengwei Liu
+          <br />Simulation d'actions non complètement positives par exponentiation d'applications préservant l'hermiticité. (Simulating non-completely positive actions via exponentiation of Hermitian-preserving maps)
+          <br /><em>npj Quantum Information</em>, 10:134, 2024.
+          <br />[<a href="https://arxiv.org/abs/2308.07956">arXiv:2308.07956</a>]<br /><br /></dd>
+
+        <dt><a name="HM12">521</a></dt>
+        <dd>Uwe Helmke et John B. Moore
+          <br />Optimisation et systèmes dynamiques. (Optimization and Dynamical Systems)
+          <br /><em>Springer Science &amp; Business Media</em>, 2012.<br /><br /></dd>
+
+        <dt><a name="G24">522</a></dt>
+        <dd>Marek Gluza
+          <br />Algorithmes quantiques à double crochet pour la diagonalisation. (Double-bracket quantum algorithms for diagonalization)
+          <br /><em>Quantum</em>, 8:1316, 2024.
+          <br />[<a href="https://arxiv.org/abs/2206.11772">arXiv:2206.11772</a>]<br /><br /></dd>
+
+        <dt><a name="RPP22">523</a></dt>
+        <dd>Matteo Robbiati, Edoardo Pedicillo, Andrea Pasquale, Xiaoyue Li, Andrew Wright, Renato M. S. Farias, Khanh Uyen Giang, Jeongrak Son, Johannel Kn&ouml;rzer, Siong Thye Goh, Jun Yong Khoo, Nelly H. Y. Ng, Zo&euml; Holmes, Stefano Cerrazza, et Marek Gluza
+          <br />Algorithmes quantiques à double crochet pour la préparation d'états fondamentaux de haute fidélité. (Double-bracket quantum algorithms for high fidelity ground state preparation)
+          <br /><em><a href="https://arxiv.org/abs/2408.03987">arXiv:2408.03987</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="GST24">524</a></dt>
+        <dd>Marek Gluza, Jeongrak Son, Bi Hong Tiang, Yudai Suzuki, Zo&euml; Holmes, et Nelly H. Y. Ng
+          <br />Algorithmes quantiques à double crochet pour l'évolution quantique en temps imaginaire. (Double-bracket quantum algorithms for quantum imaginary-time evolution)
+          <br /><em><a href="https://arxiv.org/abs/2412.04554">arXiv:2412.04554</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="ZSX25">525</a></dt>
+        <dd>Ren&eacute; Zander, Raphael Seidel, Li Xiaoyue, et Marek Gluza
+          <br />Rôle de la géométrie riemannienne dans l'évolution quantique en temps imaginaire à double crochet. (Role of Riemannian geometry in double-bracket quantum imaginary-time)
+          <br /><em><a href="https://arxiv.org/abs/2504.01065">arXiv:2504.01065</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="STS25">526</a></dt>
+        <dd>Yudai Suzuki, Bi Hong Tiang, Jeongrak Son, Nelly H. Y. Ng, Zo&euml; Holmes, et Marek Gluza
+          <br />Algorithme à double crochet pour le traitement quantique du signal sans post-sélection. (Double-bracket algorithm for quantum signal processing without post-selection)
+          <br /><em><a href="https://arxiv.org/abs/2504.01077">arXiv:2504.01077</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="LS20">527</a></dt>
+        <dd>Alessandro Luongo et Changpeng Shao
+          <br />Algorithmes quantiques pour les sommes spectrales. (Quantum algorithms for spectral sums)
+          <br /><em><a href="https://arxiv.org/abs/2011.06475">arXiv:2011.06475</a></em>, 2020.<br /><br /></dd>
+
+        <dt><a name="GLM25">528</a></dt>
+        <dd>Vittorio Giovannetti, Seth Lloyd, et Lorenzo Maccone
+          <br />Un algorithme quantique pour estimer le déterminant. (A quantum algorithm for estimating the determinant)
+          <br /><em><a href="https://arxiv.org/abs/2504.11049">arXiv:2504.11049</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="LHLW23">529</a></dt>
+        <dd>Jiaqi Leng, Ethan Hickman, Joseph Li, et Xiaodi Wu
+          <br />Descente hamiltonienne quantique. (Quantum Hamiltonian descent)
+          <br /><em><a href="https://arxiv.org/abs/2303.04171">arXiv:2303.04171</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="LZW23">530</a></dt>
+        <dd>Jiaqi Leng, Yufan Zheng, et Xiaodi Wu
+          <br />Séparation des performances quantiques et classiques en optimisation non convexe. (A quantum-classical performance separation in nonconvex optimization)
+          <br /><em><a href="https://arxiv.org/abs/2311.00811">arXiv:2311.00811</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="FGRV25">531</a></dt>
+        <dd>Edward Farhi, Sam Gutmann, Daniel Ranard, et Benjamin Villalonga
+          <br />Borne inférieure pour la coupe maximale des graphes 3-réguliers de grande maille à l'aide du QAOA. (Lower bounding the MaxCut of high girth 3-regular graphs using the QAOA)
+          <br /><em><a href="https://arxiv.org/abs/2503.12789">arXiv:2503.12789</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="BKL25">532</a></dt>
+        <dd>Sami Boulebnane, Abid Khan, Minzhao Liu, Jeffrey Larson, Dylan Herman, Ruslan Shaydulin, et Marco Pistoia
+          <br />Arguments indiquant que l'algorithme quantique d'optimisation approchée optimise efficacement le modèle de Sherrington-Kirkpatrick dans le cas moyen. (Evidence that the Quantum Approximate Optimization Algorithm Optimizes the Sherrington-Kirkpatrick Model Efficiently in the Average Case)
+          <br /><em><a href="https://arxiv.org/abs/2505.07929">arXiv:2505.07929</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="MST20">533</a></dt>
+        <dd>Mario Motta, Chong Sun, Adrian Teck Keng Tan, Matthew J. O'Rourke, Erika Ye, Austin J. Minnich, Fernando G. S. L. Brandao, et Garnet Kin-Lic Chan
+          <br />Détermination des états propres et des états thermiques sur un ordinateur quantique par évolution en temps imaginaire. (Determining eigenstates and thermal states on a quantum computer using quantum imaginary time evolution)
+          <br /><em>Nature Physics</em>, 16:205-210, 2020.
+          <br />[<a href="https://arxiv.org/abs/1901.07653">arXiv:1901.07653</a>]<br /><br /></dd>
+
+        <dt><a name="CT24">534</a></dt>
+        <dd>André Chailloux et Jean-Pierre Tillich
+          <br />Avantage quantique grâce aux décodeurs souples. (Quantum advantage from soft decoders)
+          <br /><em><a href="https://arxiv.org/abs/2411.12553">arXiv:2411.12553</a></em>, 2024.<br /><br /></dd>
+
+        <dt><a name="BCS22">535</a></dt>
+        <dd>Xavier Bonnetain, André Chailloux, André Schrottenloher, et Yixin Shen
+          <br />Recherche de nombreuses collisions à l'aide de marches quantiques réutilisables : application au criblage sur réseaux. (Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving)
+          <br />Dans <em>Proceedings of Eurocrypt</em>, p. 221-251, 2022.
+          <br />[<a href="https://arxiv.org/abs/2205.14023">arXiv:2205.14023</a>]<br /><br /></dd>
+
+        <dt><a name="CL21">536</a></dt>
+        <dd>André Chailloux et Johanna Loyer
+          <br />Criblage sur réseaux à l'aide de marches aléatoires quantiques. (Lattice Sieving via Quantum Random Walks)
+          <br />Dans <em>Proceedings of Asiacrypt</em>, p. 63-91, 2021.
+          <br />[<a href="https://arxiv.org/abs/2105.05608">arXiv:2105.05608</a>]<br /><br /></dd>
+
+        <dt><a name="EH22">537</a></dt>
+        <dd>Lior Eldar et Sean Hallgren
+          <br />Un algorithme quantique efficace pour les problèmes de réseaux atteignant un facteur d'approximation sous-exponentiel. (An efficient quantum algorithm for lattice problems achieving subexponential approximation factor)
+          <br /><em><a href="https://arxiv.org/abs/2201.13450">arXiv:2201.13450</a></em>, 2022.<br /><br /></dd>
+
+        <dt><a name="DW21">538</a></dt>
+        <dd>Leo Ducas et Wessel van Woerden
+          <br />Note sur une affirmation d'Eldar et Hallgren : l'algorithme LLL résout déjà le problème. (A note on a Claim of Eldar and Hallgren: LLL already solves it)
+          <br /><em><a href="https://github.com/lducas/BDD-note">github</a></em>, 2021.<br /><br /></dd>
+
+        <dt><a name="CG22">539</a></dt>
+        <dd>Yu-Ao Chen et Xiao-Shan Gao
+          <br />Algorithme quantique pour la résolution d'équations booléennes et attaque algébrique quantique contre les cryptosystèmes. (Quantum Algorithm for Boolean Equation Solving and Quantum Algebraic Attack on Cryptosystems)
+          <br /><em>Journal of Systems Science and Complexity</em>, 35:373-412, 2022.
+          <br />[<a href="https://arxiv.org/abs/1712.06239">arXiv:1712.06239</a>]<br /><br /></dd>
+
+        <dt><a name="CGY25">540</a></dt>
+        <dd>Yu-Ao Chen, Xiao-Shan Gao, et Chun-Ming Yuan
+          <br />Algorithme quantique pour l'optimisation et la résolution de systèmes polynomiaux sur un corps fini, avec une application à la cryptanalyse. (Quantum Algorithm for Optimization and Polynomial System Solving over Finite Field and Application to Cryptanalysis)
+          <br /><em>Journal of Systems Science and Complexity</em>, 2025.
+          <br />[<a href="https://arxiv.org/abs/1802.03856">arXiv:1802.03856</a>]<br /><br /></dd>
+
+        <dt><a name="DGG23">541</a></dt>
+        <dd>Jintai Ding, Vlad Gheorghiu, András Gilyén, Sean Hallgren, et Jianqiang Li
+          <br />Limites de l'approche par matrice de Macaulay pour résoudre les systèmes polynomiaux multivariés avec l'algorithme HHL. (Limitations of the Macaulay matrix approach for using the HHL algorithm to solve multivariate polynomial systems)
+          <br /><em>Quantum</em>, 7:1069, 2023.
+          <br />[<a href="https://arxiv.org/abs/2111.00405">arXiv:2111.00405</a>]<br /><br /></dd>
+
+        <dt><a name="HH21">542</a></dt>
+        <dd>David Harvey et Markus Hittmeir
+          <br />Une accélération logarithmique double de la factorisation déterministe d'entiers à exposant un cinquième. (A log-log speedup for exponent one-fifth deterministic integer factorization)
+          <br /><em><a href="https://arxiv.org/abs/2105.11105">arXiv:2105.11105</a></em>, 2021.<br /><br /></dd>
+
+        <dt><a name="BRJ23">543</a></dt>
+        <dd>B. Baskaran, A. S. Rawat, A. Jayashankar, D. Chakravarti, K. Sugisaki, S. Roy, S. Mandal, D. Mukherjee, et V. S. Prasannaa
+          <br />Adaptation de l'algorithme de Harrow-Hassidim-Lloyd à la théorie quantique à plusieurs corps. (Adapting the Harrow-Hassidim-Lloyd algorithm to quantum many-body theory)
+          <br /><em>Phys. Rev. Research</em>, 5:043113, 2023.
+          <br />[<a href="https://arxiv.org/abs/2212.14781">arXiv:2212.14781</a>]<br /><br /></dd>
+
+        <dt><a name="CH25">544</a></dt>
+        <dd>Daniel Cohen Hillel
+          <br />Optimisation sous contraintes quadratiques par interférométrie quantique décodée. (Optimization of Quadratic Constraints by Decoded Quantum Interferometry)
+          <br /><em><a href="https://arxiv.org/abs/2510.08061">arXiv:2510.08061</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="P25">545</a></dt>
+        <dd>Ojas Parekh
+          <br />Absence d'avantage quantique de l'interférométrie quantique décodée pour la coupe maximale. (No Quantum Advantage in Decoded Quantum Interferometry for MaxCut)
+          <br /><em><a href="https://arxiv.org/abs/2509.19966">arXiv:2509.19966</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="SLS25">546</a></dt>
+        <dd>Alexander Schmidhuber, Jonathan Z. Lu, Noah Shutty, Stephen Jordan, Alexander Poremba, et Yihui Quek
+          <br />Interférométrie quantique décodée hamiltonienne. (Hamiltonian Decoded Quantum Interferometry)
+          <br /><em><a href="https://arxiv.org/abs/2510.07913">arXiv:2510.07913</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="GJ25">547</a></dt>
+        <dd>Andi Gu et Stephen P. Jordan
+          <br />Codes de géométrie algébrique et interférométrie quantique décodée. (Algebraic Geometry Codes and Decoded Quantum Interferometry)
+          <br /><em><a href="https://arxiv.org/abs/2510.06603">arXiv:2510.06603</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="CT23">548</a></dt>
+        <dd>André Chailloux et Jean-Pierre Tillich
+          <br />Le problème du décodage quantique. (The Quantum Decoding Problem)
+          <br /><em><a href="https://arxiv.org/abs/2310.20651">arXiv:2310.20651</a></em>, 2023.<br /><br /></dd>
+
+        <dt><a name="BCT25">549</a></dt>
+        <dd>Agathe Blanvillain, André Chailloux, et Jean-Pierre Tillich
+          <br />Le problème du décodage quantique : bornes atteignables précises et application à la réduction de Regev. (The Quantum Decoding Problem: Tight Achievability Bounds and Application to Regev's Reduction)
+          <br /><em><a href="https://arxiv.org/abs/2509.24796">arXiv:2509.24796</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="BH25">550</a></dt>
+        <dd>André Chailloux et Paul Hermouet
+          <br />Sur l'équivalence quantique entre \( \textrm{S} | \textrm{LWE} \rangle \) et ISIS. (On the Quantum Equivalence between \( \textrm{S} | \textrm{LWE} \rangle \) and ISIS)
+          <br /><em><a href="https://arxiv.org/abs/2510.06097">arXiv:2510.06097</a></em>, 2025.<br /><br /></dd>
+
+        <dt><a name="BC25">551</a></dt>
+        <dd>Quentin Buzet et André Chailloux
+          <br />Mesures non ambiguës à granularité fine. (Fine-Grained Unambiguous Measurements)
+          <br /><em><a href="https://arxiv.org/abs/2510.07298">arXiv:2510.07298</a></em>, 2025.<br /><br /></dd>
+
       </dl>
     </div>
     <div id="sidebar">
@@ -5728,13 +6102,25 @@
         <a href="#references">Références</a><br /><br />
       </div>
 
-      <h2>Autres Langues</h2>
+      <h2>À propos</h2>
+      Auteur : Stephen P. Jordan, Google Quantum AI<br />
+      Pour citer cette page : <a href="zoo.bib">BibTeX</a><br />
+      Dernière mise à jour : 10 septembre 2026<br />
+      Date de création : 22 avril 2011<br />
+      Traduction française : <a href="https://alexisfimeyer.github.io/">Alexis Fimeyer</a><br /><br />
+
+      <h2>Traductions</h2>
+      Cette page est aussi disponible en :
       <div class="navlist">
-      <a href="index.html">Anglais</a><br />
-      <a href="https://www.qmedia.jp/algorithm-zoo/">Japonais</a><br /><br />
+        <a href="https://www.qmedia.jp/algorithm-zoo/">japonais</a><br />
+        <a href="index.html">anglais</a><br /><br />
       </div>
 
-      <h2>Autres Enquêtes</h2>
+      <h2>Graphe quantique</h2>
+      Le <a href="https://quantumgraph.info/">graphe quantique</a>, construit par Yudong Cao et Jonathan Olson,
+      représente les relations entre les algorithmes quantiques du zoo.<br /><br />
+
+      <h2>Autres présentations</h2>
       Pour des aperçus des algorithmes quantiques, je recommande :<br /><br />
       <div class="navlist">
         <a href="http://www.amazon.com/Quantum-Computation-Information-Cambridge-Sciences/dp/0521635039">Nielsen
@@ -5747,7 +6133,7 @@
         <a href="http://cacm.acm.org/magazines/2010/2/69352-recent-progress-in-quantum-algorithms/fulltext">Bacon et
           van Dam</a><br />
         <a href="http://arxiv.org/abs/1511.04206">Montanaro</a><br />
-        <a href="https://arxiv.org/abs/2310.03011">Delzell et al.</a><br /><br />
+        <a href="https://arxiv.org/abs/2310.03011">Dalzell et al.</a><br /><br />
       </div>
 
       <h2>Terminologie</h2>
@@ -5759,17 +6145,6 @@
         Pour un examen des notations \( O, \Omega, \Theta, \widetilde{O}, ... \), voir l'
         <a href="http://en.wikipedia.org/wiki/Big_O_notation">article Wikipedia</a>.
       </p>
-
-      <h2>À propos</h2>
-      Auteur :<br /><br />
-      <img src="sjordanface2.png" width="50" height="66" alt="photo de l'auteur" style="float: left; margin-right:5px;" />
-      Stephen Jordan<br /><br />
-      Google Research<br />
-      <div style="clear: both;"></div>
-      <br />
-      Traduite par: <a href="https://alexisfimeyer.github.io/">Alexis Fimeyer</a><br /><br />
-      Dernière mise à jour : 13 janvier 2024<br />
-      Date de création : 22 avril 2011<br /><br />
 
     </div>
     <div id="footer">
