@@ -146,6 +146,11 @@ unlikely to be feasible.
 Fourier transform of another.
 <br><br>
 
+<b>Algorithm:</b> Total Functions <br>
+<b>Speedup:</b> Polynomial <br>
+<b>Description:</b> Consider the problem of period finding: we are given an oracle evaluating a function <i>f</i> on a domain \( \{0,1,\ldots,N-1\} \). We are promised that there exists a positive integer \(s\leq\lfloor\sqrt{N}\rfloor\) such that, for all \(x,y\in\{0,1,\ldots,N-1\}\), \(f(x)=f(y)\) if and only if \(x\equiv y\pmod s\). Our job is to find the value of <i>s</i> by querying <i>f</i> as few times as possible. In the worst case, randomized classical algorithms require a number of queries that is exponential in \(\log N\), whereas a quantum computer can solve the problem using a number of queries that scales polynomially in \(\log N\), as discussed in <a href="#abelian_HSP">Abelian Hidden Subgroup</a>. This is an example of a promise problem: if <i>f</i> violates the promise, we are permitted to return any answer. However, what if we require a specified correct answer for every possible input? Formally, we can encode the oracle table as a string \(f(0),\ldots,f(N-1)\) and view our computational task as evaluating a function <i>F</i> on this string. A promise problem specifies the required output only on a subset of possible input strings. A total function instead specifies a unique output for every input string. Building upon earlier results [<a href="#BBCMW01">552</a>, <a href="#ABK15">270</a>], upper and lower bounds matching in the exponent have been obtained [<a href="#ABKRT21">553</a>, <a href="#OpenAI26">554</a>], showing that the maximum separation between quantum and randomized query complexity for any total function is quartic.  The constructions establishing these separations provide quantum algorithms achieving polynomial query-complexity speedups, albeit for problems that generally look contrived and do not have known applications. A closely related line of work concerns the recently-proven [<a href="#T26">556</a>, <a href="#HMP26">557</a>] Aaronson-Ambainis conjecture [<a href="#AA14_structure">555</a>], which states that the acceptance probability of any quantum algorithm making <i>T</i> queries to an input bit string can be approximated to additive error \(\epsilon\), on at least a \(1-\delta\) fraction of uniformly distributed inputs, by a classical algorithm making \(\operatorname{poly}(T,1/\epsilon,1/\delta)\) queries. An interesting counterpoint to the Aaronson-Ambainis conjecture is the result of Yamakawa and Zhandry [<a href="#YZ24">455</a>] which shows that total <em>search</em> problems can exhibit superpolynomial quantum query speedups even on uniformly random inputs. Here an input may have several acceptable outputs, and the algorithm need only produce one; the problem is therefore described by a total relation rather than a single-valued function.
+<br><br>
+
 <b>Algorithm:</b> Deutsch-Jozsa <br>
 <b>Speedup:</b> Exponential over P, none over BPP<br>
 <b>Implementation:</b> <a href="https://short.classiq.io/deutsch_josza">Classiq</a>, <a href="https://pennylane.ai/codebook/basic-quantum-algorithms/deutsch-jozsa">PennyLane</a><br>
@@ -519,6 +524,7 @@ I thank the following people for contributing their expertise (in chronological 
 <li><a href="https://www.fffmath.com/">Yansong Feng</a></li>
 <li><a href="https://www.tcgcrest.org/people/srinivasa-prasannaa-v/">Srinivasa Prasannaa V</a></li>
 <li>Francisca Góis</li>
+<li><a href="https://github.com/wcook04">Will Cook</a></li>
 </ul>
 <br>
 
@@ -4725,6 +4731,59 @@ pg. 431-442, Springer, 2006.
   <br><br>
 </dd>
 
+<dt id="BBCMW01">552</dt>
+<dd>
+  Robert Beals, Harry Buhrman, Richard Cleve, Michele Mosca, and Ronald de Wolf
+  <br>Quantum Lower Bounds by Polynomials
+  <br><em>Journal of the ACM</em> 48(4):778-797, 2001.
+  <br>[<a href="https://arxiv.org/abs/quant-ph/9802049">arXiv:quant-ph/9802049</a>]
+  <br><br>
+</dd>
+
+<dt id="ABKRT21">553</dt>
+<dd>
+  Scott Aaronson, Shalev Ben-David, Robin Kothari, Shravas Rao, and Avishay Tal
+  <br>Degree vs. Approximate Degree and Quantum Implications of Huang's Sensitivity Theorem
+  <br><em>Proceedings of the 53rd Annual ACM SIGACT Symposium on Theory of Computing (STOC 2021)</em>, pp. 1330-1342, 2021.
+  <br>[<a href="https://arxiv.org/abs/2010.12629">arXiv:2010.12629</a>]
+  <br><br>
+</dd>
+
+<dt id="OpenAI26">554</dt>
+<dd>
+  OpenAI
+  <br>A Nearly Quartic Separation Between Randomized and Quantum Query Complexity
+  <br>Preprint, October 5, 2026.
+  <br>[<a href="https://github.com/openai/math/blob/main/preprints/A-Nearly-Quartic-Separation-Between-Randomized-and-Quantum-Query-Complexity-October-5-2026/quartic-query-separation.pdf">PDF</a>]
+  <br>See also the <a href="https://github.com/wcook04/quartic-query-lean">Lean formalization</a> and <a href="https://wcook04.github.io/library/quartic/">Quartic Reader</a>, developed by AI systems under Will Cook's direction.
+  <br><br>
+</dd>
+
+<dt id="AA14_structure">555</dt>
+<dd>
+  Scott Aaronson and Andris Ambainis
+  <br>The Need for Structure in Quantum Speedups
+  <br><em>Theory of Computing</em> 10(6):133-166, 2014.
+  <br>[<a href="https://arxiv.org/abs/0911.0996">arXiv:0911.0996</a>]
+  <br><br>
+</dd>
+
+<dt id="T26">556</dt>
+<dd>
+  David Turturean
+  <br>A proof of the Aaronson-Ambainis conjecture
+  <br><em><a href="https://arxiv.org/abs/2611.09773">arXiv:2611.09773</a></em>, 2026.
+  <br><br>
+</dd>
+
+<dt id="HMP26">557</dt>
+<dd>
+  Thomas Huffstutler, David Miloschewsky, and Supartha Podder
+  <br>A short proof of the Aaronson-Ambainis Conjecture via the completion framework
+  <br><em><a href="https://arxiv.org/abs/2611.12795">arXiv:2611.12795</a></em>, 2026.
+  <br><br>
+</dd>
+
 </dl>
 </main>
 
@@ -4743,7 +4802,7 @@ pg. 431-442, Springer, 2006.
 <h2>About</h2>
 Author: Stephen P. Jordan, Google Quantum AI<br>
 Cite as: <a href="zoo.bib">bibtex</a><br>
-Last updated: September 10, 2026<br>
+Last updated: November 24, 2026<br>
 Date created: April 22, 2011<br><br>
 <div style="clear: both;"></div>
 <br>
