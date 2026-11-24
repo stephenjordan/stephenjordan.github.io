@@ -402,7 +402,7 @@ In [<a href="#JSW25">453</a>] a method called Decoded Quantum Interferometry (DQ
 <b>Speedup:</b> Superpolynomial<br>
 <b>Implementation:</b> <a href="https://short.classiq.io/hhl">Classiq (HHL)</a>, <a href="https://short.classiq.io/qsvt_inversion">Classiq (QSVT)</a>, <a href="https://github.com/quantumlib/Cirq/blob/main/examples/grover.py">Cirq (HHL)</a>, <a href="https://pennylane.ai/qml/demos/linear_equations_hhl_qrisp_catalyst">Qrisp/Pennylane (HHL)</a><br>
 <b>Description:</b> We are given oracle access to an \( n \times n \) matrix <i>A</i> and some description of a vector <i>b</i>. We wish to find some property of <i>f(A)b</i> for some efficiently computable function <i>f</i>.  Suppose <i>A</i> is a Hermitian matrix with  <i>O</i>(polylog <i>n</i>) nonzero entries in each row and condition number <i>k</i>. As shown in [<a href="#HHL08">104</a>], a quantum computer can in \( O(k^2 \log n) \)
-time compute to polynomial precision various expectation values of operators with respect to the vector <i>f(A)b</i> (provided that a quantum state proportional to <i>b</i> is efficiently constructable). For certain functions, such as <i>f(x)=1/x</i>, this procedure can be extended to non-Hermitian and even non-square <i>A</i>. The runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \) in [<a href="#Ambainis_linear">138</a>]. Exponentially improved scaling of runtime with precision was obtained in [<a href="#CKS15">263</a>]. Further improvement was achieved in [<a href="#CYS22">494</a>]. Some methods to extend this algorithm to apply to non-sparse matrices have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear differential equations [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], estimating electrical resistance of networks [<a href="#Wang14">210</a>], computational chemistry [<a href="#BRJ23">543</a>], least-squares curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems [<a href="#WYPGW16">297</a>], and machine learning [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>]. However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>] and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>]. That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving that the proposed quantum algorithms for these tasks do not achieve exponential speedup. Some limitations of the quantum machine learning algorithms based on linear systems are nicely summarized in [<a href="#Aa15">246</a>]. In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum computers can invert well-conditioned  \( n \times n \) matrices using only \( O( \log n ) \) qubits, whereas the best classical algorithm uses order \( \log^2 n \) bits. Subsequent improvements to this quantum algorithm are given in [<a href="#FL16">279</a>]. Variants of the linear systems problem, including the computation of Moore-Penrose pseudoinverses, can be obtained as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
+time compute to polynomial precision various expectation values of operators with respect to the vector <i>f(A)b</i> (provided that a quantum state proportional to <i>b</i> is efficiently constructable). For certain functions, such as <i>f(x)=1/x</i>, this procedure can be extended to non-Hermitian and even non-square <i>A</i>. The runtime of this algorithm was subsequently improved to \( O(k \log^3 k \log n) \) in [<a href="#Ambainis_linear">138</a>]. Exponentially improved scaling of runtime with precision was obtained in [<a href="#CKS15">263</a>]. Further improvement was achieved in [<a href="#CYS22">494</a>]. Some methods to extend this algorithm to apply to non-sparse matrices have been proposed [<a href="#KP16">309</a>,<a href="#WZP17">402</a>], although these require certain partial sums of the matrix elements to be pre-computed. Extensions of this quantum algorithm have been applied to problems of estimating electromagnetic scattering crossections [<a href="#CJS13">249</a>] (see also [<a href="#CJO17">369</a>] for a different approach), solving linear differential equations [<a href="#Berry10">156</a>, <a href="#MP16">296</a>], estimating electrical resistance of networks [<a href="#Wang14">210</a>], computational chemistry [<a href="#BRJ23">543</a>], least-squares curve-fitting [<a href="#Wiebe_Braun_Lloyd12">169</a>], solving Toeplitz systems [<a href="#WYPGW16">297</a>], and machine learning [<a href="#LMR13">214</a>,<a href="#LGZ14">222</a>,<a href="#LMR13b">250</a>,<a href="#RML13">251</a>,<a href="#KP16">309</a>]. However, the linear-systems-based quantum algorithms for recommendation systems [<a href="#KP16">309</a>] and principal component analysis [<a href="#LMR13b">250</a>] were subsequently "dequantized" by Tang [<a href="#Tang18a">400</a>, <a href="#Tang18b">401</a>]. That is, Tang obtained polynomial time classical randomized algorithms for these problems, thus proving that the proposed quantum algorithms for these tasks do not achieve exponential speedup. Some limitations of the quantum machine learning algorithms based on linear systems are nicely summarized in [<a href="#Aa15">246</a>]. Quantum linear-system methods have also been investigated for discrete mathematics problems, including recovery of planted maximum independent sets under additional structural assumptions [<a href="#Li25">558</a>], Boolean and finite-field polynomial-system solving [<a href="#CG22">539</a>, <a href="#CGY25">540</a>, <a href="#DGG23">541</a>], graph drawing through Tutte embeddings [<a href="#FGI23">559</a>], and linear systems arising from graph families [<a href="#SDC26">560</a>], with the prospects for speedup depending on instance parameters and the cost of extracting the desired output. In [<a href="#Ta-Shma13">220</a>] it was  shown that quantum computers can invert well-conditioned  \( n \times n \) matrices using only \( O( \log n ) \) qubits, whereas the best classical algorithm uses order \( \log^2 n \) bits. Subsequent improvements to this quantum algorithm are given in [<a href="#FL16">279</a>]. Variants of the linear systems problem, including the computation of Moore-Penrose pseudoinverses, can be obtained as special cases of the quantum singular value transformation [<a href="#GSLW19">433</a>].
 <br><br>
 
 <b>Algorithm:</b> Estimating Determinants and Other Spectral Sums<br>
@@ -4660,10 +4660,10 @@ pg. 431-442, Springer, 2006.
 
 <dt id="BRJ23">543</dt>
 <dd>
-  B. Baskaran, A. S. Rawat, A. Jayashankar, D. Chakravarti, K. Sugisaki, S. Roy, S. Mandal, D. Mukherjee, and V. S. Prasannaa
-  <br>Adapting the Harrow-Hassidim-Lloyd algorithm to quantum many-body theory 
-  <br><em>Phys. Rev. Research</em>, 5:043113, 2023.
-  <br>[<a href="https://arxiv.org/abs/2212.14781">arXiv:2212.14781</a>]  
+  N. Baskaran, A. S. Rawat, A. Jayashankar, D. Chakravarti, K. Sugisaki, S. Roy, S. B. Mandal, D. Mukherjee, and V. S. Prasannaa
+  <br>Adapting the Harrow-Hassidim-Lloyd algorithm to quantum many-body theory
+  <br><em><a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.043113">Phys. Rev. Research</a></em>, 5:043113, 2023.
+  <br>[<a href="https://arxiv.org/abs/2212.14781">arXiv:2212.14781</a>]
   <br><br>
 </dd>
 
@@ -4781,6 +4781,31 @@ pg. 431-442, Springer, 2006.
   Thomas Huffstutler, David Miloschewsky, and Supartha Podder
   <br>A short proof of the Aaronson-Ambainis Conjecture via the completion framework
   <br><em><a href="https://arxiv.org/abs/2611.12795">arXiv:2611.12795</a></em>, 2026.
+  <br><br>
+</dd>
+
+<dt id="Li25">558</dt>
+<dd>
+  Jianqiang Li
+  <br>A New Quantum Linear System Algorithm Beyond the Condition Number and Its Application to Solving Multivariate Polynomial Systems
+  <br><em><a href="https://arxiv.org/abs/2510.05588">arXiv:2510.05588</a></em>, 2025 (revised 2026).
+  <br><br>
+</dd>
+
+<dt id="FGI23">559</dt>
+<dd>
+  Shion Fukuzawa, Michael T. Goodrich, and Sandy Irani
+  <br>Quantum Tutte Embeddings
+  <br><em><a href="https://arxiv.org/abs/2307.08851">arXiv:2307.08851</a></em>, 2023.
+  <br><br>
+</dd>
+
+<dt id="SDC26">560</dt>
+<dd>
+  Disha Shetty, Supriyo Dutta, Palak Chawla, Akshaya Jayashankar, Jordi Riu, Jan Nogué, K. Sugisaki, and V. S. Prasannaa
+  <br>Assessing advantage from quantum linear solvers for graph-based problems
+  <br><em><a href="https://journals.aps.org/pra/abstract/10.1103/7g49-42r6">Phys. Rev. A</a></em> 113:052402, 2026.
+  <br>[<a href="https://arxiv.org/abs/2509.00913">arXiv:2509.00913</a>]
   <br><br>
 </dd>
 
